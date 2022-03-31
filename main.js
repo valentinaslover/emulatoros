@@ -86,11 +86,10 @@ $header.innerHTML = `<nav class="aa-nav">
 </div>
 <div class="aa-nav-items">
   <span class="aa-nav-item"><a href="https://emulatoros.github.io/All-links" target="_top">Home</a></span>
-  <span class="aa-nav-item"><a href="/games.html" target="_top">Games</a></span>
+  <span class="aa-nav-item"><a href="https://emulatoros.github.io/Quick-Links.html" target="_top">Quick Links</a></span>
   <span class="aa-nav-item"><a href="/faq.html" target="_top">FAQ</a></span>
   <span class="aa-nav-item"><a href="/changelog.html" target="_top">Changelog</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Settings</a></span>
-  <span class="aa-nav-item"><div class="users-online"><i class="fas fa-users"></i> <span id="user-count"></span></div></span>
 </div>
 </nav>
 
@@ -103,7 +102,7 @@ $header.innerHTML = `<nav class="aa-nav">
 <div class="aa-mobile-overlay">
 <ul class="aa-mobile-nav-items">
   <li><a href="https://emulatoros.github.io/All-links/#top" target="_top">Home</a></li>
-  <li><a href="/games.html" target="_top">Quick Links</a></li>
+  <li><a href="https://emulatoros.github.io/Quick-Links.html" target="_top">Quick Links</a></li>
   <li><a href="/faq.html" target="_top">FAQ</a></li>
   <li><a href="/changelog.html" target="_top">Changelog</a></li>
   <li><a href="/changelog.html" target="_top">Settings</a></li>
