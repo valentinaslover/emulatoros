@@ -85,9 +85,9 @@ $header.innerHTML = `<nav class="aa-nav">
   <a href="/"><img class="aa-nav-icon" src="/assets/img/socials/ubg100.png" alt="Blank" /></a>
 </div>
 <div class="aa-nav-items">
-  <span class="aa-nav-item"><a href="https://emulatoros.github.io/All-links" target="_top">Home</a></span>
+  <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Home</a></span>
   <span class="aa-nav-item"><a href="https://emulatoros.github.io/Quick-Links.html" target="_top">Quick Links</a></span>
-  <span class="aa-nav-item"><a href="https://emulatoros.github.io/Games.html" target="_top">Games</a></span>
+  <span class="aa-nav-item"><a href="https://emulatoros.github.io/games.html" target="_top">Games</a></span>
   <span class="aa-nav-item"><a href="/changelog.html" target="_top">Changelog</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Settings</a></span>
 </div>
