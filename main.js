@@ -42,25 +42,42 @@ try {
 } catch {
   //empty b/c no need for return
 }
-function requestFullScreen(element) {
-    // Supports most browsers and their versions.
-    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
+//Fullscreen function
+const reqFs = (elem) => {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) {
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+};
 
-    if (requestMethod) { // Native full screen.
-        requestMethod.call(element);
-    } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
-        var wscript = new ActiveXObject("WScript.Shell");
-        if (wscript !== null) {
-            wscript.SendKeys("{F11}");
-        }
-    }
-}
+//iframe fullscreen
+const iFullscreen = () => {
+  const elem = document.getElementsByTagName("iframe")[0];
+  reqFs(elem);
+};
 
-function makeFullScreen() {
-    document.getElementsByTagName("iframe")[0].className = "fullScreen";
-    var elem = document.body;
-    requestFullScreen(elem);
-}
+//Canvas fullscreen
+const cFullscreen = () => {
+  const elem = document.getElementById("canvas");
+  reqFs(elem);
+};
+
+//Ruffle fullscreen
+const rFullscreen = () => {
+  const elem = document.getElementById("player");
+  reqFs(elem);
+};
+
+//Emulator fullscreen
+const eFullscreen = () => {
+  const elem = document.getElementById("game");
+  reqFs(elem);
+};
 //Hamburger Menu Navbar
 const toggleMenu = () => {
   $("#hamburgerMenu").toggleClass("collapsed");
