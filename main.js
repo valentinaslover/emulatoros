@@ -42,42 +42,7 @@ try {
 } catch {
   //empty b/c no need for return
 }
-//Fullscreen function
-const reqFs = (elem) => {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) {
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
-  }
-};
 
-//iframe fullscreen
-const iFullscreen = () => {
-  const elem = document.getElementsByTagName("iframe")[0];
-  reqFs(elem);
-};
-
-//Canvas fullscreen
-const cFullscreen = () => {
-  const elem = document.getElementById("canvas");
-  reqFs(elem);
-};
-
-//Ruffle fullscreen
-const rFullscreen = () => {
-  const elem = document.getElementById("player");
-  reqFs(elem);
-};
-
-//Emulator fullscreen
-const eFullscreen = () => {
-  const elem = document.getElementById("game");
-  reqFs(elem);
-};
 //Hamburger Menu Navbar
 const toggleMenu = () => {
   $("#hamburgerMenu").toggleClass("collapsed");
