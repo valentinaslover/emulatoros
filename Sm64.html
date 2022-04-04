@@ -11,20 +11,23 @@
     <title>Chrome</title>
     <link rel="icon" type="image/x-icon" href="/assets/img/socials/ubg100.png" />
     <link rel="mask-icon" type="" href="/assets/img/socials/ubg100.png" color="#111" />
-    <link rel="stylesheet" href="https://emulatoros.github.io/main.css">
+    <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="https://emulatoros.github.io/contentpage.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
         supports it.</noscript>
-  <style>
-     html { 
+< <style>
+        html { 
   scroll-behavior: smooth; 
 }
       	body {
         	font-family: 'Syne', sans-serif;
           background-color: #000000;
       }
-  </style>
+
+
+
+    </style>
 </head>
  
 <body>
@@ -32,57 +35,29 @@
         <div class="main-content">
             <section class="content">
                 <div class="content-container">
-                    <canvas class="emscripten" id="canvas" style="width: 900px; height: 506.25px"></canvas>
-                    <script type='text/javascript'>
-                        var Module = {
-                            preRun: [],
-                            postRun: [],
-                            print: (function() {
-                                return function(text) {
-                                    if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-                                    console.log(text);
-                                };
-                            })(),
-                            printErr: function(text) {
-                                if (arguments.length > 1)
-                                    text = Array.prototype.slice.call(arguments).join(' ');
-                                console.error(text);
-                            },
-                            canvas: (function() {
-                                var canvas = document.getElementById('canvas');
-                                canvas.width = window.innerWidth;
-                                canvas.height = window.innerHeight;
-                                canvas.addEventListener("webglcontextlost", function(e) {
-                                    alert('WebGL context lost. You will need to reload the page.');
-                                    e.preventDefault();
-                                }, false);
-                                return canvas;
-                            })(),
-                            setStatus: function(text) {}
-                        };
-                    </script>
-                    <script async type="text/javascript" src="https://emulatoros.github.io/projects/sm64/sm64.us.f3dex2e.js"></script>
+                    <iframe src="https://emulatoros.github.io/projects/sm64/index.html" scrolling="no"></iframe>
                     <div class="bar">
                         <div class="bar-left">
                             <h1 id="content-title">Super Mario 64</h1>
                             <h3 id="content-creator">by Nintendo</h3>
                         </div>
-                        <button onclick="cFullscreen()">
+                        <button onclick="iFullscreen()">
                             <i class="fas fa-expand fa-2x"></i>
                         </button>
                     </div>
                 </div>
  
                 
+                    <div class="og-wrap"></div>
+                </div>
             </section>
             
-        </div>
+        
  
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://emulatoros.github.io/main.js"></script>
-   
-    <script src="/contentpage.js"></script>
+    <script src="https://emulatoros.github.io/main.js"></script>
+  <script src="https://emulatoros.github.io/contentpage.js"></script>
     
 </body>
  
