@@ -27,7 +27,7 @@ const sArr = [`1`, `4`, `0`];
 const version = "v" + sArr.join(".");
 
 //Fetch visit count
-const visitapi = "https://api.countapi.xyz/update/ubg100.github.io/27b1ee93-0d32-4635-ba66-c3772d1e55cd/?amount=1";
+const visitapi = "https://api.countapi.xyz/update/emulatoros.github.io/8f40b809-76a1-46fd-b76e-6cbd8827df44/?amount=1";
 fetch(visitapi)
 .then((res) => res.json())
 .then((res) => {
@@ -88,8 +88,9 @@ $header.innerHTML = `<nav class="aa-nav">
   <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Home</a></span>
   <span class="aa-nav-item"><a href="https://emulatoros.github.io/Quick-Links.html" target="_top">Quick Links</a></span>
   <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Games</a></span>
-  <span class="aa-nav-item"><a href="/emulatorjs/index.html" target="_top">Emulatorjs</a></span>
+  <span class="aa-nav-item"><a href="/emulatorjs/index.html" target="_top">EmulatorJS</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Blank</a></span>
+  <span class="aa-nav-item"><div class="users-online"><i class="fas fa-users"></i> <span id="user-count"></span></div></span>
 </div>
 </nav>
 
