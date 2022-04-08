@@ -90,9 +90,18 @@ $header.innerHTML = `<nav class="aa-nav">
   <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Games</a></span>
   <span class="aa-nav-item"><a href="/emulatorjs/index.html" target="_top">EmulatorJS</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Blank</a></span>
-  <span class="aa-nav-item"><div class="users-online"><i class="fas fa-users"></i> <span id="user-count"></span></div></span>
+  <span class="aa-nav-item"><div class="users-online"><i class="fas fa-users"></i> <span id="visits"></span></div></span>
 </div>
 </nav>
+<script>
+  var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.countapi.xyz/update/emulatoros.github.io/0fb02c16-3fdb-4fd2-a410-38466b7b1251/?amount=1");
+xhr.responseType = "json";
+xhr.onload = function() {
+    document.getElementById('visits').innerText = this.response.value;
+}
+xhr.send();
+  </script>
 
 <div class="aa-hamburger-menu collapsed" id="hamburgerMenu" onclick="toggleMenu()">
 <span class="aa-icon-bar"></span>
