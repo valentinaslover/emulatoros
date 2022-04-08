@@ -90,7 +90,36 @@ $header.innerHTML = `<nav class="aa-nav">
   <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Games</a></span>
   <span class="aa-nav-item"><a href="/emulatorjs/index.html" target="_top">EmulatorJS</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Blank</a></span>
-  <span class="aa-nav-item"><div class="users-online"><i class="fas fa-users"></i> <span id="visits"></span></div></span>
+  <span class="aa-nav-item"><!-- Default Statcounter code for EmulatorOS https://emulatoros.github.io/ -->
+<script type="text/javascript">
+var sc_project=12740930; 
+var sc_invisible=0; 
+var sc_security="4dc10a44"; 
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy -
+Statcounter" href="https://statcounter.com/" target="_blank"><img
+class="statcounter" src="https://c.statcounter.com/12740930/0/4dc10a44/0/"
+alt="Web Analytics Made Easy - Statcounter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code --></span>
+  <!-- Default Statcounter code for EmulatorOS https://emulatoros.github.io/ -->
+<script type="text/javascript">
+var sc_project=12740930; 
+var sc_invisible=0; 
+var sc_security="4dc10a44"; 
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy -
+Statcounter" href="https://statcounter.com/" target="_blank"><img
+class="statcounter" src="https://c.statcounter.com/12740930/0/4dc10a44/0/"
+alt="Web Analytics Made Easy - Statcounter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 </div>
 </nav>
 <script>
