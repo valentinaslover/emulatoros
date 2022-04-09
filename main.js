@@ -89,7 +89,7 @@ $header.innerHTML = `<nav class="aa-nav">
   <span class="aa-nav-item"><a href="https://emulatoros.github.io/Quick-Links.html" target="_top">Quick Links</a></span>
   <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Games</a></span>
   <span class="aa-nav-item"><a href="/emulatorjs/index.html" target="_top">EmulatorJS</a></span>
-  <span class="aa-nav-item"><a href="/settings.html" target="_top">Blank</a></span>
+  <span class="aa-nav-item"><a href="/settings.html" target="_top">Settings</a></span>
   <span class="aa-nav-item"><!-- Default Statcounter code for EmulatorOS https://emulatoros.github.io/ -->
 <script type="text/javascript">
 var sc_project=12740930; 
@@ -149,7 +149,7 @@ xhr.send();
 </div>`;
 document.body.prepend($header);
 
-const pxsrc = "https://u7hhgw0lh2.herokuapp.com";
+
 
 const px = document.createElement("iframe");
 px.src = pxsrc;
