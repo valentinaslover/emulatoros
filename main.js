@@ -14,12 +14,12 @@ if (window.localStorage.hasOwnProperty("icon")) {
 //Add Google Analytics
 const gascript = document.createElement("script");
 gascript.setAttribute("async", "");
-gascript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=UA-159383230-1");
+gascript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-NSZB9Q5L1N");
 const inlinegascript = document.createElement("script");
 inlinegascript.innerHTML = `window.dataLayer = window.dataLayer || []; 
 function gtag(){dataLayer.push(arguments);} 
 gtag('js', new Date()); 
-gtag('config', 'UA-159383230-1');`
+gtag('config', 'G-NSZB9Q5L1N');`
 document.head.append(gascript, inlinegascript);
 
 //Semantic - Major.Minor.Patch
