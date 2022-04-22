@@ -1,1 +1,57 @@
-if(!self.define){let e,i={};const n=(n,s)=>(n=new URL(n+".js",s).href,i[n]||new Promise((i=>{if("document"in self){const e=document.createElement("script");e.src=n,e.onload=i,document.head.appendChild(e)}else e=n,importScripts(n),i()})).then((()=>{let e=i[n];if(!e)throw new Error(`Module ${n} didn’t register its module`);return e})));self.define=(s,r)=>{const t=e||("document"in self?document.currentScript.src:"")||location.href;if(i[t])return;let o={};const c=e=>n(e,t),d={module:{uri:t},exports:o,require:c};i[t]=Promise.all(s.map((e=>d[e]||c(e)))).then((e=>(r(...e),o)))}}define(["./workbox-c1760cce"],(function(e){"use strict";self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/main.css",revision:null},{url:"/main.js",revision:null},{url:"index.html",revision:"d6b7e9ddddfafcdf06cd1f6385746f68"},{url:"icon.png",revision:"5a69678214e7d9b1302d1a65d18aa516"},{url:"icon-maskable.png",revision:"93dabbacb48dc51bbf7b607102ae381f"},{url:"manifest.webmanifest",revision:"02f61069f30c4b43cafa7caf38b676bc"}],{}),e.cleanupOutdatedCaches(),e.registerRoute(new e.NavigationRoute(e.createHandlerBoundToURL("index.html")))}));
+var CACHE_NAME = 'v2';
+
+var urlsToCache = [
+];
+
+self.addEventListener('install', function (event) {
+   // Perform install steps
+   event.waitUntil(
+      caches.open(CACHE_NAME)
+         .then(function (cache) {
+            console.log('Opened cache');
+            return cache.addAll(urlsToCache);
+         }).then(() => {
+            console.log('Cache downloaded')
+            self.skipWaiting()
+         })
+   );
+});
+
+
+
+self.addEventListener('fetch', function (event) {
+   event.respondWith(
+       caches.match(event.request)
+           .then(function (response) {
+               // Cache hit - return response
+               if (response) {
+                   return response;
+               }
+               console.log('cache miss', event.request.url)
+               return fetch(event.request);
+           })
+   );
+});
+
+
+self.addEventListener('activate', function (event) {
+   console.log('activated, remove unused cache...')
+   var cacheAllowlist = [CACHE_NAME];
+   event.waitUntil(
+       caches.keys().then(function (cacheNames) {
+           return Promise.all(
+               cacheNames.map(function (cacheName) {
+                   if (cacheAllowlist.indexOf(cacheName) === -1) {
+                 console.log(cacheName)
+                       return caches.delete(cacheName);
+                   }
+               })
+           );
+       })
+   );
+  clients.matchAll({includeUncontrolled:true,type:'window'}).then((arr) => {
+     for (client of arr) {
+        client.postMessage({type:'updated'})
+     }
+  })
+});
