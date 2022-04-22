@@ -88,7 +88,7 @@ $header.innerHTML = `<nav class="aa-nav">
   <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Home</a></span>
   
   <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Games</a></span>
-  <span class="aa-nav-item"><a href="/emulatorjs/index.html" target="_top">EmulatorJS</a></span>
+  <span class="aa-nav-item"><a href="https://r.emulatoros.ga/" target="_top">Search</a></span>
      <span class="aa-nav-item"><a href="/tests.html" target="_top">Tests</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Settings</a></span>
 
@@ -143,7 +143,7 @@ xhr.send();
 <div class="aa-mobile-overlay">
 <ul class="aa-mobile-nav-items">
   <li><a href="https://emulatoros.github.io/All-links/#top" target="_top">Home</a></li>
-  <li><a href="https://emulatoros.github.io/Quick-Links.html" target="_top">Quick Links</a></li>
+  <li><a href="https://emulatoros.github.io/Quick.html" target="_top">Quick Links</a></li>
   <li><a href="/faq.html" target="_top">FAQ</a></li>
   <li><a href="/changelog.html" target="_top">Changelog</a></li>
   <li><a href="/changelog.html" target="_top">Settings</a></li>
