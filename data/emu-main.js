@@ -627,11 +627,18 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             }
         };
     _0x550f17.a.get = function(oldGet) {
-        return function(url) {
+        return function(url, set) {
             if (url.startsWith('blob:')) {
                 return new Promise(async function(resolve, reject) {
                     var a = await fetch(url);
-                    a = await a.arrayBuffer();
+                    if (set && set.responseType && set.responseType.toLowerCase() === 'arraybuffer') {
+                        a = await a.arrayBuffer();
+                    } else {
+                        a = await a.text();
+                        try {
+                            a = JSON.parse(a);
+                        } catch(e) {}
+                    }
                     resolve({data:a});
                 })
             } else {
@@ -1466,6 +1473,15 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                             _0xb0c5d8 = -0x1,
                             _0x567713 = '',
                             _0x567717 = function() {
+                                if (_0x55627a.coreVer === 2) {
+                                	var mainLoop = _0x4d7024.Module.cwrap('toggleMainLoop', 'null', ['number']);
+                                    _0x4d7024.Module.resumeMainLoop = function() {
+                                        mainLoop(1);
+                                    }
+                                    _0x4d7024.Module.pauseMainLoop = function() {
+                                        mainLoop(0);
+                                    }
+                                }
                                 if (typeof _0x55627a.loadStateOnStart == 'string') {
                                     fetch(_0x55627a.loadStateOnStart).then(function(response) {
                                         response.arrayBuffer().then(function(ab) {
@@ -2146,15 +2162,8 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                                 } else _0x3641d6(_0x2458d5, _0x124167);
                                             }) : _0x3641d6(_0x2458d5, _0x124167);
                                         }
-                                        if (_0x2c1832.coreVer === 2) {
+                                        if (_0x2c1832.coreVer === 2 && !('undefined' != typeof EJS_DEBUG_XX && true === EJS_DEBUG_XX)) {
                                             _0x1e2c68.element(_0x2c1832.elements.buttons.gamepad) && _0x132da7(_0x2c1832.elements.buttons.gamepad, true);
-                                            if (Array.isArray(_0x2c1832.elements.buttons.play)) {
-                                                for (var i=0; i<_0x2c1832.elements.buttons.play.length; i++) {
-                                                    _0x1e2c68.element(_0x2c1832.elements.buttons.play[i]) && _0x132da7(_0x2c1832.elements.buttons.play[i], true);
-                                                }
-                                            } else {
-                                                _0x1e2c68.element(_0x2c1832.elements.buttons.play) && _0x132da7(_0x2c1832.elements.buttons.play, true);
-                                            }
                                         }
                                         _0x254bc2 || _0x1e2c68.element(_0x2c1832.elements.buttons.netplay) && _0x132da7(_0x2c1832.elements.buttons.netplay, true), _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd), _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x2), !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x3), !_0x5b1dcd);
                                         _0xc6823.setStatesSupported(_0x5b1dcd);
