@@ -87,7 +87,7 @@ $header.innerHTML = `<nav class="aa-nav">
 <div class="aa-nav-items">
   <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Home</a></span>
   
-  <span class="aa-nav-item"><a href="https://emulatoros.github.io" target="_top">Games</a></span>
+  <span class="aa-nav-item"><a href="https://emulatoros.github.io/games" target="_top">Games</a></span>
   <span class="aa-nav-item"><a href="https://r.emulatoros.ga/" target="_top">Search</a></span>
      <span class="aa-nav-item"><a href="/tests.html" target="_top">Tests</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Settings</a></span>
@@ -143,10 +143,10 @@ xhr.send();
 <div class="aa-mobile-overlay">
 <ul class="aa-mobile-nav-items">
   <li><a href="https://emulatoros.github.io/All-links/#top" target="_top">Home</a></li>
-  <li><a href="https://emulatoros.github.io/Quick.html" target="_top">Quick Links</a></li>
-  <li><a href="/faq.html" target="_top">FAQ</a></li>
-  <li><a href="/changelog.html" target="_top">Changelog</a></li>
-  <li><a href="/changelog.html" target="_top">Settings</a></li>
+  <li><a href="https://emulatoros.github.io/games" target="_top">Games</a></li>
+  <li><a href="https://r.emulatoros.ga/" target="_top">Search</a></li>
+  <li><a href="/tests.html" target="_top">Tests</a></li>
+  <li><a href="/settings.html" target="_top">Settings</a></li>
 </ul>
 </div>`;
 document.body.prepend($header);
