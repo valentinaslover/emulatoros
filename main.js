@@ -85,10 +85,10 @@ $header.innerHTML = `<nav class="aa-nav">
   <a href="/"><img class="aa-nav-icon" src="/assets/img/socials/ubg100.png" alt="Blank" /></a>
 </div>
 <div class="aa-nav-items">
-  <span class="aa-nav-item"><a href="https://emulatoros.github.io/home.html" target="_top">Home</a></span>
+  <span class="aa-nav-item"><a href="/home.html" target="_top">Home</a></span>
   
-  <span class="aa-nav-item"><a href="https://emulatoros.github.io/" target="_top">Games</a></span>
-  <span class="aa-nav-item"><a href="https://r.emulatoros.ga/" target="_top">Search</a></span>
+  <span class="aa-nav-item"><a href="/" target="_top">Games</a></span>
+  <span class="aa-nav-item"><a href="https://r2.emulatoros.ga/" target="_top">Search</a></span>
      <span class="aa-nav-item"><a href="/tests.html" target="_top">Tests</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Settings</a></span>
 
@@ -142,9 +142,9 @@ xhr.send();
 
 <div class="aa-mobile-overlay">
 <ul class="aa-mobile-nav-items">
-  <li><a href="https://emulatoros.github.io/home" target="_top">Home</a></li>
-  <li><a href="https://emulatoros.github.io/" target="_top">Games</a></li>
-  <li><a href="https://r.emulatoros.ga/" target="_top">Search</a></li>
+  <li><a href="/home" target="_top">Home</a></li>
+  <li><a href="/" target="_top">Games</a></li>
+  <li><a href="https://r2.emulatoros.ga/" target="_top">Search</a></li>
   <li><a href="/tests.html" target="_top">Tests</a></li>
   <li><a href="/settings.html" target="_top">Settings</a></li>
 </ul>
