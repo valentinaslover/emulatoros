@@ -13,300 +13,52 @@
     <script src="https://www.googletagmanager.com/gtag/js?id=G-NSZB9Q5L1N" async></script>
     <script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-NSZB9Q5L1N")</script>
     <style>
-        html {
-            scroll-behavior: smooth
-        }
-
-        body {
-            font-family: Syne, sans-serif
-        }
-
-        container {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto
-        }
-
-        .container {
-            display: flex
-        }
-
-        .image-container {
-            text-align: center;
-            width: 100%
-        }
-
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px
-        }
-
-        .text-container {
-            display: grid;
-            flex-direction: column;
-            align-items: start;
-            gap: 5px;
-            grid-template-columns: 1fr 1fr;
-            vertical-align: top
-        }
-
-        footer {
-            border-style: solid;
-            border-width: 2px
-        }
-
-        .footer {
-            border-style: solid;
-            border-width: 2px;
-            padding-bottom: 310px
-        }
-
-        .footer1 {
-            border-style: solid;
-            border-width: 2px;
-            padding-bottom: 90px
-        }
-
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #111
-        }
-
-        .navbar {
-            width: 85%;
-            margin: auto;
-            padding: 35px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between
-        }
-
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 10%
-        }
-
-        .overlay {
-            opacity: .8;
-            background-color: #ccc;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000
-        }
-
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin-top: 13%
-        }
-
-        img+button {
-            float: right
-        }
-
-        button {
-            width: 180px;
-            margin-left: 25%;
-            margin-right: 25%;
-            padding: 15px 0;
-            text-align: center;
-            margin: 20px 10px;
-            border-radius: 25px;
-            font-weight: 700;
-            border: 1px solid rgb(255, 255, 255, .2);
-            background: 0 0;
-            color: #fff;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            transition-duration: .3s
-        }
-
-        button:hover {
-            color: #ffffff !important;
-            text-decoration: none;
-            background-color: var(--ubg)
-        }
-
-        .text-box {
-            margin-left: 44vw;
-            margin-top: 42vh
-        }
-
-        button:hover,
-        button:link {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px #fff
-        }
-
-        button:active {
-            transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
-        }
-
-        .btn-white {
-            background-color: #fff;
-            color: #777
-        }
-
-        button::after {
-            content: "";
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-            border-radius: 100px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            transition: all .4s
-        }
-
-        .btn-white::after {
-            background-color: #fff
-        }
-
-        button:hover::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0
-        }
-
-        .btn-animated {
-            -webkit-animation: moveInBottom 5s ease-out;
-            animation: moveInBottom 5s ease-out;
-            -webkit-animation-fill-mode: backwards;
-            animation-fill-mode: backwards
-        }
-
+    html{scroll-behavior:smooth}
+        body{font-family:Syne,sans-serif}
+        container{margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px;width:100%}
+        .container{display:flex}
+        .image-container{text-align:center;width:100%}
+        .links-container{align-items:center;display:flex;flex-direction:column;gap:20px;justify-content:center}
+        .text-container{align-items:start;display:grid;flex-direction:column;gap:5px;grid-template-columns:1fr 1fr;vertical-align:top}
+        footer{border-style:solid;border-width:2px}
+        .footer{border-style:solid;border-width:2px;padding-bottom:310px}
+        .footer1{border-style:solid;border-width:2px;padding-bottom:90px}
+        body{background-color:#111;display:flex;flex-direction:column;margin:0;min-height:100vh}
+        .navbar{align-items:center;display:flex;justify-content:space-between;margin:auto;padding:35px 0;width:85%}
+        .center{display:block;margin-left:auto;margin-right:auto;width:10%}
+        .overlay{background-color:#ccc;height:100%;left:0;opacity:.8;position:fixed;top:0;width:100%;z-index:1000}
+        .logo-wrapper{align-items:center;display:flex;flex-direction:column;justify-content:center;margin-top:13%}
+        img+button{float:right}
+        button{background: 0 0; font-size: 90%;border: 1px solid rgb(255,255,255,.2); border-radius: 25px;  color: #fff; cursor: pointer; display: inline-grid; font-weight: 700; justify-items: center; margin: 20px 10px; overflow: hidden; padding: 15px 0; position: relative; text-align: center; transition-duration: .3s; width: 180px; justify-content: center;}
+        button:hover{background-color:var(--ubg);color:#ffffff!important;text-decoration:none}
+        .text-box{margin-left:44vw;margin-top:42vh}
+        button:hover,button:link{box-shadow:0 10px 20px #fff;transform:translateY(-3px)}
+        button:active{box-shadow:0 5px 10px rgba(0,0,0,.2);transform:translateY(-1px)}
+        img{border-radius:10%}
+        .btn-white{background-color:#fff;color:#777}
+        button::after{border-radius:100px;content:"";display:inline-block;height:100%;left:0;position:absolute;top:0;transition:all .4s;width:100%;z-index:-1}
+        .btn-white::after{background-color:#fff}
+        button:hover::after{opacity:0;transform:scaleX(1.4) scaleY(1.6)}
+        .btn-animated{-webkit-animation:moveInBottom 5s ease-out;-webkit-animation-fill-mode:backwards;animation:moveInBottom 5s ease-out;animation-fill-mode:backwards}
         @-webkit-keyframes moveInBottom {
-            0% {
-                opacity: 0;
-                transform: translateY(30px)
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0)
-            }
+        0%{opacity:0;transform:translateY(30px)}
+        100%{opacity:1;transform:translateY(0)}
         }
-
         @keyframes moveInBottom {
-            0% {
-                opacity: 0;
-                transform: translateY(30px)
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0)
-            }
+        0%{opacity:0;transform:translateY(30px)}
+        100%{opacity:1;transform:translateY(0)}
         }
-
-        .filter {
-            width: 180px;
-            margin-left: 25%;
-            margin-right: 25%;
-            padding: 15px 0;
-            text-align: center;
-            margin: 20px 10px;
-            border-radius: 25px;
-            font-weight: 700;
-            border: 4px solid rgb(255, 255, 255, .2);
-            background: 0 0;
-            color: #fff;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden
-        }
-
-        .logo {
-            width: 150px
-        }
-
-        .logo-wrapper .text {
-            font-size: 75px;
-            font-family: Roboto;
-            color: #fff
-        }
-
-        .main-input-button {
-            padding: 10px;
-            background: 0 0;
-            margin-left: 1px;
-            margin-right: 1px;
-            outline: 0;
-            margin-top: 2px;
-            color: #fff;
-            border: #fff solid 3px;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: .25s ease;
-            z-index: 10;
-            position: relative
-        }
-
-        .exploits {
-            display: flex;
-            columns: auto auto;
-            padding: 20px;
-            column-gap: 25px;
-            margin-top: 0;
-            flex-wrap: wrap;
-            height: 50%;
-            justify-content: center
-        }
-
-        footer a {
-            cursor: pointer
-        }
-
-        footer a:hover {
-            text-decoration: underline
-        }
-
-        form {
-            display: flex;
-            justify-content: center
-        }
-
-        form input {
-            background: 0 0;
-            font-family: inherit;
-            padding: 0 17px;
-            height: 48px;
-            border: 1px solid rgb(255, 255, 255, .2);
-            color: var(--text-color);
-            border-radius: 3px;
-            outline: 0;
-            width: 350px;
-            margin-top: 5px;
-            border-radius: 50px;
-            color: #fff
-        }
-
-        #gifs-rows img {
-            cursor: pointer
-        }
-
-        #gifs-rows .gif-file {
-            display: none
-        }
-    </style>
+        .filter{background:0 0;border:4px solid rgb(255,255,255,.2);border-radius:25px;color:#fff;cursor:pointer;font-weight:700;margin:20px 10px;overflow:hidden;padding:15px 0;position:relative;text-align:center;width:180px}
+        .logo{width:150px}
+        .logo-wrapper .text{color:#fff;font-family:Roboto;font-size:75px}
+        .main-input-button{background:0 0;border:#fff solid 3px;border-radius:3px;color:#fff;cursor:pointer;margin-left:1px;margin-right:1px;margin-top:2px;outline:0;padding:10px;position:relative;transition:.25s ease;z-index:10}
+        .exploits{column-gap:25px;columns:auto auto;display:flex;flex-wrap:wrap;height:50%;justify-content:center;margin-top:0;padding:20px}
+        footer a{cursor:pointer}
+        footer a:hover{text-decoration:underline}
+        form{display:flex;justify-content:center}
+        form input{background:0 0;border:1px solid rgb(255,255,255,.2);border-radius:3px;border-radius:50px;color:var(--text-color);color:#fff;font-family:inherit;height:48px;margin-top:5px;outline:0;padding:0 17px;width:350px}
+        #gifs-rows img{cursor:pointer}
+        #gifs-rows .gif-file{display:none}</style>
     <style>
         h1 {
             text-align: center;
@@ -433,33 +185,29 @@
       </div> 
       </form>
           </div> 
-        <script>
-      function openForm() {
-        document.getElementById("myForm").style.display = "block";
-      }
-          function openBug() {
-        document.getElementById("myForm2").style.display = "block";
-      }
-      
-      function closeForm() {
-       
-        
-        document.getElementById("myForm").style.display = "none";
-      }
-          function closeBug() {
-       
-        
-        document.getElementById("myForm2").style.display = "none";
-      }
+        <script>function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
           
+          function openBug() {
+            document.getElementById("myForm2").style.display = "block";
+          }
+          
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+          
+          function closeBug() {
+            document.getElementById("myForm2").style.display = "none";
+          }
           
           function hideRequest() {
-        document.getElementById("request").style.display = "none";
-      }
-          function hideBug() { document.getElementById("bug").style.display = "none";
-      }
-         
-      </script>
+            document.getElementById("request").style.display = "none";
+          }
+          
+          function hideBug() {
+            document.getElementById("bug").style.display = "none";
+          }</script>
         <button id="request" class="open-button" onclick="openForm()">Request a Game</button>
         <button id="bug" class="open-button2" onclick="openBug()">Report A Bug</button>
         </div>
@@ -471,6 +219,7 @@
       </a>
     </div>
      <a href=https://github.com/EmulatorOS/EmulatorOS.github.io>Github</a>
+     <br>
      <a href=/downloadgamedata/>Download or Import Game Data</a>
      
       </div>
@@ -623,6 +372,7 @@
             <button onclick='window.location.href="/games/flappy"' type=button class="ry plat"><img height=150 src="/img/flappy.webp " width=150>Flappy Bird</button>
             <button onclick='window.location.href="/uv/candy"' type=button class="ot"><img height=150 src="/img/crush.webp " width=150>Candy Crush Saga</button>
             <button onclick='window.location.href="/uv/candy2"' type=button class="ot"><img height=150 src="/img/candy2.webp " width=150>Candy Clicker 2</button>
+            <button onclick='window.location.href="/games/assessment"' type=button class="hor"><img height=150 src="/img/assessment.webp " width=150>Assessment Examination</button>
         </div>
     </div>
     </div>
