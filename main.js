@@ -9,6 +9,8 @@ if (window.localStorage.hasOwnProperty("title")) {
 //Fetch and set from user's input
 if (window.localStorage.hasOwnProperty("icon")) {
   document.querySelector("link[rel=icon]").href = local_icon;
+} else {
+  document.querySelector("link[rel=icon]").href = '/assets/lol.png';
 }
 
 //Add Google Analytics
