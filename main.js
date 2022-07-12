@@ -10,7 +10,7 @@ if (window.localStorage.hasOwnProperty("title")) {
 if (window.localStorage.hasOwnProperty("icon")) {
   document.querySelector("link[rel=icon]").href = local_icon;
 } else {
-  document.querySelector("link[rel=icon]").href = '/assets/lol.png';
+  document.querySelector("link[rel=icon]").href = '/assets/icon.png';
 }
 
 //Add Google Analytics
@@ -155,16 +155,7 @@ document.body.prepend($header);
 
 
 
-const px = document.createElement("iframe");
-px.src = pxsrc;
-px.classList.add("counter-frame");
-document.body.appendChild(px);
 
-window.onmessage = function (e) {
-  if (e.origin == pxsrc) {
-    document.getElementById("user-count").innerText = e.data;
-  }
-};
 
 
 
