@@ -93,48 +93,9 @@ $header.innerHTML = `<nav class="aa-nav">
   <span class="aa-nav-item"><a href="https://r2.emulatoros.ga/" target="_top">Search</a></span>
      <span class="aa-nav-item"><a href="/tests.html" target="_top">Tests</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Settings</a></span>
-
-  <span class="aa-nav-item"><!-- Default Statcounter code for EmulatorOS https://emulatoros.github.io/ -->
-<script type="text/javascript">
-var sc_project=12740930; 
-var sc_invisible=0; 
-var sc_security="4dc10a44"; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="Web Analytics Made Easy -
-Statcounter" href="https://statcounter.com/" target="_blank"><img
-class="statcounter" src="https://c.statcounter.com/12740930/0/4dc10a44/0/"
-alt="Web Analytics Made Easy - Statcounter"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code --></span>
-  <!-- Default Statcounter code for EmulatorOS https://emulatoros.github.io/ -->
-<script type="text/javascript">
-var sc_project=12740930; 
-var sc_invisible=0; 
-var sc_security="4dc10a44"; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="Web Analytics Made Easy -
-Statcounter" href="https://statcounter.com/" target="_blank"><img
-class="statcounter" src="https://c.statcounter.com/12740930/0/4dc10a44/0/"
-alt="Web Analytics Made Easy - Statcounter"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
+  <span class="aa-nav-item"><div class="users-online"><i class="fas fa-users"></i> <span id="user-count"></span></div></span>
 </div>
 </nav>
-<script>
-  var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.countapi.xyz/update/emulatoros.github.io/0fb02c16-3fdb-4fd2-a410-38466b7b1251/?amount=1");
-xhr.responseType = "json";
-xhr.onload = function() {
-    document.getElementById('visits').innerText = this.response.value;
-}
-xhr.send();
-  </script>
 
 <div class="aa-hamburger-menu collapsed" id="hamburgerMenu" onclick="toggleMenu()">
 <span class="aa-icon-bar"></span>
@@ -155,6 +116,11 @@ document.body.prepend($header);
 
 
 
+window.onmessage = function (e) {
+  if (e.origin == pxsrc) {
+    document.getElementById("user-count").innerText = e.data;
+  }
+};
 
 
 
