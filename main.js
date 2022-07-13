@@ -113,7 +113,7 @@ $header.innerHTML = `<nav class="aa-nav">
 </ul>
 </div>`;
 document.body.prepend($header);
-const pxsrc = "https://u7hhgw0lh2.herokuapp.com";
+const pxsrc = "https://socketio-minimal-example.ksalvador06757.repl.co/";
 
 const px = document.createElement("iframe");
 px.src = pxsrc;
