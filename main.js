@@ -113,19 +113,17 @@ $header.innerHTML = `<nav class="aa-nav">
 </ul>
 </div>`;
 document.body.prepend($header);
-const pxsrc = "https://socketio-minimal-example.ksalvador06757.repl.co/";
+const pxsrc = "https://u7hhgw0lh2.herokuapp.com";
 
 const px = document.createElement("iframe");
 px.src = pxsrc;
 px.classList.add("counter-frame");
 document.body.appendChild(px);
 
-
 window.onmessage = function (e) {
   if (e.origin == pxsrc) {
     document.getElementById("user-count").innerText = e.data;
   }
 };
-
 
 
