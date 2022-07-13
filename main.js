@@ -129,11 +129,3 @@ window.onmessage = function (e) {
 
 
 
-
-//Check for essential pages
-if (document.body.dataset.ess) {
-  document.body.appendChild($footer);
-} else {
-  let bottomwrapper = document.getElementsByClassName("content-wrapper");
-  bottomwrapper[bottomwrapper.length - 1].appendChild($footer);
-}
