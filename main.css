@@ -603,12 +603,11 @@ a:hover {
 
   .footer__visits{
 	font-weight: 500;
-	margin-top: 25px;
+	margin-top: 10px;
 	display: grid;
 	grid-auto-flow: column;
     gap: 0.25rem;
     align-items: baseline;
-    width: max-content;
 	color: white;
 	transition: 0.3s;
 	cursor: pointer;
