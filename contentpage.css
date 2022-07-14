@@ -12,7 +12,7 @@ ins.adsbygoogle[data-ad-status=unfilled] {
     padding-top: 3%;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    background: rgba(121,121,121,.35);
+    background: var(--content);
     box-shadow: rgba(0,0,0,.24)0 6px 12px 0
 }
 
