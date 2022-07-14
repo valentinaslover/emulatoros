@@ -9,6 +9,7 @@
 	--scroll-active: #717171;
 	--scrollbg: #191a21;
 	--users-online: #49ff0d;
+	--bg-color: #000000;
 }
 
 /* =================== Main =================== */
@@ -35,7 +36,7 @@ body{
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	scroll-behavior: smooth;
-	background-color: #1f2029;
+	background-color: var(--bg-color);
   	/* Create the parallax scrolling effect */
   	background: url("/assets/img/bg.svg");
  	background-attachment: fixed;

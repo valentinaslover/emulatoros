@@ -27,7 +27,7 @@ document.head.append(gascript, inlinegascript);
 //Semantic - Major.Minor.Patch
 const sArr = [`1`, `4`, `0`];
 const version = "v" + sArr.join(".");
-
+document.body.style.backgroundColor = "var(--bg-color)";
 //Fetch visit count
 const visitapi = "https://api.countapi.xyz/update/emulatoros.github.io/8f40b809-76a1-46fd-b76e-6cbd8827df44/?amount=1";
 fetch(visitapi)
