@@ -7,7 +7,7 @@ nostyle.onerror = function handleScriptError() {
   console.log('error loading script');
 };
 
-document.body.appendChild(script);
+document.head.appendChild(nostyle);
 	}
   
 
