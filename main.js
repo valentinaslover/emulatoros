@@ -83,7 +83,7 @@ $(window).scroll(function () {
 //Prepend Navbar (using innerHTML because there's no escaped input)
 const $header = document.createElement("header");
 $header.innerHTML = `<nav class="aa-nav">
-<span class="aa-nav-item" style="
+<div style="
 position: relative;
 float: left;
 margin: 0;
@@ -93,8 +93,10 @@ list-style: none;
 transition: 0.2s linear all;
 }
 ">
+<span class="aa-nav-item" >
   <div class="users-online"><i class="fas fa-users"></i> <span id="user-count">13</span></div>
 </span>
+</div>
 <div class="aa-nav-items">
   <span class="aa-nav-item"><a href="/home.html" target="_top">Home</a></span>
   
