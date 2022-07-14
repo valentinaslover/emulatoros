@@ -29,7 +29,7 @@ const sArr = [`1`, `4`, `0`];
 const version = "v" + sArr.join(".");
 document.body.style.backgroundColor = "var(--bg-color)";
 //Fetch visit count
-const visitapi = "https://api.countapi.xyz/update/emulatoros.github.io/8f40b809-76a1-46fd-b76e-6cbd8827df44/?amount=1";
+const visitapi = "https://api.countapi.xyz/update/emulatoros.github.io/78c84613-3752-436e-ae7c-29f94d1fc15f/?amount=1";
 fetch(visitapi)
 .then((res) => res.json())
 .then((res) => {
