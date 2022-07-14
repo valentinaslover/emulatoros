@@ -6,8 +6,8 @@ nostyle.text = `var count_particles, stats, update; particlesJS("particles-js", 
 nostyle.onerror = function handleScriptError() {
   console.log('error loading script');
 };
+document.head.appendChild(nostyle)
 
-document.head.appendChild(nostyle);
 	}
   
 
