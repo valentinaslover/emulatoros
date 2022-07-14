@@ -124,7 +124,7 @@ window.onmessage = function (e) {
     document.getElementById("user-count").innerText = e.data;
   
 };
-function loadTheme(pal)//function to load pallets
+function loadPallet(pal)//function to load pallets
 {
   sheet = document.querySelector(':root');
   index = pal.split(";");
@@ -137,22 +137,22 @@ function loadTheme(pal)//function to load pallets
   }
   return sheet;
 }
-theme = "bg/#1F2029;detextcol/#222;sharebg/#f2f2f2;sharehover/#E1E1E1;searchborder/#d9d9d9;searchbg/#f5f5f5;findtext/#666;botlinks/#e4e4e4;searchhovbg/#f8f8f8;searchhovshad/rgba(0, 0, 0, 0.1);searchhovtext/#333;overlaybg/#ccc";
+pallet = "bg/#fff;detextcol/#222;sharebg/#f2f2f2;sharehover/#E1E1E1;searchborder/#d9d9d9;searchbg/#f5f5f5;findtext/#666;botlinks/#e4e4e4;searchhovbg/#f8f8f8;searchhovshad/rgba(0, 0, 0, 0.1);searchhovtext/#333;overlaybg/#ccc";
 
 document.addEventListener('DOMContentLoaded', function () 
 {
-  if (localStorage.getItem("styletheme") !== ""){
-	  theme = localStorage.getItem("styletheme");
+  if (localStorage.getItem("stylepallet") !== ""){
+	  pallet = localStorage.getItem("stylepallet");
 	} 
 	else {
-	  localStorage.setItem("styletheme", theme)
+	  localStorage.setItem("stylepallet", pallet)
 	}
-  loadTheme(theme);
+  loadPallet(pallet);
 });
-function saveTheme(pal)
+function savePallet(pal)
 {
   localStorage.setItem("stylepallet", pal)
-  loadTheme(pal);
+  loadPallet(pal);
   window.location.href=window.location.href
   window.location.reload()
 }
