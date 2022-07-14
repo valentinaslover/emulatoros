@@ -147,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function ()
 {
   if (localStorage.getItem("stylepallet") !== ""){
 	  pallet = localStorage.getItem("stylepallet");
-    normal();
 	} 
 	else {
 	  localStorage.setItem("stylepallet", pallet)
