@@ -26,7 +26,18 @@
           background-color: #000000;
       }
 
-
+	  #button{background: 0 0; font-size: 90%;border: 1px solid rgb(255,255,255,.2); border-radius: 25px;  color: #fff; cursor: pointer; display: inline-grid; font-weight: 700; justify-items: center; margin: 20px 10px; overflow: hidden; padding: 15px 0; position: relative; text-align: center; transition-duration: .3s; width: 180px; justify-content: center;}
+        #button:hover{background-color:var(--ubg);color:#ffffff!important;text-decoration:none}
+        .text-box{margin-left:44vw;margin-top:42vh}
+        #button:hover,#button:link{box-shadow:0 10px 20px #fff;transform:translateY(-3px)}
+        #button:active{box-shadow:0 5px 10px rgba(0,0,0,.2);transform:translateY(-1px)}
+        
+        .btn-white{background-color:#fff;color:#777}
+        #button::after{border-radius:100px;content:"";display:inline-block;height:100%;left:0;position:absolute;top:0;transition:all .4s;width:100%;z-index:-1}
+        .btn-white::after{background-color:#fff}
+        #button:hover::after{opacity:0;transform:scaleX(1.4) scaleY(1.6)}
+        .btn-animated{-webkit-animation:moveInBottom 5s ease-out;-webkit-animation-fill-mode:backwards;animation:moveInBottom 5s ease-out;animation-fill-mode:backwards}
+        
 
     </style>
 </head>
@@ -62,8 +73,8 @@
 	
 	</div>
 	<div class="themebuttons">
-		<button onclick="savePallet('ubg/#800080;bg/#1F2029;footerbg/#170E1F;link/#0084ff;scroll-active/#717171;scrollbg/#191a21;users-online/#49ff0d;')">Default</button>
-		<button onclick="savePallet('ubg/#180f89;bg/#1F2029;footerbg/#170E1F;link/#0084ff;scroll-active/#717171;scrollbg/#191a21;users-online/#49ff0d;')">Blue</button>
+		<button id="button" onclick="savePallet('ubg/#800080;bg/#1F2029;footerbg/#170E1F;link/#0084ff;scroll-active/#717171;scrollbg/#191a21;users-online/#49ff0d;')">Default</button>
+		<button id="button" onclick="savePallet('ubg/#180f89;bg/#1F2029;footerbg/#170E1F;link/#0084ff;scroll-active/#717171;scrollbg/#191a21;users-online/#49ff0d;')">Blue</button>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
