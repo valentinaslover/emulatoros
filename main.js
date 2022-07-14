@@ -84,7 +84,7 @@ $(window).scroll(function () {
 const $header = document.createElement("header");
 $header.innerHTML = `<nav class="aa-nav">
 <div class="aa-nav-icon-container">
-  <a href="/"><img class="aa-nav-icon" src="/assets/img/socials/ubg100.png" alt="Blank" /></a>
+  <div class="users-online"><i class="fas fa-users"></i> <span id="user-count"></span></div>
 </div>
 <div class="aa-nav-items">
   <span class="aa-nav-item"><a href="/home.html" target="_top">Home</a></span>
@@ -93,8 +93,7 @@ $header.innerHTML = `<nav class="aa-nav">
   <span class="aa-nav-item"><a href="https://r2.emulatoros.ga/" target="_top">Search</a></span>
      <span class="aa-nav-item"><a href="/tests.html" target="_top">Tests</a></span>
   <span class="aa-nav-item"><a href="/settings.html" target="_top">Settings</a></span>
-  <span class="aa-nav-item"><div class="users-online"><i class="fas fa-users"></i> <span id="user-count"></span></div></span>
-</div>
+  </div>
 </nav>
 
 <div class="aa-hamburger-menu collapsed" id="hamburgerMenu" onclick="toggleMenu()">
