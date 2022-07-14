@@ -66,6 +66,7 @@ $(window).scroll(function () {
     $(".aa-nav").addClass("aa-small-nav");
     $(".aa-nav-icon").addClass("aa-small-nav-icon");
     $(".aa-nav-items").addClass("aa-small-nav-items");
+    $(".aa-nav-items2").addClass("aa-small-nav-items");
     $(".aa-hamburger-menu").addClass("aa-small-hamburger-menu");
     isExpanded = false;
   }
@@ -74,6 +75,7 @@ $(window).scroll(function () {
     $(".aa-nav").removeClass("aa-small-nav");
     $(".aa-nav-icon").removeClass("aa-small-nav-icon");
     $(".aa-nav-items").removeClass("aa-small-nav-items");
+    $(".aa-nav-items2").removeClass("aa-small-nav-items");
     $(".aa-hamburger-menu").removeClass("aa-small-hamburger-menu");
     $(".aa-nav-item > a").css("color", "white");
     isExpanded = true;
@@ -83,16 +85,7 @@ $(window).scroll(function () {
 //Prepend Navbar (using innerHTML because there's no escaped input)
 const $header = document.createElement("header");
 $header.innerHTML = `<nav class="aa-nav">
-<div style="
-position: relative;
-float: left;
-margin: 0;
-padding-right: 20px;
-line-height: 90px;
-list-style: none;
-transition: 0.2s linear all;
-}
-">
+<div class="aa-nav-items2">
 <span class="aa-nav-item" >
   <div class="users-online"><i class="fas fa-users"></i> <span id="user-count">13</span></div>
 </span>
