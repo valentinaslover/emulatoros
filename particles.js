@@ -1,4 +1,4 @@
-particlesJS("particles-js", {
+tsParticles.load('particles-js', {
   particles: {
     number: { value: 47, density: { enable: true, value_area: 500 } },
     color: { value: "#800080" },
