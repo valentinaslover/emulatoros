@@ -84,10 +84,14 @@ $(window).scroll(function () {
 const $header = document.createElement("header");
 $header.innerHTML = `<nav class="aa-nav">
 <span class="aa-nav-item" style="
-  
-    float: left;
-    line-height: 90px;
-    transition: 0.2s linear all;
+position: relative;
+float: left;
+margin: 0;
+padding-right: 20px;
+line-height: 90px;
+list-style: none;
+transition: 0.2s linear all;
+}
 ">
   <div class="users-online"><i class="fas fa-users"></i> <span id="user-count">13</span></div>
 </span>
