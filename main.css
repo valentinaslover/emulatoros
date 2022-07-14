@@ -289,10 +289,12 @@ a:hover {
   
   .aa-nav-item > .users-online {
 	text-decoration: none;
-	font-size: 20px;
-	transition: 0.2s linear all;
-	color: var(--users-online) !important;
-  }
+    font-size: 20px;
+    transition: 0.2s linear all;
+    color: var(--users-online) !important;
+    font-family: Arimo;
+}
+  
   
   .aa-nav-item > a:hover {
 	color: var(--ubg) !important;
