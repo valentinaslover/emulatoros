@@ -122,7 +122,6 @@ px.classList.add("counter-frame");
 document.body.appendChild(px);
 
 window.onmessage = function (e) {
-  if (e.origin == pxsrc) {
     console.log(edata)
     document.getElementById("user-count").innerText = e.data;
   }
