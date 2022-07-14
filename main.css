@@ -611,6 +611,7 @@ a:hover {
 	color: white;
 	transition: 0.3s;
 	cursor: pointer;
+	justify-content: center;
   }
 
   .footer__visits:hover{
