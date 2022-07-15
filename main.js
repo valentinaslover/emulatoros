@@ -160,11 +160,4 @@ function savePallet(pal)
   window.location.href=window.location.href
   window.location.reload()
 }
-function particleColo(color)
-{
-  window.localStorage.setItem("particletheme", color)
-}
-function pselectio(lin)
-{
-  window.localStorage.setItem("plink", lin)
-}
+
