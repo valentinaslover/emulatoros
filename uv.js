@@ -8,10 +8,7 @@ document.addEventListener('DOMContentLoaded', function ()
     r2Link();
 	} 
 });
-console.log(`${gamelink}.`);
 console.log(game.dataset.gamelink);
-localStorage.setItem("plink", "r2");
-r2Link();
 function r2Link() 
 {
  
