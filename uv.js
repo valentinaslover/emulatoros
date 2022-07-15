@@ -4,12 +4,14 @@ const gamelink = game.dataset.gamelink;
 document.addEventListener('DOMContentLoaded', function () 
 {
   if (localStorage.getItem("plink") !== ""){
-    localStorage.setItem("plink", '"https://r2.emulatoros.ga"');
+    localStorage.setItem("plink", 'https://r2.emulatoros.ga');
 	} 
 });
-localStorage.setItem('plink', '"https://r2.emulatoros.ga"');
-var proxlink = JSON.parse(localStorage.getItem('plink'));
-console.log(proxlink);
-console.log()
 
-document.getElementById("iframesrc").src = proxlink;
+document.addEventListener('DOMContentLoaded', function () 
+{
+  if (localStorage.getItem("plink") !== "https://r2.emulatoros.ga"){
+    var site = 'https://r2.emulatoros.ga'+${gamelink};
+    document.getElementById('gameiframe').src = site;
+	} 
+});
