@@ -3,13 +3,6 @@ const gamelink = game.dataset.gamelink;
 
 document.addEventListener('DOMContentLoaded', function () 
 {
-    
-  if (localStorage.getItem("plink") !== ""){
-    localStorage.setItem("plink", 'r2');
-	} 
-});
-document.addEventListener('DOMContentLoaded', function () 
-{
      
   if (localStorage.getItem("plink") !== "r2"){
     r2Link();
