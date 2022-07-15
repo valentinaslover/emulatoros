@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function ()
     localStorage.setItem("plink", "r2.emulatoros.ga");
 	} 
 });
-var proxlink = localStorage.getItem("plink");
+var proxlink = JSON.parse(window.localStorage.getItem('plink'));
+console.log(proxlink);
 
-var xy = document.getElementById("iframesrc").src = proxlink;
+document.getElementById("iframesrc").innerHTML = proxlink;
