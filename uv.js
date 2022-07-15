@@ -9,4 +9,4 @@ document.addEventListener('DOMContentLoaded', function ()
 });
 var proxlink = localStorage.getItem("plink");
 
-document.getElementById("iframesrc").src = proxlink;
+var xy = document.getElementById("iframesrc").src = proxlink;
