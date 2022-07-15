@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function ()
 });
 console.log(`${gamelink}.`);
 localStorage.setItem("plink", 'r2');
+r2Link();
 function r2Link() 
 {
  
