@@ -1,4 +1,4 @@
-addEventListener("load", hideparticles());
+addEventListener("load", bluep());
 document.addEventListener('DOMContentLoaded', function () 
 {
   if (localStorage.getItem("particletheme") === null) {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function ()
     console.log('null');
   }  
 });
-document.addEventListener('DOMContentLoaded', function(){
+function bluep(){
 if (localStorage.getItem("particletheme") !== "blue"){
 	  var scriptElm = document.createElement('script');
 scriptElm.setAttribute('id', 'class-name2');
@@ -19,7 +19,7 @@ scriptElm.appendChild(inlineCode);
 document.body.appendChild(scriptElm);
 console.log('blue');
 }
-});
+};
 document.addEventListener('DOMContentLoaded', function()
 { if (localStorage.getItem("particletheme") !== "normal3"){
   var scriptElm = document.createElement('script');
@@ -34,14 +34,3 @@ console.log('normal');
 
 }}
 )
-function hideparticles() {
-  
-  if (localStorage.getItem("particletheme") !== "hide"){
-    console.log('no-particles');
-    
-    
-var div3 = document.getElementById('class-name3')
-div3.remove();
-}
-console.log('run hide-particles');
-};
