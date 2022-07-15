@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function ()
     localStorage.setItem("plink", 'r2');
 	} 
 });
-console.log(plink);
 console.log(`${gamelink}.`);
 localStorage.setItem("plink", 'r2');
 function r2Link() 
