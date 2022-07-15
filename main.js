@@ -164,7 +164,7 @@ function particleColor(color)
 {
   localStorage.setItem("particletheme", color)
 }
-function pselection(link)
+function pselection(lin)
 {
-  localStorage.setItem("plink", link)
+  localStorage.setItem("plink", lin)
 }
