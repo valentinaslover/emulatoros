@@ -10,4 +10,4 @@ document.addEventListener('DOMContentLoaded', function ()
 var proxlink = JSON.parse(window.localStorage.getItem('plink'));
 console.log(proxlink);
 
-document.getElementById("iframesrc").innerHTML = proxlink;
+document.getElementById("iframesrc").src = proxlink;
