@@ -33,7 +33,7 @@ const visitapi = "https://api.countapi.xyz/update/emulatoros.github.io/78c84613-
 fetch(visitapi)
 .then((res) => res.json())
 .then((res) => {
-  document.getElementById("visit-count").innerText = " " + parseInt(res.value).toLocaleString("en-US"); //Add commas
+  document.getElementById("visit-count").innerText = parseInt(res.value).toLocaleString("en-US"); //Add commas
 });
 
 //Turn off GSAP null warnings (if present)
