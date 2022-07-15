@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function ()
     localStorage.setItem("plink", '"https://r2.emulatoros.ga"');
 	} 
 });
-localStorage.setItem('plink', 'https://r2.emulatoros.ga');
+localStorage.setItem('plink', '"https://r2.emulatoros.ga"');
 var proxlink = JSON.parse(localStorage.getItem('plink'));
 console.log(proxlink);
 console.log()
