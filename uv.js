@@ -19,7 +19,7 @@ console.log(`${gamelink}.`);
 localStorage.setItem("plink", 'r2');
 function r2Link() 
 {
-  if (localStorage.getItem("plink") !== "r2"){
+ 
     
         console.log(`start change link`);
         var site = 'https://r2.emulatoros.ga'+ '${gamelink}';
@@ -27,5 +27,5 @@ function r2Link()
     document.getElementById('gameiframe').src = site;
     console.log(`finish change link`);
     
-	} 
+	
 }
