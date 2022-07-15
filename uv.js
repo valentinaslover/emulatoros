@@ -17,7 +17,7 @@ function r2Link()
  
     
         console.log(`start change link`);
-        var site = 'https://r2.emulatoros.ga'+ game.dataset.gamelink;
+        var site = 'https://r2.emulatoros.ga'+ "/" + game.dataset.gamelink;
         ;
 
     document.getElementById('gameiframe').src = site;
