@@ -17,8 +17,11 @@ scriptElm.appendChild(inlineCode);
 document.body.appendChild(scriptElm);	
 console.log('blue');
 
-} else if (localStorage.getItem("particletheme") !== "noparticles"){
-  console.log('no-particles');
-  
 } 
+  
+} );
+document.addEventListener('DOMContentLoaded', function () {
+  if (localStorage.getItem("particletheme") !== "noparticles"){
+    console.log('no-particles');
+}
 });
