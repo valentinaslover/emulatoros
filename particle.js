@@ -6,10 +6,3 @@
   gamewrap.appendChild(ejsscript);
 	
   
-
-  document.addEventListener('DOMContentLoaded', function () 
-  {
-    if (localStorage.getItem("stylepallet") !== ""){
-      normal();
-    } 
-  });
