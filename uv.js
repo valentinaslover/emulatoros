@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', function ()
 {
   if (localStorage.getItem("plink") !== "https://r2.emulatoros.ga"){
     var site = 'https://r2.emulatoros.ga'+ '${gamelink}';
-    document.getElementById('gameiframe').src = site;
+    game.src = site;
 	} 
 });
