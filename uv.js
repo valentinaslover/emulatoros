@@ -2,7 +2,7 @@ const game = document.querySelector("#gameiframe");
 const gamelink = game.dataset.gamelink;
 document.addEventListener('DOMContentLoaded', function () 
 {
-  if (localStorage.getItem("plink") !== "r2"){
+  if (localStorage.getItem("plink") !== "r2link"){
     r2Link();
   }
 });
