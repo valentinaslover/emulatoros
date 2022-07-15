@@ -1,12 +1,10 @@
 const game = document.querySelector("#gameiframe");
 const gamelink = game.dataset.gamelink;
-
 document.addEventListener('DOMContentLoaded', function () 
 {
-     
   if (localStorage.getItem("plink") !== "r2"){
     r2Link();
-	} 
+  }
 });
 console.log(game.dataset.gamelink);
 function r2Link() 
