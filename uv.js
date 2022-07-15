@@ -4,7 +4,7 @@ const gamelink = game.dataset.gamelink;
 document.addEventListener('DOMContentLoaded', function () 
 {
   if (localStorage.getItem("plink") !== ""){
-    localStorage.setItem("plink", 'https://r2.emulatoros.ga');
+    localStorage.setItem("plink", '"https://r2.emulatoros.ga"');
 	} 
 });
 localStorage.setItem('plink', 'https://r2.emulatoros.ga');
