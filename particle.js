@@ -21,7 +21,8 @@ console.log('blue');
   
 } );
 document.addEventListener('DOMContentLoaded', function () {
+  console.log('no-particles');
   if (localStorage.getItem("particletheme") !== "noparticles"){
-    console.log('no-particles');
+    
 }
 });
