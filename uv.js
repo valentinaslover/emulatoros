@@ -11,7 +11,11 @@ console.log(`${gamelink}.`);
 document.addEventListener('DOMContentLoaded', function () 
 {
   if (localStorage.getItem("plink") !== "https://r2.emulatoros.ga"){
-    var site = 'https://r2.emulatoros.ga'+ '${gamelink}';
-    game.src = site;
+    setTimeout(function(){
+        var site = 'https://r2.emulatoros.ga'+ '${gamelink}';
+
+    document.getElementById('gameiframe').src = site;
+    }, 1000);
+    
 	} 
 });
