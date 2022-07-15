@@ -18,7 +18,13 @@ div3.remove();
         console.log('blue');
     }
     });
-    
+
+    document.addEventListener('DOMContentLoaded', function(){
+        if (localStorage.getItem("particletheme") !== 'hide'){
+            console.log('blue2');
+    }
+    });
+
         document.addEventListener('DOMContentLoaded', function(){
             if (localStorage.getItem("particletheme") !== 'normal2'){
             var scriptElm = document.createElement('script');
