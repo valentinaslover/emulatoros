@@ -11,15 +11,7 @@ console.log('normal');
   } 
 	
 });
-document.addEventListener('DOMContentLoaded', function () 
-{
-  if (localStorage.getItem("particletheme") !== "noparticles"){
-	  console.log('no-particles');
-    var div = document.getElementById('class-name')
-    div.remove();
-  } 
-	
-});
+
 document.addEventListener('DOMContentLoaded', function () 
 {
   if (localStorage.getItem("particletheme") !== "blue"){
@@ -29,5 +21,14 @@ var inlineCode = document.createTextNode('var count_particles,stats,update;parti
 scriptElm.appendChild(inlineCode); 
 document.body.appendChild(scriptElm);	} 
 console.log('blue');
+	
+});
+document.addEventListener('DOMContentLoaded', function () 
+{
+  if (localStorage.getItem("particletheme") !== "noparticles"){
+	  console.log('no-particles');
+    var div = document.getElementById('class-name')
+    div.remove();
+  } 
 	
 });
