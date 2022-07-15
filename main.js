@@ -117,7 +117,7 @@ $header.innerHTML = `<nav class="aa-nav">
 </div>`;
 document.body.prepend($header);
 
-const pxsrc = "https://socketio-minimal-example.testsds.repl.co/";
+const pxsrc = "https://socketio.emulatoros.ga/";
 
 const px = document.createElement("iframe");
 px.src = pxsrc;
