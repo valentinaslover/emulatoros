@@ -18,18 +18,7 @@ div3.remove();
         console.log('blue');
     }
     });
-    document.addEventListener('DOMContentLoaded', function(){
-    if (localStorage.getItem("particletheme") !== 'blue'){
-        
-    console.log('nopRTB');
-    }
-    });
-    document.addEventListener('DOMContentLoaded', function(){
-        if (localStorage.getItem("particletheme") !== 'normal3'){
-            
-        console.log('nopRT3');
-        }
-        });
+    
         document.addEventListener('DOMContentLoaded', function(){
             if (localStorage.getItem("particletheme") !== 'normal2'){
             var scriptElm = document.createElement('script');
