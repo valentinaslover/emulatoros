@@ -19,9 +19,6 @@ console.log('blue');
 
 } else if (localStorage.getItem("particletheme") !== "noparticles"){
   console.log('no-particles');
-  var div2 = document.getElementById('class-name2')
-  div2.remove();
-  var div3 = document.getElementById('class-name3')
-  div3.remove();
+  
 } 
 });
