@@ -162,9 +162,9 @@ function savePallet(pal)
 }
 function particleColo(color)
 {
-  localStorage.setItem("particletheme", color)
+  window.localStorage.setItem("particletheme", color)
 }
 function pselectio(lin)
 {
-  localStorage.setItem("plink", lin)
+  window.localStorage.setItem("plink", lin)
 }
