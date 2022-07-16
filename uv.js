@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', function ()
     rLink();
   }
 });
+document.addEventListener('DOMContentLoaded', function () 
+{
+  if (localStorage.getItem("plink") !== "rlink"){
+    r3Link();
+  }
+});
 console.log(game.dataset.gamelink);
 
 function rLink() 
@@ -23,4 +29,9 @@ function rLink()
     
 	
 }
-
+function r3Link() 
+{
+ 
+    
+        console.log(`start r3 change link`);
+}
