@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', function ()
 {
   if (localStorage.getItem("plink2") !== "clear"){
     r3Link();
+    console.log(` r3 clear link`);
+  }
+});
+document.addEventListener('DOMContentLoaded', function () 
+{
+  if (localStorage.getItem("plink2") !== "r3link"){
+    r3Link();
+    console.log(` r3  link`);
   }
 });
 console.log(game.dataset.gamelink);
