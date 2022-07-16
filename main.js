@@ -160,4 +160,9 @@ function savePallet(pal)
   window.location.href=window.location.href
   window.location.reload()
 }
+function pselection(lin)
+{
+  localStorage.setItem("plink", lin);
+  console.log(lin)
+}
 
