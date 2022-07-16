@@ -24,9 +24,13 @@ function rLink()
         console.log(`start r change link`);
         var site = 'https://r.emulatoros.ga'+ "/" + game.dataset.gamelink;
         ;
-
-    document.getElementById('gameiframe').src = site;
-    document.getElementById('gameiframe').contentWindow.location.reload();
+game.remove();
+var iframeElm = document.createElement('iframe');
+            iframeElm.setAttribute('id', 'riframe');
+            iframeElm.setAttribute('allowfullscreen', 'true')
+            iframeElm.setAttribute('scrolling', 'no')
+    iframeElm.src = site;
+    container.prepend(iframeElm);
     console.log(`finish r change link`);
     
 	
@@ -47,5 +51,5 @@ var iframeElm = document.createElement('iframe');
     container.prepend(iframeElm);
     
     
-    console.log(`finish r change link`);
+    console.log(`finish r3 change link`);
 }
