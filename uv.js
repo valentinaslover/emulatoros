@@ -42,4 +42,10 @@ function r3Link()
  
     
         console.log(`start r3 change link`);
+        var site = 'https://r3.emulatoros.ga'+ "/" + game.dataset.gamelink;
+        ;
+
+    document.getElementById('gameiframe').src = site;
+    document.getElementById('gameiframe').contentWindow.location.reload();
+    console.log(`finish r change link`);
 }
