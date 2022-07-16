@@ -1,5 +1,6 @@
 const game = document.querySelector("#gameiframe");
 const gamelink = game.dataset.gamelink;
+const container = document.querySelector(".content-container");
 
 document.addEventListener('DOMContentLoaded', function () 
 {
@@ -44,8 +45,12 @@ function r3Link()
         console.log(`start r3 change link`);
         var site = 'https://r3.emulatoros.ga'+ "/" + game.dataset.gamelink;
         ;
-
-    document.getElementById('gameiframe').src = site;
-    document.getElementById('gameiframe').contentWindow.location.reload();
+game.remove();
+var iframeElm = document.createElement('iframe');
+            iframeElm.setAttribute('id', 'r3iframe');
+            iframeElm.setAttribute('allowfullscreen scrolling', 'no')
+    iframeElm.src = site;
+    container.appendChild(scriptElm);
+    
     console.log(`finish r change link`);
 }
