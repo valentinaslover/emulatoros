@@ -51,7 +51,7 @@ var iframeElm = document.createElement('iframe');
             iframeElm.setAttribute('allowfullscreen', 'true')
             iframeElm.setAttribute('scrolling', 'no')
     iframeElm.src = site;
-    container.appendChild(scriptElm);
+    container.appendChild(iframeElm);
     
     
     console.log(`finish r change link`);
