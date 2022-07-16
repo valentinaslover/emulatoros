@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function ()
 document.addEventListener('DOMContentLoaded', function () 
 {
   if (localStorage.getItem("plink3") !== "clear"){
-    r3Link();
+    r2Link();
     console.log(` r2 clear link`);
   }
 });

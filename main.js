@@ -171,7 +171,7 @@ function pselection2(lin2)
   localStorage.setItem("plink2", lin2);
   console.log(lin2 + '2')
 }
-function pselection2(lin3)
+function pselection3(lin3)
 {
   localStorage.setItem("plink3", lin3);
   console.log(lin3 + '3')
