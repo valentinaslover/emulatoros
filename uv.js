@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function ()
 });
 document.addEventListener('DOMContentLoaded', function () 
 {
-  if (localStorage.getItem("plink") !== "rlink"){
+  if (localStorage.getItem("plink2") !== "clear"){
     r3Link();
   }
 });
