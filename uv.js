@@ -18,6 +18,7 @@ function rLink()
         ;
 
     document.getElementById('gameiframe').src = site;
+    document.getElementById('gameiframe').contentWindow.location.reload();
     console.log(`finish r change link`);
     
 	
