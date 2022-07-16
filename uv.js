@@ -23,7 +23,24 @@ document.addEventListener('DOMContentLoaded', function ()
   }
 });
 console.log(game.dataset.gamelink);
-
+function r2Link() 
+{
+ 
+    
+        console.log(`start r2 change link`);
+        var site = 'https://r2.emulatoros.ga'+ "/" + game.dataset.gamelink;
+        ;
+game.remove();
+var iframeElm = document.createElement('iframe');
+            iframeElm.setAttribute('id', 'riframe');
+            iframeElm.setAttribute('allowfullscreen', 'true')
+            iframeElm.setAttribute('scrolling', 'no')
+    iframeElm.src = site;
+    container.prepend(iframeElm);
+    console.log(`finish r2 change link`);
+    
+	
+}
 function rLink() 
 {
  
