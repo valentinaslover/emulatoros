@@ -4,7 +4,7 @@ const container = document.querySelector(".content-container");
 
 document.addEventListener('DOMContentLoaded', function () 
 {
-  if (localStorage.getItem("plink") !== "r2link"){
+  if (localStorage.getItem("plink") !== "clear"){
     rLink();
   }
 });
