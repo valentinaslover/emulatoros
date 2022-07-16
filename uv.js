@@ -48,7 +48,8 @@ function r3Link()
 game.remove();
 var iframeElm = document.createElement('iframe');
             iframeElm.setAttribute('id', 'r3iframe');
-            iframeElm.setAttribute('allowfullscreen scrolling', 'no')
+            iframeElm.setAttribute('allowfullscreen')
+            iframeElm.setAttribute('scrolling', 'no')
     iframeElm.src = site;
     container.appendChild(scriptElm);
     
