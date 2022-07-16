@@ -66,13 +66,10 @@ function r3Link()
         console.log(`start r3 change link`);
         var site = 'https://r3.emulatoros.ga'+ "/" + game.dataset.gamelink;
         ;
-game.remove();
-var iframeElm = document.createElement('iframe');
-            iframeElm.setAttribute('id', 'r3iframe');
-            iframeElm.setAttribute('allowfullscreen', 'true')
-            iframeElm.setAttribute('scrolling', 'no')
-    iframeElm.src = site;
-    container.prepend(iframeElm);
+            game.setAttribute('id', 'r3iframe');
+            game.setAttribute('allowfullscreen', 'true')
+            game.setAttribute('scrolling', 'no')
+    game.src = site;
     
     
     console.log(`finish r3 change link`);
