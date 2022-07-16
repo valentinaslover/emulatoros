@@ -31,10 +31,10 @@ document.body.style.backgroundColor = "var(--bg-color)";
 //Fetch visit count
 const visitapi = "https://api.countapi.xyz/update/emulatoros.github.io/78c84613-3752-436e-ae7c-29f94d1fc15f/?amount=1";
 fetch(visitapi)
-.then((res) => res.json())
-.then((res) => {
-  document.getElementById("visit-count").innerText = res.value; //Add commas
-});
+  .then((res) => res.json())
+  .then((res) => {
+    document.getElementById("visit-count").innerText = res.value; //Add commas
+  });
 
 //Turn off GSAP null warnings (if present)
 try {
@@ -125,54 +125,35 @@ px.classList.add("counter-frame");
 document.body.appendChild(px);
 
 window.onmessage = function (e) {
-    document.getElementById("user-count").innerText = e.data;
-  
+  document.getElementById("user-count").innerText = e.data;
+
 };
 function loadPallet(pal)//function to load pallets
 {
   sheet = document.querySelector(':root');
   index = pal.split(";");
-  
-  for(x = 0; x < index.length - 1; x++)
-  {
+
+  for (x = 0; x < index.length - 1; x++) {
     varname = index[x].split("/")[0];
     col = index[x].split("/")[1];
-    sheet.style.setProperty('--'+varname, col);
+    sheet.style.setProperty('--' + varname, col);
   }
   return sheet;
 }
 pallet = "bg/#fff;detextcol/#222;sharebg/#f2f2f2;sharehover/#E1E1E1;searchborder/#d9d9d9;searchbg/#f5f5f5;findtext/#666;botlinks/#e4e4e4;searchhovbg/#f8f8f8;searchhovshad/rgba(0, 0, 0, 0.1);searchhovtext/#333;overlaybg/#ccc";
 
-document.addEventListener('DOMContentLoaded', function () 
-{
-  if (localStorage.getItem("stylepallet") !== ""){
-	  pallet = localStorage.getItem("stylepallet");
-	} 
-	else {
-	  localStorage.setItem("stylepallet", pallet)
-	}
+document.addEventListener('DOMContentLoaded', function () {
+  if (localStorage.getItem("stylepallet") !== "") {
+    pallet = localStorage.getItem("stylepallet");
+  }
+  else {
+    localStorage.setItem("stylepallet", pallet)
+  }
   loadPallet(pallet);
 });
-function savePallet(pal)
-{
+function savePallet(pal) {
   localStorage.setItem("stylepallet", pal)
   loadPallet(pal);
-  window.location.href=window.location.href
+  window.location.href = window.location.href
   window.location.reload()
-}
-function pselection(lin)
-{
-  localStorage.setItem("plink", lin);
-  console.log(lin)
-}
-
-function pselection2(lin2)
-{
-  localStorage.setItem("plink2", lin2);
-  console.log(lin2 + '2')
-}
-function pselection3(lin3)
-{
-  localStorage.setItem("plink3", lin3);
-  console.log(lin3 + '3')
 }
