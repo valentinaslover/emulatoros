@@ -15,6 +15,13 @@ document.addEventListener('DOMContentLoaded', function ()
     console.log(` r3 clear link`);
   }
 });
+document.addEventListener('DOMContentLoaded', function () 
+{
+  if (localStorage.getItem("plink3") !== "clear"){
+    r3Link();
+    console.log(` r2 clear link`);
+  }
+});
 console.log(game.dataset.gamelink);
 
 function rLink() 
