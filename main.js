@@ -140,7 +140,7 @@ function loadPallet(pal)//function to load pallets
   }
   return sheet;
 }
-pallet = "bg/#fff;detextcol/#222;sharebg/#f2f2f2;sharehover/#E1E1E1;searchborder/#d9d9d9;searchbg/#f5f5f5;findtext/#666;botlinks/#e4e4e4;searchhovbg/#f8f8f8;searchhovshad/rgba(0, 0, 0, 0.1);searchhovtext/#333;overlaybg/#ccc";
+pallet = "ubg/#800080;bg/#1F2029;footerbg/#170E1F;link/#0084ff;scroll-active/#717171;scrollbg/#191a21;users-online/#49ff0d";
 
 document.addEventListener('DOMContentLoaded', function () {
   if (localStorage.getItem("stylepallet") !== "") {
