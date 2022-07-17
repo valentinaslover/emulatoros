@@ -58,11 +58,12 @@
         0 0 90px #0fa,
         0 0 100px #0fa,
         0 0 150px #0fa;
-    
+    color: black;
     }
     
     20%, 24%, 55% {        
         background-color: transparent;
+        color: white;
     }    
   }
 * {
