@@ -45,7 +45,7 @@
         text-shadow: none;
     }    
   }
-  @keyframes flicker2 {
+  @keyframes glowing {
     
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
   
@@ -62,7 +62,7 @@
     }
     
     20%, 24%, 55% {        
-        background-color: none;
+        background-color: transparent;
     }    
   }
 * {
@@ -74,7 +74,7 @@ html {
   min-height: 100%; /* make sure it is at least as tall as the viewport */
   position: relative;
 }
-button{animation: flicker2 1.5s infinite alternate;  color:#000000;background-color: #caf7ff;
+button{animation: glowing 1.5s infinite alternate;  color:#000000;background-color: #caf7ff;
     box-shadow: 0 0 5px #0bf4f3;
      font-size: 90%;border: 1px solid rgb(255,255,255,.2); border-radius: 25px; cursor: pointer; display: inline-grid; font-weight: 700; justify-items: center; margin: 20px 10px; overflow: hidden; padding: 15px 0; position: relative; text-align: center; transition-duration: .3s; width: 180px; justify-content: center;}
         button:hover{box-shadow: 0 0 10px #0bf4f3, 0 0 20px #0bf4f3, 0 0 20px rgba(255, 255, 255, 0) inset;text-decoration:none}
