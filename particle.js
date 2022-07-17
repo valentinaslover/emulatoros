@@ -21,3 +21,13 @@ if (localStorage.getItem("particletheme") == 'blue'){
 if (localStorage.getItem("particletheme") == 'noparticle'){
     console.log('noparticle')
 }
+if (localStorage.getItem("particletheme") == 'neon') {
+    
+    const main = document.querySelector("#maincss");
+    main.remove();
+    var cssElm = document.createElement('style');
+    cssElm.setAttribute('href', '/neon.css');
+    cssElm.setAttribute('rel', 'stylesheet');
+    document.head.appendChild(cssElm);
+    console.log('neon')
+  }

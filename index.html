@@ -7,7 +7,7 @@
 
     <link rel="icon" type="image/x-icon" href="/assets/img/socials/ubg100.webp" />
     <link rel="mask-icon" type="" href="/assets/img/socials/ubg100.webp" color="#111" />
-    <link href=/main.css rel=stylesheet />
+    <link id="maincss" href=/main.css rel=stylesheet />
     <link href=/form.css rel=stylesheet />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     
@@ -31,17 +31,7 @@
         .overlay{background-color:#ccc;height:100%;left:0;opacity:.8;position:fixed;top:0;width:100%;z-index:1000}
         .logo-wrapper{align-items:center;display:flex;flex-direction:column;justify-content:center;margin-top:13%}
         img+button{float:right}
-        button{background: 0 0; font-size: 90%;border: 1px solid rgb(255,255,255,.2); border-radius: 25px;  color: #fff; cursor: pointer; display: inline-grid; font-weight: 700; justify-items: center; margin: 20px 10px; overflow: hidden; padding: 15px 0; position: relative; text-align: center; transition-duration: .3s; width: 180px; justify-content: center;}
-        button:hover{background-color:var(--ubg);color:#ffffff!important;text-decoration:none}
-        .text-box{margin-left:44vw;margin-top:42vh}
-        button:hover,button:link{box-shadow:0 10px 20px #fff;transform:translateY(-3px)}
-        button:active{box-shadow:0 5px 10px rgba(0,0,0,.2);transform:translateY(-1px)}
-        img{border-radius:10%}
-        .btn-white{background-color:#fff;color:#777}
-        button::after{border-radius:100px;content:"";display:inline-block;height:100%;left:0;position:absolute;top:0;transition:all .4s;width:100%;z-index:-1}
-        .btn-white::after{background-color:#fff}
-        button:hover::after{opacity:0;transform:scaleX(1.4) scaleY(1.6)}
-        .btn-animated{-webkit-animation:moveInBottom 5s ease-out;-webkit-animation-fill-mode:backwards;animation:moveInBottom 5s ease-out;animation-fill-mode:backwards}
+        
         @-webkit-keyframes moveInBottom {
         0%{opacity:0;transform:translateY(30px)}
         100%{opacity:1;transform:translateY(0)}
@@ -217,7 +207,7 @@
         </div>
       <div style=text-align:center>
         <div id=sec10 class=logo-wrapper></div>
-        <strong style="font-size: 2.5em;font-weight: bold;" style=font-family:verdana>Games</strong><div>
+        <strong class="neon"style="font-size: 2.5em;font-weight: bold;" style=font-family:verdana>Games</strong><div>
       <a style="font-size: 1em;font-weight: bold;" onclick="openInUnblocked('https://' + window.location.hostname)">
         <p>Hide this from History</p>
       </a>
