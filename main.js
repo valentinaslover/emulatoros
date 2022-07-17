@@ -162,5 +162,6 @@ function pselection(lin) {
   console.log(lin)
 }
 if (localStorage.getItem("plink") === null) {
+  console.log('null')
   localStorage.setItem("plink", 'r2');
 }
