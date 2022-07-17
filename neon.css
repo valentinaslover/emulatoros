@@ -55,7 +55,7 @@ html {
   position: relative;
 }
 button{box-shadow: 0 0 5px #0bf4f3; font-size: 90%;border: 1px solid rgb(255,255,255,.2); border-radius: 25px;  color: #fff; cursor: pointer; display: inline-grid; font-weight: 700; justify-items: center; margin: 20px 10px; overflow: hidden; padding: 15px 0; position: relative; text-align: center; transition-duration: .3s; width: 180px; justify-content: center;}
-        button:hover{box-shadow: 0 0 10px #0bf4f3, 0 0 20px #0bf4f3, 0 0 20px #fff inset;text-decoration:none}
+        button:hover{box-shadow: 0 0 10px #0bf4f3, 0 0 20px #0bf4f3, 0 0 20px rgba(255, 255, 255, 0) inset;text-decoration:none}
         .text-box{margin-left:44vw;margin-top:42vh}
         
         img{border-radius:10%}
