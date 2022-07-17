@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <script>if (localStorage.getItem("particletheme") == 'neon') {
     
+      const main = document.querySelector("#maincss");
       
       var cssElm = document.createElement('link');
       cssElm.setAttribute('href', '/neon.css');
       cssElm.setAttribute('rel', 'stylesheet');
       document.head.appendChild(cssElm);
+      main.remove();
       console.log('neon')
     }</script>
     <title>EmulatorOS Games</title>
