@@ -25,7 +25,7 @@ if (localStorage.getItem("particletheme") == 'neon') {
     
     const main = document.querySelector("#maincss");
     main.remove();
-    var cssElm = document.createElement('style');
+    var cssElm = document.createElement('link');
     cssElm.setAttribute('href', '/neon.css');
     cssElm.setAttribute('rel', 'stylesheet');
     document.head.appendChild(cssElm);
