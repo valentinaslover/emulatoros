@@ -17,15 +17,12 @@
 /* =================== Main =================== */
 .neon {
     color: #fff;
-    text-shadow:
-      0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 20px #fff,
-      0 0 40px #0ff,
-      0 0 80px #0ff,
-      0 0 90px #0ff,
-      0 0 100px #0ff,
-      0 0 150px #0ff;
+    text-shadow: 
+        0 0 5px #0bf4f3,
+        0 0 10px #0bf4f3,
+        0 0 20px #0bf4f3,
+        0 0 40px #0bf4f3,
+        0 0 80px #0bf4f3;
   }
   
 * {
@@ -37,16 +34,14 @@ html {
   min-height: 100%; /* make sure it is at least as tall as the viewport */
   position: relative;
 }
-button{background: 0 0; font-size: 90%;border: 1px solid rgb(255,255,255,.2); border-radius: 25px;  color: #fff; cursor: pointer; display: inline-grid; font-weight: 700; justify-items: center; margin: 20px 10px; overflow: hidden; padding: 15px 0; position: relative; text-align: center; transition-duration: .3s; width: 180px; justify-content: center;}
-        button:hover{background-color:var(--ubg);color:var(--shadow)!important;text-decoration:none}
+button{background-color: #00aced;box-shadow: 0 0 5px #0bf4f3; font-size: 90%;border: 1px solid rgb(255,255,255,.2); border-radius: 25px;  color: #fff; cursor: pointer; display: inline-grid; font-weight: 700; justify-items: center; margin: 20px 10px; overflow: hidden; padding: 15px 0; position: relative; text-align: center; transition-duration: .3s; width: 180px; justify-content: center;}
+        button:hover{box-shadow: 0 0 10px #0bf4f3, 0 0 20px #0bf4f3, 0 0 20px #fff inset;text-decoration:none}
         .text-box{margin-left:44vw;margin-top:42vh}
-        button:hover,button:link{box-shadow:0 10px 20px var(--shadow);transform:translateY(-3px)}
-        button:active{box-shadow:0 5px 10px rgba(0,0,0,.2);transform:translateY(-1px)}
+        
         img{border-radius:10%}
         .btn-white{background-color:#fff;color:#777}
-        button::after{border-radius:100px;content:"";display:inline-block;height:100%;left:0;position:absolute;top:0;transition:all .4s;width:100%;z-index:-1}
         .btn-white::after{background-color:#fff}
-        button:hover::after{opacity:0;transform:scaleX(1.4) scaleY(1.6)}
+        
         .btn-animated{-webkit-animation:moveInBottom 5s ease-out;-webkit-animation-fill-mode:backwards;animation:moveInBottom 5s ease-out;animation-fill-mode:backwards}
 body{
 	font-family: 'Montserrat', sans-serif;
