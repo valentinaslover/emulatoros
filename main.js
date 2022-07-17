@@ -161,6 +161,10 @@ function pselection(lin) {
   localStorage.setItem("plink", lin);
   console.log(lin)
 }
+function particleS(lin) {
+  localStorage.setItem("particletheme", lin);
+  console.log(lin + ' theme')
+}
 if (localStorage.getItem("plink") === null) {
   console.log('null')
   localStorage.setItem("plink", 'r2');
