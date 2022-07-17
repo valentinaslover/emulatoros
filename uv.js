@@ -3,8 +3,9 @@ const gamelink = game.dataset.gamelink;
 const container = document.querySelector(".content-container");
 
 document.addEventListener('DOMContentLoaded', function () {
-  if (localStorage.getItem("plink") !== "clear") {
+  if (localStorage.getItem("plink") == "clear") {
     console.log(`start r change link`);
+    console.log(`clear`);
     var site = 'https://r.emulatoros.ga' + "/" + game.dataset.gamelink;
     game.setAttribute('id', 'riframe');
     game.setAttribute('allowfullscreen', 'true')
