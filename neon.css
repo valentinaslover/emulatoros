@@ -62,20 +62,7 @@
         text-shadow: none;
     }    
   }
-  @keyframes flickerbox {
-    
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
   
-        box-shadow:
-        0 0 4px #48f2f2,
-        0 0 11px #0bf4f3,
-    
-    }
-    
-    20%, 24%, 55% {        
-        box-shadow: 0 0 4px #48f2f2,;
-    }    
-  }
 * {
     margin: 0;
     padding: 0;
