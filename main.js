@@ -1,3 +1,12 @@
+if (localStorage.getItem("particletheme") == 'neon') {
+
+  var cssElm = document.createElement('link');
+  cssElm.setAttribute('href', '/neon.css');
+  cssElm.setAttribute('rel', 'stylesheet');
+  document.head.appendChild(cssElm);
+
+  console.log('neon')
+}
 //Declare variables for cloak here
 const local_title = localStorage.getItem("title");
 const local_icon = localStorage.getItem("icon");
@@ -168,18 +177,4 @@ function particleS(lin) {
 if (localStorage.getItem("plink") === null) {
   console.log('null')
   localStorage.setItem("plink", 'r2');
-}
-if (localStorage.getItem("particletheme") == 'neon') {
-    
-  const main = document.querySelector("#maincss");
-  
-  var cssElm = document.createElement('link');
-  cssElm.setAttribute('href', '/neon.css');
-  cssElm.setAttribute('rel', 'stylesheet');
-  document.head.appendChild(cssElm);
-  setTimeout(() => {
-    main.remove();
-}, "3000")
-  console.log('neon')
-  main.remove();
 }
