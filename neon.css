@@ -62,6 +62,20 @@
         text-shadow: none;
     }    
   }
+  @keyframes flickerbox {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        box-shadow:
+        0 0 4px #48f2f2,
+        0 0 11px #0bf4f3,
+    
+    }
+    
+    20%, 24%, 55% {        
+        box-shadow: none;
+    }    
+  }
 * {
     margin: 0;
     padding: 0;
@@ -71,7 +85,7 @@ html {
   min-height: 100%; /* make sure it is at least as tall as the viewport */
   position: relative;
 }
-button{  color:#ffffff;background-color: #caf7ff00;
+button{  animation: flickerbox 2.5s infinite alternate;  color:#ffffff;background-color: #caf7ff00;
     box-shadow: 0 0 5px #0bf4f3;
      font-size: 90%;border: 1px solid rgb(255,255,255,.2); border-radius: 25px; cursor: pointer; display: inline-grid; font-weight: 700; justify-items: center; margin: 20px 10px; overflow: hidden; padding: 15px 0; position: relative; text-align: center; transition-duration: .3s; width: 180px; justify-content: center;}
         button:hover{
@@ -118,11 +132,26 @@ a{
         0 0 20px #0bf4f3,
         0 0 40px #0bf4f3,
         0 0 80px #0bf4f3;
-        animation: flickertext 1.5s infinite alternate;  
+        animation: flickertext 2s infinite alternate;  
     
 }
 
 a:hover {
+	color:#000000
+}
+h1{
+    color: #fff;
+    text-shadow: 
+        0 0 5px #0bf4f3,
+        0 0 10px #0bf4f3,
+        0 0 20px #0bf4f3,
+        0 0 40px #0bf4f3,
+        0 0 80px #0bf4f3;
+        animation: flickertext 2s infinite alternate;  
+    
+}
+
+h1:hover {
 	color:#000000
 }
 
@@ -368,7 +397,7 @@ a:hover {
   
   
   .aa-nav-item > a:hover {
-	color: var(--ubg) !important;
+	color: #000000;
 	text-decoration: none;
   }
   
