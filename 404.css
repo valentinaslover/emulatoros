@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-:root {
-  --blue: #0e0620;
-  --white: #fff;
-  --ubg100: #e77e7e;
-}
+
 
 html,
 body {
@@ -26,7 +22,7 @@ body {
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 1.7;
-  color: var(--ubg100);
+  color: black;
   font-size: 1em;
 }
 
@@ -60,43 +56,7 @@ p{
   color: white;
 }
 
-.btn {
-  z-index: 1;
-  overflow: hidden;
-  background: transparent;
-  position: relative;
-  padding: 8px 50px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1em;
-  letter-spacing: 2px;
-  transition: 0.2s ease;
-  font-weight: bold;
-  margin: 5px 0px;
-}
-.btn.ubg100 {
-  color: black;
-  background: white;
-}
-.btn.ubg100:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 100%;
-  background: var(--ubg100);
-  z-index: -1;
-  transition: 0.2s ease;
-}
-.btn.ubg100:hover {
-  color: var(--white);
-  background: var(--ubg100);
-  transition: 0.2s ease;
-}
-.btn.ubg100:hover:before {
-  width: 100%;
-}
+
 
 @media screen and (max-width: 768px) {
   body {
