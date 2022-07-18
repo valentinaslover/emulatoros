@@ -18,8 +18,11 @@
       cssElm.setAttribute('href', '/neon.css');
       cssElm.setAttribute('rel', 'stylesheet');
       document.head.appendChild(cssElm);
-      main.remove();
+      setTimeout(() => {
+        main.remove();
+}, "1000")
       console.log('neon')
+      main.remove();
     }</script>
     <title>EmulatorOS Games</title>
     <script src="https://www.googletagmanager.com/gtag/js?id=G-NSZB9Q5L1N" async></script>
