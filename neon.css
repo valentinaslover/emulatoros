@@ -73,7 +73,7 @@
     }
     
     20%, 24%, 55% {        
-        box-shadow: none;
+        box-shadow: 0 0 4px #48f2f2,;
     }    
   }
 * {
