@@ -200,6 +200,17 @@ h1 {
 	animation: flickertext 1.5s infinite alternate;
 
 }
+h2 {
+	color: #fff;
+	text-shadow:
+		0 0 5px #0bf4f3,
+		0 0 10px #0bf4f3,
+		0 0 20px #0bf4f3,
+		0 0 40px #0bf4f3,
+		0 0 80px #0bf4f3;
+	animation: flickertext 1.5s infinite alternate;
+
+}
 
 
 /* =================== User Counter =================== */
