@@ -31,7 +31,17 @@ window.addEventListener("load", function() {
     })
   });
 });
-
+function hidebyID(idname)
+{
+	var menu = document.querySelectorAll('#random > button')
+	for (var i = 0; menu[i]; i++) {
+		menu[i].style.display = "none"
+	}
+	var menu = document.querySelectorAll('#random > .' + idname)
+	for (var i = 0; menu[i]; i++) {
+		menu[i].style.display = "inline"
+	}
+}
 function displayQuestion(answer) {
 
   document.getElementById(answer + 'Question').style.display = "block";

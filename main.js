@@ -178,3 +178,4 @@ if (localStorage.getItem("plink") === null) {
   console.log('null')
   localStorage.setItem("plink", 'r2');
 }
+function searchGames() { var e = document.getElementById("GameSearch").value.toLowerCase(), a = document.getElementsByClassName("GameName"); for (i = 0; i < a.length; i++)a[i].innerText.toLowerCase().includes(e) ? a[i].setAttribute('style', 'display:flex !important') : a[i].setAttribute('style', 'display:none !important') }
