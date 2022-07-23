@@ -63,6 +63,47 @@
             z-index: 1;
             position: relative;
         }
+        .form-index {
+    position: relative;
+    z-index: 2;
+    background: 0 0;
+    font-family: inherit;
+    padding: 0 17px;
+    height: 48px;
+    border: 1px solid rgb(255,255,255,.2);
+    color: var(--text-color);
+    border-radius: 3px;
+    outline: 0;
+    width: 350px;
+    margin-top: 5px;
+    border-radius: 50px;
+    color: #fff;
+}
+.input {
+    height: 3rem;
+    border-width: 1px;
+    border-color: hsl(var(--bc)/var(--tw-border-opacity));
+    --tw-border-opacity: 0;
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b1)/var(--tw-bg-opacity));
+    border-radius: var(--rounded-btn, .5rem);
+    flex-shrink: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: .875rem;
+    line-height: 2;
+    transition-property: color, background-color, border-color, -webkit-text-decoration-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+}
+.input-bordered {
+    --tw-border-opacity: .2
+}
+
+.input:focus {
+    outline: 2px solid hsla(var(--bc)/.2);
+    outline-offset: 2px
+}
     </style>
     </head>
     <body id="bodyjs">
@@ -216,7 +257,7 @@
      <br>
      <a href=/downloadgamedata/>Download or Import Game Data</a>
      <div class="footer__visits"><i class="fas fa-eye"></i><span id="visit-count">0</span></div>
-     <input type="text" class="form-control" id="GameSearch" onkeyup="searchGames()" placeholder="Search">
+     <input type="text"class="form-index input input-bordered input-outline  w-full max-w-xs" id="GameSearch" onkeyup="searchGames()" placeholder="Search">
         
       </div>
     <div style=text-align:center>
