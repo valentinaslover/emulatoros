@@ -249,7 +249,7 @@
         <button id="request" class="open-button" onclick="openForm()">Request a Game</button>
         <button id="bug" class="open-button2" onclick="openBug()">Report A Bug</button>
         </div>
-      <div style=text-align:center>
+      <div style="text-align:center;display: flex;flex-direction: column;align-items: center;">
         <div id=sec10 class=logo-wrapper></div>
         <strong class="neon"style="font-size: 2.5em;font-weight: bold;" style=font-family:verdana>Games</strong><div>
       <a style="font-size: 1em;font-weight: bold;" onclick="openInUnblocked('https://' + window.location.hostname)">
@@ -257,7 +257,6 @@
       </a>
     </div>
      <a href=https://github.com/EmulatorOS/EmulatorOS.github.io>Github</a>
-     <br>
      <a href=/downloadgamedata/>Download or Import Game Data</a>
      <div class="footer__visits"><i class="fas fa-eye"></i><span id="visit-count">0</span></div>
      <input type="text"class="form-index input input-bordered input-outline  w-full max-w-xs" id="GameSearch" onkeyup="searchGames()" placeholder="Search">
