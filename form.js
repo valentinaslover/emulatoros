@@ -33,15 +33,39 @@ window.addEventListener("load", function() {
 });
 function hidebyID(idname)
 {
+  document.querySelectorAll(".tabshow").forEach(e =>  e.classList.remove("tabbuttonactive"));
+  localStorage.setItem("show", idname)
+  document.querySelector(".tabshow[show='" + idname + "']").classList.add("tabbuttonactive")
+  if (idname == "all") {
+    var menu = document.querySelectorAll('#random > button')
+	for (var i = 0; menu[i]; i++) {
+		menu[i].style.display = "inline"
+	}
+  } else {
 	var menu = document.querySelectorAll('#random > button')
 	for (var i = 0; menu[i]; i++) {
 		menu[i].style.display = "none"
 	}
 	var menu = document.querySelectorAll('#random > .' + idname)
 	for (var i = 0; menu[i]; i++) {
-		menu[i].style.display = "inline"
+		menu[i].style.display = "inline-grid"
 	}
 }
+}
+var show = localStorage.getItem("show") || "none"
+document.querySelector(".tabshow[show='" + show + "']").classList.add("tabbuttonactive")
+console.log(show)
+if (show !== "all") {
+  var menu = document.querySelectorAll('#random > button')
+	for (var i = 0; menu[i]; i++) {
+		menu[i].style.display = "none"
+	}
+	var menu = document.querySelectorAll('#random > .' + show)
+	for (var i = 0; menu[i]; i++) {
+		menu[i].style.display = "inline-grid"
+}
+}
+
 function displayQuestion(answer) {
 
   document.getElementById(answer + 'Question').style.display = "block";

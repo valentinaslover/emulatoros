@@ -264,24 +264,24 @@
       </div>
     <div style=text-align:center>
         <div style="text-align:center">
-            <button class="hover" style="width:100px;height: 50px;" type="button"
-                onclick="var menu = document.querySelectorAll('#random > button');for (var i = 0; menu[i]; i++) {menu[i].style.display = 'inline'};document.getElementById('filtertext').innerHTML ='Curently Showing: ALL'">All</button>
-            <button style="width:100px;height: 50px;" type="button"
-                onclick="hidebyID('mp');document.getElementById('filtertext').innerHTML ='Curently Showing: MULTIPLAYER'">Multiplayer</button>
-            <button style="width:100px;height: 50px;" type="button"
-                onclick="hidebyID('emu');document.getElementById('filtertext').innerHTML ='Curently Showing: EMULATOR'">Emulator</button>
-            <button style="width:100px;height: 50px;" type="button"
-                onclick="hidebyID('ry');document.getElementById('filtertext').innerHTML ='Curently Showing: RHYTHM'">Rhythm</button>
-            <button style="width:100px;height: 50px;" type="button"
-                onclick="hidebyID('shoot');document.getElementById('filtertext').innerHTML ='Curently Showing: SHOOTERS'">Shooters</button>
-            <button style="width:100px;height: 50px;" type="button"
-                onclick="hidebyID('hor');document.getElementById('filtertext').innerHTML ='Curently Showing: HORROR'">Horror</button>
-            <button style="width:100px;height: 50px;" type="button"
-                onclick="hidebyID('plat');document.getElementById('filtertext').innerHTML ='Curently Showing: PLATFORMER'">Platformer</button>
-            <button style="width:100px;height: 50px;" type="button"
-                onclick="hidebyID('sp');document.getElementById('filtertext').innerHTML ='Curently Showing: Sports'">Sports</button>
-            <button style="width:100px;height: 50px;" type="button"
-                onclick="hidebyID('ot');document.getElementById('filtertext').innerHTML ='Curently Showing: OTHER'">Other</button>
+            <button class="tabshow" show="all" style="width:100px;height: 50px;" type="button"
+                onclick="hidebyID('all');">All</button>
+            <button class="tabshow" show="mp" style="width:100px;height: 50px;" type="button"
+                onclick="hidebyID('mp')">Multiplayer</button>
+            <button class="tabshow" show="emu" style="width:100px;height: 50px;" type="button"
+                onclick="hidebyID('emu')">Emulator</button>
+            <button class="tabshow" show="ry" style="width:100px;height: 50px;" type="button"
+                onclick="hidebyID('ry')">Rhythm</button>
+            <button class="tabshow" show="shoot" style="width:100px;height: 50px;" type="button"
+                onclick="hidebyID('shoot')">Shooters</button>
+            <button class="tabshow" show="hor" style="width:100px;height: 50px;" type="button"
+                onclick="hidebyID('hor')">Horror</button>
+            <button class="tabshow" show="plat" style="width:100px;height: 50px;" type="button"
+                onclick="hidebyID('plat')">Platformer</button>
+            <button class="tabshow" show="sp" style="width:100px;height: 50px;" type="button"
+                onclick="hidebyID('sp')">Sports</button>
+            <button class="tabshow" show="ot" style="width:100px;height: 50px;" type="button"
+                onclick="hidebyID('ot')">Other</button>
         </div>
         <div id=random style=text-align:center>
             <button onclick='window.location.href="/games/sm64"' type=button class="GameName emu btn"><img height=150 src="/img/mario64.webp" width=150>Super Mario 64</button> 
