@@ -87,6 +87,7 @@ ins.adsbygoogle[data-ad-status=unfilled] {
     border-radius: 25px;
     color: #fff;
     border: 0;
+    box-shadow: inherit;
     align-items: center
 }
 

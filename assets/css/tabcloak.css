@@ -27,7 +27,7 @@
     margin: auto;
     width: 45vw;
     height: 40vh;
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
   }
 
   .console {
@@ -39,7 +39,7 @@
   }
 
   .console-input{
-    padding-bottom: 15%;
+    padding-bottom: 0%;
   }
   
   .console h1 {
@@ -97,7 +97,7 @@
     background: black;
     cursor: pointer;
     position: relative;
-    z-index: 0;
+    z-index: 1;
     border-radius: 10px;
     width: 200px;
     font-size: 1.25rem

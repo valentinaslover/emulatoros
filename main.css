@@ -1,18 +1,9 @@
 /* =================== Import + Root =================== */
+@import url('appearance.css');
+@import url('https://fonts.cdnfonts.com/css/blazma');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-:root {
-	--ubg: #800080;
-	--bg: #1F2029;
-	--footerbg: #170E1F;
-	--link: #0084ff;
-	--scroll-active: #717171;
-	--scrollbg: #191a21;
-	--users-online: #49ff0d;
-	--bg-color: #000000;
-	--content: #302c2c;
-	--shadow: #ffffff;
-}
+
 
 /* =================== Main =================== */
 * {
@@ -26,8 +17,87 @@ html {
 	/* make sure it is at least as tall as the viewport */
 	position: relative;
 }
-
+.tabbuttonactive {
+	color: var(--highlight)
+	}
+	
+	#particles-js {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: -69;
+	}
+	
+	#squares {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: -69;
+	overflow: hidden;
+	}
+	
+	
+	#squares .animated-box{
+	position: absolute;
+	background: rgba(255,255,255,.2);
+	display: block;
+	pointer-events: none;
+	border-radius: .5rem;
+	animation: animate-squares 6s linear infinite;
+	z-index: 1000;
+	}
+	
+	@keyframes animate-squares{
+	0%{
+	opacity: 0;
+	transform:scale(0) translateY(-200%) rotate(0deg);
+	}
+	10%{
+	opacity: 1;
+	}
+	90%{
+	opacity: 1;
+	}
+	100%{
+	opacity: 0;
+	transform:scale(0.5) translateY(-500%) rotate(360deg);
+	}
+	}
+	.tabchoice {
+		border-radius: 50%;
+		font-size: 18px;
+		color: white;
+		margin: 10px;
+		border: 1px solid var(--scroll-active);
+		background: transparent;
+		padding: 20px;
+		width: 10px;
+		height: 10px;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		cursor: pointer;
+		}
+		.tabchoice > img {
+			height: 40px;
+			width: 40px;
+		}
+		.tabgroup{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 button {
+	font-family: var(--font);
 	background: 0 0;
 	font-size: 90%;
 	border: 1px solid rgb(255, 255, 255, .2);
@@ -108,7 +178,7 @@ button:hover::after {
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 1.7;
@@ -385,7 +455,7 @@ a:hover {
 
 
 .aa-nav-item>a:hover {
-	color: var(--ubg) !important;
+	color: var(--highlight) !important;
 	text-decoration: none;
 }
 
@@ -722,13 +792,9 @@ a:hover {
 	align-items: baseline;
 	color: white;
 	transition: 0.3s;
-	cursor: pointer;
 	justify-content: center;
 }
 
-.footer__visits:hover {
-	color: var(--ubg);
-}
 
 @media (max-width: 768px) {
 	.footer__version {

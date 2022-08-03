@@ -1,19 +1,6 @@
 /* =================== Import + Root =================== */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-:root {
-	--ubg: #800080;
-	--bg: #1F2029;
-	--footerbg: #170E1F;
-	--link: #0084ff;
-	--scroll-active: #717171;
-	--scrollbg: #191a21;
-	--users-online: #49ff0d;
-	--bg-color: #000000;
-	--content: #302c2c;
-	--shadow: #ffffff;
-}
-
 /* =================== Main =================== */
 .neon {
 	color: #fff;
@@ -94,6 +81,7 @@ html {
 }
 
 button {
+	font-family: var(--font);
 	animation: flickerbox 1.5s infinite alternate;
 	color: #ffffff;
 	background-color: #caf7ff00;
@@ -150,7 +138,7 @@ img {
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 1.7;
@@ -165,7 +153,6 @@ body {
 	scroll-behavior: smooth;
 	background-color: var(--bg-color);
 	/* Create the parallax scrolling effect */
-	background: url("/assets/img/bg.svg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: repeat;
