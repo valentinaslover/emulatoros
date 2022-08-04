@@ -29,7 +29,7 @@ function searchapps() {
   var controls = document.getElementById("controls");
   controls.style.display = "flex";
   appframe.style.display = "initial";
-  appframe.setAttribute("src", app);
+  appframe.setAttribute("src", 'https://' + plink + app);
   }
       
   function closeapp() {
@@ -67,7 +67,7 @@ function searchapps() {
   console.log( '"' + plink + location + '"' )
   var appelm = document.createElement("div")
   appelm.className = "app"
-  appelm.setAttribute("onclick", 'openapp(' + '"' + plink + location + '"' + ')')
+  appelm.setAttribute("onclick", 'openapp(' + '"'  + location + '"' + ')')
   document.getElementsByClassName("apps")[0].appendChild(appelm)
   
   var app = document.getElementsByClassName("app")[app]
