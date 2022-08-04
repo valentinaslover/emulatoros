@@ -27,6 +27,8 @@ function searchapps() {
   function openapp(app) {
   var appframe = document.getElementById("appframe");
   var controls = document.getElementById("controls");
+  var header = document.getElementById("header");
+  header.style.display = "none";
   controls.style.display = "flex";
   appframe.style.display = "initial";
   appframe.setAttribute("src", 'https://' + plink + app);
@@ -36,6 +38,8 @@ function searchapps() {
   var appframe = document.getElementById("appframe");
   var controls = document.getElementById("controls");
   var navtitle = document.getElementById("nav-title");
+  var header = document.getElementById("header");
+  header.style.display = "block";
   controls.style.display = "none";
   appframe.style.display = "none";
   appframe.setAttribute("src", "");
@@ -65,7 +69,7 @@ function searchapps() {
   var image = json[app].image
   var location = json[app].location
   console.log( '"' + plink + location + '"' )
-  var appelm = document.createElement("div")
+  var appelm = document.createElement("button")
   appelm.className = "app"
   appelm.setAttribute("onclick", 'openapp(' + '"'  + location + '"' + ')')
   document.getElementsByClassName("apps")[0].appendChild(appelm)
