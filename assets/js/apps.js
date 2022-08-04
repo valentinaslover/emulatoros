@@ -1,31 +1,4 @@
-document.domain = 'r2.emulatoros.ga'
 
-console.log(document.domain)
-function searchapps() {
-    var searchapps = document.getElementById("searchapps");
-    var filter = searchapps.value.toLowerCase();
-    var app = document.getElementsByClassName('app');
-  
-    for (i = 0; i < app.length; i++) {
-      if (app[i].innerText.toLowerCase().includes(filter)) {
-        app[i].style.display = "initial";
-      } else {
-        app[i].style.display = "none";
-      }
-    }
-  
-  
-  document.getElementById("noapp").style.display = "inherit"
-  
-  for (item in app) {
-  if (app[item].innerText !== undefined) {
-  if (app[item].style.display !== "none") {
-  document.getElementById("noapp").style.display = "none"
-  }
-  }
-  }
-  
-  }
   
   function openapp(app) {
   var appframe = document.getElementById("appframe");
@@ -40,13 +13,11 @@ function searchapps() {
   function closeapp() {
   var appframe = document.getElementById("appframe");
   var controls = document.getElementById("controls");
-  var navtitle = document.getElementById("nav-title");
   var header = document.getElementById("header");
   header.style.display = "block";
   controls.style.display = "none";
   appframe.style.display = "none";
   appframe.setAttribute("src", "");
-  navtitle.innerText = "Loading..."
   }
   
   function fullapp() {
@@ -94,63 +65,5 @@ function searchapps() {
   
   fetchapps()
  
-  function setTabTitle(title) {
-    if (title) {
-      var navtitle = document.getElementById("nav-title");
-      navtitle.innerText = title;
-      document.title = title;
-    } else {
-      var navtitle = document.getElementById("nav-title");
-      var appframe = document.getElementById("appframe");
-      navtitle.innerText = appframe.contentWindow.location.host;
-    }
-  }
   
-  function setTabIcon(favicon) {
-    if (favicon) {
-      var navicon = document.getElementById("nav-icon");
-      navicon.src = favicon;
-    } else {
-      var navicon = document.getElementById("nav-icon");
-      navicon.src =
-        "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDJjNS41MiAwIDEwIDQuNDggMTAgMTBzLTQuNDggMTAtMTAgMTBTMiAxNy41MiAyIDEyIDYuNDggMiAxMiAyek00IDEyaDQuNGMzLjQwNy4wMjIgNC45MjIgMS43MyA0LjU0MyA1LjEyN0g5LjQ4OHYyLjQ3YTguMDA0IDguMDA0IDAgMDAxMC40OTgtOC4wODNDMTkuMzI3IDEyLjUwNCAxOC4zMzIgMTMgMTcgMTNjLTIuMTM3IDAtMy4yMDYtLjkxNi0zLjIwNi0yLjc1aC0zLjc0OGMtLjI3NC0yLjcyOC42ODMtNC4wOTIgMi44Ny00LjA5MiAwLS45NzUuMzI3LTEuNTk3LjgxMS0xLjk3QTguMDA0IDguMDA0IDAgMDA0IDEyeiIgZmlsbD0iIzNDNDA0MyIvPjwvc3ZnPg==";
-    }
-  }
-  
-  appframe.addEventListener("load", function () {
-    var navtitle = document.getElementById("nav-title");
-    var navicon = document.getElementById("nav-icon");
-  var initTitle = appframe.contentWindow.document.title;
-    if (appframe.contentWindow.location.toString() == "about:blank") {
-      return {
-        name: (navtitle.innerText = "Loading..."),
-        favicon: (navicon.src = ""),
-      };
-    }
-  
-    
-    console.log(initTitle);
-    setTabTitle(initTitle);
-    
-  
-    var initFavicon = null;
-    var icon =
-      appframe.contentWindow.document.querySelector("link[rel='icon']") || null;
-    var shortcuticon =
-      appframe.contentWindow.document.querySelector("link[rel='shortcut icon']") ||
-      null;
-    if (icon) {
-      initFavicon = new URL(appframe.contentWindow.document.querySelector("link[rel='icon']").getAttribute("href"), appframe.contentWindow.document.baseURI).toString();
-      document.querySelector("link[rel=icon]").href = initFavicon;
-      console.log('icon is ' + initFavicon)
-    } else if (shortcuticon) {
-      initFavicon = new URL(appframe.contentWindow.document.querySelector("link[rel='shortcut icon']").getAttribute("href"), appframe.contentWindow.document.baseURI).toString();
-      document.querySelector("link[rel=shortcut icon]").href = initFavicon;
-    }
-    if (initFavicon == appframe.contentWindow.document.baseURI) {
-      initFavicon = null;
-      console.log('favicon is null')
-    }
-    setTabIcon(initFavicon);
-  });
   
