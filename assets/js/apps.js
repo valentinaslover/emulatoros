@@ -19,7 +19,10 @@
   appframe.style.display = "none";
   appframe.setAttribute("src", "");
   }
-  
+  function reloadapp() {
+  var appframe = document.getElementById("appframe");
+  appframe.contentWindow.location.reload();
+}
   function fullapp() {
     var appframe = document.getElementById("appframe")
     appframe.requestFullscreen()
