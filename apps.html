@@ -21,16 +21,14 @@
 }
        
     
-    .apps {
-        display: flex;
+.apps {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    }
+    /* position: absolute; */
+    /* transform: translateY(-50%); */
+}
     .appimg {
         width: 100%;
         border-bottom: 1px solid var(--light-text);
@@ -155,20 +153,30 @@ margin: 5px;
 user-select: none;
 }
 * {
-font-family: var(--font-main);
+font-family: var(--font);
 }
 
 body {
 background: var(--bg-main);
 margin: 0;
 }
+.logo-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+}
     </style>
 </head>
 <body>
 
 
-    <div id="sec10" class="logo-wrapper"></div>
-   
+    <div style="text-align:center;display: flex;flex-direction: column;align-items: center;">
+        <div id=sec10 class=logo-wrapper></div>
+        <strong class="neon"style="font-size: 2.5em;font-weight: bold;" style=font-family:verdana>Apps</strong><div>
+     
+    </div>
     <div class="apps"></div>
 
 <iframe src="" id="appframe"></iframe>

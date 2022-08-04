@@ -20,8 +20,7 @@
   appframe.setAttribute("src", "");
   }
   function reloadapp() {
-  var appframe = document.getElementById("appframe");
-  appframe.contentWindow.location.reload();
+    document.getElementById('appframe').src = document.getElementById('appframe').src
 }
   function fullapp() {
     var appframe = document.getElementById("appframe")
