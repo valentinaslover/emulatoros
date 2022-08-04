@@ -966,8 +966,12 @@ video {
 }
 
 .underline {
+    -webkit-text-decoration-line: none;
+    text-decoration-line: none;
+}
+.underline:hover {
     -webkit-text-decoration-line: underline;
-    text-decoration-line: underline
+    text-decoration-line: underline;
 }
 
 .shadow-md {

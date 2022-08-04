@@ -551,23 +551,25 @@ a:hover {
 
 /* =================== Footer =================== */
 .footer {
-	background: var(--footerbg);
-	padding: 84px 0 46px;
+	color: var(--shadow);
+   position: fixed;
+bottom: 5px;
+text-align: center;
+font-size: 12px;
+right: 14px;
+display: flex;
 }
 
-@media (max-width: 768px) {
-	.footer {
-		padding-top: 64px;
+.link {
+	color: var(--shadow) !important;
+margin: 0 7.5px;
+}
+.underline {
+	text-decoration: none;
 	}
-}
-
-.footer__container {
-	width: 100%;
-	max-width: 1355px;
-	padding: 0 40px;
-	margin: 0 auto;
-}
-
+.underline:hover {
+	text-decoration: underline;
+	}
 @media (max-width: 991px) {
 	.footer__container {
 		padding: 0 25px;

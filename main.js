@@ -130,6 +130,8 @@ $(window).scroll(function () {
   }
 });
 
+
+
 //Prepend Navbar (using innerHTML because there's no escaped input)
 const $header = document.createElement("header");
 $header.setAttribute("id", "header");
@@ -140,12 +142,12 @@ $header.innerHTML = `<nav class="aa-nav">
 </span>
 </div>
 <div class="aa-nav-items">
-  <span class="aa-nav-item"><a href="/home.html" target="_top">Home</a></span>
+  <span class="aa-nav-item"><a href="/home" target="_top">Home</a></span>
   
   <span class="aa-nav-item"><a href="/" target="_top">Games</a></span>
   <span class="aa-nav-item"><a href="https://r2.emulatoros.ga/" target="_top">Search</a></span>
-     <span class="aa-nav-item"><a href="/tests.html" target="_top">Tests</a></span>
-  <span class="aa-nav-item"><a href="/settings.html" target="_top">Settings</a></span>
+     <span class="aa-nav-item"><a href="/tests" target="_top">Tests</a></span>
+  <span class="aa-nav-item"><a href="/settings" target="_top">Settings</a></span>
   </div>
 </nav>
 
@@ -160,11 +162,26 @@ $header.innerHTML = `<nav class="aa-nav">
   <li><a href="/home" target="_top">Home</a></li>
   <li><a href="/" target="_top">Games</a></li>
   <li><a href="https://r2.emulatoros.ga/" target="_top">Search</a></li>
-  <li><a href="/tests.html" target="_top">Tests</a></li>
-  <li><a href="/settings.html" target="_top">Settings</a></li>
+  <li><a href="/tests" target="_top">Tests</a></li>
+  <li><a href="/settings" target="_top">Settings</a></li>
 </ul>
 </div>`;
 document.body.prepend($header);
+
+const $footer = document.createElement("div");
+$footer.setAttribute("class", "footer");
+$footer.innerHTML = `<a class="link underline" href="https://github.com/EmulatorOS/EmulatorOS.github.io">G&#173;it&#173;h&#173;ub</a>
+
+<a class="link underline" href="/credits">Credits</a>
+<a class="link underline" href="/terms">Terms</a>
+<a class="link underline" href="/5" style="margin-right: 14px;">Privacy</a>
+
+© Emulator&#173;OS 2021- <p id="yearp"></p>`;
+document.body.append($footer);
+
+yearset = new Date().getFullYear()
+const yearp = document.getElementById("yearp");
+yearp.innerHTML = ' ' + yearset;
 
 const pxsrc = "https://socketio.emulatoros.ga/";
 
@@ -180,8 +197,17 @@ window.onmessage = function (e) {
 
 if (localStorage.getItem("plink") === null) {
   console.log("null");
-  localStorage.setItem("plink", "r2");
+  localStorage.setItem("plink", "r2.emulatoros.ga");
 }
+
+if (localStorage.getItem("plink") == 'r') {
+  localStorage.setItem("plink", "r2.emulatoros.ga");
+} else if (localStorage.getItem("plink") == 'r2') {
+  localStorage.setItem("plink", "r2.emulatoros.ga");
+} else if (localStorage.getItem("plink") == 'r3') {
+  localStorage.setItem("plink", "r2.emulatoros.ga");
+}
+
 function searchGames() {
   var e = document.getElementById("GameSearch").value.toLowerCase(),
     a = document.getElementsByClassName("GameName");

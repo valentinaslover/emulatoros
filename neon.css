@@ -538,15 +538,14 @@ h2 {
 
 /* =================== Footer =================== */
 .footer {
-	background: var(--footerbg);
-	padding: 84px 0 46px;
+	color :var(--shadow);
+position: fixed;
+bottom: 14px;
+text-align: center;
+font-size: 12px;
+right: 14px;
 }
 
-@media (max-width: 768px) {
-	.footer {
-		padding-top: 64px;
-	}
-}
 
 .footer__container {
 	width: 100%;
