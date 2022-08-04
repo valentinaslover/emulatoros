@@ -64,7 +64,7 @@ function searchapps() {
   var title = json[app].title
   var image = json[app].image
   var location = json[app].location
-  console.log(location)
+  console.log( '"' + plink + location + '"' )
   var appelm = document.createElement("div")
   appelm.className = "app"
   appelm.setAttribute("onclick", 'openapp(' + '"' + plink + location + '"' + ')')
