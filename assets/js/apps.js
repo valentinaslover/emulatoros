@@ -90,7 +90,7 @@ function searchapps() {
   }
   
   fetchapps()
-  var surf = document.getElementById('appframe')
+ 
   function setTabTitle(title) {
     if (title) {
       var navtitle = document.getElementById("nav-title");
@@ -98,8 +98,8 @@ function searchapps() {
       document.title = title;
     } else {
       var navtitle = document.getElementById("nav-title");
-      var surf = document.getElementById("appframe");
-      navtitle.innerText = surf.contentWindow.location.host;
+      var appframe = document.getElementById("appframe");
+      navtitle.innerText = appframe.contentWindow.location.host;
     }
   }
   
@@ -113,38 +113,41 @@ function searchapps() {
         "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDJjNS41MiAwIDEwIDQuNDggMTAgMTBzLTQuNDggMTAtMTAgMTBTMiAxNy41MiAyIDEyIDYuNDggMiAxMiAyek00IDEyaDQuNGMzLjQwNy4wMjIgNC45MjIgMS43MyA0LjU0MyA1LjEyN0g5LjQ4OHYyLjQ3YTguMDA0IDguMDA0IDAgMDAxMC40OTgtOC4wODNDMTkuMzI3IDEyLjUwNCAxOC4zMzIgMTMgMTcgMTNjLTIuMTM3IDAtMy4yMDYtLjkxNi0zLjIwNi0yLjc1aC0zLjc0OGMtLjI3NC0yLjcyOC42ODMtNC4wOTIgMi44Ny00LjA5MiAwLS45NzUuMzI3LTEuNTk3LjgxMS0xLjk3QTguMDA0IDguMDA0IDAgMDA0IDEyeiIgZmlsbD0iIzNDNDA0MyIvPjwvc3ZnPg==";
     }
   }
-  surf.addEventListener("load", function () {
+  
+  appframe.addEventListener("load", function () {
     var navtitle = document.getElementById("nav-title");
     var navicon = document.getElementById("nav-icon");
-  
-    if (surf.contentWindow.location.toString() == "about:blank") {
+  var initTitle = appframe.contentWindow.document.title;
+    if (appframe.contentWindow.location.toString() == "about:blank") {
       return {
         name: (navtitle.innerText = "Loading..."),
         favicon: (navicon.src = ""),
       };
     }
   
-    var initTitle = surf.contentWindow.document.title;
-    setTabTitle(initTitle);
+    
     console.log(initTitle);
+    setTabTitle(initTitle);
+    
   
     var initFavicon = null;
     var icon =
-      surf.contentWindow.document.querySelector("link[rel='icon']") || null;
+      appframe.contentWindow.document.querySelector("link[rel='icon']") || null;
     var shortcuticon =
-      surf.contentWindow.document.querySelector("link[rel='shortcut icon']") ||
+      appframe.contentWindow.document.querySelector("link[rel='shortcut icon']") ||
       null;
     if (icon) {
-      initFavicon = new URL(surf.contentWindow.document.querySelector("link[rel='icon']").getAttribute("href"), surf.contentWindow.document.baseURI).toString();
+      initFavicon = new URL(appframe.contentWindow.document.querySelector("link[rel='icon']").getAttribute("href"), appframe.contentWindow.document.baseURI).toString();
       document.querySelector("link[rel=icon]").href = initFavicon;
       console.log('icon is ' + initFavicon)
     } else if (shortcuticon) {
-      initFavicon = new URL(surf.contentWindow.document.querySelector("link[rel='shortcut icon']").getAttribute("href"), surf.contentWindow.document.baseURI).toString();
+      initFavicon = new URL(appframe.contentWindow.document.querySelector("link[rel='shortcut icon']").getAttribute("href"), appframe.contentWindow.document.baseURI).toString();
       document.querySelector("link[rel=shortcut icon]").href = initFavicon;
     }
-    if (initFavicon == surf.contentWindow.document.baseURI) {
+    if (initFavicon == appframe.contentWindow.document.baseURI) {
       initFavicon = null;
       console.log('favicon is null')
     }
     setTabIcon(initFavicon);
   });
+  
