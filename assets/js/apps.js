@@ -1,3 +1,6 @@
+document.domain = 'r2.emulatoros.ga'
+
+console.log(document.domain)
 function searchapps() {
     var searchapps = document.getElementById("searchapps");
     var filter = searchapps.value.toLowerCase();
