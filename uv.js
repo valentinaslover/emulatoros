@@ -1,30 +1,29 @@
 const game = document.querySelector("#gameiframe");
-const gamelink = game.dataset.gamelink;
-const container = document.querySelector(".content-container");
+var plink = localStorage.getItem("plink")
 
-if (localStorage.getItem("plink") == "r.emulatoros.ga") {
-  console.log(`start r change link`);
-  var site = 'https://r.emulatoros.ga' + "/" + game.dataset.gamelink;
+if (plink == "r.emulatoros.ga") {
+  console.log('start ' + plink + ' change');
+  var site = plink + "/" + game.dataset.gamelink;
   game.setAttribute('id', 'riframe');
   game.setAttribute('allowfullscreen', 'true')
   game.setAttribute('scrolling', 'yes')
   game.src = site;
-  console.log(`finish r change link`);
-} else if (localStorage.getItem("plink") == "r2.emulatoros.ga") {
-  console.log(`start r2 change link`);
-  var site = 'https://r2.emulatoros.ga' + "/" + game.dataset.gamelink;
+  console.log('finish ' + plink + ' change link');
+} else if (plink == "r2.emulatoros.ga") {
+  console.log('start ' + plink + ' change');
+  var site = plink + "/" + game.dataset.gamelink;
   game.setAttribute('id', 'r2iframe');
   game.setAttribute('allowfullscreen', 'true')
   game.setAttribute('scrolling', 'yes')
   game.src = site;
-  console.log(`finish r2 change link`);
-} else if (localStorage.getItem("plink") == "r3.emulatoros.ga") {
-  console.log(`start r3 change link`);
-  var site = 'https://r3.emulatoros.ga' + "/" + game.dataset.gamelink;
+  console.log('finish ' + plink + ' change link');
+} else if (plink == "r3.emulatoros.ga") {
+  console.log('start ' + plink + ' change');
+  var site = plink + "/" + game.dataset.gamelink;
   game.setAttribute('id', 'r3iframe');
   game.setAttribute('allowfullscreen', 'true')
   game.setAttribute('scrolling', 'yes')
   game.src = site;
-  console.log(`finish r3 change link`);
+  console.log('finish ' + plink + ' change link');
 }
 console.log(game.dataset.gamelink);
