@@ -1,7 +1,8 @@
 const game = document.querySelector("#gameiframe");
 var plink = localStorage.getItem("plink")
+var link = 'https://' + plink
 
-if (plink == "r.emulatoros.ga") {
+if (link == "r.emulatoros.ga") {
   console.log('start ' + plink + ' change');
   var site = plink + "/" + game.dataset.gamelink;
   game.setAttribute('id', 'riframe');
@@ -9,7 +10,7 @@ if (plink == "r.emulatoros.ga") {
   game.setAttribute('scrolling', 'yes')
   game.src = site;
   console.log('finish ' + plink + ' change link');
-} else if (plink == "r2.emulatoros.ga") {
+} else if (link == "r2.emulatoros.ga") {
   console.log('start ' + plink + ' change');
   var site = plink + "/" + game.dataset.gamelink;
   game.setAttribute('id', 'r2iframe');
@@ -17,7 +18,7 @@ if (plink == "r.emulatoros.ga") {
   game.setAttribute('scrolling', 'yes')
   game.src = site;
   console.log('finish ' + plink + ' change link');
-} else if (plink == "r3.emulatoros.ga") {
+} else if (link == "r3.emulatoros.ga") {
   console.log('start ' + plink + ' change');
   var site = plink + "/" + game.dataset.gamelink;
   game.setAttribute('id', 'r3iframe');
