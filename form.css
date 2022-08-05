@@ -3,7 +3,15 @@
 	margin-bottom: 36px;
 	overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+	.open-button {
+		display: none;
+	}
 
+	.open-button2 {
+		display: none;
+	}
+}
 .switch-field input {
 	position: absolute !important;
 	clip: rect(0, 0, 0, 0);

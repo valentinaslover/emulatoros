@@ -174,9 +174,9 @@ $footer.innerHTML = `<a class="link underline" href="https://github.com/Emulator
 
 <a class="link underline" href="/credits">Credits</a>
 <a class="link underline" href="/terms">Terms</a>
-<a class="link underline" href="/5" style="margin-right: 14px;">Privacy</a>
+<a class="link underline" href="/privacy" style="margin-right: 14px;">Privacy</a>
 
-© Emulator&#173;OS 2021- <p id="yearp"></p>`;
+<p class="at">© Emulator&#173;OS 2021-</p> <p id="yearp"></p>`;
 document.body.append($footer);
 
 yearset = new Date().getFullYear()

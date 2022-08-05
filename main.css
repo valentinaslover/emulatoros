@@ -864,3 +864,36 @@ canvas {
 .count-particles {
 	border-radius: 0 0 3px 3px;
 }
+@media screen and (max-width: 768px) {
+	.link {
+		color: var(--shadow) !important;
+    margin: 0 5px;
+    font-size: 10px;
+	}
+	.cky-revisit-bottom-left {
+		bottom: 30px;
+		left: 15px;
+	}
+}
+@media screen and (max-width: 365px) {
+	.link {
+		color: var(--shadow) !important;
+    margin: 0 5px;
+    font-size: 10px;
+	}
+	.cky-revisit-bottom-left {
+		bottom: 30px;
+		left: 15px;
+	}
+	.at {
+		font-size: 10;
+	}
+	#yearp {
+		font-size: 10;
+	}
+}
+@media screen and (max-width: 340px) {
+	.footer {
+		display: none;
+	}
+}
