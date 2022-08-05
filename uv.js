@@ -1,6 +1,6 @@
 const game = document.querySelector("#gameiframe");
-var plink = localStorage.getItem("plink")
-var link = 'https://' + plink
+var link = localStorage.getItem("plink")
+var plink = 'https://' + link
 
 if (link == "r.emulatoros.ga") {
   console.log('start ' + plink + ' change');
