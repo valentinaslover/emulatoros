@@ -12,9 +12,10 @@ function progressCallback({ totalRows: e, completedRows: o }) {
       (o = t[n]),
         JSZip.loadAsync(o)
           .then(function (e) {
-            try {
-                console.log(e.files)
+            console.log(e.files)
                 console.log(e.target.files)
+            try {
+                
               return e.files["indexedDB_subway.json"].async("blob");
             } catch (e) {
               console.log(
