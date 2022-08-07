@@ -64,5 +64,10 @@
     "title": "Hulu",
     "image": "/img/hulu-logo-2019.webp",
     "location": "/apps/apps.html#hulu.com"
+  },
+  {
+    "title": "Poki",
+    "image": "/img/poki.webp",
+    "location": "/apps/apps.html#poki.com"
   }
 ]
