@@ -12,11 +12,9 @@ function progressCallback({ totalRows: e, completedRows: o }) {
       (o = t[n]),
         JSZip.loadAsync(o)
           .then(function (e) {
-            console.log(e.files)
-                console.log(e.target.files)
             try {
                 
-              return e.files["indexedDB_subway.json"].async("blob");
+              return e.files["indexedDB.json"].async("blob");
             } catch (e) {
               console.log(
                 "IndexedDB: No such file found. Data was not imported."
@@ -58,7 +56,7 @@ function progressCallback({ totalRows: e, completedRows: o }) {
       e.file("localStorage.json", o);
       try {
         const o = await db.export();
-        e.file("indexedDB_subway.json", o);
+        e.file("indexedDB.json", o);
       } catch (e) {
         console.log("No IndexedDB data, skipping...");
       }
