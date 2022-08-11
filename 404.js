@@ -58,3 +58,44 @@ if (localStorage.hasOwnProperty("appearance")) {
     .getElementsByTagName("body")[0]
     .setAttribute("appearance", "default");
 }
+
+$("#icon").hover(function(){
+  enter('#icon');
+  }, function(){
+  leave('#icon');
+});
+$("#icon2").hover(function(){
+  enter('#icon2');
+  }, function(){
+  leave('#icon2');
+});
+ 
+    $("#icon3").hover(function(){
+      enter('#icon3');
+      }, function(){
+      leave('#icon3');
+    });
+    $("#icon4").hover(function(){
+      enter('#icon4');
+      }, function(){
+      leave('#icon4');
+    });
+
+
+    var r = document.querySelector('body');
+    var rs = getComputedStyle(r);
+    // Alert the value of the --blue variable
+    var ubg = rs.getPropertyValue('--ubg')
+    var shadow = rs.getPropertyValue('--shadow')
+
+    function enter(id) {
+      console.log('enter ' + id)
+      $(id).animate({ top: '-4px', color: ubg }, 100, function(){ 
+      });
+    }
+    function leave(id) {
+      console.log('leave ' + id)
+      $(id).animate({ top: '0px',color: shadow }, 100, function(){ 
+      });
+    }
+   

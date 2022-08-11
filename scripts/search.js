@@ -15,21 +15,14 @@ function searchurl(url) {
 }
 
 function getproxy(url) {
-  var currentproxy = localStorage.getItem("proxy");
-  if (currentproxy == "Rhodium") {
-    return rhodiumproxy + url;
-  } else if (currentproxy == "Corrosion") {
-    return corrosionproxy + url;
-  } else if (currentproxy == "Ultraviolet") {
-   if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
-    return ultravioletproxy + __uv$config.encodeUrl(url);
-  } else if (currentproxy == "Stomp") {
-    return stompproxy + Stomp.html(StompSearch.query(url));
-  }
+    var currentproxy = localStorage.getItem("plink");
+  var plink = "https://" + currentproxy
+  return plink + "/apps/apps.html#" + url
+  
 }
 
 function pxyopen(url) {
-  if (localStorage.getItem("proxy") !== null) {
+  
     console.log("!==");
     var surf = document.getElementById("surf");
     var controls = document.getElementById("controls");
@@ -41,25 +34,11 @@ function pxyopen(url) {
     surf.style.display = "initial";
     surf.setAttribute("src", getproxy(url));
     document.getElementById("search").value = "";
-  } else {
-    console.log("null");
   }
-}
+
 
 function go(url) {
-  if (url !== "") {
-    if (url.includes(".")) {
-      pxyopen(url);
-    } else if (url.startsWith("https://")) {
-      pxyopen(url);
-    } else if (url.startsWith("http://")) {
-      pxyopen(url);
-    } else {
-      searchurl(url);
-    }
-  } else {
-    return false;
-  }
+    pxyopen(url);
 }
 
 window.onload = function () {
@@ -89,8 +68,7 @@ function closesurf() {
 }
 
 function reloadsurf() {
-  var surf = document.getElementById("surf");
-  surf.contentWindow.location.reload();
+    document.getElementById('surf').src = document.getElementById('surf').src
 }
 
 function fullscreensurf() {
@@ -186,36 +164,9 @@ window.addEventListener("load", function () {
       }
   });
 
-  search.addEventListener("keyup", function (event) {
-    event.preventDefault();
-    if (search.value.trim().length !== 0) {
-      document.getElementById("suggestions").innerText = "";
-      showsugg();
-      async function getsuggestions() {
-        var term = search.value || "";
-        var response = await fetch("//r2.emulatoros.ga/suggestions?q=" + term);
-        var result = await response.json();
-        var suggestions = result.slice(0, 8);
-        for (sugg in suggestions) {
-          var suggestion = suggestions[sugg];
-          var sugg = document.createElement("div");
-          sugg.innerText = suggestion;
-          sugg.setAttribute("onclick", "sugggo(this.innerText)");
-          sugg.className = "sugg";
-          document.getElementById("suggestions").appendChild(sugg);
-        }
-      }
-      getsuggestions();
-    } else {
-      hidesugg();
-    }
-  });
+  
 
-  search.addEventListener("click", function (event) {
-    if (search.value.trim().length !== 0) {
-      showsugg();
-    }
-  });
+  
 });
 
 function hidesuggclick() {
