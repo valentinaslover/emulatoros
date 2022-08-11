@@ -145,7 +145,6 @@ $header.innerHTML = `<nav class="aa-nav">
   <span class="aa-nav-item"><a href="/home" target="_top">Home</a></span>
   
   <span class="aa-nav-item"><a href="/" target="_top">Games</a></span>
-  <span class="aa-nav-item"><a href="https://r2.emulatoros.ga/" target="_top">Search</a></span>
      <span class="aa-nav-item"><a href="/apps" target="_top">Apps</a></span>
   <span class="aa-nav-item"><a href="/settings" target="_top">Settings</a></span>
   </div>
@@ -161,7 +160,6 @@ $header.innerHTML = `<nav class="aa-nav">
 <ul class="aa-mobile-nav-items">
   <li><a href="/home" target="_top">Home</a></li>
   <li><a href="/" target="_top">Games</a></li>
-  <li><a href="https://r2.emulatoros.ga/" target="_top">Search</a></li>
   <li><a href="/apps" target="_top">Apps</a></li>
   <li><a href="/settings" target="_top">Settings</a></li>
 </ul>
