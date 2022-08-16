@@ -195,15 +195,15 @@ window.onmessage = function (e) {
 
 if (localStorage.getItem("plink") === null) {
   console.log("null");
-  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co/");
+  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
 }
 
 if (localStorage.getItem("plink") == 'r') {
-  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co/);
+  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
 } else if (localStorage.getItem("plink") == 'r2') {
-  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co/");
+  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
 } else if (localStorage.getItem("plink") == 'r3') {
-  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co/");
+  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
 }
 
 function searchGames() {
