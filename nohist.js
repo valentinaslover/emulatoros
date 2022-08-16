@@ -4,22 +4,3 @@ myWindow.document.write("<iframe onload=\"\" id='iframe' width=\"100%\" height=\
 myWindow.document.write("<style>body { margin:0;}</style>")
 myWindow.document.write("<script>function home(){document.getElementById('iframe').src = \""+url+"\"}</script>")
 myWindow.document.close();myWindow.stop();window.location.replace('https://google.com');}
-function reveal() {
-    var reveals = document.querySelectorAll(".GameName");
-  
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
-    }
-  }
-  $(function() {
-    reveal();
-  });
-  window.addEventListener("scroll", reveal);
