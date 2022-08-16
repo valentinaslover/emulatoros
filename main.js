@@ -181,7 +181,7 @@ yearset = new Date().getFullYear()
 const yearp = document.getElementById("yearp");
 yearp.innerHTML = ' ' + yearset;
 
-const pxsrc = "https://socketio.emulatoros.ga/";
+const pxsrc = "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co/";
 
 const px = document.createElement("iframe");
 px.src = pxsrc;
