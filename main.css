@@ -97,7 +97,7 @@ html {
 			justify-content: center;
 		}
 		.GameName {
-			opacity: 0;
+			opacity: 1;
 		}
 		.GameName.active {
 			opacity: 1;
