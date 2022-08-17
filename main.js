@@ -200,6 +200,8 @@ if (localStorage.getItem("plink") === null) {
 
 if (localStorage.getItem("plink") == 'r') {
   localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
+} else if (localStorage.getItem("plink") == 'r2.emulatoros.ga') {
+  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
 } else if (localStorage.getItem("plink") == 'r2') {
   localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
 } else if (localStorage.getItem("plink") == 'r3') {
