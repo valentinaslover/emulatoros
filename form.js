@@ -2,6 +2,7 @@ window.addEventListener("load", function() {
   const form = document.getElementById('my-form');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
+	     closeForm();
     const data = new FormData(form);
     const action = e.target.action;
     fetch(action, {
@@ -9,7 +10,7 @@ window.addEventListener("load", function() {
       body: data,
     })
     .then(() => {
-      closeForm();
+   
       hideRequest();
       document.getElementById("bug").style.bottom = "08px";
     })
@@ -19,6 +20,7 @@ window.addEventListener("load", function() {
   const form = document.getElementById('my-form2');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
+	  closeBug();
     const data = new FormData(form);
     const action = e.target.action;
     fetch(action, {
@@ -26,7 +28,7 @@ window.addEventListener("load", function() {
       body: data,
     })
     .then(() => {
-      closeBug();
+      
       hideBug();
     })
   });
