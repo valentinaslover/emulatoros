@@ -77,6 +77,12 @@ const version = "v" + sArr.join(".");
 document.body.style.backgroundColor = "var(--bg-color)";
 document.body.style.fontFamily = "var(--font)";
 //Fetch visit count
+const visitapi = "https://api.countapi.xyz/update/emulatoros.github.io/78c84613-3752-436e-ae7c-29f94d1fc15f/?amount=1";
+fetch(visitapi)
+  .then((res) => res.json())
+  .then((res) => {
+    document.getElementById("visit-count").innerText = res.value; //Add commas
+  });
 (function(history){
   var pushState = history.pushState;
   history.pushState = function(state) {
@@ -89,8 +95,8 @@ document.body.style.fontFamily = "var(--font)";
 const gc = document.createElement("script");
 gc.src = "/assets/js/count.js";
 gc.setAttribute("data-goatcounter", "https://emulatoros.goatcounter.com/count");
+gc.setAttribute("data-goatcounter-settings", '{"allow_local": true}');
 document.head.appendChild(gc);
-
 // Manage page changes
 history.onpushstate = () => {
   setTimeout(() => {

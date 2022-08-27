@@ -854,10 +854,7 @@ margin: 0 7.5px;
 	}
 }
 
-canvas {
-	display: block;
-	vertical-align: bottom;
-}
+
 
 /* ---- particles.js container ---- */
 #particles-js {
