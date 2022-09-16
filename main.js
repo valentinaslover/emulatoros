@@ -83,6 +83,27 @@ fetch(visitapi)
   .then((res) => {
     document.getElementById("visit-count").innerText = res.value; //Add commas
   });
+(function(history){
+  var pushState = history.pushState;
+  history.pushState = function(state) {
+    if (typeof history.onpushstate == "function") {
+      history.onpushstate(arguments);
+    }
+    return pushState.apply(history, arguments);
+  };
+})(window.history);
+const gc = document.createElement("script");
+gc.src = "/assets/js/count.js";
+gc.setAttribute("data-goatcounter", "https://emulatoros.goatcounter.com/count");
+gc.setAttribute("data-goatcounter-settings", '{"allow_local": true}');
+document.head.appendChild(gc);
+// Manage page changes
+history.onpushstate = () => {
+  setTimeout(() => {
+    console.log(location.pathname);
+    goatcounter.count();
+  }, 1);
+}
 
 //Turn off GSAP null warnings (if present)
 try {
