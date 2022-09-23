@@ -77,7 +77,7 @@ arcscript.setAttribute(
   "src",
   "https://arc.io/widget.min.js#n2Wgjzok"
 );
-document.head.append(gascript);
+document.head.append(arcscript);
 
 //Semantic - Major.Minor.Patch
 const sArr = [`1`, `4`, `0`];
