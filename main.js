@@ -5,7 +5,7 @@ arcscript.setAttribute(
   "src",
   "https://arc.io/widget.min.js#n2Wgjzok"
 );
-document.head.append(arcscript);
+document.head.prepend(arcscript);
 
 if (localStorage.getItem("appearance") == "neon") {
   var cssElm = document.createElement("link");
