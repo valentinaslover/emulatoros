@@ -1,3 +1,6 @@
+
+
+
 if (localStorage.getItem("appearance") == "neon") {
   var cssElm = document.createElement("link");
   cssElm.setAttribute("href", "/neon.css");
