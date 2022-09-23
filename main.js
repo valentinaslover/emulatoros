@@ -1,11 +1,13 @@
 //Add Arc.io
-const arcscript = document.createElement("script");
+setTimeout(() => {
+  const arcscript = document.createElement("script");
 arcscript.setAttribute("async", "");
 arcscript.setAttribute(
   "src",
   "https://arc.io/widget.min.js#n2Wgjzok"
 );
-document.head.prepend(arcscript);
+document.head.prepend(arcscript);}, 3000)
+
 
 if (localStorage.getItem("appearance") == "neon") {
   var cssElm = document.createElement("link");
