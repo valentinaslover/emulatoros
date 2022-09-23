@@ -1,3 +1,12 @@
+//Add Arc.io
+const arcscript = document.createElement("script");
+arcscript.setAttribute("async", "");
+arcscript.setAttribute(
+  "src",
+  "https://arc.io/widget.min.js#n2Wgjzok"
+);
+document.head.append(arcscript);
+
 if (localStorage.getItem("appearance") == "neon") {
   var cssElm = document.createElement("link");
   cssElm.setAttribute("href", "/neon.css");
@@ -70,14 +79,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date()); 
 gtag('config', 'G-NSZB9Q5L1N');`;
 document.head.append(gascript, inlinegascript);
-//Add Arc.io
-const arcscript = document.createElement("script");
-arcscript.setAttribute("async", "");
-arcscript.setAttribute(
-  "src",
-  "https://arc.io/widget.min.js#n2Wgjzok"
-);
-document.head.append(arcscript);
 
 //Semantic - Major.Minor.Patch
 const sArr = [`1`, `4`, `0`];
