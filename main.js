@@ -240,3 +240,9 @@ function searchGames() {
       ? a[i].setAttribute("style", "display:inline !important")
       : a[i].setAttribute("style", "display:none !important");
 }
+if (getElementsByClassName("content-container")) {
+  console.log('game page')
+}
+$('.fa-star').click(function() {
+  $(this).toggleClass('fas far');
+})
