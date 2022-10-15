@@ -1,6 +1,3 @@
-
-
-
 if (localStorage.getItem("appearance") == "neon") {
   var cssElm = document.createElement("link");
   cssElm.setAttribute("href", "/neon.css");
@@ -11,15 +8,15 @@ if (localStorage.getItem("appearance") == "neon") {
   console.log("neon");
 }
 if (localStorage.getItem("background") == null) {
-  localStorage.setItem("background", "default")
-  }
+  localStorage.setItem("background", "default");
+}
 if (localStorage.getItem("appearance") !== "neon") {
-  if (document.getElementById('neoncss')) {
-  const link = document.getElementById("neoncss");
-  console.log(link);
-  link.remove();
+  if (document.getElementById("neoncss")) {
+    const link = document.getElementById("neoncss");
+    console.log(link);
+    link.remove();
 
-  console.log("remove neon");
+    console.log("remove neon");
   }
 }
 function setLogo(highlight) {
@@ -80,15 +77,16 @@ const version = "v" + sArr.join(".");
 document.body.style.backgroundColor = "var(--bg-color)";
 document.body.style.fontFamily = "var(--font)";
 //Fetch visit count
-const visitapi = "https://api.countapi.xyz/update/emulatoros.github.io/78c84613-3752-436e-ae7c-29f94d1fc15f/?amount=1";
+const visitapi =
+  "https://api.countapi.xyz/update/emulatoros.github.io/78c84613-3752-436e-ae7c-29f94d1fc15f/?amount=1";
 fetch(visitapi)
   .then((res) => res.json())
   .then((res) => {
     document.getElementById("visit-count").innerText = res.value; //Add commas
   });
-(function(history){
+(function (history) {
   var pushState = history.pushState;
-  history.pushState = function(state) {
+  history.pushState = function (state) {
     if (typeof history.onpushstate == "function") {
       history.onpushstate(arguments);
     }
@@ -106,7 +104,7 @@ history.onpushstate = () => {
     console.log(location.pathname);
     goatcounter.count();
   }, 1);
-}
+};
 
 //Turn off GSAP null warnings (if present)
 try {
@@ -154,8 +152,6 @@ $(window).scroll(function () {
   }
 });
 
-
-
 //Prepend Navbar (using innerHTML because there's no escaped input)
 const $header = document.createElement("header");
 $header.setAttribute("id", "header");
@@ -201,9 +197,9 @@ $footer.innerHTML = `<a class="link underline" href="https://github.com/Emulator
 <p class="at">© Emulator&#173;OS 2021-</p> <p id="yearp"></p>`;
 document.body.append($footer);
 
-yearset = new Date().getFullYear()
+yearset = new Date().getFullYear();
 const yearp = document.getElementById("yearp");
-yearp.innerHTML = ' ' + yearset;
+yearp.innerHTML = " " + yearset;
 
 const pxsrc = "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co/";
 
@@ -216,20 +212,34 @@ window.onmessage = function (e) {
   document.getElementById("user-count").innerText = e.data;
 };
 
-
 if (localStorage.getItem("plink") === null) {
   console.log("null");
-  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
+  localStorage.setItem(
+    "plink",
+    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
+  );
 }
 
-if (localStorage.getItem("plink") == 'r') {
-  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
-} else if (localStorage.getItem("plink") == 'r2.emulatoros.ga') {
-  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
-} else if (localStorage.getItem("plink") == 'r2') {
-  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
-} else if (localStorage.getItem("plink") == 'r3') {
-  localStorage.setItem("plink", "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co");
+if (localStorage.getItem("plink") == "r") {
+  localStorage.setItem(
+    "plink",
+    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
+  );
+} else if (localStorage.getItem("plink") == "r2.emulatoros.ga") {
+  localStorage.setItem(
+    "plink",
+    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
+  );
+} else if (localStorage.getItem("plink") == "r2") {
+  localStorage.setItem(
+    "plink",
+    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
+  );
+} else if (localStorage.getItem("plink") == "r3") {
+  localStorage.setItem(
+    "plink",
+    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
+  );
 }
 
 function searchGames() {
@@ -240,7 +250,7 @@ function searchGames() {
       ? a[i].setAttribute("style", "display:inline !important")
       : a[i].setAttribute("style", "display:none !important");
 }
-if (getElementsByClassName("content-container")) {
+if (getElementsByClassName("content-container") !== null) {
   if (document.body.dataset.ess) {
     const autogads = document.createElement("script");
     autogads.setAttribute("async", "");
@@ -251,20 +261,20 @@ if (getElementsByClassName("content-container")) {
     autogads.setAttribute("crossorigin", "anonymous");
     document.head.appendChild(autogads);
   } else {
-    <div class="othergames-container"></div>;
+    
     const ogcontainer = document.createElement("div");
     ogcontainer.classList.add("othergames-container");
     ogcontainer.append(document.getElementsByClassName("content"));
     const adDiv = document.createElement("div");
     adDiv.classList.add("adDiv");
     ogcontainer.prepend(adDiv);
-  
+
     const adScript = document.createElement("script");
     adScript.async = true;
     adScript.src =
       "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2209834467602790";
     adScript.crossOrigin = "anonymous";
-  
+
     const adIns = document.createElement("ins");
     adIns.setAttribute("class", "adsbygoogle");
     adIns.setAttribute(
@@ -273,18 +283,18 @@ if (getElementsByClassName("content-container")) {
     );
     adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
     adIns.setAttribute("data-ad-slot", "2600269721");
-  
+
     const adScript2 = document.createElement("script");
     adScript2.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});";
     adDiv.append(adScript, adIns, adScript2);
-  
+
     console.log("Ads displayed");
   }
-  
-  console.log('game page')
+
+  console.log("game page");
 } else {
-  console.log('no game page')
+  console.log("no game page");
 }
-$('.fa-star').click(function() {
-  $(this).toggleClass('fas far');
-})
+$(".fa-star").click(function () {
+  $(this).toggleClass("fas far");
+});
