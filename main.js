@@ -292,13 +292,11 @@ if (ads !== null) {
     adIns2.setAttribute("class", "adsbygoogle");
     adIns2.setAttribute(
       "style",
-      "display:block;"
+      "display:inline-block;width:200px;height:500px"
     );
-     adIns2.setAttribute("data-full-width-responsive", "true");
-     adIns2.setAttribute("data-ad-format", "auto");
     adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
     adIns2.setAttribute("data-ad-slot", "9792797175");
-    
+
     const adScript2 = document.createElement("script");
     adScript2.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});";
     adDiv.append(adScript, adIns2, adIns, adScript2);
