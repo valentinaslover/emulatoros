@@ -287,12 +287,13 @@ if (ads !== null) {
     adIns2.setAttribute("class", "adsbygoogle");
     adIns2.setAttribute(
       "style",
-      "display:block;width:250px;height:250px; margin:auto;"
+      "display:block;"
     );
+     adIns2.setAttribute("data-full-width-responsive", "true");
+     adIns2.setAttribute("data-ad-format", "auto");
     adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
     adIns2.setAttribute("data-ad-slot", "9792797175");
 
-    const adScript2 = document.createElement("script");
     ads.append(adScript, adIns, adIns2);
     
     console.log("Ads displayed");
