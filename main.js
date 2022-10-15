@@ -298,11 +298,8 @@ if (ads !== null) {
     adIns2.setAttribute("data-ad-slot", "9792797175");
 
     const adScript2 = document.createElement("script");
-    adScript2.innerText =
-      "(adsbygoogle = window.adsbygoogle || []).push({});";
-    adDiv.append(adScript, adIns2, adScript2);
-
-
+    adDiv.append(adScript, adIns2, adIns);
+    
     console.log("Ads displayed");
   }
 
@@ -310,6 +307,9 @@ if (ads !== null) {
 } else {
   console.log("no game page");
 }
+[].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+  (adsbygoogle = window.adsbygoogle || []).push({});
+});
 $(".fa-star").click(function () {
   $(this).toggleClass("fas far");
 });
