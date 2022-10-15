@@ -263,7 +263,9 @@ if (ads !== null) {
     document.head.appendChild(autogads);
     console.log('ess')
   } else {
-    
+    const adDiv = document.createElement("div");
+          adDiv.classList.add("adDiv");
+          ads.append(adDiv);
     
 
     const adScript = document.createElement("script");
@@ -294,7 +296,7 @@ if (ads !== null) {
     adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
     adIns2.setAttribute("data-ad-slot", "9792797175");
 
-    ads.append(adScript, adIns, adIns2);
+    adDiv.append(adScript, adIns, adIns2);
     
     console.log("Ads displayed");
   }
