@@ -241,7 +241,49 @@ function searchGames() {
       : a[i].setAttribute("style", "display:none !important");
 }
 if (getElementsByClassName("content-container")) {
+  if (document.body.dataset.ess) {
+    const autogads = document.createElement("script");
+    autogads.setAttribute("async", "");
+    autogads.setAttribute(
+      "src",
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2209834467602790"
+    );
+    autogads.setAttribute("crossorigin", "anonymous");
+    document.head.appendChild(autogads);
+  } else {
+    <div class="othergames-container"></div>;
+    const ogcontainer = document.createElement("div");
+    ogcontainer.classList.add("othergames-container");
+    ogcontainer.append(document.getElementsByClassName("content"));
+    const adDiv = document.createElement("div");
+    adDiv.classList.add("adDiv");
+    ogcontainer.prepend(adDiv);
+  
+    const adScript = document.createElement("script");
+    adScript.async = true;
+    adScript.src =
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2209834467602790";
+    adScript.crossOrigin = "anonymous";
+  
+    const adIns = document.createElement("ins");
+    adIns.setAttribute("class", "adsbygoogle");
+    adIns.setAttribute(
+      "style",
+      "display:block;width:250px;height:250px; margin: auto;"
+    );
+    adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
+    adIns.setAttribute("data-ad-slot", "2600269721");
+  
+    const adScript2 = document.createElement("script");
+    adScript2.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});";
+    adDiv.append(adScript, adIns, adScript2);
+  
+    console.log("Ads displayed");
+  }
+  
   console.log('game page')
+} else {
+  console.log('no game page')
 }
 $('.fa-star').click(function() {
   $(this).toggleClass('fas far');
