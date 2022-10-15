@@ -264,12 +264,7 @@ if (ads !== null) {
     console.log('ess')
   } else {
     
-    const ogcontainer = document.createElement("div");
-    ogcontainer.classList.add("othergames-container");
-    ads.appendChild(ogcontainer);
-    const adDiv = document.createElement("div");
-    adDiv.classList.add("adDiv");
-    ogcontainer.prepend(adDiv);
+    
 
     const adScript = document.createElement("script");
     adScript.async = true;
@@ -298,7 +293,7 @@ if (ads !== null) {
     adIns2.setAttribute("data-ad-slot", "9792797175");
 
     const adScript2 = document.createElement("script");
-    adDiv.append(adScript, adIns2, adIns);
+    ads.append(adScript, adIns, adIns2);
     
     console.log("Ads displayed");
   }
