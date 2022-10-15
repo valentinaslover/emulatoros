@@ -267,7 +267,7 @@ if (ads !== null) {
     
     const adDiv = document.createElement("div");
     adDiv.classList.add("adDiv");
-    ads.prepend(adDiv);
+    ads.append(adDiv);
 
     const adScript = document.createElement("script");
     adScript.async = true;
