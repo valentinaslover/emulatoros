@@ -251,6 +251,7 @@ function searchGames() {
       : a[i].setAttribute("style", "display:none !important");
 }
 const ads = document.querySelector(".content");
+const main = document.querySelector(".main-content");
 if (ads !== null) {
   if (document.body.dataset.ess) {
     const autogads = document.createElement("script");
@@ -296,7 +297,8 @@ if (ads !== null) {
     adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
     adIns2.setAttribute("data-ad-slot", "9792797175");
 
-    adDiv.append(adScript, adIns, adIns2);
+    adDiv.append(adScript, adIns);
+    main.append(adIns2);
     
     console.log("Ads displayed");
   }
