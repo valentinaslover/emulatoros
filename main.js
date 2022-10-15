@@ -250,7 +250,7 @@ function searchGames() {
       ? a[i].setAttribute("style", "display:inline !important")
       : a[i].setAttribute("style", "display:none !important");
 }
-const ads = document.getElementsByClassName("content-container");
+const ads = document.getElementsByClassName("content");
 if (ads !== null) {
   if (document.body.dataset.ess) {
     const autogads = document.createElement("script");
@@ -266,7 +266,7 @@ if (ads !== null) {
     
     const ogcontainer = document.createElement("div");
     ogcontainer.classList.add("othergames-container");
-    document.getElementsByClassName("content").append(ogcontainer);
+    ads.append(ogcontainer);
     const adDiv = document.createElement("div");
     adDiv.classList.add("adDiv");
     ogcontainer.prepend(adDiv);
