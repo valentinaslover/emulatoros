@@ -284,7 +284,7 @@ if (ads !== null) {
       "display:block;width:250px;height:250px; margin: auto;"
     );
     adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
-    adIns.setAttribute("data-ad-slot", "2600269721");
+    adIns.setAttribute("data-ad-slot", "1042232702");
 
     const adScript2 = document.createElement("script");
     adScript2.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});";
