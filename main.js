@@ -261,6 +261,7 @@ if (ads !== null) {
     );
     autogads.setAttribute("crossorigin", "anonymous");
     document.head.appendChild(autogads);
+    console.log('ess')
   } else {
     
     const ogcontainer = document.createElement("div");
@@ -288,6 +289,7 @@ if (ads !== null) {
     const adScript2 = document.createElement("script");
     adScript2.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});";
     adDiv.append(adScript, adIns, adScript2);
+    console.log(adScript)
 
     console.log("Ads displayed");
   }
