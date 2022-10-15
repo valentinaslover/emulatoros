@@ -281,7 +281,7 @@ if (ads !== null) {
     adIns.setAttribute("class", "adsbygoogle");
     adIns.setAttribute(
       "style",
-      "display:block;margin-top: 20x; margin-bottom:0px;"
+      "display:block;"
     );
      adIns.setAttribute("data-full-width-responsive", "true");
      adIns.setAttribute("data-ad-format", "auto");
