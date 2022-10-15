@@ -281,10 +281,12 @@ if (ads !== null) {
     adIns.setAttribute("class", "adsbygoogle");
     adIns.setAttribute(
       "style",
-      "display:block;width:250px;height:250px; margin: auto;"
+      "display:block; margin: auto;"
     );
     adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
     adIns.setAttribute("data-ad-slot", "1042232702");
+    adIns.setAttribute("data-ad-format", "auto");
+    adIns.setAttribute("data-full-width-responsive", "true");
 
     const adScript2 = document.createElement("script");
     adScript2.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});";
