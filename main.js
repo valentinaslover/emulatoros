@@ -281,16 +281,27 @@ if (ads !== null) {
     adIns.setAttribute("class", "adsbygoogle");
     adIns.setAttribute(
       "style",
-      "display:block;"
+      "display:block;margin-top: 20x; margin-bottom:0px;"
     );
      adIns.setAttribute("data-full-width-responsive", "true");
      adIns.setAttribute("data-ad-format", "auto");
     adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
     adIns.setAttribute("data-ad-slot", "1042232702");
-
+    
+    const adIns2 = document.createElement("ins");
+    adIns2.setAttribute("class", "adsbygoogle");
+    adIns2.setAttribute(
+      "style",
+      "display:block;"
+    );
+     adIns2.setAttribute("data-full-width-responsive", "true");
+     adIns2.setAttribute("data-ad-format", "auto");
+    adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
+    adIns2.setAttribute("data-ad-slot", "9792797175");
+    
     const adScript2 = document.createElement("script");
     adScript2.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});";
-    adDiv.append(adScript, adIns, adScript2);
+    adDiv.append(adScript, adIns2, adIns, adScript2);
     console.log(ogcontainer);
 
     console.log("Ads displayed");
