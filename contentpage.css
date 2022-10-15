@@ -23,7 +23,7 @@ ins.adsbygoogle[data-ad-status=unfilled] {
 .content {
     position: relative;
     margin: auto;
-    display: grid;
+    display: flex;
     overflow: hidden;
     justify-content: center;
     grid-template-columns: 1fr 1fr
