@@ -298,7 +298,7 @@ if (ads !== null) {
     const adScript2 = document.createElement("script");
     ads.append(adScript, adIns2);
     
-    console.log(ogcontainer);
+    console.log(ads);
 
     console.log("Ads displayed");
   }
