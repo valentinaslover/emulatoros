@@ -264,7 +264,7 @@ if (ads !== null) {
     console.log('ess')
   } else {
     const adDiv = document.createElement("div");
-          adDiv.classList.add("adDiv");
+          adDiv.classList.add("othergames-container");
           ads.append(adDiv);
     
 
