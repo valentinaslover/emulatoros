@@ -281,7 +281,7 @@ if (ads !== null) {
     adIns.setAttribute("class", "adsbygoogle");
     adIns.setAttribute(
       "style",
-      "display:block;width:250px;height:500px; margin: auto;"
+      "display:inline-block;width:250px;height:500px;"
     );
     adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
     adIns.setAttribute("data-ad-slot", "1042232702");
