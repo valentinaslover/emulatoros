@@ -289,7 +289,7 @@ if (ads !== null) {
     const adScript2 = document.createElement("script");
     adScript2.innerText = "(adsbygoogle = window.adsbygoogle || []).push({});";
     adDiv.append(adScript, adIns, adScript2);
-    console.log(adScript)
+    console.log(ogcontainer);
 
     console.log("Ads displayed");
   }
