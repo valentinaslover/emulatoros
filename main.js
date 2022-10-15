@@ -250,7 +250,7 @@ function searchGames() {
       ? a[i].setAttribute("style", "display:inline !important")
       : a[i].setAttribute("style", "display:none !important");
 }
-const ads = getElementsByClassName("content-container")
+const ads = document.getElementsByClassName("content-container");
 if (ads !== null) {
   if (document.body.dataset.ess) {
     const autogads = document.createElement("script");
