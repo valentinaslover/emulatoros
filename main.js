@@ -279,7 +279,7 @@ if (ads !== null) {
     adIns.setAttribute("class", "adsbygoogle");
     adIns.setAttribute(
       "style",
-      "display:block;margin:5%0"
+      "display:block"
     );
      adIns.setAttribute("data-full-width-responsive", "true");
      adIns.setAttribute("data-ad-format", "auto");
@@ -290,7 +290,7 @@ if (ads !== null) {
     adIns2.setAttribute("class", "adsbygoogle");
     adIns2.setAttribute(
       "style",
-      "display:block;"
+      "display:block;margin:5%0"
     );
      adIns2.setAttribute("data-full-width-responsive", "true");
      adIns2.setAttribute("data-ad-format", "auto");
