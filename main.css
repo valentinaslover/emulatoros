@@ -222,6 +222,19 @@ button:hover::after {
 	animation: moveInBottom 5s ease-out;
 	animation-fill-mode: backwards
 }
+/* =================== Games =================== */
+.adcontainer{
+	position: sticky;
+	height: 800px;
+	top: 1vh;
+  }
+  
+  .games-wrapper{
+	  display: grid;
+	  max-width: 100%;
+	  grid-template-columns: 0.5fr 2fr 0.5fr;
+	  margin-bottom: 5%;
+  }
 
 body {
 	font-family: var(--font);
