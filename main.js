@@ -296,7 +296,7 @@ if (ads !== null) {
     adIns2.setAttribute("data-ad-slot", "9792797175");
 
     const adScript2 = document.createElement("script");
-    ads.append(adScript, adIns2);
+    adDiv.append(adScript, adIns2);
     
     console.log(ads);
 
