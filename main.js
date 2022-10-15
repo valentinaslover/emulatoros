@@ -264,10 +264,12 @@ if (ads !== null) {
     console.log('ess')
   } else {
     
-   
+    const ogcontainer = document.createElement("div");
+    ogcontainer.classList.add("othergames-container");
+    ads.appendChild(ogcontainer);
     const adDiv = document.createElement("div");
     adDiv.classList.add("adDiv");
-    ads.prepend(adDiv);
+    ogcontainer.prepend(adDiv);
 
     const adScript = document.createElement("script");
     adScript.async = true;
@@ -290,15 +292,15 @@ if (ads !== null) {
     adIns2.setAttribute("class", "adsbygoogle");
     adIns2.setAttribute(
       "style",
-      "display:block;width:250px;height:250px"
+      "display:block;width:250px;height:250px; margin:auto;"
     );
     adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
     adIns2.setAttribute("data-ad-slot", "9792797175");
 
     const adScript2 = document.createElement("script");
-    ads.append(adScript, adIns2);
+    adDiv.append(adScript, adIns2, adIns);
     
-    console.log(ads);
+    console.log(ogcontainer);
 
     console.log("Ads displayed");
   }
