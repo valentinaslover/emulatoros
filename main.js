@@ -266,7 +266,7 @@ if (ads !== null) {
     
     const ogcontainer = document.createElement("div");
     ogcontainer.classList.add("othergames-container");
-    ads.appendChild(ogcontainer);
+    ads[0].appendChild(ogcontainer);
     const adDiv = document.createElement("div");
     adDiv.classList.add("adDiv");
     ogcontainer.prepend(adDiv);
