@@ -1,5 +1,5 @@
 const buildfilterdiv = (games) => {
-    const $divwrap = document.createElement("button");
+    const $divwrap = document.createElement("div");
     $divwrap.classList.add("filter-item");
     for (var i = 0; i < games.filter.length; i++){
         $divwrap.classList.add(games.filter[i]);
@@ -18,13 +18,15 @@ const buildfilterdiv = (games) => {
   };
 
   const buildimgcontainer = (games) => {
-    const $imgcontainer = document.createElement("div"); //create div imagecontainer
+    const $imgcontainer = document.createElement("span"); //create div imagecontainer
     $imgcontainer.classList.add("img-container");
+    
 
     const $anchor = document.createElement("a"); //create anchor tag inside that
     $anchor.href = "/games/" + games.link;
 
     const $imgtag = document.createElement("img"); //create the img tag
+    $imgtag.setAttribute("decoding", "true")
     $imgtag.classList.add("hover-center");
     $imgtag.src = "/img/" + games.imgsrc + '.webp';
     $imgtag.alt = games.name; //alt is the same as the game's name

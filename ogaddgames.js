@@ -25,7 +25,9 @@ const buildfilterdiv = (games) => {
     $anchor.href = "/" + games.link + ".html";
 
     const $imgtag = document.createElement("img"); //create the img tag
+    $imgtag.setAttribute("decoding", "true")
     $imgtag.classList.add("hover-center");
+    
     $imgtag.src = "/assets/img/games/" + games.imgsrc;
     $imgtag.alt = games.name; //alt is the same as the game's name
 
