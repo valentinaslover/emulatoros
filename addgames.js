@@ -86,7 +86,12 @@ const randGame = () => {
     window.location = "/" + gamesArr[randInd].link + ".html";
   }
 }
-$(document).click(function(event) {
-  var text = $(event.target);
-  console.log(text)
-});
+let parent = document.querySelector('.adcontainer').parentElement;
+
+while (parent) {
+    const hasOverflow = getComputedStyle(parent).overflow;
+    if (hasOverflow !== 'visible') {
+        console.log(hasOverflow, parent);
+    }
+    parent = parent.parentElement;
+}
