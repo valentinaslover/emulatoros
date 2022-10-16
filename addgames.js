@@ -18,14 +18,21 @@ const buildfilterdiv = (games) => {
   };
 
   const buildimgcontainer = (games) => {
+    const $imgcontainer = document.createElement("div"); //create div imagecontainer
+    $imgcontainer.classList.add("img-container");
+
+    const $anchor = document.createElement("a"); //create anchor tag inside that
+    $anchor.href = "/" + games.link + ".html";
 
     const $imgtag = document.createElement("img"); //create the img tag
     $imgtag.classList.add("hover-center");
     $imgtag.src = "/img/" + games.imgsrc + '.webp';
     $imgtag.alt = games.name; //alt is the same as the game's name
 
+$anchor.appendChild($imgtag);
+    $imgcontainer.appendChild($anchor);
 
-    return $imgtag;
+    return $imgcontainer;
   };
 
   const buildgridcardtext = (games) => {
