@@ -230,10 +230,17 @@ button:hover::after {
   }
   
   .games-wrapper{
-	  display: grid;
-	  max-width: 100%;
-	  grid-template-columns: 0.5fr 2fr 0.5fr;
-	  margin-bottom: 5%;
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+		row-gap: 4rem;
+		align-items: center;
+		flex-direction: column;
+		max-width: 80rem;
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
   }
   .filter-wrap {
     position: relative;
