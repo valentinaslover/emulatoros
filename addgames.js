@@ -84,6 +84,6 @@ const randGame = () => {
   }
 }
 $(document).click(function(event) {
-  var text = $(event.target).text();
+  var text = $(event.target);
   console.log(text)
 });
