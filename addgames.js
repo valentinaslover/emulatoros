@@ -35,7 +35,6 @@ const buildfilterdiv = (games) => {
     $p.innerText = games.name; //set the title
 
 
-    $gridcardtext.appendChild($p);
 
     return $p;
   };
