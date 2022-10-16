@@ -29,21 +29,15 @@ const buildfilterdiv = (games) => {
   };
 
   const buildgridcardtext = (games) => {
-    const $gridcardtext = document.createElement("div"); //create div gridcardtext
-    $gridcardtext.classList.add("grid-card-text");
-
+    
     const $p = document.createElement("p"); //create the p tag
     $p.classList.add("game-name");
     $p.innerText = games.name; //set the title
 
-    const $h1 = document.createElement("h1"); //create h1 tag inside that
-    $h1.classList.add("game-developer");
-    $h1.innerText = "by " + games.developer;
 
     $gridcardtext.appendChild($p);
-    $gridcardtext.appendChild($h1);
 
-    return $gridcardtext;
+    return $p;
   };
 
   const filterwrap = document.querySelector(".filter-wrap");
