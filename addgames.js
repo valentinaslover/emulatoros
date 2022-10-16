@@ -21,7 +21,7 @@ const buildfilterdiv = (games) => {
 
     const $imgtag = document.createElement("img"); //create the img tag
     $imgtag.classList.add("hover-center");
-    $imgtag.src = "/assets/img/games/" + games.imgsrc;
+    $imgtag.src = "/img/" + games.imgsrc + '.webp';
     $imgtag.alt = games.name; //alt is the same as the game's name
 
 
@@ -29,14 +29,17 @@ const buildfilterdiv = (games) => {
   };
 
   const buildgridcardtext = (games) => {
-    
+    const $gridcardtext = document.createElement("div"); //create div gridcardtext
+    $gridcardtext.classList.add("grid-card-text");
+
     const $p = document.createElement("p"); //create the p tag
     $p.classList.add("game-name");
     $p.innerText = games.name; //set the title
 
 
+    $gridcardtext.appendChild($p);
 
-    return $p;
+    return $gridcardtext;
   };
 
   const filterwrap = document.querySelector(".filter-wrap");
