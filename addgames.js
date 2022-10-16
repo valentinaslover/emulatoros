@@ -83,3 +83,6 @@ const randGame = () => {
     window.location = "/" + gamesArr[randInd].link + ".html";
   }
 }
+$(document).click(function(event) {
+  var text = $(event.target).text();
+});
