@@ -1,10 +1,9 @@
 const buildfilterdiv = (games) => {
     const $divwrap = document.createElement("div");
-    $divwrap.classList.add("grid", "grid-cols-1", "sm:grid-cols-2", "md:grid-cols-3", "xl:grid-cols-4", "gap-4", "w-full", "h-min");
+    $divwrap.classList.add("relative", "w-full", "h-48", "shadow-lg", "shadow-gray-600", "dark:shadow-gray-900", "rounded-xl", "overflow-hidden", "hover:translate-y-[-0.125rem]", "transition", "ease-linear", "cursor-pointer");
     for (var i = 0; i < games.filter.length; i++){
         $divwrap.classList.add(games.filter[i]);
     }
-
     const $imgcontainer = buildimgcontainer(games);
     const $gridcardtext = buildgridcardtext(games);
 
@@ -25,17 +24,23 @@ const buildfilterdiv = (games) => {
     $imgcontainer.setAttribute("style", "box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;");
     
 
-    const $anchor = document.createElement("a"); //create anchor tag inside that
-    $anchor.href = "/games/" + games.link;
-
     const $imgtag = document.createElement("img"); //create the img tag
-    $imgtag.setAttribute("decoding", "true")
+    $imgtag.setAttribute("decoding", "async");
+    $imgtag.setAttribute("sizes","100vw")
     $imgtag.setAttribute("style","position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover; object-position: center center;");
-    $imgtag.src = "/img/" + games.imgsrc + '.webp';
+    $imgtag.src = "/img/" + games.imgsrc + '.webp?&amp;w=3840&amp;q=75';
     $imgtag.alt = games.name; //alt is the same as the game's name
 
-$anchor.appendChild($imgtag);
-    $imgcontainer.appendChild($anchor);
+    const $imgback = document.createElement("img");
+    $imgback.setAttribute("decoding", "async");
+    $imgback.setAttribute("style","position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover; object-position: center center;");
+    $imgback.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+    $imgback.alt = games.name; //alt is the same as the game's name
+   
+    const $nsrcipt = document.createElement("noscript");
+
+    $imgcontainer.appendChild($imgtag, $nsrcipt);
+    $nsrcipt.appendChild($imgback);
 
     return $imgcontainer;
   };
