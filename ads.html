@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/contentpage.css">
+  <link id="maincss" rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="flex flex-col items-center w-full h-full min-h-screen py-20 justify-center">
+       
+        
+        <div class="w-full grid flex-row justify-center" style="grid-template-columns: 0.5fr 2fr 0.5fr;">
+          <div class="adcontainer"></div>
+          <div id="gridCardsWithFilter" class="w-full min-h-screen max-w-7xl px-5 flex flex-col gap-y-16 py-20 items-center">
+            <section class="filter-categories"></section>
+            <div class="grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-4 w-full h-min filter-wrap"></div>
+          </div>
+          <div class="adcontainer"></div>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/main.js"></script>
+    <script src="/mainads.js"></script>
+</body>
+</html>
