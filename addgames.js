@@ -41,12 +41,16 @@ $anchor.appendChild($imgtag);
     const $gridcardtext = document.createElement("div"); //create div gridcardtext
     $gridcardtext.classList.add("grid-card-text");
 
-    const $p = document.createElement("p"); //create the p tag
+    const $gridcardtextdiv = document.createElement("div"); //create div gridcardtext
+    $gridcardtextdiv.classList.add("grid-card-text-div");
+
+    const $p = document.createElement("h1"); //create the p tag
     $p.classList.add("game-name");
     $p.innerText = games.name; //set the title
 
 
-    $gridcardtext.appendChild($p);
+    $gridcardtext.appendChild($gridcardtextdiv);
+    $gridcardtextdiv.appendChild($p)
 
     return $gridcardtext;
   };

@@ -252,7 +252,31 @@ button:hover::after {
 		height: 12rem;
 		position: relative;
 	}
-
+.grid-card-text {
+		--tw-gradient-to: #111827;
+		--tw-gradient-from: transparent;
+		--tw-gradient-to: transparent;
+		--tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
+		background-image: linear-gradient(to bottom,var(--tw-gradient-stops));
+		right: 0;
+		left: 0;
+		position: absolute;
+}
+.grid-card-text-div {
+		padding: 1rem;
+		bottom: 0;
+		position: absolute;
+	}
+	.game-name {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    letter-spacing: -.025em;
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
 body {
 	font-family: var(--font);
 	font-weight: 500;
