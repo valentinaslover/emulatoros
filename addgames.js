@@ -22,7 +22,7 @@ const buildfilterdiv = (games) => {
 
   const buildimgcontainer = (games) => {
     const $imgcontainer = document.createElement("span"); //create div imagecontainer
-    $imgcontainer.setAttribute.add("style", "box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;");
+    $imgcontainer.setAttribute("style", "box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;");
     
 
     const $anchor = document.createElement("a"); //create anchor tag inside that
@@ -30,7 +30,7 @@ const buildfilterdiv = (games) => {
 
     const $imgtag = document.createElement("img"); //create the img tag
     $imgtag.setAttribute("decoding", "true")
-    $imgtag.setAttribute.add("style","position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover; object-position: center center;");
+    $imgtag.setAttribute("style","position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover; object-position: center center;");
     $imgtag.src = "/img/" + games.imgsrc + '.webp';
     $imgtag.alt = games.name; //alt is the same as the game's name
 
