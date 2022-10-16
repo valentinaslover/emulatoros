@@ -11,13 +11,13 @@
   <link id="maincss" rel="stylesheet" href="/main.css">
 </head>
 <body>
-    <div class="flex flex-col items-center w-full h-full min-h-screen py-20 justify-center">
        
         
-        <div class="w-full grid flex-row justify-center" style="grid-template-columns: 0.5fr 2fr 0.5fr;">
+        <div class="w-full grid flex-row justify-center" style="    display: grid;
+        max-width: 100%;
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        margin-bottom: 5%;">
           <div class="adcontainer"></div>
-          <div id="gridCardsWithFilter" class="w-full min-h-screen max-w-7xl px-5 flex flex-col gap-y-16 py-20 items-center">
-            <section class="filter-categories"></section>
             <div class="grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-4 w-full h-min filter-wrap">
                 <button onclick='window.location.href="/games/sm64"' type=button class="GameName emu btn"><img height=150 src="/img/mario64.webp" width=150>Super Mario 64</button> 
             <button onclick='window.location.href="/games/firered"' type=button class="GameName emu"><img height=150 src="/img/firered.webp" width=150>Pokemon Fire Red</button> 
