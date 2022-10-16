@@ -9,11 +9,16 @@ const buildfilterdiv = (games) => {
     const $gridcardtext = buildgridcardtext(games);
 
     const $filtermask = document.createElement("div");
-    $filtermask.classList.add("filter-mask");
+    $filtermask.classList.add("hover-div");
 
+    const $back = document.createElement("div");
+    $back.classList.add("back");
+
+    $divwrap.appendChild($back);
     $divwrap.appendChild($imgcontainer);
     $divwrap.appendChild($gridcardtext);
-    $divwrap.appendChild($filtermask)
+    $divwrap.appendChild($filtermask);
+    
     return $divwrap;
   };
 

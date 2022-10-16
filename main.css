@@ -247,11 +247,75 @@ button:hover::after {
     font-size: 75%;
 }
 .filter-item {
-    position: relative;
+		--tw-shadow-color: #111827;
+		--tw-shadow: var(--tw-shadow-colored);
+		transition-timing-function: linear;
+		transition-property: color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+		transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
+		transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+		transition-timing-function: cubic-bezier(.4,0,.2,1);
+		transition-duration: .15s;
+		--tw-shadow-color: #4b5563;
+		--tw-shadow: var(--tw-shadow-colored);
+		box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+		--tw-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+		--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);
+		border-radius: 0.75rem;
+		overflow: hidden;
+		cursor: pointer;
 		width: 100%;
 		height: 12rem;
 		position: relative;
 	}
+	.hover-div {
+			transition-timing-function: linear;
+			transition-property: color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+			transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
+			transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+			transition-timing-function: cubic-bezier(.4,0,.2,1);
+			transition-duration: .15s;
+			border-color: transparent;
+			border-width: 3px;
+			border-radius: 0.75rem;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			position: absolute;
+		}
+		.hover-div :hover {
+				--tw-border-opacity: 1;
+				border-color: rgb(231 126 126/var(--tw-border-opacity));
+				transition-timing-function: linear;
+				transition-property: color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+				transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
+				transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+				transition-timing-function: cubic-bezier(.4,0,.2,1);
+				transition-duration: .15s;
+				border-color: transparent;
+				border-width: 3px;
+				border-radius: 0.75rem;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				position: absolute;
+			}
+		.back {
+				--tw-bg-opacity: 1;
+				background-color: rgb(156 163 175/var(--tw-bg-opacity));
+			
+				border-radius: 1rem;
+				-webkit-animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite;
+				animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite;
+				width: 100%;
+				height: 100%;
+			}
+		
 	.hover-center    { position: absolute;
 		inset: 0px;
 		box-sizing: border-box;
@@ -307,6 +371,7 @@ button:hover::after {
     font-weight: 800;
     font-size: 1.125rem;
     line-height: 1.75rem;
+	margin: revert;
 }
 body {
 	font-family: var(--font);

@@ -206,11 +206,6 @@ ins.adsbygoogle[data-ad-status=unfilled] {
     object-position: 100% 100%
 }
 
-.grid-card-text {
-    padding: 10px;
-    line-height: 5px
-}
-
 @media all and (max-width:812px) {
     .grid-card-text {
         padding-top: 5px;
