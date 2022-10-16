@@ -12,12 +12,10 @@
             adIns.setAttribute("class", "adsbygoogle");
             adIns.setAttribute(
                 "style",
-                "display:block;margin: 12vh auto;"
+                "display:block;width:160px;height:600px;margin: 12vh auto;"
             );
-            adIns.setAttribute("data-full-width-responsive", "true");
-     adIns.setAttribute("data-ad-format", "auto");
             adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
-            adIns.setAttribute("data-ad-slot", "1042232702");
+            adIns.setAttribute("data-ad-slot", "4749512883");
 
             const adScript2 = document.createElement("script");
             adScript2.innerText =
