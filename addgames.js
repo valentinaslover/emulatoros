@@ -1,6 +1,6 @@
 const buildfilterdiv = (games) => {
     const $divwrap = document.createElement("div");
-    $divwrap.classList.add("relative", "w-full", "h-48", "shadow-lg", "shadow-gray-600", "dark:shadow-gray-900", "rounded-xl", "overflow-hidden", "hover:translate-y-[-0.125rem]", "transition", "ease-linear", "cursor-pointer");
+    $divwrap.classList.add("relative", "w-full", "h-48", "shadow-lg", "shadow-gray-600", "dark:shadow-gray-900", "rounded-xl", "overflow-hidden", "hover:translate-y-[-0.125rem]", "transition", "ease-linear", "cursor-pointer", "filter-item");
     for (var i = 0; i < games.filter.length; i++){
         $divwrap.classList.add(games.filter[i]);
     }
@@ -8,9 +8,9 @@ const buildfilterdiv = (games) => {
     const $gridcardtext = buildgridcardtext(games);
 
     const $filtermask = document.createElement("div");
-    $filtermask.classList.add("absolute", "inset-0", "w-full", "h-full", "border-transparent", "border-5", "hover:border-primary", "rounded-xl", "ease-linear", "transition");
+    $filtermask.classList.add("filter-mask", "absolute", "inset-0", "w-full", "h-full", "border-transparent", "border-5", "hover:border-primary", "rounded-xl", "ease-linear", "transition");
     $($filtermask).click(function(event) {
-      window.location.href = "games" + games.link
+      window.location.href = "/games/" + games.link
   });
     const $back = document.createElement("div");
     $back.classList.add("w-full", "h-full", "bg-gray-400", "rounded-2xl", "animate-pulse");
