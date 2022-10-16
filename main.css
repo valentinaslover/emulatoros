@@ -660,7 +660,7 @@ right: 14px;
 display: flex;
 border-style: none !important;
     border-width: 2px;
-    padding-bottom: 310px !important;
+    padding-bottom: 0px !important;
 }
 
 .link {
