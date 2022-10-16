@@ -22,7 +22,7 @@ const buildfilterdiv = (games) => {
     $imgcontainer.classList.add("img-container");
 
     const $anchor = document.createElement("a"); //create anchor tag inside that
-    $anchor.href = "/" + games.link + ".html";
+    $anchor.href = "/games/" + games.link;
 
     const $imgtag = document.createElement("img"); //create the img tag
     $imgtag.classList.add("hover-center");

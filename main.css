@@ -235,7 +235,21 @@ button:hover::after {
 	  grid-template-columns: 0.5fr 2fr 0.5fr;
 	  margin-bottom: 5%;
   }
-
+  .filter-wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-auto-flow: row;
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem;
+    font-size: 75%;
+}
+.filter-item {
+    position: relative;
+    border-radius: 5px;
+}
 body {
 	font-family: var(--font);
 	font-weight: 500;
@@ -619,7 +633,7 @@ right: 14px;
 display: flex;
 border-style: none !important;
     border-width: 2px;
-    padding-bottom: 0px !important;
+    padding-bottom: 310px !important;
 }
 
 .link {
