@@ -267,7 +267,6 @@ body {
 	line-height: 1.7;
 	color: #FFFFFF;
 	background-color: var(--bg);
-	overflow-x: hidden;
 	letter-spacing: 0.2px;
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
