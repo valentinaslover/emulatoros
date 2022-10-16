@@ -51,7 +51,7 @@ const buildfilterdiv = (games) => {
     $p.innerText = games.name; //set the title
 
     const $h1 = document.createElement("h1"); //create h1 tag inside that
-    $h1.classList.add("game-developer");
+    $h1.classList.add("game-developer", ".md\:text-xl");
     $h1.innerText = "by " + games.developer;
 
     $gridcardtext.appendChild($p);

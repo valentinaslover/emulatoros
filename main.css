@@ -408,16 +408,22 @@ button:hover::after {
 		bottom: 0;
 		position: absolute;
 	}
-	.game-name {
+	@media (min-width: 768px){
+.md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-    --tw-text-opacity: 1;
+}
+	}
+	.game-name {
+	--tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     letter-spacing: -.025em;
     font-weight: 800;
     font-size: 1.125rem;
     line-height: 1.75rem;
-	margin: revert;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
 }
 body {
 	font-family: var(--font);
