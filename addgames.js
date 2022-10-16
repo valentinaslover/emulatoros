@@ -9,6 +9,9 @@ const buildfilterdiv = (games) => {
 
     const $filtermask = document.createElement("div");
     $filtermask.classList.add("absolute", "inset-0", "w-full", "h-full", "border-transparent", "border-[3px]", "hover:border-primary", "rounded-xl", "ease-linear", "transition");
+    $($filtermask).click(function(event) {
+      window.location.href = games.link
+  });
     const $back = document.createElement("div");
     $back.classList.add("w-full", "h-full", "bg-gray-400", "rounded-2xl", "animate-pulse");
 
