@@ -71,6 +71,23 @@ gtag('js', new Date());
 gtag('config', 'G-NSZB9Q5L1N');`;
 document.head.append(gascript, inlinegascript);
 
+const wndw = window.location.hostname 
+if (wndw == 'emulatoros.github.io') {
+  const gascript2 = document.createElement("script");
+gascript2.setAttribute("async", "");
+gascript2.setAttribute(
+  "src",
+  "https://www.googletagmanager.com/gtag/js?id=UA-225490180-1"
+);
+const inlinegascript2 = document.createElement("script");
+inlinegascript2.innerHTML = `window.dataLayer = window.dataLayer || []; 
+function gtag(){dataLayer.push(arguments);} 
+gtag('js', new Date()); 
+gtag('config', 'UA-225490180-1');`;
+document.head.append(gascript2, inlinegascript2);
+}
+
+
 //Semantic - Major.Minor.Patch
 const sArr = [`1`, `4`, `0`];
 const version = "v" + sArr.join(".");
