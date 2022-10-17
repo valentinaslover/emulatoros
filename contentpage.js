@@ -1,4 +1,5 @@
 let url = window.location.pathname; //get path
+let host = window.location.host
 /*let urlsub = "";
 if (urlstring.indexOf("html") > -1) {
   //Check of html String in URL.
@@ -13,7 +14,7 @@ if (url.indexOf("html") > -1) {
 }
 const ads = document.querySelector(".content");
 const main = document.querySelector(".main-content");
-if (url == "emulatoros.github.io") {
+if (host == "emulatoros.github.io") {
 if (ads !== null) {
   if (document.body.dataset.ess) {
     const autogads = document.createElement("script");
@@ -70,7 +71,7 @@ if (ads !== null) {
   console.log("no game page");
 }
 } else {
-  console.log('no ads allowed')
+  console.log(url + 'no ads allowed')
 }
 
 //if we find a match for the element, create the info
