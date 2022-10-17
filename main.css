@@ -11,7 +11,73 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+.filtered-inclusive .filter-item,
+  .filtered-exclusive .filter-item,
+  .filter-no-item {
+    display: none;
+  }
 
+  .filtered-inclusive .filter-item.selected,
+  .filtered-exclusive .filter-item:not(.selected) {
+    display: block;
+  }
+  .filter-input {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  .filter-input:checked+label {
+    background-color: var(--highlight);
+    box-shadow: none;
+  }
+  .filter-label {
+    display: block;
+    /* margin-right: 1em; */
+    padding: 0.5rem 0.5rem;
+    /* border-radius: 0.25rem; */
+    /* box-shadow: 3px 3px 3px rgb(0 0 0 / 30%); */
+    background: #FFFFFF;
+    transition: all 0.3s ease 0s;
+    font-size: 1.25rem;
+	color: var(--bg-color);
+	
+}
+
+
+  @media all and (max-width: 812px) {
+    .filter-label {
+      font-size: 0.6rem;
+    }
+  }
+  .filter-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .filter-no-item.filter-no-item-active {
+    display: block;
+    width: 100%;
+    background: #d8d8d8;
+    padding: 1em 1.5em;
+    margin: 0.75%;
+    border-radius: 0.25rem;
+    line-height: 1.2rem;
+	grid-area: 1 / 2 / 1 / 2;
+  }
+
+  @media all and (max-width: 812px) {
+    .filter-no-item.filter-no-item-active {
+      line-height: 0.8rem;
+    }
+  }
+  .adcontainer{
+	position: sticky;
+	height: 800px;
+	top: 1vh;
+  }
 html {
 	min-height: 100%;
 	/* make sure it is at least as tall as the viewport */
@@ -222,7 +288,14 @@ button:hover::after {
 	animation: moveInBottom 5s ease-out;
 	animation-fill-mode: backwards
 }
-
+/* =================== Games =================== */
+.adcontainer{
+	position: sticky;
+	height: 800px;
+	top: 1vh;
+  }
+  
+ 
 body {
 	font-family: var(--font);
 	font-weight: 500;
@@ -230,7 +303,6 @@ body {
 	line-height: 1.7;
 	color: #FFFFFF;
 	background-color: var(--bg);
-	overflow-x: hidden;
 	letter-spacing: 0.2px;
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
@@ -604,6 +676,9 @@ text-align: center;
 font-size: 12px;
 right: 14px;
 display: flex;
+border-style: none !important;
+    border-width: 2px;
+    padding-bottom: 0px !important;
 }
 
 .link {
