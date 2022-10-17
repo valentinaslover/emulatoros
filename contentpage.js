@@ -70,7 +70,7 @@ if (ads !== null) {
   console.log("no game page");
 }
 } else {
-  console.log('no ads allowed')
+  console.log(url + 'no ads allowed')
 }
 
 //if we find a match for the element, create the info
