@@ -85,6 +85,19 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date()); 
 gtag('config', 'UA-225490180-1');`;
 document.head.append(gascript2, inlinegascript2);
+} else {
+const gascript2 = document.createElement("script");
+gascript2.setAttribute("async", "");
+gascript2.setAttribute(
+  "src",
+  "https://www.googletagmanager.com/gtag/js?id=UA-225490180-2"
+);
+const inlinegascript2 = document.createElement("script");
+inlinegascript2.innerHTML = `window.dataLayer = window.dataLayer || []; 
+function gtag(){dataLayer.push(arguments);} 
+gtag('js', new Date()); 
+gtag('config', 'UA-225490180-2');`;
+document.head.append(gascript2, inlinegascript2);
 }
 
 
