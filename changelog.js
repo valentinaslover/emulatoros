@@ -9,8 +9,7 @@ var data = [
         }
     ]
     for (let i = 0; i < data.length; i++) {
-        console.log(data.date[i]);
-        console.log(data.version[i]);
+        console.log(data[i]);
   }
  // $.each(data, function(i, field){
    // console.log(data.date[i]);
