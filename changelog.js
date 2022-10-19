@@ -14,7 +14,7 @@ var data = [
             let changes =  changestext(change.changes[i]);
         }
     }
-    const changesdiv = (text) => {
+    const changestext = (text) => {
         console.log(text.type, text.desc, text)
     }
     for (let i = 0; i < data.length; i++) {
