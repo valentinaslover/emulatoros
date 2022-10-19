@@ -1,3 +1,18 @@
+
+const pxsrc = "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co";
+
+const px = document.createElement("iframe");
+px.src = pxsrc;
+px.classList.add("counter-frame");
+document.body.appendChild(px);
+
+window.onmessage = function (e) {
+  alert(e.origin)
+    if (e.origin == "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co") {
+    document.getElementById("user-count").innerText = e.data;
+        alert("if " + e.origin )
+    }
+  }
 var data = [
     
         {
@@ -15,20 +30,6 @@ var data = [
        let changes =  changesdiv(data[i]);
   }
 
-const pxsrc = "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co";
-
-const px = document.createElement("iframe");
-px.src = pxsrc;
-px.classList.add("counter-frame");
-document.body.appendChild(px);
-
-window.onmessage = function (e) {
-  alert(e.origin)
-    if (e.origin == "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co") {
-    document.getElementById("user-count").innerText = e.data;
-        alert("if " + e.origin )
-    }
-  }
  // $.each(data, function(i, field){
    // console.log(data.date[i]);
   //  console.log(data.version[i]);
