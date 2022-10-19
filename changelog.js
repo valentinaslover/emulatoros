@@ -27,7 +27,7 @@ var data = [
       const type = document.createElement("div");
       type.innerHTML = text.type
       const desc = document.createElement("div");
-      desc.innerHTML = change.desc
+      desc.innerHTML = text.desc
       allchanges.appendChild(type, desc)  
       return allchanges
     }
