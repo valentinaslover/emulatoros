@@ -1,4 +1,4 @@
-var changelog = [
+var data = [
     
         {
           "version": "1.0.0",
