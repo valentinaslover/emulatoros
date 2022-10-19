@@ -8,12 +8,12 @@ var data = [
           ]
         }
     ]
-$.each(data, function(field){
-    console.log(data.date);
-    console.log(data.version);
-    $.each(data.changes, function (change) { 
-         console.log(change.type)
-         console.log(change.desc)
+$.each(data, function(i, field){
+    console.log(data.date[i]);
+    console.log(data.version[i]);
+    $.each(data.changes[i], function (change) { 
+         console.log(change.type[i])
+         console.log(change.desc[i])
     });
     const main = document.createElement('div');
     $('changelog').appendTo(main);

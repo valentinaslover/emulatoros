@@ -198,7 +198,7 @@ $header.innerHTML = `<nav class="aa-nav">
   
   <span class="aa-nav-item"><a href="/" target="_top">Games</a></span>
      <span class="aa-nav-item"><a href="/apps" target="_top">Apps</a></span>
-     <span class="aa-nav-item"><a href="/changelog" target="_top">Changelog</a></span>
+     
   <span class="aa-nav-item"><a href="/settings" target="_top">Settings</a></span>
   </div>
 </nav>
