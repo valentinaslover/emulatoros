@@ -31,8 +31,11 @@ var data = [
       allchanges.appendChild(type, desc)  
       return allchanges
     }
+    const topdiv = document.getElementById('changelog')
     for (let i = 0; i < data.length; i++) {
        let main =  changesdiv(data[i]);
+       topdiv.appendChild(main);
+
   }
  // $.each(data, function(i, field){
    // console.log(data.date[i]);
