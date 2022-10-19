@@ -8,8 +8,11 @@ var data = [
           ]
         }
     ]
+    const changesdiv = (change) => {
+        console.log(change.version, change.date, change.changes.type,  change.changes.desc)
+    }
     for (let i = 0; i < data.length; i++) {
-        console.log(data[i]);
+       let changes =  changesdiv(data[i]);
   }
  // $.each(data, function(i, field){
    // console.log(data.date[i]);
