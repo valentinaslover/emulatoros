@@ -11,7 +11,7 @@ window.onmessage = function (e) {
    
         alert("not allowed " + e.origin )
     } else {
-         document.getElementById("user-count").innerText = e.data;
+         
         alert("allowed " + e.origin )
     }
   }
