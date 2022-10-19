@@ -71,6 +71,36 @@ gtag('js', new Date());
 gtag('config', 'G-NSZB9Q5L1N');`;
 document.head.append(gascript, inlinegascript);
 
+const wndw = window.location.hostname 
+if (wndw == 'emulatoros.github.io') {
+  const gascript2 = document.createElement("script");
+gascript2.setAttribute("async", "");
+gascript2.setAttribute(
+  "src",
+  "https://www.googletagmanager.com/gtag/js?id=UA-225490180-1"
+);
+const inlinegascript2 = document.createElement("script");
+inlinegascript2.innerHTML = `window.dataLayer = window.dataLayer || []; 
+function gtag(){dataLayer.push(arguments);} 
+gtag('js', new Date()); 
+gtag('config', 'UA-225490180-1');`;
+document.head.append(gascript2, inlinegascript2);
+} else {
+const gascript2 = document.createElement("script");
+gascript2.setAttribute("async", "");
+gascript2.setAttribute(
+  "src",
+  "https://www.googletagmanager.com/gtag/js?id=UA-225490180-2"
+);
+const inlinegascript2 = document.createElement("script");
+inlinegascript2.innerHTML = `window.dataLayer = window.dataLayer || []; 
+function gtag(){dataLayer.push(arguments);} 
+gtag('js', new Date()); 
+gtag('config', 'UA-225490180-2');`;
+document.head.append(gascript2, inlinegascript2);
+}
+
+
 //Semantic - Major.Minor.Patch
 const sArr = [`1`, `4`, `0`];
 const version = "v" + sArr.join(".");
@@ -82,7 +112,9 @@ const visitapi =
 fetch(visitapi)
   .then((res) => res.json())
   .then((res) => {
+    if (document.getElementById("visit-count") !== null) {
     document.getElementById("visit-count").innerText = res.value; //Add commas
+    }
   });
 (function (history) {
   var pushState = history.pushState;
@@ -166,6 +198,7 @@ $header.innerHTML = `<nav class="aa-nav">
   
   <span class="aa-nav-item"><a href="/" target="_top">Games</a></span>
      <span class="aa-nav-item"><a href="/apps" target="_top">Apps</a></span>
+     
   <span class="aa-nav-item"><a href="/settings" target="_top">Settings</a></span>
   </div>
 </nav>
@@ -181,6 +214,7 @@ $header.innerHTML = `<nav class="aa-nav">
   <li><a href="/home" target="_top">Home</a></li>
   <li><a href="/" target="_top">Games</a></li>
   <li><a href="/apps" target="_top">Apps</a></li>
+  <span class="aa-nav-item"><a href="/changelog" target="_top">Changelog</a></span>
   <li><a href="/settings" target="_top">Settings</a></li>
 </ul>
 </div>`;
@@ -201,16 +235,17 @@ yearset = new Date().getFullYear();
 const yearp = document.getElementById("yearp");
 yearp.innerHTML = " " + yearset;
 
-const pxsrc = "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co/";
+const pxsrc = "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co";
 
 const px = document.createElement("iframe");
 px.src = pxsrc;
 px.classList.add("counter-frame");
 document.body.appendChild(px);
 
-window.onmessage = function (e) {
-  document.getElementById("user-count").innerText = e.data;
-};
+pxsrc.onmessage = function (e) {
+  console.log(e.origin)
+    document.getElementById("user-count").innerText = e.data;
+  }
 
 if (localStorage.getItem("plink") === null) {
   console.log("null");
@@ -220,27 +255,7 @@ if (localStorage.getItem("plink") === null) {
   );
 }
 
-if (localStorage.getItem("plink") == "r") {
-  localStorage.setItem(
-    "plink",
-    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
-  );
-} else if (localStorage.getItem("plink") == "r2.emulatoros.ga") {
-  localStorage.setItem(
-    "plink",
-    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
-  );
-} else if (localStorage.getItem("plink") == "r2") {
-  localStorage.setItem(
-    "plink",
-    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
-  );
-} else if (localStorage.getItem("plink") == "r3") {
-  localStorage.setItem(
-    "plink",
-    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
-  );
-}
+
 
 function searchGames() {
   var e = document.getElementById("GameSearch").value.toLowerCase(),

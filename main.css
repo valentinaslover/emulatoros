@@ -311,7 +311,7 @@ body {
 	scroll-behavior: smooth;
 	background-color: var(--bg-color);
 	/* Create the parallax scrolling effect */
-	background: url("/assets/img/bg.svg");
+	
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: repeat;
