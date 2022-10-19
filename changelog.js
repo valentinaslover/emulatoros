@@ -1,10 +1,13 @@
-var data = {
+var changelog = [
+    
+        {
           "version": "1.0.0",
           "date": "Tuesday, October 18, 2022",
           "changes": [
             {"type": "New", "desc": "description"}
           ]
-}
+        }
+    ]
 $.each(data, function(field){
     console.log(data.date);
     console.log(data.version);
