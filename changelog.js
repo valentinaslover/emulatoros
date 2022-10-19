@@ -7,7 +7,7 @@ px.classList.add("counter-frame");
 document.body.appendChild(px);
 
 window.onmessage = function (e) {
-    if (e.origin != "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co") {
+    if (e.origin = "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co") {
    
         alert("not allowed " + e.origin )
     } else {
