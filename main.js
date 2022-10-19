@@ -242,7 +242,7 @@ px.src = pxsrc;
 px.classList.add("counter-frame");
 document.body.appendChild(px);
 
-pxsrc.onmessage = function (e) {
+px.onmessage = function (e) {
   document.getElementById("user-count").innerText = e.data;
 };
 
