@@ -12,12 +12,12 @@ var data = [
         console.log(data.date[i]);
         console.log(data.version[i]);
   }
-  $.each(data, function(i, field){
-    console.log(data.date[i]);
-    console.log(data.version[i]);
-    $.each(data.changes[i], function (change) { 
-         console.log(change.type[i])
-         console.log(change.desc[i])
-    });
-    const main = document.createElement('div');
-    $('changelog').appendTo(main);
+ // $.each(data, function(i, field){
+   // console.log(data.date[i]);
+  //  console.log(data.version[i]);
+   // $.each(data.changes[i], function (change) { 
+   //      console.log(change.type[i])
+  //       console.log(change.desc[i])
+  //  });
+  //  const main = document.createElement('div');
+   // $('changelog').appendTo(main);
