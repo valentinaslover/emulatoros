@@ -9,7 +9,13 @@ var data = [
         }
     ]
     const changesdiv = (change) => {
-        console.log(change.version, change.date, change.changes.length,  change.changes.desc)
+        console.log(change.version, change.date)
+        for (let i = 0; i < change.changes.length; i++) {
+            let changes =  changestext(change.changes[i]);
+        }
+    }
+    const changesdiv = (text) => {
+        console.log(text.type, text.desc, text)
     }
     for (let i = 0; i < data.length; i++) {
        let changes =  changesdiv(data[i]);
