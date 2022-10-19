@@ -14,7 +14,8 @@ var data = [
       version.innerHTML = change.version
       const date = document.createElement("div");
       date.innerHTML = change.date  
-      main.appendChild(version, date)          
+      main.appendChild(version)     
+      main.appendChild(date)         
         console.log(change.version, change.date)
         for (let i = 0; i < change.changes.length; i++) {
             let changes =  changestext(change.changes[i]);
@@ -28,7 +29,8 @@ var data = [
       type.innerHTML = text.type
       const desc = document.createElement("div");
       desc.innerHTML = text.desc
-      allchanges.appendChild(type, desc)  
+      allchanges.appendChild(type)  
+      allchanges.appendChild(desc)    
       return allchanges
     }
     const topdiv = document.getElementById('changelog')
