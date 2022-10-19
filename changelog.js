@@ -9,13 +9,27 @@ var data = [
         }
     ]
     const changesdiv = (change) => {
+      const main = document.createElement("div");
+      const version = document.createElement("div");
+      version.innerHTML = change.version
+      const date = document.createElement("div");
+      date.innerHTML = change.date  
+      main.appendChild(version, date)          
         console.log(change.version, change.date)
         for (let i = 0; i < change.changes.length; i++) {
             let changes =  changestext(change.changes[i]);
+            main.appendChild(allchanges)
         }
+        return main
     }
     const changestext = (text) => {
-        console.log(text.type, text.desc, text)
+        const allchanges = document.createElement("div");
+      const type = document.createElement("div");
+      type.innerHTML = text.type
+      const desc = document.createElement("div");
+      desc.innerHTML = change.desc
+      allchanges.appendChild(type, desc)  
+      return allchanges
     }
     for (let i = 0; i < data.length; i++) {
        let changes =  changesdiv(data[i]);
