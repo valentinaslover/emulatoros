@@ -112,7 +112,9 @@ const visitapi =
 fetch(visitapi)
   .then((res) => res.json())
   .then((res) => {
+    if (document.getElementById("visit-count") !== null) {
     document.getElementById("visit-count").innerText = res.value; //Add commas
+    }
   });
 (function (history) {
   var pushState = history.pushState;
@@ -196,6 +198,7 @@ $header.innerHTML = `<nav class="aa-nav">
   
   <span class="aa-nav-item"><a href="/" target="_top">Games</a></span>
      <span class="aa-nav-item"><a href="/apps" target="_top">Apps</a></span>
+     <span class="aa-nav-item"><a href="/changelog" target="_top">Changelog</a></span>
   <span class="aa-nav-item"><a href="/settings" target="_top">Settings</a></span>
   </div>
 </nav>
@@ -211,6 +214,7 @@ $header.innerHTML = `<nav class="aa-nav">
   <li><a href="/home" target="_top">Home</a></li>
   <li><a href="/" target="_top">Games</a></li>
   <li><a href="/apps" target="_top">Apps</a></li>
+  <span class="aa-nav-item"><a href="/changelog" target="_top">Changelog</a></span>
   <li><a href="/settings" target="_top">Settings</a></li>
 </ul>
 </div>`;
@@ -238,7 +242,7 @@ px.src = pxsrc;
 px.classList.add("counter-frame");
 document.body.appendChild(px);
 
-window.onmessage = function (e) {
+pxsrc.onmessage = function (e) {
   document.getElementById("user-count").innerText = e.data;
 };
 
@@ -250,27 +254,7 @@ if (localStorage.getItem("plink") === null) {
   );
 }
 
-if (localStorage.getItem("plink") == "r") {
-  localStorage.setItem(
-    "plink",
-    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
-  );
-} else if (localStorage.getItem("plink") == "r2.emulatoros.ga") {
-  localStorage.setItem(
-    "plink",
-    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
-  );
-} else if (localStorage.getItem("plink") == "r2") {
-  localStorage.setItem(
-    "plink",
-    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
-  );
-} else if (localStorage.getItem("plink") == "r3") {
-  localStorage.setItem(
-    "plink",
-    "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
-  );
-}
+
 
 function searchGames() {
   var e = document.getElementById("GameSearch").value.toLowerCase(),
