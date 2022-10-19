@@ -242,9 +242,10 @@ px.src = pxsrc;
 px.classList.add("counter-frame");
 document.body.appendChild(px);
 
-pxsrc.onmessage = function (e) {
-  console.log(e.origin)
-    document.getElementById("user-count").innerText = e.data;
+window.onmessage = function (e) {
+    if (e.origin == "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co") {
+   document.getElementById("user-count").innerText = e.data;
+    } 
   }
 
 if (localStorage.getItem("plink") === null) {
