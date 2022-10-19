@@ -1,4 +1,4 @@
-$.getJSON('changelog.json', (data) => {
+$.getJSON('/changelog.json', (data) => {
 $.each(result, function(field){
     console.log(result)
     console.log(field)
