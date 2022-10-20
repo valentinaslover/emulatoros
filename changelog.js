@@ -4,17 +4,67 @@ var data = [
     
         {
           "version": "1.0.0",
-          "date": "Tuesday, October 18, 2022",
+          "date": "Wednesday, October 19, 2022",
           "changes": [
-            {"type": "New", "desc": "description"}
+            {"type": "New", "desc": "Changelog page to know the latest update"},
+            {"type": "Fix", "desc": "Fix all the games that ran from replit"},
+            {"type": "Fix", "desc": "Fix Papa's Freezeria"},
+            {"type": "Fix", "desc": "Fix some bugs"}
           ]
         }
     ]
     const changesdiv = (change) => {
-        console.log(change.version, change.date, change.changes.length,  change.changes.desc)
+      const main = document.createElement("div");
+      main.classList.add('flex', 'flex-col', 'gap-y-2', 'p-6', 'rounded-xl', 'max-w-5xl', 'w-full');
+      main.setAttribute('style', 'background-color: var(--bg);')
+      const div1 = document.createElement("div");
+      const version = document.createElement('h1');
+      version.classList.add('font-bold', 'text-2xl')
+      version.innerHTML = change.version
+      const datediv = document.createElement('div');
+      datediv.classList.add('flex', 'flex-col');
+      const datetxt = document.createElement('h2');
+      datetxt.classList.add('font-semibold', 'text-lg');
+      datetxt.innerHTML = change.date
+      const div2 = document.createElement("div");
+      div2.classList.add('flex', 'flex-col', 'gap-y-6');
+
+
+      main.appendChild(div1) 
+      div1.appendChild(version)
+      div1.appendChild(datediv)
+      datediv.appendChild(datetxt)
+      main.appendChild(div2)         
+        console.log(change.version, change.date)
+        for (let i = 0; i < change.changes.length; i++) {
+            let changes =  changestext(change.changes[i]);
+            div2.appendChild(changes)
+        }
+        return main
     }
+    const changestext = (text) => {
+        const allchanges = document.createElement("div");
+        allchanges.classList.add('flex', 'flex-row', 'gap-x-2', '2xl:gap-x-3', 'items-center');
+      const type = document.createElement("div");
+      type.classList.add('px-2', 'py-1', 'rounded-xl', 'tracking-tighter', 'font-medium', 'text-xs', 'md:text-sm', '2xl:text-base')
+      if (text.type == 'New') {
+        type.setAttribute('style', 'background-color: #124bc7;')
+      } else if (text.type == 'Fix') {
+        type.setAttribute('style', 'background-color: #ecc118;')
+      }
+      type.innerHTML = text.type
+      const desc = document.createElement("p");
+      desc.classList.add('text-sm', 'md:text-base', '2xl:text-lg', 'tracking-tighter', 'font-semibold')
+      desc.innerText = text.desc
+      allchanges.appendChild(type)  
+      allchanges.appendChild(desc)    
+      return allchanges
+    }
+    const topdiv = document.getElementById('changelog')
     for (let i = 0; i < data.length; i++) {
-       let changes =  changesdiv(data[i]);
+       let main =  changesdiv(data[i]);
+       topdiv.appendChild(main);
+
   }
 
  // $.each(data, function(i, field){
