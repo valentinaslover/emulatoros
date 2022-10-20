@@ -10,35 +10,39 @@ var data = [
     ]
     const changesdiv = (change) => {
       const main = document.createElement("div");
-      main.classList.add('flex', 'flex-col', 'gap-y-2');
+      main.classList.add('flex', 'flex-col', 'gap-y-2', 'p-6', 'rounded-xl', 'max-w-5xl');
       const div1 = document.createElement("div");
       const version = document.createElement('h1');
+      version.classList.add('font-bold', 'text-2xl')
       version.innerHTML = change.version
       const datediv = document.createElement('div');
       datediv.classList.add('flex', 'flex-col');
       const datetxt = document.createElement('h2');
+      datetxt.classList.add('font-semibold', 'text-lg');
       datetxt.innerHTML = change.date
-      const date = document.createElement("div");
-      date.innerHTML = change.date  
+      const div2 = document.createElement("div");
+      div2.classList.add('flex', 'flex-col', 'gap-y-6');
 
 
       main.appendChild(div1) 
       div1.appendChild(version)
       div1.appendChild(datediv)
       datediv.appendChild(datetxt)
-      main.appendChild(date)         
+      main.appendChild(div2)         
         console.log(change.version, change.date)
         for (let i = 0; i < change.changes.length; i++) {
             let changes =  changestext(change.changes[i]);
-            main.appendChild(changes)
+            div2.appendChild(changes)
         }
         return main
     }
     const changestext = (text) => {
         const allchanges = document.createElement("div");
       const type = document.createElement("div");
+      type.classList.add('px-2', 'py-1', 'rounded-xl', 'tracking-tighter', 'font-medium', 'text-xs', 'md:text-sm', '2xl:text-base')
       type.innerHTML = text.type
-      const desc = document.createElement("div");
+      const desc = document.createElement("p");
+      desc.classList.add('text-sm', 'md:text-base', '2xl:text-lg', 'tracking-tighter', 'font-semibold')
       desc.innerHTML = text.desc
       allchanges.appendChild(type)  
       allchanges.appendChild(desc)    
