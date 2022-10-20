@@ -43,7 +43,7 @@ var data = [
       const type = document.createElement("div");
       type.classList.add('px-2', 'py-1', 'rounded-xl', 'tracking-tighter', 'font-medium', 'text-xs', 'md:text-sm', '2xl:text-base')
       if (text.type == 'New') {
-        main.setAttribute('style', 'background-color: #124bc7;')
+        type.setAttribute('style', 'background-color: #124bc7;')
       }
       type.innerHTML = text.type
       const desc = document.createElement("p");
