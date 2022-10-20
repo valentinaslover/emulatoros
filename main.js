@@ -198,7 +198,7 @@ $header.innerHTML = `<nav class="aa-nav">
   
   <span class="aa-nav-item"><a href="/" target="_top">Games</a></span>
      <span class="aa-nav-item"><a href="/apps" target="_top">Apps</a></span>
-     
+     <span class="aa-nav-item"><a href="/changelog" target="_top">Changelog</a></span>
   <span class="aa-nav-item"><a href="/settings" target="_top">Settings</a></span>
   </div>
 </nav>
@@ -214,7 +214,7 @@ $header.innerHTML = `<nav class="aa-nav">
   <li><a href="/home" target="_top">Home</a></li>
   <li><a href="/" target="_top">Games</a></li>
   <li><a href="/apps" target="_top">Apps</a></li>
-  <span class="aa-nav-item"><a href="/changelog" target="_top">Changelog</a></span>
+  <li><a href="/changelog" target="_top">Changelog</a></li>
   <li><a href="/settings" target="_top">Settings</a></li>
 </ul>
 </div>`;

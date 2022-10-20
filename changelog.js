@@ -2,9 +2,12 @@ var data = [
     
         {
           "version": "1.0.0",
-          "date": "Tuesday, October 18, 2022",
+          "date": "Wednesday, October 19, 2022",
           "changes": [
-            {"type": "New", "desc": "description"}
+            {"type": "New", "desc": "Changelog page to know the latest update"},
+            {"type": "Fix", "desc": "Fix all the games that ran from replit"},
+            {"type": "Fix", "desc": "Fix Papa's Freezeria"},
+            {"type": "Fix", "desc": "Fix some bugs"}
           ]
         }
     ]
@@ -44,6 +47,8 @@ var data = [
       type.classList.add('px-2', 'py-1', 'rounded-xl', 'tracking-tighter', 'font-medium', 'text-xs', 'md:text-sm', '2xl:text-base')
       if (text.type == 'New') {
         type.setAttribute('style', 'background-color: #124bc7;')
+      } else if (text.type == 'Fix') {
+        type.setAttribute('style', 'background-color: yellow;')
       }
       type.innerHTML = text.type
       const desc = document.createElement("p");
