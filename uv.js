@@ -10,7 +10,7 @@ if (link == "r.emulatoros.ga") {
   game.setAttribute('scrolling', 'yes')
   game.src = site;
   console.log('finish ' + plink + ' change link');
-} else if (link == "88894746-f44f-4984-b06a-95324219f0c0.id.repl.co") {
+} else if (link == "87d083da-175b-4b4b-9d9f-1445af44773e.id.repl.co") {
   console.log('start ' + plink + ' change');
   var site = plink + "/apps/apps.html#" + game.dataset.gamelink;
   game.setAttribute('id', 'r2iframe');
