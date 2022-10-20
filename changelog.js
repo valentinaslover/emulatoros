@@ -45,7 +45,7 @@ var data = [
       type.innerHTML = text.type
       const desc = document.createElement("p");
       desc.classList.add('text-sm', 'md:text-base', '2xl:text-lg', 'tracking-tighter', 'font-semibold')
-      desc.innerHTML = text.desc
+      desc.innerText = text.desc
       allchanges.appendChild(type)  
       allchanges.appendChild(desc)    
       return allchanges
