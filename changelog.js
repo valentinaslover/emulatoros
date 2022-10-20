@@ -10,11 +10,17 @@ var data = [
     ]
     const changesdiv = (change) => {
       const main = document.createElement("div");
-      const version = document.createElement("div");
+      main.classList.add('flex', 'flex-col', 'gap-y-2');
+      const div1 = document.createElement("div");
+      const version = div1.createElement('h1');
       version.innerHTML = change.version
+      const datediv = div1.createElement('div');
+      datediv.classList.add('flex', 'flex-col');
+      const datetxt = datediv.createElement('h2');
+      datetxt.innerHTML = change.date
       const date = document.createElement("div");
       date.innerHTML = change.date  
-      main.appendChild(version)     
+      main.appendChild(div1)     
       main.appendChild(date)         
         console.log(change.version, change.date)
         for (let i = 0; i < change.changes.length; i++) {
