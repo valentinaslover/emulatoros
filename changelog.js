@@ -48,7 +48,7 @@ var data = [
       if (text.type == 'New') {
         type.setAttribute('style', 'background-color: #124bc7;')
       } else if (text.type == 'Fix') {
-        type.setAttribute('style', 'background-color: yellow;')
+        type.setAttribute('style', 'background-color: #ecc118;')
       }
       type.innerHTML = text.type
       const desc = document.createElement("p");
