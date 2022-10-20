@@ -10,7 +10,8 @@ var data = [
     ]
     const changesdiv = (change) => {
       const main = document.createElement("div");
-      main.classList.add('flex', 'flex-col', 'gap-y-2', 'p-6', 'rounded-xl', 'max-w-5xl');
+      main.classList.add('flex', 'flex-col', 'gap-y-2', 'p-6', 'rounded-xl', 'max-w-5xl', 'w-full');
+      main.setAttribute('style', 'background-color: var(--bg);')
       const div1 = document.createElement("div");
       const version = document.createElement('h1');
       version.classList.add('font-bold', 'text-2xl')
@@ -38,6 +39,7 @@ var data = [
     }
     const changestext = (text) => {
         const allchanges = document.createElement("div");
+        allchanges.classList.add('flex', 'flex-row', 'gap-x-2', '2xl:gap-x-3', 'items-center');
       const type = document.createElement("div");
       type.classList.add('px-2', 'py-1', 'rounded-xl', 'tracking-tighter', 'font-medium', 'text-xs', 'md:text-sm', '2xl:text-base')
       type.innerHTML = text.type
