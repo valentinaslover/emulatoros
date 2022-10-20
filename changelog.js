@@ -42,6 +42,9 @@ var data = [
         allchanges.classList.add('flex', 'flex-row', 'gap-x-2', '2xl:gap-x-3', 'items-center');
       const type = document.createElement("div");
       type.classList.add('px-2', 'py-1', 'rounded-xl', 'tracking-tighter', 'font-medium', 'text-xs', 'md:text-sm', '2xl:text-base')
+      if (text.type == 'New') {
+        main.setAttribute('style', 'background-color: #124bc7;')
+      }
       type.innerHTML = text.type
       const desc = document.createElement("p");
       desc.classList.add('text-sm', 'md:text-base', '2xl:text-lg', 'tracking-tighter', 'font-semibold')
