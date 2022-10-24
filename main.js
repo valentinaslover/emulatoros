@@ -261,6 +261,11 @@ if (localStorage.getItem("plink") == "aab0b842-deb7-4ed9-9916-d14602d15beb.id.re
     "plink",
     "87d083da-175b-4b4b-9d9f-1445af44773e.id.repl.co"
   );}
+if (localStorage.getItem("plink") == "87d083da-175b-4b4b-9d9f-1445af44773e.id.repl.co") {
+  localStorage.setItem(
+    "plink",
+    "r3os.herokuapp.com"
+  );}
 
 
 function searchGames() {
