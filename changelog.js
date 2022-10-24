@@ -9,6 +9,18 @@ var data = [
             {"type": "Fix", "desc": "Fix Papa's Freezeria"},
             {"type": "Fix", "desc": "Fix some bugs"}
           ]
+        }, 
+        {
+          "version": "1.1.0",
+          "date": "Wednesday, October 19, 2022",
+          "changes": [
+            {"type": "Fix", "desc": "Fix Papa's Pizzeria"},
+            {"type": "New", "desc": "Add There Is No Game"},
+              {"type": "New", "desc": "Add Pressing Under Pressure"},
+              {"type": "New", "desc": "Add PortaBoy+"},
+              {"type": "New", "desc": "Add Deepest Sword"},
+              {"type": "New", "desc": "Add Tunnel Rush"}
+          ]
         }
     ]
     const changesdiv = (change) => {
