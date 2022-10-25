@@ -61,7 +61,7 @@ if (wndw == "emulatoros.github.io") {
     } else {
       const adScript2 = document.createElement("script");
       adScript2.innerText =
-          "(adsbygoogle = window.adsbygoogle || []).push({});";
+          "(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});";
       const adDiv = document.createElement("div");
       adDiv.classList.add("othergames-container");
       ads.append(adDiv);
@@ -87,7 +87,7 @@ if (wndw == "emulatoros.github.io") {
       adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
       adIns2.setAttribute("data-ad-slot", "9792797175");
 
-      adDiv.append(adScript, adIns, adScript2);
+      adDiv.append(adScript, adIns);
       $(ads).after(adIns2, adScript2);
 
       console.log("Ads displayed");
