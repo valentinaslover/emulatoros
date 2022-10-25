@@ -88,7 +88,7 @@ if (wndw == "emulatoros.github.io") {
       adIns2.setAttribute("data-ad-slot", "9792797175");
 
       adDiv.append(adScript, adIns);
-      main.append(adIns2);
+      $(main).after(adIns2);
 
       console.log("Ads displayed");
     }
