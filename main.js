@@ -76,7 +76,7 @@ if (wndw == "emulatoros.github.io") {
       adIns.setAttribute("class", "adsbygoogle");
       adIns.setAttribute(
           "style",
-          "display:block;width:160px;height:600px;margin: 6vh auto;"
+          "display:block;width:160px;height:600px;margin: 0px auto;"
       );
       adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
       adIns.setAttribute("data-ad-slot", "4749512883");
