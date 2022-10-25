@@ -42,6 +42,71 @@ if (localStorage.hasOwnProperty("appearance")) {
     .getElementsByTagName("body")[0]
     .setAttribute("appearance", "default");
 }
+[].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+  (adsbygoogle = window.adsbygoogle || []).push({});
+});
+
+const ads = document.querySelector(".content");
+const main = document.querySelector(".main-content");
+if (host == "emulatoros.github.io") {
+if (ads !== null) {
+  if (document.body.dataset.ess) {
+    const autogads = document.createElement("script");
+    autogads.setAttribute("async", "");
+    autogads.setAttribute(
+      "src",
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2209834467602790"
+    );
+    autogads.setAttribute("crossorigin", "anonymous");
+    document.head.appendChild(autogads);
+    console.log('ess')
+  } else {
+    const adDiv = document.createElement("div");
+          adDiv.classList.add("othergames-container");
+          ads.append(adDiv);
+    
+
+    const adScript = document.createElement("script");
+    adScript.async = true;
+    adScript.src =
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2209834467602790";
+    adScript.crossOrigin = "anonymous";
+
+    const adIns = document.createElement("ins");
+    adIns.setAttribute("class", "adsbygoogle");
+    adIns.setAttribute(
+      "style",
+      "display:block; margin-left:150px"
+    );
+     adIns.setAttribute("data-full-width-responsive", "true");
+     adIns.setAttribute("data-ad-format", "auto");
+    adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
+    adIns.setAttribute("data-ad-slot", "1042232702");
+    
+    const adIns2 = document.createElement("ins");
+    adIns2.setAttribute("class", "adsbygoogle");
+    adIns2.setAttribute(
+      "style",
+      "display:block;margin:5%0"
+    );
+     adIns2.setAttribute("data-full-width-responsive", "true");
+     adIns2.setAttribute("data-ad-format", "auto");
+    adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
+    adIns2.setAttribute("data-ad-slot", "9792797175");
+
+    adDiv.append(adScript, adIns);
+    main.append(adIns2);
+    
+    console.log("Ads displayed");
+  }
+
+  console.log("game page");
+} else {
+  console.log("no game page");
+}
+} else {
+  console.log(url + 'no ads allowed')
+}
 //Declare variables for cloak here
 const local_title = localStorage.getItem("title");
 const local_icon = localStorage.getItem("icon");
@@ -283,9 +348,7 @@ function searchGames() {
       : a[i].setAttribute("style", "display:none !important");
 }
 
-[].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
-  (adsbygoogle = window.adsbygoogle || []).push({});
-});
+
 $(".fa-star").click(function () {
   $(this).toggleClass("fas far");
 });
