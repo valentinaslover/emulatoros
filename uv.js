@@ -10,7 +10,6 @@ var plink = 'https://' + link
   game.src = site;
   console.log('finish ' + plink + ' change link');
 
-}
 document.onkeyup = function(e) {
    if (e.ctrlKey && e.which == 66) {
     var site = "https://r2os.herokuapp.com/apps/apps.html#" + game.dataset.gamelink;
