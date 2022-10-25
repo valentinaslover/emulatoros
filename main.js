@@ -76,13 +76,13 @@ if (wndw == "emulatoros.github.io") {
       adIns.setAttribute("class", "adsbygoogle");
       adIns.setAttribute(
         "style",
-        "display:block; margin-left:150px"
+        "display:block;"
       );
        adIns.setAttribute("data-full-width-responsive", "true");
        adIns.setAttribute("data-ad-format", "auto");
       adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
       adIns.setAttribute("data-ad-slot", "1042232702");
-      
+
       const adIns2 = document.createElement("ins");
       adIns2.setAttribute("class", "adsbygoogle");
       adIns2.setAttribute("style", "display:block;margin-top:5%");
