@@ -62,9 +62,12 @@ if (wndw == "emulatoros.github.io") {
       const adScript2 = document.createElement("script");
       adScript2.innerText =
           "(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});";
+          const other = document.createElement("div");
+          other.classList.add("othergames-container");
+          ads.append(adDiv);
       const adDiv = document.createElement("div");
-      adDiv.classList.add("othergames-container");
-      ads.append(adDiv);
+      adDiv.classList.add("adDiv");
+      other.append(adDiv);
 
       const adScript = document.createElement("script");
       adScript.async = true;
