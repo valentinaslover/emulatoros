@@ -42,9 +42,7 @@ if (localStorage.hasOwnProperty("appearance")) {
     .getElementsByTagName("body")[0]
     .setAttribute("appearance", "default");
 }
-[].forEach.call(document.querySelectorAll(".adsbygoogle"), function () {
-  (adsbygoogle = window.adsbygoogle || []).push({});
-});
+
 const wndw = window.location.hostname;
 const ads = document.querySelector(".content");
 const main = document.querySelector(".main-content");
@@ -61,6 +59,9 @@ if (wndw == "emulatoros.github.io") {
       document.head.appendChild(autogads);
       console.log("ess");
     } else {
+      const adScript2 = document.createElement("script");
+      adScript2.innerText =
+          "(adsbygoogle = window.adsbygoogle || []).push({});";
       const adDiv = document.createElement("div");
       adDiv.classList.add("othergames-container");
       ads.append(adDiv);
@@ -87,8 +88,8 @@ if (wndw == "emulatoros.github.io") {
       adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
       adIns2.setAttribute("data-ad-slot", "9792797175");
 
-      adDiv.append(adScript, adIns);
-      $(main).after(adIns2);
+      adDiv.append(adScript, adIns, adScript2);
+      $(ads).after(adIns2, adScript2);
 
       console.log("Ads displayed");
     }
