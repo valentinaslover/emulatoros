@@ -64,7 +64,7 @@ if (wndw == "emulatoros.github.io") {
           "(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});";
           const other = document.createElement("div");
           other.classList.add("othergames-container");
-          ads.append(adDiv);
+          ads.append(other);
       const adDiv = document.createElement("div");
       adDiv.classList.add("adDiv");
       other.append(adDiv);
