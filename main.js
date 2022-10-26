@@ -42,6 +42,71 @@ if (localStorage.hasOwnProperty("appearance")) {
     .getElementsByTagName("body")[0]
     .setAttribute("appearance", "default");
 }
+
+const wndw = window.location.hostname;
+const ads = document.querySelector(".content");
+const main = document.querySelector(".main-content");
+if (wndw == "emulatoros.github.io") {
+  if (ads !== null) {
+    if (document.body.dataset.ess) {
+      const autogads = document.createElement("script");
+      autogads.setAttribute("async", "");
+      autogads.setAttribute(
+        "src",
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2209834467602790"
+      );
+      autogads.setAttribute("crossorigin", "anonymous");
+      document.head.appendChild(autogads);
+      console.log("ess");
+    } else {
+      const adScript2 = document.createElement("script");
+      adScript2.innerText =
+          "(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});";
+          const other = document.createElement("div");
+          other.classList.add("othergames-container");
+          ads.append(other);
+      const adDiv = document.createElement("div");
+      adDiv.classList.add("adDiv");
+      other.append(adDiv);
+
+      const adScript = document.createElement("script");
+      adScript.async = true;
+      adScript.src =
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2209834467602790";
+      adScript.crossOrigin = "anonymous";
+
+      const adIns = document.createElement("ins");
+      adIns.setAttribute("class", "adsbygoogle");
+      adIns.setAttribute(
+        "style",
+        "display:block;margin:auto"
+      );
+       adIns.setAttribute("data-full-width-responsive", "true");
+       adIns.setAttribute("data-ad-format", "auto");
+      adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
+      adIns.setAttribute("data-ad-slot", "1042232702");
+
+      const adIns2 = document.createElement("ins");
+      adIns2.setAttribute("class", "adsbygoogle");
+      adIns2.setAttribute("style", "display:block;margin-top:5%");
+      adIns2.setAttribute("data-full-width-responsive", "true");
+      adIns2.setAttribute("data-ad-format", "auto");
+      adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
+      adIns2.setAttribute("data-ad-slot", "9792797175");
+
+      adDiv.append(adScript, adIns);
+      $(ads).after(adIns2, adScript2);
+
+      console.log("Ads displayed");
+    }
+
+    console.log("game page");
+  } else {
+    console.log("no game page");
+  }
+} else {
+  console.log(url + "no ads allowed");
+}
 //Declare variables for cloak here
 const local_title = localStorage.getItem("title");
 const local_icon = localStorage.getItem("icon");
@@ -71,35 +136,34 @@ gtag('js', new Date());
 gtag('config', 'G-NSZB9Q5L1N');`;
 document.head.append(gascript, inlinegascript);
 
-const wndw = window.location.hostname 
-if (wndw == 'emulatoros.github.io') {
+
+if (wndw == "emulatoros.github.io") {
   const gascript2 = document.createElement("script");
-gascript2.setAttribute("async", "");
-gascript2.setAttribute(
-  "src",
-  "https://www.googletagmanager.com/gtag/js?id=UA-225490180-1"
-);
-const inlinegascript2 = document.createElement("script");
-inlinegascript2.innerHTML = `window.dataLayer = window.dataLayer || []; 
+  gascript2.setAttribute("async", "");
+  gascript2.setAttribute(
+    "src",
+    "https://www.googletagmanager.com/gtag/js?id=UA-225490180-1"
+  );
+  const inlinegascript2 = document.createElement("script");
+  inlinegascript2.innerHTML = `window.dataLayer = window.dataLayer || []; 
 function gtag(){dataLayer.push(arguments);} 
 gtag('js', new Date()); 
 gtag('config', 'UA-225490180-1');`;
-document.head.append(gascript2, inlinegascript2);
+  document.head.append(gascript2, inlinegascript2);
 } else {
-const gascript2 = document.createElement("script");
-gascript2.setAttribute("async", "");
-gascript2.setAttribute(
-  "src",
-  "https://www.googletagmanager.com/gtag/js?id=UA-225490180-2"
-);
-const inlinegascript2 = document.createElement("script");
-inlinegascript2.innerHTML = `window.dataLayer = window.dataLayer || []; 
+  const gascript2 = document.createElement("script");
+  gascript2.setAttribute("async", "");
+  gascript2.setAttribute(
+    "src",
+    "https://www.googletagmanager.com/gtag/js?id=UA-225490180-2"
+  );
+  const inlinegascript2 = document.createElement("script");
+  inlinegascript2.innerHTML = `window.dataLayer = window.dataLayer || []; 
 function gtag(){dataLayer.push(arguments);} 
 gtag('js', new Date()); 
 gtag('config', 'UA-225490180-2');`;
-document.head.append(gascript2, inlinegascript2);
+  document.head.append(gascript2, inlinegascript2);
 }
-
 
 //Semantic - Major.Minor.Patch
 const sArr = [`1`, `4`, `0`];
@@ -113,7 +177,7 @@ fetch(visitapi)
   .then((res) => res.json())
   .then((res) => {
     if (document.getElementById("visit-count") !== null) {
-    document.getElementById("visit-count").innerText = res.value; //Add commas
+      document.getElementById("visit-count").innerText = res.value; //Add commas
     }
   });
 (function (history) {
@@ -243,36 +307,31 @@ px.classList.add("counter-frame");
 document.body.appendChild(px);
 
 window.onmessage = function (e) {
-    if (e.origin == "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co") {
-   document.getElementById("user-count").innerText = e.data;
-    } 
+  if (e.origin == "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co") {
+    document.getElementById("user-count").innerText = e.data;
   }
+};
 
 if (localStorage.getItem("plink") === null) {
   console.log("null");
-  localStorage.setItem(
-    "plink",
-    "emulatoros2.herokuapp.com"
-  );
+  localStorage.setItem("plink", "emulatoros2.herokuapp.com");
 }
 
-if (localStorage.getItem("plink") == "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co") {
-  localStorage.setItem(
-    "plink",
-    "emulatoros2.herokuapp.com"
-  );}
-if (localStorage.getItem("plink") == "87d083da-175b-4b4b-9d9f-1445af44773e.id.repl.co") {
-  localStorage.setItem(
-    "plink",
-    "emulatoros2.herokuapp.com"
-  );}
+if (
+  localStorage.getItem("plink") ==
+  "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
+) {
+  localStorage.setItem("plink", "emulatoros2.herokuapp.com");
+}
+if (
+  localStorage.getItem("plink") ==
+  "87d083da-175b-4b4b-9d9f-1445af44773e.id.repl.co"
+) {
+  localStorage.setItem("plink", "emulatoros2.herokuapp.com");
+}
 if (localStorage.getItem("plink") == "r3os.herokuapp.com") {
-  localStorage.setItem(
-    "plink",
-    "emulatoros2.herokuapp.com"
-  );}
-
-
+  localStorage.setItem("plink", "emulatoros2.herokuapp.com");
+}
 
 function searchGames() {
   var e = document.getElementById("GameSearch").value.toLowerCase(),
@@ -283,9 +342,6 @@ function searchGames() {
       : a[i].setAttribute("style", "display:none !important");
 }
 
-[].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
-  (adsbygoogle = window.adsbygoogle || []).push({});
-});
 $(".fa-star").click(function () {
   $(this).toggleClass("fas far");
 });
