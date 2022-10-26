@@ -105,7 +105,7 @@ if (wndw == "emulatoros.github.io") {
     console.log("no game page");
   }
 } else {
-  console.log(url + "no ads allowed");
+  console.log(wndw + " no ads allowed");
 }
 //Declare variables for cloak here
 const local_title = localStorage.getItem("title");
