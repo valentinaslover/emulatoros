@@ -124,6 +124,7 @@ ins.adsbygoogle[data-ad-status=unfilled] {
 }
 .othergames-container {
     width: 250px;
+    margin: auto;
 }
 
 @media all and (max-width:1024px) {
