@@ -122,6 +122,9 @@ ins.adsbygoogle[data-ad-status=unfilled] {
     width: 250px;
     margin: .5rem auto 1rem
 }
+.othergames-container {
+    width: 250px;
+}
 
 @media all and (max-width:1024px) {
     .othergames-hr {
