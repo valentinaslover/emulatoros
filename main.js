@@ -292,7 +292,7 @@ yearset = new Date().getFullYear();
 const yearp = document.getElementById("yearp");
 yearp.innerHTML = " " + yearset;
 
-const pxsrc = "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co";
+const pxsrc = "https://6831551b-1a1c-49c9-ae0e-7d42e9de012b.id.repl.co";
 
 const px = document.createElement("iframe");
 px.src = pxsrc;
@@ -300,7 +300,7 @@ px.classList.add("counter-frame");
 document.body.appendChild(px);
 
 window.onmessage = function (e) {
-  if (e.origin == "https://88894746-f44f-4984-b06a-95324219f0c0.id.repl.co") {
+  if (e.origin == "https://6831551b-1a1c-49c9-ae0e-7d42e9de012b.id.repl.co") {
     document.getElementById("user-count").innerText = e.data;
   }
 };
