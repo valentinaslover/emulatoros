@@ -61,10 +61,13 @@ if (wndw == "emulatoros.github.io") {
     } else {
       const adScript2 = document.createElement("script");
       adScript2.innerText =
-          "(adsbygoogle = window.adsbygoogle || []).push({});";
+          "(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});";
+          const other = document.createElement("div");
+          other.classList.add("othergames-container");
+          ads.append(other);
       const adDiv = document.createElement("div");
-      adDiv.classList.add("othergames-container");
-      ads.append(adDiv);
+      adDiv.classList.add("adDiv");
+      other.append(adDiv);
 
       const adScript = document.createElement("script");
       adScript.async = true;
@@ -75,19 +78,23 @@ if (wndw == "emulatoros.github.io") {
       const adIns = document.createElement("ins");
       adIns.setAttribute("class", "adsbygoogle");
       adIns.setAttribute(
-          "style",
-          "display:block;width:160px;height:600px;margin: 6vh auto;"
+        "style",
+        "display:block;margin:auto"
       );
+       adIns.setAttribute("data-full-width-responsive", "true");
+       adIns.setAttribute("data-ad-format", "auto");
       adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
-      adIns.setAttribute("data-ad-slot", "4749512883");
+      adIns.setAttribute("data-ad-slot", "1042232702");
 
       const adIns2 = document.createElement("ins");
       adIns2.setAttribute("class", "adsbygoogle");
-      adIns2.setAttribute("style", "display:block;width:1200px;height:160px");
+      adIns2.setAttribute("style", "display:block;margin-top:5%");
+      adIns2.setAttribute("data-full-width-responsive", "true");
+      adIns2.setAttribute("data-ad-format", "auto");
       adIns2.setAttribute("data-ad-client", "ca-pub-2209834467602790");
       adIns2.setAttribute("data-ad-slot", "9792797175");
 
-      adDiv.append(adScript, adIns, adScript2);
+      adDiv.append(adScript, adIns);
       $(ads).after(adIns2, adScript2);
 
       console.log("Ads displayed");
@@ -98,7 +105,7 @@ if (wndw == "emulatoros.github.io") {
     console.log("no game page");
   }
 } else {
-  console.log(url + "no ads allowed");
+  console.log(wndw + " no ads allowed");
 }
 //Declare variables for cloak here
 const local_title = localStorage.getItem("title");
