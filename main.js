@@ -299,7 +299,7 @@ yearset = new Date().getFullYear();
 const yearp = document.getElementById("yearp");
 yearp.innerHTML = " " + yearset;
 
-const pxsrc = "https://6831551b-1a1c-49c9-ae0e-7d42e9de012b.id.repl.co";
+const pxsrc = "https://emulatoroscounter.herokuapp.com";
 
 const px = document.createElement("iframe");
 px.src = pxsrc;
@@ -307,7 +307,7 @@ px.classList.add("counter-frame");
 document.body.appendChild(px);
 
 window.onmessage = function (e) {
-  if (e.origin == "https://6831551b-1a1c-49c9-ae0e-7d42e9de012b.id.repl.co") {
+  if (e.origin == "https://emulatoroscounter.herokuapp.com") {
     document.getElementById("user-count").innerText = e.data;
   }
 };
