@@ -1,6 +1,20 @@
 
 
 var data = [
+  {
+    "version": "1.1.1",
+    "date": "Monday, October 31, 2022",
+    "changes": [
+      {"type": "Fix", "desc": "I think I fixed PortaBoy+ but if there are any errors please report them"},
+      {"type": "New", "desc": "Add George and the Printer"},
+        {"type": "New", "desc": "Add Getaway Shootout"},
+        {"type": "New", "desc": "Add Papa's Hot Doggeria"},
+        {"type": "New", "desc": "Add Papa Louie: When Pizzas Attack!"},
+        {"type": "New", "desc": "Add Soccer Random"},
+        {"type": "New", "desc": "Add Boxing Physics 2"},
+        {"type": "New", "desc": "Add Hole.io"}        
+    ]
+  },
     {
           "version": "1.1.0",
           "date": "Monday, October 24, 2022",

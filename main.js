@@ -61,10 +61,10 @@ if (wndw == "emulatoros.github.io") {
     } else {
       const adScript2 = document.createElement("script");
       adScript2.innerText =
-          "(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});";
-          const other = document.createElement("div");
-          other.classList.add("othergames-container");
-          ads.append(other);
+        "(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});";
+      const other = document.createElement("div");
+      other.classList.add("othergames-container");
+      ads.append(other);
       const adDiv = document.createElement("div");
       adDiv.classList.add("adDiv");
       other.append(adDiv);
@@ -77,12 +77,9 @@ if (wndw == "emulatoros.github.io") {
 
       const adIns = document.createElement("ins");
       adIns.setAttribute("class", "adsbygoogle");
-      adIns.setAttribute(
-        "style",
-        "display:block;margin:auto"
-      );
-       adIns.setAttribute("data-full-width-responsive", "true");
-       adIns.setAttribute("data-ad-format", "auto");
+      adIns.setAttribute("style", "display:block;margin:auto");
+      adIns.setAttribute("data-full-width-responsive", "true");
+      adIns.setAttribute("data-ad-format", "auto");
       adIns.setAttribute("data-ad-client", "ca-pub-2209834467602790");
       adIns.setAttribute("data-ad-slot", "1042232702");
 
@@ -135,7 +132,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date()); 
 gtag('config', 'G-NSZB9Q5L1N');`;
 document.head.append(gascript, inlinegascript);
-
 
 if (wndw == "emulatoros.github.io") {
   const gascript2 = document.createElement("script");
@@ -299,7 +295,7 @@ yearset = new Date().getFullYear();
 const yearp = document.getElementById("yearp");
 yearp.innerHTML = " " + yearset;
 
-const pxsrc = "https://emulatoroscounter.herokuapp.com";
+const pxsrc = "https://activecounter.herokuapp.com";
 
 const px = document.createElement("iframe");
 px.src = pxsrc;
@@ -307,7 +303,7 @@ px.classList.add("counter-frame");
 document.body.appendChild(px);
 
 window.onmessage = function (e) {
-  if (e.origin == "https://emulatoroscounter.herokuapp.com") {
+  if (e.origin == "https://activecounter.herokuapp.com") {
     document.getElementById("user-count").innerText = e.data;
   }
 };
@@ -317,20 +313,12 @@ if (localStorage.getItem("plink") === null) {
   localStorage.setItem("plink", "emulatoros2.herokuapp.com");
 }
 
-if (
-  localStorage.getItem("plink") ==
-  "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co"
-) {
-  localStorage.setItem("plink", "emulatoros2.herokuapp.com");
-}
-if (
-  localStorage.getItem("plink") ==
-  "87d083da-175b-4b4b-9d9f-1445af44773e.id.repl.co"
-) {
-  localStorage.setItem("plink", "emulatoros2.herokuapp.com");
-}
-if (localStorage.getItem("plink") == "r3os.herokuapp.com") {
-  localStorage.setItem("plink", "emulatoros2.herokuapp.com");
+if (localStorage.getItem("plink") == "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co") {
+  localStorage.setItem("plink", "emulatoros3.herokuapp.com");
+} else if (localStorage.getItem("plink") == "r3os.herokuapp.com") {
+  localStorage.setItem("plink", "emulatoros3.herokuapp.com");
+} else if (localStorage.getItem("plink") == "emulatoros2.herokuapp.com") {
+  localStorage.setItem("plink", "emulatoros3.herokuapp.com");
 }
 
 function searchGames() {
