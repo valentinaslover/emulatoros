@@ -3,6 +3,15 @@ var data = [
     "version": "1.1.1",
     "date": "Monday, October 31, 2022",
     "changes": [
+      {"type": "Fix", "desc": "Fix Knife Hit not loading error"},
+      {"type": "New", "desc": "Add Papa's Taco Mia"},
+        {"type": "New", "desc": "Add Unfair Mario"}   
+    ]
+  },
+  {
+    "version": "1.1.1",
+    "date": "Monday, October 31, 2022",
+    "changes": [
       {"type": "Fix", "desc": "I think I fixed PortaBoy+ but if there are any errors please report them"},
       {"type": "New", "desc": "Add George and the Printer"},
         {"type": "New", "desc": "Add Getaway Shootout"},
