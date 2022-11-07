@@ -310,15 +310,15 @@ window.onmessage = function (e) {
 
 if (localStorage.getItem("plink") === null) {
   console.log("null");
-  localStorage.setItem("plink", "emulatoros2.herokuapp.com");
+  localStorage.setItem("plink", "emulatoros.up.railway.app");
 }
 
 if (localStorage.getItem("plink") == "aab0b842-deb7-4ed9-9916-d14602d15beb.id.repl.co") {
-  localStorage.setItem("plink", "emulatoros3.herokuapp.com");
+  localStorage.setItem("plink", "emulatoros.up.railway.app");
 } else if (localStorage.getItem("plink") == "r3os.herokuapp.com") {
-  localStorage.setItem("plink", "emulatoros3.herokuapp.com");
-} else if (localStorage.getItem("plink") == "emulatoros2.herokuapp.com") {
-  localStorage.setItem("plink", "emulatoros3.herokuapp.com");
+  localStorage.setItem("plink", "emulatoros.up.railway.app");
+} else if (localStorage.getItem("plink") == "emulatoros3.herokuapp.com") {
+  localStorage.setItem("plink", "emulatoros.up.railway.app ");
 }
 
 function searchGames() {
