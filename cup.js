@@ -34,14 +34,14 @@
     }
     var plink = localStorage.getItem("plink")
     async function fetchapps() {
-    let response = await fetch("/sites/apps.json")
+    let response = await fetch("/cup.json")
     let json = await response.json()
     var main = document.getElementById("font-md-10")
     for (app in json) {
-    var title = json[app].title
-    var image = json[app].image
-    var location = json[app].location
-    var appelm = document.createElement("button")
+    var title = json[app].date
+    var image = json[app].team1
+    var location = json[app].link
+    var appelm = document.createElement("a")
     
     appelm.className = "app"
     appelm.setAttribute("onclick", 'openapp(' + '"'  + location + '"' + ')')
