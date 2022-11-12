@@ -54,7 +54,7 @@
     app.appendChild(maindiv)
     
     var maindiv2 = document.createElement("div")
-    maindiv2.setAttribute("style", 'div-child-box bg-dark-gray  bg-white py-2 position-relative') 
+    maindiv2.setAttribute("style", 'd-flex justify-content-center row') 
     maindiv.appendChild(maindiv2)
 
     var titleelm = document.createElement("div")
