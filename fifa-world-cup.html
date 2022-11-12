@@ -29,8 +29,145 @@
 			font-family: 'Syne', sans-serif;
 			background-color: #000000;
 		}
+        #surf {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: none;
+      z-index: 10;
+      display: none;
+      background: var(--bg-main);
+      width: 100%;
+      height: calc(100% - 60px);
+      background-image: url(/assets/img/preloader.gif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #000000
+    }
+
+    #controls {
+      height: 60px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: var(--bg-main);
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      display: none;
+      z-index: 100;
+    }
+
+    .nav-icon {
+      margin: 0 5px 0 10px;
+      height: 38px;
+      width: 38px;
+      border-radius: 5px;
+      user-select: none;
+    }
+
+    .nav-title {
+      color: var(--light-text);
+      flex-grow: 1;
+      margin: 0 10px 0 5px;
+      padding: 7px;
+      user-select: none;
+      font-size: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: pre;
+    }
+
+    .nav-button {
+      font-family: Material Icons;
+      color: var(--highlight);
+      font-size: 25px;
+      cursor: pointer;
+      padding: 7px;
+      margin: 5px;
+      user-select: none;
+    }
+
+    #closesurf {
+      display: none;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: var(--highlight);
+      border-radius: 2.5px;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      z-index: 11;
+      cursor: pointer;
+    }
+
+    #reloadsurf {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 60px;
+      background-color: var(--highlight);
+      border-radius: 2.5px;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      z-index: 11;
+      cursor: pointer;
+    }
+
+    .proxy {
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      font-size: 16px;
+      padding: 5px;
+      min-width: 70px;
+      height: 30px;
+      background-color: transparent;
+      color: var(--light-text);
+      margin: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .proxysel {
+      color: var(--highlight);
+    }
+
+    #opensurf {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 60px;
+      background-color: var(--highlight);
+      border-radius: 2.5px;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      z-index: 11;
+      cursor: pointer;
+    }
+
+    .sugg {
+color: var(--light-text);
+font-size: 20px;
+cursor: pointer;
+padding: 5px;
+padding-left: 10px;
+}
+
+.sugg:hover {
+color: var(--highlight);
+}
 </style>
-/head>
+</head>
 <div class="my-1">
     <a href="" class=" text-dark-light">
         <img src="https://seeklogo.com/images/F/fifa-world-cup-2022-logo-0E5F05028D-seeklogo.com.png" alt="Football pic" class="img-icone">

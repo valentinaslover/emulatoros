@@ -45,7 +45,7 @@
     
     appelm.className = "app"
     appelm.setAttribute("onclick", 'openapp(' + '"'  + location + '"' + ')')
-    main.appendChild(appelm)
+    
     
     var app = document.getElementsByClassName("app")[app]
     
@@ -57,6 +57,8 @@
     titleelm.innerText = title
     titleelm.className = "appinfo"
     maindiv.appendChild(titleelm)
+    
+    main.appendChild(appelm)
     }
     
     }
