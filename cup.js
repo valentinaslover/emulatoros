@@ -49,7 +49,7 @@
     
     var app = document.getElementsByClassName("app")[app]
     
-    var imageelm = document.createElement("img")
+    var imageelm = document.createElement("div")
     imageelm.className = "appimg"
     imageelm.src = image
     app.appendChild(imageelm)
