@@ -49,15 +49,14 @@
     
     var app = document.getElementsByClassName("app")[app]
     
-    var imageelm = document.createElement("div")
-    imageelm.className = "appimg"
-    imageelm.src = image
-    app.appendChild(imageelm)
+    var maindiv = document.createElement("div")
+    maindiv.setAttribute("style", 'div-child-box bg-dark-gray  bg-white py-2 position-relative') 
+    app.appendChild(maindiv)
     
     var titleelm = document.createElement("div")
     titleelm.innerText = title
     titleelm.className = "appinfo"
-    app.appendChild(titleelm)
+    maindiv.appendChild(titleelm)
     }
     
     }
