@@ -39,7 +39,7 @@
     var main = document.getElementById("font-md-10")
     for (app in json) {
     var title = json[app].date
-    var image = json[app].team1
+    var team1 = json[app].team1
     var location = json[app].link
     var appelm = document.createElement("a")
     
@@ -56,6 +56,15 @@
     var maindiv2 = document.createElement("div")
     maindiv2.setAttribute("style", 'd-flex justify-content-center row') 
     maindiv.appendChild(maindiv2)
+
+    var team1div = document.createElement("div")
+    team1div.setAttribute("style", 'col-4 text-right') 
+    maindiv2.appendChild(team1div)
+
+    var team1span = document.createElement("span")
+    team1span.setAttribute("style", 'd-inline-block mt-2') 
+    team1span.innerText = team1
+    team1div.appendChild(team1span)
 
     var titleelm = document.createElement("div")
     titleelm.innerText = title
