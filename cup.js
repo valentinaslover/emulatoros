@@ -19,9 +19,6 @@
     appframe.style.display = "none";
     appframe.setAttribute("src", "");
     }
-    function reloadapp() {
-      document.getElementById('appframe').src = document.getElementById('appframe').src
-  }
     function fullapp() {
       var appframe = document.getElementById("appframe")
       appframe.requestFullscreen()
@@ -48,7 +45,7 @@
     
     appelm.className = "app"
     appelm.setAttribute("onclick", 'openapp(' + '"'  + location + '"' + ')')
-    document.getElementsByClassName("apps")[0].appendChild(appelm)
+    document.getElementById("font-md-10")[0].appendChild(appelm)
     
     var app = document.getElementsByClassName("app")[app]
     
