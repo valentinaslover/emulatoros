@@ -36,7 +36,7 @@
     async function fetchapps() {
     let response = await fetch("/sites/apps.json")
     let json = await response.json()
-    
+    var main = document.getElementById("font-md-10")
     for (app in json) {
     var title = json[app].title
     var image = json[app].image
@@ -45,7 +45,7 @@
     
     appelm.className = "app"
     appelm.setAttribute("onclick", 'openapp(' + '"'  + location + '"' + ')')
-    document.getElementById("font-md-10")[0].appendChild(appelm)
+    main.appendChild(appelm)
     
     var app = document.getElementsByClassName("app")[app]
     
