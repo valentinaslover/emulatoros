@@ -1,7 +1,7 @@
 
   
   function openapp(app) {
-    var appframe = document.getElementById("appframe");
+    var appframe = document.getElementById("surf");
     var controls = document.getElementById("controls");
     var header = document.getElementById("header");
     header.style.display = "none";
@@ -11,7 +11,7 @@
     }
         
     function closeapp() {
-    var appframe = document.getElementById("appframe");
+    var appframe = document.getElementById("surf");
     var controls = document.getElementById("controls");
     var header = document.getElementById("header");
     header.style.display = "block";
@@ -20,11 +20,11 @@
     appframe.setAttribute("src", "");
     }
     function fullapp() {
-      var appframe = document.getElementById("appframe")
+      var appframe = document.getElementById("surf")
       appframe.requestFullscreen()
     }
     function opentab() {
-      var url = document.getElementById("appframe").src;
+      var url = document.getElementById("surf").src;
     
       var tabOrWindow = window.open(url, '_blank');
       closeapp();
@@ -38,8 +38,10 @@
     let json = await response.json()
     var main = document.getElementById("font-md-10")
     for (app in json) {
-    var title = json[app].date
+    var date = json[app].date
+    var time = json[app].time
     var team1 = json[app].team1
+    var team2 = json[app].team2
     var location = json[app].link
     var appelm = document.createElement("a")
     
@@ -66,8 +68,26 @@
     team1span.innerText = team1
     team1div.appendChild(team1span)
 
+    var datediv = document.createElement("div")
+    datediv.setAttribute("style", 'col-3 text-center') 
+    maindiv2.appendChild(datediv)
+
+    var datespan = document.createElement("span")
+    datespan.setAttribute("style", 'd-inline-block text-center text-dark-l') 
+    datespan.innerHTML = '<i class="fas fa-clock"></i><br>' + date + '&nbsp;&nbsp;' + time
+    datediv.appendChild(datespan)
+
+    var team2div = document.createElement("div")
+    team2div.setAttribute("style", 'col-5 text-left') 
+    maindiv2.appendChild(team2div)
+
+    var team2span = document.createElement("span")
+    team2span.setAttribute("style", 'd-inline-block mt-2') 
+    team2span.innerText = team2
+    team2div.appendChild(team2span)
+    
     var titleelm = document.createElement("div")
-    titleelm.innerText = title
+    titleelm.innerText = date
     titleelm.className = "appinfo"
     maindiv2.appendChild(titleelm)
 
