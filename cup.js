@@ -9,7 +9,9 @@
     appframe.style.display = "initial";
     appframe.setAttribute("src", 'https://' + plink + '/apps/apps.html#' + app);
     }
-        
+    function reloadapp() {
+      document.getElementById('surf').src = document.getElementById('surf').src
+  }
     function closeapp() {
     var appframe = document.getElementById("surf");
     var controls = document.getElementById("controls");
