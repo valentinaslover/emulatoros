@@ -86,10 +86,6 @@
     team2span.innerText = team2
     team2div.appendChild(team2span)
     
-    var titleelm = document.createElement("div")
-    titleelm.innerText = date
-    titleelm.className = "appinfo"
-    maindiv2.appendChild(titleelm)
 
    
     }
