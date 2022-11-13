@@ -71,7 +71,7 @@
     team1div.appendChild(team1span)
 
     var datediv = document.createElement("div")
-    datediv.setAttribute("class", 'col-3 text-center') 
+    datediv.setAttribute("class", 'col-4 text-center') 
     maindiv2.appendChild(datediv)
 
     var datespan = document.createElement("span")
@@ -80,7 +80,7 @@
     datediv.appendChild(datespan)
 
     var team2div = document.createElement("div")
-    team2div.setAttribute("class", 'col-5 text-left') 
+    team2div.setAttribute("class", 'col-4 text-left') 
     maindiv2.appendChild(team2div)
 
     var team2span = document.createElement("span")
