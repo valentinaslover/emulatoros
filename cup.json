@@ -4,20 +4,34 @@
         "team1": "Argentina",
         "team2": "Saudi Arabia",
         "link": "https://footybite.to/Argentina-vs-Saudi-Arabia/201",
-        "time": "4:00 AM"
-    },
-    {
-        "date": "2022-11-21",
-        "team1": "England",
-        "team2": "Iran",
-        "link": "https://footybite.to/England-vs-Iran/198",
-        "time": "07:00 AM"
+        "time": "04:00 AM"
     },
     {
         "date": "2022-11-22",
         "team1": "Denmark",
         "team2": "Tunisia",
         "link": "https://footybite.to/Denmark-vs-Tunisia/202",
+        "time": "07:00 AM"
+    },
+    {
+        "date": "2022-11-22",
+        "team1": "Mexico",
+        "team2": "Poland",
+        "link": "https://footybite.to/Mexico-vs-Poland/203",
+        "time": "10:00 AM"
+    },
+    {
+        "date": "2022-11-22",
+        "team1": "France",
+        "team2": "Australia",
+        "link": "https://footybite.to/France-vs-Australia/204",
+        "time": "01:00 PM"
+    },
+    {
+        "date": "2022-11-21",
+        "team1": "England",
+        "team2": "Iran",
+        "link": "https://footybite.to/England-vs-Iran/198",
         "time": "07:00 AM"
     },
     {
@@ -28,20 +42,6 @@
         "time": "10:00 AM"
     },
     {
-        "date": "2022-11-22",
-        "team1": "Mexico",
-        "team2": "Poland",
-        "link": "https://footybite.to/Mexico-vs-Poland/203",
-        "time": "10:00 AM"
-    },
-    {
-        "date": "2022-11-20",
-        "team1": "Qatar",
-        "team2": "Ecuador",
-        "link": "https://footybite.to/Qatar-vs-Ecuador/197",
-        "time": "10:00 AM"
-    },
-    {
         "date": "2022-11-21",
         "team1": "USA",
         "team2": "Wales",
@@ -49,10 +49,10 @@
         "time": "01:00 PM"
     },
     {
-        "date": "2022-11-22",
-        "team1": "France",
-        "team2": "Australia",
-        "link": "https://footybite.to/France-vs-Australia/204",
-        "time": "01:00 PM"
+        "date": "2022-11-20",
+        "team1": "Qatar",
+        "team2": "Ecuador",
+        "link": "https://footybite.to/Qatar-vs-Ecuador/197",
+        "time": "10:00 AM"
     }
 ]
