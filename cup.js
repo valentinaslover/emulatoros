@@ -7,7 +7,7 @@
     header.style.display = "none";
     controls.style.display = "flex";
     appframe.style.display = "initial";
-    appframe.setAttribute("src", 'https://' + plink + app);
+    appframe.setAttribute("src", 'https://' + plink + '/apps/apps.html#' + app);
     }
         
     function closeapp() {
