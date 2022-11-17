@@ -7,7 +7,7 @@
     header.style.display = "none";
     controls.style.display = "flex";
     appframe.style.display = "initial";
-    appframe.setAttribute("src", 'https://' + plink + '/apps/apps.html#' + app);
+    appframe.setAttribute("src", 'https://' + plink + '/iframe.html#' + app);
     }
     function reloadapp() {
       document.getElementById('surf').src = document.getElementById('surf').src
