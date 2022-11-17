@@ -9,15 +9,7 @@
     appframe.style.display = "initial";
     appframe.setAttribute("src", 'https://' + plink + '/apps/apps.html#' + app);
     }
-    function openstream(app) {
-      var appframe = document.getElementById("surf");
-      var controls = document.getElementById("controls");
-      var header = document.getElementById("header");
-      header.style.display = "none";
-      controls.style.display = "flex";
-      appframe.style.display = "initial";
-      appframe.setAttribute("src", 'https://' + plink + '/iframe.html#' + app);
-      }
+    
     function reloadapp() {
       document.getElementById('surf').src = document.getElementById('surf').src
   }
@@ -53,8 +45,7 @@
     var time = json[app].time
     var team1 = json[app].team1
     var team2 = json[app].team2
-    var streaml = json[app].link[1]
-    var alll = json[app].link[0]
+    var streaml = json[app].link[0]
     var appelm = document.createElement("a")
     
     appelm.className = "app"
@@ -102,16 +93,10 @@
     streamsdiv.setAttribute("class", 'text-right d-none d-md-inline-block float-right') 
     team2div.appendChild(streamsdiv)
 
-    var stream = document.createElement("button")
-    stream.setAttribute("class", "btn btn-sm btn-danger m-2") 
-    stream.innerText = 'Main Stream'
-    stream.setAttribute("onclick", 'openstream(' + '"'  + streaml + '"' + ')')
-    streamsdiv.appendChild(stream)
-
     var all = document.createElement("button")
     all.setAttribute("class", "btn btn-sm btn-danger m-2") 
     all.innerText = 'Live Streams'
-    all.setAttribute("onclick", 'openapp(' + '"'  + alll + '"' + ')')
+    all.setAttribute("onclick", 'openapp(' + '"'  + streaml + '"' + ')')
     streamsdiv.appendChild(all)
     }
     
