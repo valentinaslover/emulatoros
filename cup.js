@@ -9,7 +9,7 @@
     appframe.style.display = "initial";
     appframe.setAttribute("src", 'https://' + plink + '/apps/apps.html#' + app);
     }
-    function openapp(app) {
+    function openstream(app) {
       var appframe = document.getElementById("surf");
       var controls = document.getElementById("controls");
       var header = document.getElementById("header");
