@@ -44,7 +44,8 @@
     var time = json[app].time
     var team1 = json[app].team1
     var team2 = json[app].team2
-    var location = json[app].link
+    var streaml = json[app].link[1]
+    var alll = json[app].link[0]
     var appelm = document.createElement("a")
     
     appelm.className = "app"
@@ -95,13 +96,13 @@
     var stream = document.createElement("button")
     stream.setAttribute("class", "btn btn-sm btn-danger m-2") 
     stream.innerText = 'Main Stream'
-    stream.setAttribute("onclick", 'openapp(' + '"'  + json[app].link[1] + '"' + ')')
+    stream.setAttribute("onclick", 'openapp(' + '"'  + streaml + '"' + ')')
     streamsdiv.appendChild(stream)
 
     var all = document.createElement("button")
     all.setAttribute("class", "btn btn-sm btn-danger m-2") 
     all.innerText = 'Live Streams'
-    all.setAttribute("onclick", 'openapp(' + '"'  + json[app].link[0] + '"' + ')')
+    all.setAttribute("onclick", 'openapp(' + '"'  + alll + '"' + ')')
     streamsdiv.appendChild(all)
     }
     
