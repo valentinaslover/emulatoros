@@ -7,7 +7,7 @@
     header.style.display = "none";
     controls.style.display = "flex";
     appframe.style.display = "initial";
-    appframe.setAttribute("src", 'https://' + plink + '/iframe.html#' + app);
+    appframe.setAttribute("src", 'https://' + plink + '/apps/apps.html#' + app);
     }
     function reloadapp() {
       document.getElementById('surf').src = document.getElementById('surf').src
@@ -48,7 +48,7 @@
     var appelm = document.createElement("a")
     
     appelm.className = "app"
-    appelm.setAttribute("onclick", 'openapp(' + '"'  + location + '"' + ')')
+    
     main.appendChild(appelm)
     
     var app = document.getElementsByClassName("app")[app]
@@ -87,9 +87,22 @@
     team2span.setAttribute("class", 'd-inline-block mt-2') 
     team2span.innerText = team2
     team2div.appendChild(team2span)
-    
 
-   
+    var streamsdiv = document.createElement("div")
+    streamsdiv.setAttribute("class", 'text-right d-none d-md-inline-block float-right') 
+    team2div.appendChild(streamsdiv)
+
+    var stream = document.createElement("button")
+    stream.setAttribute("class", "btn btn-sm btn-danger m-2") 
+    stream.innerText = 'Main Stream'
+    stream.setAttribute("onclick", 'openapp(' + '"'  + json[app].link[1] + '"' + ')')
+    streamsdiv.appendChild(stream)
+
+    var all = document.createElement("button")
+    all.setAttribute("class", "btn btn-sm btn-danger m-2") 
+    all.innerText = 'Live Streams'
+    all.setAttribute("onclick", 'openapp(' + '"'  + json[app].link[0] + '"' + ')')
+    streamsdiv.appendChild(all)
     }
     
     }
