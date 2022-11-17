@@ -9,6 +9,15 @@
     appframe.style.display = "initial";
     appframe.setAttribute("src", 'https://' + plink + '/apps/apps.html#' + app);
     }
+    function openapp(app) {
+      var appframe = document.getElementById("surf");
+      var controls = document.getElementById("controls");
+      var header = document.getElementById("header");
+      header.style.display = "none";
+      controls.style.display = "flex";
+      appframe.style.display = "initial";
+      appframe.setAttribute("src", 'https://' + plink + '/iframe.html#' + app);
+      }
     function reloadapp() {
       document.getElementById('surf').src = document.getElementById('surf').src
   }
@@ -96,7 +105,7 @@
     var stream = document.createElement("button")
     stream.setAttribute("class", "btn btn-sm btn-danger m-2") 
     stream.innerText = 'Main Stream'
-    stream.setAttribute("onclick", 'openapp(' + '"'  + streaml + '"' + ')')
+    stream.setAttribute("onclick", 'openstream(' + '"'  + streaml + '"' + ')')
     streamsdiv.appendChild(stream)
 
     var all = document.createElement("button")
