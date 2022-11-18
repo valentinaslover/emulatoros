@@ -10,7 +10,8 @@ let options = {
 formatter = new Intl.DateTimeFormat([], options);
 // Compare today with October 3rd
 var timeanddate = formatter.format(new Date());
-if (timeanddate.getDate() === 3 && timeanddate.getMonth() === 9) {
+var today = new Date()
+if (today.getDate() === 3 && today.getMonth() === 9) {
   console.log("It's October 3rd.");
 } else {
   console.log("It's not October 3rd.");
