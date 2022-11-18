@@ -69,6 +69,8 @@ console.log(timeanddate)
     var main = document.getElementById("font-md-10")
     for (app in json) {
     var date = json[app].date
+    var day = json[app].day
+    var month = json[app].month
     var time = json[app].time
     var team1 = json[app].team1
     var team2 = json[app].team2
@@ -105,7 +107,7 @@ console.log(timeanddate)
 
     var datespan = document.createElement("span")
     datespan.setAttribute("class", 'd-inline-block text-center text-dark-l') 
-    datespan.innerHTML = '<i class="fas fa-clock"></i><br>' + date + '&nbsp;&nbsp;' + time + ' CT'
+    datespan.innerHTML = '<i class="fas fa-clock"></i><br>2022-' + date + '&nbsp;&nbsp;' + time + ' CT'
     datediv.appendChild(datespan)
 
     var team2div = document.createElement("div")
@@ -116,8 +118,8 @@ console.log(timeanddate)
     team2span.setAttribute("class", 'd-inline-block mt-2') 
     team2span.innerText = team2
     team2div.appendChild(team2span)
-
-    var streamsdiv = document.createElement("div")
+    if (today.getDate() === day && today.getMonth() === month) {
+      var streamsdiv = document.createElement("div")
     streamsdiv.setAttribute("class", 'text-right d-none d-md-inline-block float-right') 
     team2div.appendChild(streamsdiv)
 
@@ -132,6 +134,10 @@ console.log(timeanddate)
     all.innerText = 'All Live Streams'
     all.setAttribute("onclick", 'openapp(' + '"'  + alll + '"' + ')')
     streamsdiv.appendChild(all)
+    } else {
+      console.log("It's not the date of game.");
+    }
+    
     }
     
     }
