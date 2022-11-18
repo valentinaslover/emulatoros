@@ -1,6 +1,17 @@
+let options = {
+  timeZone: 'America/Chicago',
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+},
+formatter = new Intl.DateTimeFormat([], options);
 
-  
-  function openapp(app) {
+console.log(formatter.format(new Date()));
+
+ function openapp(app) {
     var appframe = document.getElementById("surf");
     var controls = document.getElementById("controls");
     var header = document.getElementById("header");
