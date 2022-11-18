@@ -9,7 +9,8 @@ let options = {
 },
 formatter = new Intl.DateTimeFormat([], options);
 
-console.log(formatter.format(new Date()));
+var timeanddate = formatter.format(new Date());
+console.log(timeanddate)
 
  function openapp(app) {
     var appframe = document.getElementById("surf");
