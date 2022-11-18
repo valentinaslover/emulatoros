@@ -3,12 +3,15 @@ let options = {
   year: 'numeric',
   month: 'numeric',
   day: 'numeric',
+},
+datevar = new Intl.DateTimeFormat([], options);
+let options = {
+  timeZone: 'America/Chicago',
   hour: 'numeric',
   minute: 'numeric',
   second: 'numeric',
 },
-formatter = new Intl.DateTimeFormat([], options);
-
+timevar = new Intl.DateTimeFormat([], options);
 var timeanddate = formatter.format(new Date());
 console.log(timeanddate)
 
