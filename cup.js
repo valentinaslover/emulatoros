@@ -113,14 +113,14 @@ async function fetchapps() {
     team2div.appendChild(team2span);
    
     console.log(day + 'and' + month)
-    if (dt.getMonth()+1 == month) {
+    if (dt.getDate() == month) {
       console.log('=='+ team1)
-    } else if (dt.getMonth()+1 === month) {
+    } else if (dt.getDate() === month) {
       console.log('==='+ team1)
     }
     console.log(dt.getMonth() + 1)
 
-    if (dt.getDate() === day && dt.getMonth() + 1 === month) {
+    if (dt.getDate() == day && dt.getMonth() + 1 == month) {
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
         "class",
