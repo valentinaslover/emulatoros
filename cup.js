@@ -1,6 +1,8 @@
 
-var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
-var hrs = today.getHours();
+var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" }); 
+const dt = new Date(today)
+var hrs = dt.getHours();
+
 alert(hrs);
 
 
