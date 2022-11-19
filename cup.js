@@ -117,8 +117,8 @@ async function fetchapps() {
     console.log(dt.getHours() + 'and'+ hour)
     console.log(dt.getMinutes())
     let now = `${dt.getHours()}${dt.getMinutes()}`
-    let start = `${hour}00`
-    let maxhour = `${hour +1}30`
+    let start = hour + '00'
+    let maxhour = hour +1 + '30'
     console.log(`${now}/${start}/${maxhour}`)
     if (dt.getDate() == day && dt.getMonth() + 1 == month) {
       if (start < now) {
