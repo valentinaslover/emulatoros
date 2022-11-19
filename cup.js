@@ -111,10 +111,10 @@ async function fetchapps() {
     team2span.setAttribute("class", "d-inline-block mt-2");
     team2span.innerText = team2;
     team2div.appendChild(team2span);
-    var other = new Date();
+   
     console.log(day + 'and' + month)
-    console.log(dt.getDate() + 'and' + dt.getMonth())
-    if (dt.getDate() === day && dt.getMonth() === month) {
+    console.log(dt.getMonth() + 1)
+    if (dt.getDate() === day && dt.getMonth() + 1 === month) {
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
         "class",
