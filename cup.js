@@ -1,4 +1,4 @@
-var today = new Date().toLocaleString("en-US", { timeZone: "America/Nome" });
+var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
 const dt = new Date(today);
 var hrs = dt.getHours();
 
@@ -116,6 +116,7 @@ async function fetchapps() {
     
     console.log(dt.getHours() + 'and'+ hour)
     if (dt.getDate() == day && dt.getMonth() + 1 == month) {
+      if (dt.getHours() < hours) {
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
         "class",
@@ -135,6 +136,7 @@ async function fetchapps() {
       all.setAttribute("onclick", "openapp(" + '"' + alll + '"' + ")");
       streamsdiv.appendChild(all);
     } 
+  }
   }
 }
 
