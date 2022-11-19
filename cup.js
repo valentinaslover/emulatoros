@@ -1,6 +1,8 @@
 let options = {
   timeZone: 'America/Chicago',
- 
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
 },
 formatter = new Intl.DateTimeFormat([], options);
 // Compare today with October 3rd
