@@ -117,7 +117,7 @@ async function fetchapps() {
     console.log(dt.getHours() + 'and'+ hour)
     console.log(dt.getMinutes())
     if (dt.getDate() == day && dt.getMonth() + 1 == month) {
-      if (dt.getHours() < hour) {
+      if (dt.getHours() > hour) {
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
         "class",
