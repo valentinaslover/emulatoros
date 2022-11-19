@@ -1,9 +1,10 @@
 
 var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
+var hrs = today.getHours();
+alert(hrs);
 
 
 console.log(today)
-console.log(today.getHours() + " plus " + today.getMinutes())
  function openapp(app) {
     var appframe = document.getElementById("surf");
     var controls = document.getElementById("controls");
