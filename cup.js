@@ -118,8 +118,7 @@ async function fetchapps() {
     } else if (dt.getDate() === day) {
       console.log('==='+ team1)
     }
-    console.log(dt.getMonth() + 1)
-
+    console.log(dt.getHours() + 'and'+ time)
     if (dt.getDate() == day && dt.getMonth() + 1 == month) {
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
