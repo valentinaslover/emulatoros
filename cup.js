@@ -1,4 +1,4 @@
-var today = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
 const dt = new Date(today);
 var hrs = dt.getHours();
 
@@ -111,7 +111,8 @@ async function fetchapps() {
     team2span.setAttribute("class", "d-inline-block mt-2");
     team2span.innerText = team2;
     team2div.appendChild(team2span);
-    if (dt.getDate() === day && dt.getMonth() === month) {
+    var other = new Date();
+    if (other.getDate() === day && other.getMonth() === month) {
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
         "class",
