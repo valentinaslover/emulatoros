@@ -1,136 +1,139 @@
-
-var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" }); 
-const dt = new Date(today)
+var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
+const dt = new Date(today);
 var hrs = dt.getHours();
 
-alert(hrs);
+console.log(today);
+console.log(dt)
+function openapp(app) {
+  var appframe = document.getElementById("surf");
+  var controls = document.getElementById("controls");
+  var header = document.getElementById("header");
+  header.style.display = "none";
+  controls.style.display = "flex";
+  appframe.style.display = "initial";
+  appframe.setAttribute("src", "https://" + plink + "/apps/apps.html#" + app);
+}
+function openstream(app) {
+  var appframe = document.getElementById("surf");
+  var controls = document.getElementById("controls");
+  var header = document.getElementById("header");
+  header.style.display = "none";
+  controls.style.display = "flex";
+  appframe.style.display = "initial";
+  appframe.setAttribute("src", "https://" + plink + "/iframe.html#" + app);
+}
+function reloadapp() {
+  document.getElementById("surf").src = document.getElementById("surf").src;
+}
+function closeapp() {
+  var appframe = document.getElementById("surf");
+  var controls = document.getElementById("controls");
+  var header = document.getElementById("header");
+  header.style.display = "block";
+  controls.style.display = "none";
+  appframe.style.display = "none";
+  appframe.setAttribute("src", "");
+}
+function fullapp() {
+  var appframe = document.getElementById("surf");
+  appframe.requestFullscreen();
+}
+function opentab() {
+  var url = document.getElementById("surf").src;
 
+  var tabOrWindow = window.open(url, "_blank");
+  closeapp();
+  console.log("open in new tab");
 
-console.log(today)
- function openapp(app) {
-    var appframe = document.getElementById("surf");
-    var controls = document.getElementById("controls");
-    var header = document.getElementById("header");
-    header.style.display = "none";
-    controls.style.display = "flex";
-    appframe.style.display = "initial";
-    appframe.setAttribute("src", 'https://' + plink + '/apps/apps.html#' + app);
-    }
-    function openstream(app) {
-      var appframe = document.getElementById("surf");
-      var controls = document.getElementById("controls");
-      var header = document.getElementById("header");
-      header.style.display = "none";
-      controls.style.display = "flex";
-      appframe.style.display = "initial";
-      appframe.setAttribute("src", 'https://' + plink + '/iframe.html#' + app);
-      }
-    function reloadapp() {
-      document.getElementById('surf').src = document.getElementById('surf').src
-  }
-    function closeapp() {
-    var appframe = document.getElementById("surf");
-    var controls = document.getElementById("controls");
-    var header = document.getElementById("header");
-    header.style.display = "block";
-    controls.style.display = "none";
-    appframe.style.display = "none";
-    appframe.setAttribute("src", "");
-    }
-    function fullapp() {
-      var appframe = document.getElementById("surf")
-      appframe.requestFullscreen()
-    }
-    function opentab() {
-      var url = document.getElementById("surf").src;
-    
-      var tabOrWindow = window.open(url, '_blank');
-      closeapp();
-      console.log('open in new tab')
-      
-       tabOrWindow.focus();
-    }
-    var plink = localStorage.getItem("plink")
-    async function fetchapps() {
-    let response = await fetch("/cup.json")
-    let json = await response.json()
-    var main = document.getElementById("font-md-10")
-    for (app in json) {
-    var date = json[app].date
-    var day = json[app].day
-    var month = json[app].month
-    var time = json[app].time
-    var team1 = json[app].team1
-    var team2 = json[app].team2
-    var streaml = json[app].link[1]
-    var alll = json[app].link[0]
-    var appelm = document.createElement("a")
-    
-    appelm.className = "app"
-    
-    main.appendChild(appelm)
-    
-    var app = document.getElementsByClassName("app")[app]
-    
-    var maindiv = document.createElement("div")
-    maindiv.setAttribute("class", 'div-child-box bg-dark-gray  bg-white py-2 position-relative') 
-    app.appendChild(maindiv)
-    
-    var maindiv2 = document.createElement("div")
-    maindiv2.setAttribute("class", 'd-flex justify-content-center row') 
-    maindiv.appendChild(maindiv2)
+  tabOrWindow.focus();
+}
+var plink = localStorage.getItem("plink");
+async function fetchapps() {
+  let response = await fetch("/cup.json");
+  let json = await response.json();
+  var main = document.getElementById("font-md-10");
+  for (app in json) {
+    var date = json[app].date;
+    var day = json[app].day;
+    var month = json[app].month;
+    var time = json[app].time;
+    var team1 = json[app].team1;
+    var team2 = json[app].team2;
+    var streaml = json[app].link[1];
+    var alll = json[app].link[0];
+    var appelm = document.createElement("a");
 
-    var team1div = document.createElement("div")
-    team1div.setAttribute("class", 'col-4 text-right') 
-    maindiv2.appendChild(team1div)
+    appelm.className = "app";
 
-    var team1span = document.createElement("span")
-    team1span.setAttribute("class", 'd-inline-block mt-2') 
-    team1span.innerText = team1
-    team1div.appendChild(team1span)
+    main.appendChild(appelm);
 
-    var datediv = document.createElement("div")
-    datediv.setAttribute("class", 'col-4 text-center') 
-    maindiv2.appendChild(datediv)
+    var app = document.getElementsByClassName("app")[app];
 
-    var datespan = document.createElement("span")
-    datespan.setAttribute("class", 'd-inline-block text-center text-dark-l') 
-    datespan.innerHTML = '<i class="fas fa-clock"></i><br>2022-' + date + '&nbsp;&nbsp;' + time + ' CT'
-    datediv.appendChild(datespan)
+    var maindiv = document.createElement("div");
+    maindiv.setAttribute(
+      "class",
+      "div-child-box bg-dark-gray  bg-white py-2 position-relative"
+    );
+    app.appendChild(maindiv);
 
-    var team2div = document.createElement("div")
-    team2div.setAttribute("class", 'col-4 text-left') 
-    maindiv2.appendChild(team2div)
+    var maindiv2 = document.createElement("div");
+    maindiv2.setAttribute("class", "d-flex justify-content-center row");
+    maindiv.appendChild(maindiv2);
 
-    var team2span = document.createElement("span")
-    team2span.setAttribute("class", 'd-inline-block mt-2') 
-    team2span.innerText = team2
-    team2div.appendChild(team2span)
-    if (today.getDate() === day && today.getMonth() === month) {
-      var streamsdiv = document.createElement("div")
-    streamsdiv.setAttribute("class", 'text-right d-none d-md-inline-block float-right') 
-    team2div.appendChild(streamsdiv)
+    var team1div = document.createElement("div");
+    team1div.setAttribute("class", "col-4 text-right");
+    maindiv2.appendChild(team1div);
 
-    var stream = document.createElement("button")
-    stream.setAttribute("class", "btn btn-sm btn-danger m-2") 
-    stream.innerText = 'Main Stream'
-    stream.setAttribute("onclick", 'openstream(' + '"'  + streaml + '"' + ')')
-    streamsdiv.appendChild(stream)
+    var team1span = document.createElement("span");
+    team1span.setAttribute("class", "d-inline-block mt-2");
+    team1span.innerText = team1;
+    team1div.appendChild(team1span);
 
-    var all = document.createElement("button")
-    all.setAttribute("class", "btn btn-sm btn-danger m-2") 
-    all.innerText = 'All Live Streams'
-    all.setAttribute("onclick", 'openapp(' + '"'  + alll + '"' + ')')
-    streamsdiv.appendChild(all)
+    var datediv = document.createElement("div");
+    datediv.setAttribute("class", "col-4 text-center");
+    maindiv2.appendChild(datediv);
+
+    var datespan = document.createElement("span");
+    datespan.setAttribute("class", "d-inline-block text-center text-dark-l");
+    datespan.innerHTML =
+      '<i class="fas fa-clock"></i><br>2022-' +
+      date +
+      "&nbsp;&nbsp;" +
+      time +
+      " CT";
+    datediv.appendChild(datespan);
+
+    var team2div = document.createElement("div");
+    team2div.setAttribute("class", "col-4 text-left");
+    maindiv2.appendChild(team2div);
+
+    var team2span = document.createElement("span");
+    team2span.setAttribute("class", "d-inline-block mt-2");
+    team2span.innerText = team2;
+    team2div.appendChild(team2span);
+    if (dt.getDate() === day && dt.getMonth() === month) {
+      var streamsdiv = document.createElement("div");
+      streamsdiv.setAttribute(
+        "class",
+        "text-right d-none d-md-inline-block float-right"
+      );
+      team2div.appendChild(streamsdiv);
+
+      var stream = document.createElement("button");
+      stream.setAttribute("class", "btn btn-sm btn-danger m-2");
+      stream.innerText = "Main Stream";
+      stream.setAttribute("onclick", "openstream(" + '"' + streaml + '"' + ")");
+      streamsdiv.appendChild(stream);
+
+      var all = document.createElement("button");
+      all.setAttribute("class", "btn btn-sm btn-danger m-2");
+      all.innerText = "All Live Streams";
+      all.setAttribute("onclick", "openapp(" + '"' + alll + '"' + ")");
+      streamsdiv.appendChild(all);
     } else {
       console.log("It's not the date of game.");
     }
-    
-    }
-    
-    }
-    
-    fetchapps()
-   
-    
-    
+  }
+}
+
+fetchapps();
