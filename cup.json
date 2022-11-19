@@ -3,6 +3,7 @@
         "date": "2022-11-22",
         "day":"19",
         "month":"11",
+        "hour":"4",
         "team1": "Argentina",
         "team2": "Saudi Arabia",
         "link": ["https://footybite.to/Argentina-vs-Saudi-Arabia/201", "https://embedstream.me/argentina-vs-saudi-arabia-stream-1"],
@@ -14,6 +15,7 @@
         "team2": "Tunisia",
         "day":"22",
         "month":"11",
+        "hour":"7",
         "link": ["https://footybite.to/Denmark-vs-Tunisia/202", "https://embedstream.me/denmark-vs-tunisia-stream-1"],
         "time": "07:00 AM"
     },
@@ -23,6 +25,7 @@
         "team2": "Poland",
         "day":"22",
         "month":"11",
+        "hour":"10",
         "link": ["https://footybite.to/Mexico-vs-Poland/203", "https://embedstream.me/mexico-vs-poland-stream-1"],
         "time": "10:00 AM"
     },
@@ -32,6 +35,7 @@
         "team2": "Australia",
         "day":"22",
         "month":"11",
+        "hour":"13",
         "link": ["https://footybite.to/France-vs-Australia/204","https://embedstream.me/france-vs-australia-stream-1"],
         "time": "01:00 PM"
     },
@@ -41,6 +45,7 @@
         "team2": "Iran",
         "day":"21",
         "month":"11",
+        "hour":"7",
         "link": ["https://footybite.to/England-vs-Iran/198", "https://embedstream.me/england-vs-iran-stream-1"],
         "time": "07:00 AM"
     },
@@ -50,6 +55,7 @@
         "team2": "Netherlands",
         "day":"21",
         "month":"11",
+        "hour":"10",
         "link": ["https://footybite.to/Senegal-vs-Netherlands/199", "https://embedstream.me/senegal-vs-netherland-stream-1"],
         "time": "10:00 AM"
     },
@@ -59,6 +65,7 @@
         "team2": "Wales",
         "day":"21",
         "month":"11",
+        "hour":"13",
         "link": ["https://footybite.to/USA-vs-Wales/200", "https://embedstream.me/usa-vs-wales-stream-1"],
         "time": "01:00 PM"
     },
@@ -68,6 +75,7 @@
         "team2": "Ecuador",
         "day":"20",
         "month":"11",
+        "hour":"10",
         "link": ["https://footybite.to/Qatar-vs-Ecuador/197", "https://embedstream.me/qatar-vs-ecuador-stream-1"],
         "time": "10:00 AM"
     }

@@ -61,6 +61,7 @@ async function fetchapps() {
     var team2 = json[app].team2;
     var streaml = json[app].link[1];
     var alll = json[app].link[0];
+    var hour = json[app].hour;
     var appelm = document.createElement("a");
 
     appelm.className = "app";
@@ -118,7 +119,7 @@ async function fetchapps() {
     } else if (dt.getDate() === day) {
       console.log('==='+ team1)
     }
-    console.log(dt.getHours() + 'and'+ time)
+    console.log(dt.getHours() + 'and'+ hour)
     if (dt.getDate() == day && dt.getMonth() + 1 == month) {
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
@@ -138,9 +139,7 @@ async function fetchapps() {
       all.innerText = "All Live Streams";
       all.setAttribute("onclick", "openapp(" + '"' + alll + '"' + ")");
       streamsdiv.appendChild(all);
-    } else {
-      console.log("It's not the date of game.");
-    }
+    } 
   }
 }
 
