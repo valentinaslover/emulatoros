@@ -1,16 +1,9 @@
-let options = {
-  timeZone: 'America/Chicago',
-  hour: 'numeric',
-  minute: 'numeric',
-},
-formatter = new Intl.DateTimeFormat([], options);
-// Compare today with October 3rd
-var timeanddate = formatter.format(new Date());
-var today = new Date()
+
+var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
 
 
-console.log(timeanddate)
-console.log(timeanddate.getHours() + " plus " + timeanddate.getMinutes())
+console.log(today)
+console.log(today.getHours() + " plus " + today.getMinutes())
  function openapp(app) {
     var appframe = document.getElementById("surf");
     var controls = document.getElementById("controls");
