@@ -113,9 +113,9 @@ async function fetchapps() {
     team2div.appendChild(team2span);
    
     console.log(day + 'and' + month)
-    if (dt.getMonth()+1 == day) {
+    if (dt.getMonth()+1 == month) {
       console.log('=='+ team1)
-    } else if (dt.getMonth()+1 === day) {
+    } else if (dt.getMonth()+1 === month) {
       console.log('==='+ team1)
     }
     console.log(dt.getMonth() + 1)
