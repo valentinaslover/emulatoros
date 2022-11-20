@@ -116,7 +116,8 @@ async function fetchapps() {
       console.log('today is ' + team1)
       if (hour <= dt.getHours()) {
         console.log('after ' +hour)
-        if(hour + 1 <=dt.getHours()) {
+        console.log(`${hour +1} >= ${dt.getHours}`)
+        if(hour + 1 >=dt.getHours()) {
           console.log('before ' +hour +1)
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
