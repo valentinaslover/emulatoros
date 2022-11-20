@@ -111,7 +111,7 @@ async function fetchapps() {
           var stream = document.createElement("button");
           stream.setAttribute("class", "btn btn-sm btn-danger m-2");
           stream.innerText = "Main Stream";
-          stream.setAttribute("onclick", "openapp('https://l1l1.to/ch4')");
+          stream.setAttribute("onclick", "window.open('https://" + plink + "/apps/apps.html#https://l1l1.to/ch4')");
           streamsdiv.appendChild(stream);
 
           var all = document.createElement("button");
