@@ -110,9 +110,21 @@ async function fetchapps() {
 
           var stream = document.createElement("button");
           stream.setAttribute("class", "btn btn-sm btn-danger m-2");
-          stream.innerText = "Main Stream";
-          stream.setAttribute("onclick", "window.open('https://" + plink + "/apps/apps.html#https://l1l1.to/ch4')");
+          stream.innerText = "Stream 1(EN)";
+          stream.setAttribute("onclick", "window.open('https://" + plink + "/apps/apps.html#https://l1l1.to/ch1')");
           streamsdiv.appendChild(stream);
+
+          var stream2 = document.createElement("button");
+          stream2.setAttribute("class", "btn btn-sm btn-danger m-2");
+          stream2.innerText = "Stream 2(EN)";
+          stream2.setAttribute("onclick", "window.open('https://" + plink + "/apps/apps.html#https://l1l1.to/ch4')");
+          streamsdiv.appendChild(stream2);
+
+          var stream3 = document.createElement("button");
+          stream3.setAttribute("class", "btn btn-sm btn-danger m-2");
+          stream3.innerText = "Stream 3(ES)";
+          stream3.setAttribute("onclick", "window.open('https://" + plink + "/apps/apps.html#https://l1l1.to/ch10')");
+          streamsdiv.appendChild(stream3);
 
           var all = document.createElement("button");
           all.setAttribute("class", "btn btn-sm btn-danger m-2");
