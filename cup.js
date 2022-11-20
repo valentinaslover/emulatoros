@@ -113,12 +113,9 @@ async function fetchapps() {
     team2span.innerText = team2;
     team2div.appendChild(team2span);
    
-    let now = `${dt.getHours()}${dt.getMinutes()}`
-    let start = hour + '00'
-    let maxhour = hour + 1 + '30'
-    console.log(`now:${now}/start:${start}/max:${maxhour} on ${team1} vs ${team2}` )
+   
     if (dt.getDate() == day && dt.getMonth() + 1 == month) {
-      if (start < now < maxhour) {
+      if (hour <= now && hour + 1 <=now) {
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
         "class",
