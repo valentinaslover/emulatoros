@@ -71,10 +71,7 @@ async function fetchapps() {
     var app = document.getElementsByClassName("app")[app];
 
     var maindiv = document.createElement("div");
-    maindiv.setAttribute(
-      "class",
-      "div-child-box bg-dark-gray  bg-white py-2 position-relative"
-    );
+    maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 position-relative");
     app.appendChild(maindiv);
 
     var maindiv2 = document.createElement("div");
@@ -96,12 +93,7 @@ async function fetchapps() {
 
     var datespan = document.createElement("span");
     datespan.setAttribute("class", "d-inline-block text-center text-dark-l");
-    datespan.innerHTML =
-      '<i class="fas fa-clock"></i><br>2022-' +
-      date +
-      "&nbsp;&nbsp;" +
-      time +
-      " CT";
+    datespan.innerHTML = '<i class="fas fa-clock"></i><br>2022-' + date + "&nbsp;&nbsp;" + time + " CT";
     datediv.appendChild(datespan);
 
     var team2div = document.createElement("div");
@@ -112,34 +104,32 @@ async function fetchapps() {
     team2span.setAttribute("class", "d-inline-block mt-2");
     team2span.innerText = team2;
     team2div.appendChild(team2span);
+    var max = hour+1
     if (dt.getDate() == day && dt.getMonth() + 1 == month) {
       console.log('today is ' + team1)
       if (hour <= dt.getHours()) {
-        console.log('after ' +hour)
-        console.log(`${hour +1} >= ${dt.getHours}`)
-        if(hour + 1 >=dt.getHours()) {
-          console.log('before ' +hour +1)
-      var streamsdiv = document.createElement("div");
-      streamsdiv.setAttribute(
-        "class",
-        "text-right d-none d-md-inline-block float-right"
-      );
-      team2div.appendChild(streamsdiv);
+        console.log('after ' + hour)
+        console.log(`${hour + 1} >= ${dt.getHours()}`)
+        if (max >= dt.getHours()) {
+          console.log('before ' + max)
+          var streamsdiv = document.createElement("div");
+          streamsdiv.setAttribute("class", "text-right d-none d-md-inline-block float-right");
+          team2div.appendChild(streamsdiv);
 
-      var stream = document.createElement("button");
-      stream.setAttribute("class", "btn btn-sm btn-danger m-2");
-      stream.innerText = "Main Stream";
-      stream.setAttribute("onclick", "openstream(" + '"' + streaml + '"' + ")");
-      streamsdiv.appendChild(stream);
+          var stream = document.createElement("button");
+          stream.setAttribute("class", "btn btn-sm btn-danger m-2");
+          stream.innerText = "Main Stream";
+          stream.setAttribute("onclick", "openstream(" + '"' + streaml + '"' + ")");
+          streamsdiv.appendChild(stream);
 
-      var all = document.createElement("button");
-      all.setAttribute("class", "btn btn-sm btn-danger m-2");
-      all.innerText = "All Live Streams";
-      all.setAttribute("onclick", "openapp(" + '"' + alll + '"' + ")");
-      streamsdiv.appendChild(all);
+          var all = document.createElement("button");
+          all.setAttribute("class", "btn btn-sm btn-danger m-2");
+          all.innerText = "All Live Streams";
+          all.setAttribute("onclick", "openapp(" + '"' + alll + '"' + ")");
+          streamsdiv.appendChild(all);
         }
-    } 
-  }
+      }
+    }
   }
 }
 
