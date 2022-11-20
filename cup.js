@@ -113,7 +113,11 @@ async function fetchapps() {
     team2span.innerText = team2;
     team2div.appendChild(team2span);
     if (dt.getDate() == day && dt.getMonth() + 1 == month) {
-      if (hour <= dt.getHours() && hour + 1 <=dt.getHours()) {
+      console.log('today is ' + team1)
+      if (hour <= dt.getHours()) {
+        console.log('after ' +hour)
+        if(hour + 1 <=dt.getHours()) {
+          console.log('before ' +hour +1)
       var streamsdiv = document.createElement("div");
       streamsdiv.setAttribute(
         "class",
@@ -132,6 +136,7 @@ async function fetchapps() {
       all.innerText = "All Live Streams";
       all.setAttribute("onclick", "openapp(" + '"' + alll + '"' + ")");
       streamsdiv.appendChild(all);
+        }
     } 
   }
   }
