@@ -13,15 +13,7 @@ function openapp(app) {
   appframe.style.display = "initial";
   appframe.setAttribute("src", "https://" + plink + "/apps/apps.html#" + app);
 }
-function openstream(app) {
-  var appframe = document.getElementById("surf");
-  var controls = document.getElementById("controls");
-  var header = document.getElementById("header");
-  header.style.display = "none";
-  controls.style.display = "flex";
-  appframe.style.display = "initial";
-  appframe.setAttribute("src", "https://" + plink + "/iframe.html#" + app);
-}
+
 function reloadapp() {
   document.getElementById("surf").src = document.getElementById("surf").src;
 }
@@ -119,7 +111,7 @@ async function fetchapps() {
           var stream = document.createElement("button");
           stream.setAttribute("class", "btn btn-sm btn-danger m-2");
           stream.innerText = "Main Stream";
-          stream.setAttribute("onclick", "openstream(" + '"' + streaml + '"' + ")");
+          stream.setAttribute("onclick", "openapp('https://l1l1.to/ch4')");
           streamsdiv.appendChild(stream);
 
           var all = document.createElement("button");
