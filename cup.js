@@ -85,7 +85,7 @@ async function fetchapps() {
 
     var datespan = document.createElement("span");
     datespan.setAttribute("class", "d-inline-block text-center text-dark-l");
-    datespan.innerHTML = '<i class="fas fa-clock"></i><br>2022-' + date + "&nbsp;&nbsp;" + time + " CT";
+    datespan.innerHTML = '<i class="fas fa-clock"></i><br>' + date + "&nbsp;&nbsp;" + time + " CT";
     datediv.appendChild(datespan);
 
     var team2div = document.createElement("div");
