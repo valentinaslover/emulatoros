@@ -54,6 +54,8 @@ async function fetchapps() {
     var streaml = json[app].link[1];
     var alll = json[app].link[0];
     var hour = json[app].hour;
+    if (day <= dt.getDate()) {
+      console.log('before' + team1)
     var appelm = document.createElement("a");
 
     appelm.className = "app";
@@ -144,7 +146,11 @@ var best = document.createElement("button");
         }
       }
     }
+  } else {
+    console.log( `after ${team1} game game was ${day}`)
+    console.log()
   }
+}
 }
 
 fetchapps();
