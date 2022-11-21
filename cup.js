@@ -64,6 +64,7 @@ async function fetchapps() {
 
     var maindiv = document.createElement("div");
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 position-relative");
+    maindiv.setAttribute("style", "cursor:default;")
     app.appendChild(maindiv);
 
     var maindiv2 = document.createElement("div");
