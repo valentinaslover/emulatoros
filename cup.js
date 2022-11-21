@@ -126,6 +126,11 @@ async function fetchapps() {
           stream3.innerText = "Stream 3(ES)";
           stream3.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://l1l1.to/ch10')");
           streamsdiv.appendChild(stream3);
+          var stream4 = document.createElement("button");
+          stream4.setAttribute("class", "btn btn-sm btn-danger m-2");
+          stream4.innerText = "Stream 4(EN)";
+          stream4.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://liveon.sx/embed1')");
+          streamsdiv.appendChild(stream4);
 
           var all = document.createElement("button");
           all.setAttribute("class", "btn btn-sm btn-danger m-2");
