@@ -11,7 +11,7 @@ function openapp(app) {
   header.style.display = "none";
   controls.style.display = "flex";
   appframe.style.display = "initial";
-  appframe.setAttribute("src", "https://" + plink + "/apps/apps.html#" + app);
+  appframe.setAttribute("src", "https://qatar.up.railway.app/apps/apps.html#" + app);
 }
 
 function reloadapp() {
@@ -112,19 +112,19 @@ async function fetchapps() {
           var stream = document.createElement("button");
           stream.setAttribute("class", "btn btn-sm btn-danger m-2");
           stream.innerText = "Stream 1(EN)";
-          stream.setAttribute("onclick", "window.open('https://" + plink + "/apps/apps.html#https://l1l1.to/ch1')");
+          stream.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://l1l1.to/ch1')");
           streamsdiv.appendChild(stream);
 
           var stream2 = document.createElement("button");
           stream2.setAttribute("class", "btn btn-sm btn-danger m-2");
           stream2.innerText = "Stream 2(EN)";
-          stream2.setAttribute("onclick", "window.open('https://" + plink + "/apps/apps.html#https://l1l1.to/ch4')");
+          stream2.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://l1l1.to/ch4')");
           streamsdiv.appendChild(stream2);
 
           var stream3 = document.createElement("button");
           stream3.setAttribute("class", "btn btn-sm btn-danger m-2");
           stream3.innerText = "Stream 3(ES)";
-          stream3.setAttribute("onclick", "window.open('https://" + plink + "/apps/apps.html#https://l1l1.to/ch10')");
+          stream3.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://l1l1.to/ch10')");
           streamsdiv.appendChild(stream3);
 
           var all = document.createElement("button");
