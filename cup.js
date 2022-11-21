@@ -112,7 +112,7 @@ async function fetchapps() {
           var stream = document.createElement("button");
           stream.setAttribute("class", "btn btn-sm btn-danger m-2");
           stream.innerText = "Stream 1(EN)";
-          stream.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://l1l1.to/ch1')");
+          stream.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')");
           streamsdiv.appendChild(stream);
 
           var stream2 = document.createElement("button");
