@@ -131,7 +131,11 @@ async function fetchapps() {
           stream4.innerText = "Stream 4(EN)";
           stream4.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://liveon.sx/embed1')");
           streamsdiv.appendChild(stream4);
-
+var best = document.createElement("button");
+          best.setAttribute("class", "btn btn-sm btn-danger m-2");
+          best.innerText = "Best but Laggy(EN)";
+          best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
+          streamsdiv.appendChild(best);
           var all = document.createElement("button");
           all.setAttribute("class", "btn btn-sm btn-danger m-2");
           all.innerText = "All Live Streams";
