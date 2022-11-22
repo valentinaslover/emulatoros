@@ -54,7 +54,7 @@ async function fetchapps() {
     var streaml = json[app].link[1];
     var alll = json[app].link[0];
     var hour = json[app].hour;
-    if (day <= dt.getDate()) {
+    if (day >= dt.getDate()) {
       console.log('before' + team1)
     var appelm = document.createElement("a");
 
@@ -65,7 +65,7 @@ async function fetchapps() {
     var app = document.getElementsByClassName("app")[app];
 
     var maindiv = document.createElement("div");
-    console.log(maindiv)
+    console.log(app)
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 position-relative");
     maindiv.setAttribute("style", "cursor:default;")
     app.appendChild(maindiv);
