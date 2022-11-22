@@ -1,128 +1,197 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 <link rel="stylesheet" href="player.css" />
 <style>
-        #jw-container {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
-        }
-        .jwplayer {
-            position: absolute !important;
-        }
-        .jw-logo {
-            display: none;
-        }
-        .chat-show {
-            display: block !important;
-        }
-        .chat-hide {
-            display: none !important;
-        }
-    </style>
-<div id="main-wrapper">
-        <div id="match-detail-app">
-            <div class="match-wrap">
-                <div class="container">
-                    <section class="match-section">
-<div class="ms-media">
-<div class="media-frame">
-                                <div class="box-countdown">
-                                    <div id="show-countdown">
-                                        <div class="sc-title">
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    #jw-container {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+
+    .jwplayer {
+        position: absolute !important;
+    }
+
+    .jw-logo {
+        display: none;
+    }
+
+    .chat-show {
+        display: block !important;
+    }
+
+    .chat-hide {
+        display: none !important;
+    }
+</style>
+<div class="container">
+    <section class="match-section">
+        <div class="ms-detail">
+            <div class="msd-title">
+                <div class="ajax-loading is-load-single">
+                    <div class="vir-item h-30"></div>
+                    <div class="vir-item h-30"></div>
+                </div>
+            </div>
+            <div class="msd-teams">
+                <div class="ajax-loading is-load-match-team">
+                    <div class="vir-item"></div>
+                    <div class="vir-item"></div>
+                </div>
+            </div>
+            <div class="msd-info">
+                <div class="match-stats">
+                    <div class="ajax-loading is-load-single">
+                        <div class="vir-item h-30 m-0 mb-3"></div>
+                        <div class="vir-item h-30 m-0 mb-3"></div>
+                        <div class="vir-item h-30 m-0"></div>
+                    </div>
+                </div>
+                <div class="league-detail">
+                    <div class="ajax-loading is-load-single">
+                        <div class="vir-item h-30 m-0 mb-3"></div>
+                        <div class="vir-item h-30 m-0 mb-3"></div>
+                        <div class="vir-item h-30 m-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ms-media">
+            <div class="media-side">
+                <div class="match-side-head">
+                    <div class="ajax-loading is-load-title">
+                        <div class="vir-item h-30"></div>
+                    </div>
+                </div>
+                <div class="match-social"></div>
+            </div>
+            <div class="media-frame">
+                <div class="box-countdown">
+                    <div id="show-countdown">
+                        <div class="sc-title">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="media-side">
+                <div class="server-wrap">
+                    <div class="ajax-loading is-load-servers">
+                        <div class="vir-item"></div>
+                        <div class="vir-item"></div>
+                        <div class="vir-item"></div>
+                    </div>
+                </div>
+                <div class="match-extend">
+                    <div class="ajax-loading is-load-servers">
+                        <div class="vir-item"></div>
+                        <div class="vir-item mr-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ms-chat">
+            <div class="live-chat">
+                <div class="ls___-chatbox">
+                    <div class="chatbox_wrap" style="display:none;"></div>
+                    <div id="chat_off" style="display:block;">
+                        <div class="chat_off-content">
+                            <div class="text">Chat is off</div>
+                            <div id="chat_on" class="sbtn sbtn-sm sbtn-secondary">Show chat</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 <script>
-      function find_match_id() {
+    function find_match_id() {
         var parsed = new URL(window.location.href);
         var arr_url = parsed.pathname.split("/");
         var slug = "";
         while (arr_url.length) {
-          var item = arr_url.pop().trim();
-          if (item.length > 5) {
-            slug = item;
-            break;
-          }
+            var item = arr_url.pop().trim();
+            if (item.length > 5) {
+                slug = item;
+                break;
+            }
         }
         var arr_s = item.split("-");
         return arr_s[arr_s.length - 1].trim();
 
-      }
-      window.page_name = "detail";
-      window.assets_base_path = "/oze"
-      window.show_chat = true
-      window.chat_url = "https://www3.cbox.ws/box/?boxid=3522725&boxtag=jz7HWG"
-      window.build_match_url = function (model) {
+    }
+    window.page_name = "detail";
+    window.assets_base_path = "/oze"
+    window.show_chat = true
+    window.chat_url = "https://www3.cbox.ws/box/?boxid=3522725&boxtag=jz7HWG"
+    window.build_match_url = function (model) {
         return `/watch-${model.home.slug}-vs-${model.away.slug}-${model.tournament.slug}-${model.id}`
-      }
-      window.detail_match_id = find_match_id();
-      window.api_base_url = "https://justameanlessdomain.com";
-      window.api_live_base_url = "https://justameanlessdomain.com";
-      window.tournament_standings = [
-          {
-              "model_id": "wr28ftknkx",
-              "name": "FIFA World Cup",
-              "slug": "fifa-world-cup",
-              "logo": "https://img.thesports.com/football/competition/3901a01c4d76ef57fa641b37bf09d297.png",
-              "is_featured": true,
-              "priority": 101
-          },
-          {
-              "model_id": "8i963rx2v3",
-              "name": "UEFA Champions League",
-              "slug": "uefa-champions-league",
-              "logo": "https://img.thesports.com/football/competition/ac05535bde17129cb598311242b3afba.png",
-              "is_featured": true,
-              "priority": 99
-          },
-          {
-              "model_id": "90zme62h20",
-              "name": "English Premier League",
-              "slug": "english-premier-league",
-              "logo": "https://img.thesports.com/football/competition/d3cd84441d4de605d84a14521ef56920.png",
-              "is_featured": true,
-              "priority": 98
-          },
-          {
-              "model_id": "7x097px91o",
-              "name": "Spanish La Liga",
-              "slug": "spanish-la-liga",
-              "logo": "https://img.thesports.com/football/competition/e6ee784bdd6af4694075206cd069387e.png",
-              "is_featured": true,
-              "priority": 97
-          },
-          {
-              "model_id": "59zgw3t9bb",
-              "name": "Bundesliga",
-              "slug": "bundesliga",
-              "logo": "https://img.thesports.com/football/competition/0c6a25cd746e802296d9064b4504179d.png",
-              "is_featured": true,
-              "priority": 96
-          },
-          {
-              "model_id": "fpbhuhmttb",
-              "name": "French Ligue 1",
-              "slug": "french-ligue-1",
-              "logo": "https://img.thesports.com/football/competition/d1569394723b61d7aa6b0aee530945fe.png",
-              "is_featured": true,
-              "priority": 95
-          },
-          {
-              "model_id": "8owenpxenq",
-              "name": "Italian Serie A",
-              "slug": "italian-serie-a",
-              "logo": "https://img.thesports.com/football/competition/e481bc102a38742e6abfafd2f8873ea9.png",
-              "is_featured": true,
-              "priority": 94
-          }
-      ];
-      window.seo_data = {"title":"9Goal - Watch live Mexico vs Poland | FIFA World Cup | 2022","keywords":"watch Mexico match, free Mexico live, watch Poland match, free Poland live, Mexico vs Poland 2022, Mexico FIFA World Cup 2022, PolandFIFA World Cup 2022","description":"Watch live Mexico vs Poland at FIFA World Cup","icon":"/oze/static/img/favicon.png","image":"https://9goal.tv/oze/images/grab.png","h1":"Watch  Mexico vs Poland (FIFA World Cup) Live Streaming","content_top":"","content_bot":"","content":"","head":"","footer":""}
-    </script>
+    }
+    window.detail_match_id = find_match_id();
+    window.api_base_url = "https://justameanlessdomain.com";
+    window.api_live_base_url = "https://justameanlessdomain.com";
+    window.tournament_standings = [
+        {
+            "model_id": "wr28ftknkx",
+            "name": "FIFA World Cup",
+            "slug": "fifa-world-cup",
+            "logo": "https://img.thesports.com/football/competition/3901a01c4d76ef57fa641b37bf09d297.png",
+            "is_featured": true,
+            "priority": 101
+        },
+        {
+            "model_id": "8i963rx2v3",
+            "name": "UEFA Champions League",
+            "slug": "uefa-champions-league",
+            "logo": "https://img.thesports.com/football/competition/ac05535bde17129cb598311242b3afba.png",
+            "is_featured": true,
+            "priority": 99
+        },
+        {
+            "model_id": "90zme62h20",
+            "name": "English Premier League",
+            "slug": "english-premier-league",
+            "logo": "https://img.thesports.com/football/competition/d3cd84441d4de605d84a14521ef56920.png",
+            "is_featured": true,
+            "priority": 98
+        },
+        {
+            "model_id": "7x097px91o",
+            "name": "Spanish La Liga",
+            "slug": "spanish-la-liga",
+            "logo": "https://img.thesports.com/football/competition/e6ee784bdd6af4694075206cd069387e.png",
+            "is_featured": true,
+            "priority": 97
+        },
+        {
+            "model_id": "59zgw3t9bb",
+            "name": "Bundesliga",
+            "slug": "bundesliga",
+            "logo": "https://img.thesports.com/football/competition/0c6a25cd746e802296d9064b4504179d.png",
+            "is_featured": true,
+            "priority": 96
+        },
+        {
+            "model_id": "fpbhuhmttb",
+            "name": "French Ligue 1",
+            "slug": "french-ligue-1",
+            "logo": "https://img.thesports.com/football/competition/d1569394723b61d7aa6b0aee530945fe.png",
+            "is_featured": true,
+            "priority": 95
+        },
+        {
+            "model_id": "8owenpxenq",
+            "name": "Italian Serie A",
+            "slug": "italian-serie-a",
+            "logo": "https://img.thesports.com/football/competition/e481bc102a38742e6abfafd2f8873ea9.png",
+            "is_featured": true,
+            "priority": 94
+        }
+    ];
+    window.seo_data = { "title": "9Goal - Watch live Mexico vs Poland | FIFA World Cup | 2022", "keywords": "watch Mexico match, free Mexico live, watch Poland match, free Poland live, Mexico vs Poland 2022, Mexico FIFA World Cup 2022, PolandFIFA World Cup 2022", "description": "Watch live Mexico vs Poland at FIFA World Cup", "icon": "/oze/static/img/favicon.png", "image": "https://9goal.tv/oze/images/grab.png", "h1": "Watch  Mexico vs Poland (FIFA World Cup) Live Streaming", "content_top": "", "content_bot": "", "content": "", "head": "", "footer": "" }
+</script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
@@ -132,8 +201,8 @@
 <script src="https://content.jwplatform.com/libraries/Jq6HIbgz.js">
 </script>
 <script type="text/javascript"
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-      jwplayer.key = '3SYLbRo6MN5cBDxwpZh3dl1gb0lMTUOos31M5hoAlf4='
-    </script>
+<script>
+    jwplayer.key = '3SYLbRo6MN5cBDxwpZh3dl1gb0lMTUOos31M5hoAlf4='
+</script>
