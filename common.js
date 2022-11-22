@@ -3834,7 +3834,7 @@
                   , i = (0,
                 w.iH)(null);
                 let n = await Z.fetchDetail(t.match_id);
-                n || (window.location.href = "/hi"),
+                
                 i.value = n,
                 await s.addData(n, {
                     source: "detail"
