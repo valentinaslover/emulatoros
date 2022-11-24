@@ -339,7 +339,7 @@ $('#modal_frame').on('show.bs.modal', function (e) {
 
   // load content from HTML string
   //modal.find('.modal-body').html("Nice modal body baby...");
-
+console.log('click')
   // or, load content from value of data-remote url
   modal.find('.modal-body').load(button.data("remote"));
 
