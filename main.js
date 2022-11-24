@@ -332,7 +332,7 @@ function searchGames() {
       : a[i].setAttribute("style", "display:none !important");
 }
 
-$('#modal_framw').on('show.bs.modal', function (e) {
+$('#modal_frame').on('show.bs.modal', function (e) {
 
   var button = $(e.relatedTarget);
   var modal = $(this);
