@@ -1,29 +1,27 @@
 [
     {
-        "date": "2022-11-22",
-        "day": "22",
+        "date": "2022-11-24",
+        "day": "24",
         "month": "11",
-        "hour": 4,
-        "team1": "Argentina",
-        "team2": "Saudi Arabia",
+        "hour": 13,
+        "team1": "Brazil",
+        "team2": "Serbia",
         "link": [
-            "https://footybite.to/Argentina-vs-Saudi-Arabia/201",
-            "https://embedstream.me/argentina-vs-saudi-arabia-stream-1"
+            "https://footybite.to/Brazil-vs-Serbia/4913"
         ],
-        "time": "04:00 AM"
+        "time": "01:00 PM"
     },
     {
-        "date": "2022-11-22",
-        "team1": "Denmark",
-        "team2": "Tunisia",
-        "day": "22",
+        "date": "2022-11-24",
+        "team1": "Portugal",
+        "team2": "Ghana",
+        "day": "24",
         "month": "11",
-        "hour": 7,
+        "hour": 10,
         "link": [
-            "https://footybite.to/Denmark-vs-Tunisia/202",
-            "https://embedstream.me/denmark-vs-tunisia-stream-1"
+            "https://footybite.to/Portugal-vs-Ghana/4912"
         ],
-        "time": "07:00 AM"
+        "time": "10:00 AM"
     },
     {
         "date": "2022-11-22",
