@@ -332,17 +332,6 @@ function searchGames() {
       : a[i].setAttribute("style", "display:none !important");
 }
 
-$('#theModal').on('show.bs.modal', function (e) {
-
-  var button = $(e.relatedTarget);
-  var modal = $(this);
-
-  // load content from HTML string
-  //modal.find('.modal-body').html("Nice modal body baby...");
-
-  // or, load content from value of data-remote url
-  var find = modal.find('.modal-body');
-  console.log(find)
-  find.load(button.data("remote"));
-
+$('#modal_frame').on('show.bs.modal', function (e) {
+  $(this).find('.modal-body').load(e.relatedTarget.href);
 });
