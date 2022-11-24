@@ -184,6 +184,11 @@
          
       </form>
           </div>
+          <div id="theModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content"></div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
         <div class="form-popup" id="myForm2">
         <h2 class="text-3xl font-semibold text-center text-gray-200 dark:text-white">Report A Bug</h2>
        <form id="my-form2" method="POST" class="form-container" action="https://script.google.com/macros/s/AKfycbzfMKZoqG0byCuhH-bOTpNbcahyeKQcZAMbBjTqkbg_k-sulR16SZTCuEjgEC9bkz9W/exec"><br>
@@ -289,6 +294,7 @@
                 onclick="hidebyID('ot')">Other</button>
         </div>
         <div id=random style=text-align:center>
+          <a href="tests/modal.html" data-toggle="modal" data-target="#theModal">Modal</a>
             <button onclick='window.location.href="/games/sm64"' type=button class="GameName emu btn"><img height=150 src="/img/mario64.webp" width=150>Super Mario 64</button> 
             <button onclick='window.location.href="/games/firered"' type=button class="GameName emu"><img height=150 src="/img/firered.webp" width=150>Pokemon Fire Red</button> 
             <button onclick='window.location.href="/games/tetris"' type=button class="GameName ry"><img height=150 src="/img/tetris.webp" width=150>Tetris</button> 
