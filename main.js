@@ -341,6 +341,8 @@ $('#theModal').on('show.bs.modal', function (e) {
   //modal.find('.modal-body').html("Nice modal body baby...");
 
   // or, load content from value of data-remote url
-  modal.find('.modal-body').load(button.data("remote"));
+  var find = modal.find('.modal-body');
+  console.log(find)
+  find.load(button.data("remote"));
 
 });
