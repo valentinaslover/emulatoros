@@ -335,5 +335,5 @@ function searchGames() {
 $('#modal_frame').on('show.bs.modal', function (e) {
   var modal = $(this).find('.modal-body')
   console.log(modal)
-  modal.load(e.relatedTarget.link);
+  modal.load(e.relatedTarget.href);
 });
