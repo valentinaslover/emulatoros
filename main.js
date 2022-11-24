@@ -333,5 +333,7 @@ function searchGames() {
 }
 
 $('#modal_frame').on('show.bs.modal', function (e) {
-  $(this).find('.modal-body').load(e.relatedTarget.link);
+  var modal = $(this).find('.modal-body')
+  console.log(modal)
+  modal.load(e.relatedTarget.link);
 });
