@@ -51,7 +51,6 @@ async function fetchapps() {
     var time = json[app].time;
     var team1 = json[app].team1;
     var team2 = json[app].team2;
-    var streaml = json[app].link[1];
     var alll = json[app].link[0];
     var hour = json[app].hour;
     if (day >= dt.getDate()) {
