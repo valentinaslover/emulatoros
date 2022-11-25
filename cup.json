@@ -6,9 +6,8 @@
         "hour": 13,
         "team1": "Brazil",
         "team2": "Serbia",
-        "link": [
-            "https://footybite.to/Brazil-vs-Serbia/4913"
-        ],
+        "link": 
+            "https://footybite.to/Brazil-vs-Serbia/4913",
         "time": "01:00 PM"
     },
     {
@@ -18,9 +17,9 @@
         "day": "24",
         "month": "11",
         "hour": 10,
-        "link": [
+        "link": 
             "https://footybite.to/Portugal-vs-Ghana/4912"
-        ],
+        ,
         "time": "10:00 AM"
     },
     {
@@ -30,9 +29,9 @@
         "day": "25",
         "month": "11",
         "hour": 4,
-        "link": [
+        "link": 
             "https://footybite.to/Wales-vs-Iran/4914"
-        ],
+        ,
         "time": "04:00 AM"
     },
     {
@@ -42,9 +41,9 @@
         "day": "25",
         "month": "11",
         "hour": 7,
-        "link": [
+        "link": 
             "https://footybite.to/Qatar-vs-Senegal/4915"
-        ],
+        ,
         "time": "07:00 AM"
     },
     {
@@ -54,9 +53,9 @@
         "day": "25",
         "month": "11",
         "hour": 10,
-        "link": [
+        "link": 
             "https://footybite.to/Netherlands-vs-Ecuador/4916"
-        ],
+        ,
         "time": "10:00 PM"
     },
     {
@@ -66,10 +65,10 @@
         "day": "25",
         "month": "11",
         "hour": 13,
-        "link": [
+        "link": 
             "https://footybite.to/England-vs-Iran/198",
             "https://embedstream.me/england-vs-iran-stream-1"
-        ],
+        ,
         "time": "01:00 PM"
     },
     {
@@ -79,9 +78,9 @@
         "day": "26",
         "month": "11",
         "hour": 4,
-        "link": [
+        "link": 
             "https://footybite.to/Tunisia-vs-Australia/4918"
-        ],
+        ,
         "time": "04:00 AM"
     },
     {
@@ -91,9 +90,9 @@
         "day": "26",
         "month": "11",
         "hour": 7,
-        "link": [
+        "link": 
             "https://footybite.to/Poland-vs-Saudi-Arabia/4919"
-        ],
+        ,
         "time": "07:00 AM"
     },
     {
@@ -103,9 +102,9 @@
         "day": "26",
         "month": "11",
         "hour": 10,
-        "link": [
+        "link": 
             "https://footybite.to/France-vs-Denmark/4920"
-        ],
+        ,
         "time": "10:00 AM"
     }
 ]
