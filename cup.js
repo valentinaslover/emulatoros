@@ -43,6 +43,7 @@ var plink = localStorage.getItem("plink");
 async function fetchapps() {
   let response = await fetch("/cup.json");
   let json = await response.json();
+  console.log(json)
   var main = document.getElementById("font-md-10");
   for (app in json) {
     var date = json[app].date;
