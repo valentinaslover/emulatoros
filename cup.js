@@ -1,4 +1,4 @@
-var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
+ var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
 const dt = new Date(today);
 var hrs = dt.getHours();
 
@@ -64,7 +64,7 @@ async function fetchapps() {
     var apps = document.getElementsByClassName("app")[app];
 
     var maindiv = document.createElement("div");
-    console.log(apps)
+    console.log(appelm)
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 position-relative");
     maindiv.setAttribute("style", "cursor:default;")
     apps.appendChild(maindiv);
