@@ -51,8 +51,9 @@ async function fetchapps() {
     console.log(date)
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
-    if (day >= dt.getDate()) {
-      console.log('before' + team1)
+    var status = json[app].status;
+    
+      console.log('before' + status)
     var appelm = document.createElement("a");
 
     appelm.className = "app";
@@ -85,7 +86,7 @@ async function fetchapps() {
 
     var datespan = document.createElement("span");
     datespan.setAttribute("class", "d-inline-block text-center text-dark-l");
-    datespan.innerHTML = '<i class="fas fa-clock"></i><br>' + date + "&nbsp;&nbsp;" + time + " CT";
+    datespan.innerHTML = '<i class="fas fa-clock"></i><br>' + date + " CT";
     datediv.appendChild(datespan);
 
     var team2div = document.createElement("div");
@@ -96,13 +97,9 @@ async function fetchapps() {
     team2span.setAttribute("class", "d-inline-block mt-2");
     team2span.innerText = team2;
     team2div.appendChild(team2span);
-    var max = hour+1
-    if (dt.getDate() == day && dt.getMonth() + 1 == month) {
-      console.log('today is ' + team1)
-      if (hour <= dt.getHours()) {
-        console.log('after ' + hour)
-        console.log(`${hour + 1} >= ${dt.getHours()}`)
-        if (max >= dt.getHours()) {
+
+    // check if playing
+
           console.log('before ' + max)
           var streamsdiv = document.createElement("div");
           streamsdiv.setAttribute("class", "text-right d-none d-md-inline-block float-right");
@@ -138,12 +135,6 @@ var best = document.createElement("button");
           
         }
       }
-    }
-  } else {
-    console.log( `after ${team1} game game was ${day}`)
-    console.log()
-  }
-}
-}
+    
 
 fetchapps();
