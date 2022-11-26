@@ -99,7 +99,7 @@ async function fetchapps() {
       team2span.setAttribute("class", "d-inline-block mt-2");
       team2span.innerText = away;
       team2div.appendChild(team2span);
-
+console.log('finish')
       
     }
   }
@@ -110,9 +110,7 @@ async function current() {
   var main = document.getElementById("font-md-10");
   for (app in json) {
 
-    var format = moment(json[app].datetime);
-    var date = format.tz('America/Chicago').format('llll');
-    console.log(date)
+    
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
     var home = team1.name;
@@ -152,7 +150,7 @@ async function current() {
 
       var datespan = document.createElement("span");
       datespan.setAttribute("class", "d-inline-block text-center text-dark-l");
-      datespan.innerHTML = '<i class="fas fa-clock"></i><br>' + date + " CT";
+      datespan.innerHTML = '<i class="fas fa-clock"></i><br> Live ';
       datediv.appendChild(datespan);
 
       var team2div = document.createElement("div");
