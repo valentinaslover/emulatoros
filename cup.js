@@ -56,7 +56,7 @@ async function fetchapps() {
 
     var status = json[app].status;
     console.log(`${away} is ${status}`)
-    if (status !== "completed" && status !== "on_progress" && team !== "To Be Determined") {
+    if (status !== "completed" && status !== "on_progress" && home !== "To Be Determined") {
 
 
       console.log('before ' + status)
