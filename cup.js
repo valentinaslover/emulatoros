@@ -45,15 +45,9 @@ async function fetchapps() {
   let json = await response.json();
   var main = document.getElementById("font-md-10");
   for (app in json) {
-    console.log(app)
-    var date = json[app].date;
-    var day = json[app].day;
-    var month = json[app].month;
-    var time = json[app].time;
-    var team1 = json[app].team1;
-    var team2 = json[app].team2;
-    var alll = json[app].link;
-    var hour = json[app].hour;
+    var date = json[app].datetime;
+    var team1 = json[app].home_team;
+    var team2 = json[app].away_team;
     if (day >= dt.getDate()) {
       console.log('before' + team1)
     var appelm = document.createElement("a");
@@ -138,11 +132,7 @@ var best = document.createElement("button");
           best.innerText = "Best but Laggy(EN)";
           best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
           streamsdiv.appendChild(best);
-          var all = document.createElement("button");
-          all.setAttribute("class", "btn btn-sm btn-danger m-2");
-          all.innerText = "All Live Streams";
-          all.setAttribute("onclick", "openapp(" + '"' + alll + '"' + ")");
-          streamsdiv.appendChild(all);
+          
         }
       }
     }
