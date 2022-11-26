@@ -1,7 +1,10 @@
 var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
 const dt = new Date(today);
 var hrs = dt.getHours();
-
+import flags from './flags.js'
+function getFlags(code) {
+  return flags[code]
+}
 console.log(today);
 console.log(dt)
 function openapp(app) {
@@ -59,7 +62,8 @@ async function fetchapps() {
     if (status !== "completed" && status !== "on_progress" && home !== "To Be Determined") {
 
 
-      console.log('before ' + status)
+      console.log(team1.country)
+      console.log(getFlags(team1.country))
       var appelm = document.createElement("a");
 
       appelm.className = "app";
@@ -102,7 +106,7 @@ async function fetchapps() {
       team2span.setAttribute("class", "d-inline-block mt-2");
       team2span.innerText = away;
       team2div.appendChild(team2span);
-      
+
       var streamsdiv = document.createElement("div");
     streamsdiv.setAttribute("class", "d-flex justify-content-center");
     maindiv.appendChild(streamsdiv);
