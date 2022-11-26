@@ -1,7 +1,20 @@
  var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
 const dt = new Date(today);
 var hrs = dt.getHours();
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://community-official-world-cup.p.rapidapi.com/wc/matches",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": "65cf4edf8emsh2c9503ac886d7d6p1a34a7jsn1157b93984f2",
+		"X-RapidAPI-Host": "community-official-world-cup.p.rapidapi.com"
+	}
+};
 
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
 console.log(today);
 console.log(dt)
 function openapp(app) {
