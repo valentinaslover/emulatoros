@@ -47,7 +47,7 @@ async function fetchapps() {
   for (app in json) {
     
     var format = moment(json[app].datetime);
-    var date = date.tz('America/Chicago').format('llll'); 
+    var date = format.tz('America/Chicago').format('llll'); 
     console.log(date)
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
