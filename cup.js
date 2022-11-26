@@ -102,7 +102,38 @@ async function fetchapps() {
       team2span.setAttribute("class", "d-inline-block mt-2");
       team2span.innerText = away;
       team2div.appendChild(team2span);
-      console.log('finish')
+      
+      var streamsdiv = document.createElement("div");
+    streamsdiv.setAttribute("class", "d-flex justify-content-center");
+    maindiv.appendChild(streamsdiv);
+
+    var stream = document.createElement("button");
+    stream.setAttribute("class", "btn btn-sm btn-danger m-2");
+    stream.innerText = "Stream 1(EN)";
+    stream.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')");
+    streamsdiv.appendChild(stream);
+
+    var stream2 = document.createElement("button");
+    stream2.setAttribute("class", "btn btn-sm btn-danger m-2");
+    stream2.innerText = "Stream 2(EN)";
+    stream2.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://l1l1.to/ch4')");
+    streamsdiv.appendChild(stream2);
+
+    var stream3 = document.createElement("button");
+    stream3.setAttribute("class", "btn btn-sm btn-danger m-2");
+    stream3.innerText = "Stream 3(ES)";
+    stream3.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://l1l1.to/ch10')");
+    streamsdiv.appendChild(stream3);
+    var stream4 = document.createElement("button");
+    stream4.setAttribute("class", "btn btn-sm btn-danger m-2");
+    stream4.innerText = "Stream 4(EN)";
+    stream4.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://liveon.sx/embed1')");
+    streamsdiv.appendChild(stream4);
+    var best = document.createElement("button");
+    best.setAttribute("class", "btn btn-sm btn-danger m-2");
+    best.innerText = "Best but Laggy(EN)";
+    best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
+    streamsdiv.appendChild(best);
 
     }
   }
@@ -125,7 +156,7 @@ async function current() {
     console.log('before ' + status)
     var appelm = document.createElement("a");
 
-    appelm.className = "app";
+    appelm.className = "live" + app;
 
     main.appendChild(appelm);
 
@@ -134,7 +165,6 @@ async function current() {
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 position-relative");
     maindiv.setAttribute("style", "cursor:default;")
     appelm.appendChild(maindiv);
-
     var maindiv2 = document.createElement("div");
     maindiv2.setAttribute("class", "d-flex justify-content-center row");
     maindiv.appendChild(maindiv2);
@@ -170,8 +200,8 @@ async function current() {
 
 
     var streamsdiv = document.createElement("div");
-    streamsdiv.setAttribute("class", "text-right d-none d-md-inline-block float-right");
-    team2div.appendChild(streamsdiv);
+    streamsdiv.setAttribute("class", "d-flex justify-content-center");
+    maindiv.appendChild(streamsdiv);
 
     var stream = document.createElement("button");
     stream.setAttribute("class", "btn btn-sm btn-danger m-2");
