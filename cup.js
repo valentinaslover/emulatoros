@@ -51,6 +51,9 @@ async function fetchapps() {
     console.log(date)
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
+    var home = team1.name;
+    var away = team2.name;
+    console.log(away + " and " + home)
     var status = json[app].status;
     
       console.log('before' + status)
@@ -100,7 +103,7 @@ async function fetchapps() {
 
     // check if playing
 
-          console.log('before ' + max)
+    
           var streamsdiv = document.createElement("div");
           streamsdiv.setAttribute("class", "text-right d-none d-md-inline-block float-right");
           team2div.appendChild(streamsdiv);
