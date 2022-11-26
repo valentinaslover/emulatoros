@@ -53,9 +53,11 @@ async function fetchapps() {
     var team2 = json[app].away_team;
     var home = team1.name;
     var away = team2.name;
-    console.log(away + " and " + home)
+   
     var status = json[app].status;
+    console.log(`${away} is ${status}` )
     if (status !== "completed") {
+
       if (status !== "on_progress") {
         console.log('before ' + status)
         var appelm = document.createElement("a");
