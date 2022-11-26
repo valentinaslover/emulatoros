@@ -41,7 +41,7 @@ function opentab() {
 }
 var plink = localStorage.getItem("plink");
 async function fetchapps() {
-  let response = await fetch("https://qatar.up.railway.app/api?q=hi");
+  let response = await fetch("https://qatar.up.railway.app/api?q=matches");
   let json = await response.json();
   var main = document.getElementById("font-md-10");
   for (app in json) {
