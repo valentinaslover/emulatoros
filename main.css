@@ -164,6 +164,9 @@ html {
 		}
 		.GameName {
 			opacity: 1;
+			margin: 20px 10px;
+			border-radius: 25px;
+			line-height: normal;
 		}
 		.GameName.active {
 			opacity: 1;
