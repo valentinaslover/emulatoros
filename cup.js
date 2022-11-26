@@ -45,7 +45,9 @@ async function fetchapps() {
   let json = await response.json();
   var main = document.getElementById("font-md-10");
   for (app in json) {
-    var date = json[app].datetime;
+    
+    var format = moment(json[app].datetime);
+    var date = date.tz('America/Chicago').format('llll'); 
     console.log(date)
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
