@@ -101,7 +101,7 @@ async function fetchapps() {
 }
 
 async function current() {
-  let response = await fetch("https://qatar.up.railway.app/api?q=matches/current");
+  let response = await fetch("/current.json");
   let json = await response.json();
 
   for (app in json) {
