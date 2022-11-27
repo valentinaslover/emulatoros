@@ -7,7 +7,7 @@ function getFlags(code) {
 function update(app) {
  const num = app
     $.getJSON(
-      "https://qatar.up.railway.app/api?q=matches/current",
+      "/current.json",
       function (json) {
         
           console.log(json[num])
