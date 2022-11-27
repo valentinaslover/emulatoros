@@ -13,6 +13,7 @@ function dot(finalDot) {
   )
 }
 function PlayByPlay({ match }) {
+  console.log(match)
   const events = [
     ...match.home_team_events.map(event => (Object.assign(Object.assign({}, event), { country: match.home_team_country }))),
     ...match.away_team_events.map(event => (Object.assign(Object.assign({}, event), { country: match.away_team_country })))
