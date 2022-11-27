@@ -23,12 +23,12 @@ function create() {
                 appelm.className = "live";
 
                 appelm.innerHTML =
-                    `<table class="bg-dark-black">
+                    `<table class="bg-dark">
                     <thead>
   <tr>
-    <th><img src="${getFlags(team1.country)}"></img><span>${home}<span></th>
+    <th><div class="d-grid justify-content-center"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div></th>
     <th>Played on<br>${date} CT</th>
-    <th><img src="${getFlags(team2.country)}"></img><span>${away}<span></th>
+    <th><div class="d-grid justify-content-center"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div></th>
   </tr>
   </thead>
   <tbody>
