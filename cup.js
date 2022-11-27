@@ -46,12 +46,13 @@ function interval(app, play, json) {
     var eventelm = document.createElement("div");
     console.log(home + ' and ' + events[app].type_of_event)
     eventelm.innerHTML = `hi`
+    playelm.appendChild(eventelm);
   } else {
     var eventelm = document.createElement("div");
     console.log(away + ' else ' + events[app].type_of_event)
     eventelm.innerHTML = `else`
   }
-playelm.appendChild(eventelm);
+
 
 }
   setInterval(update, 10000);
