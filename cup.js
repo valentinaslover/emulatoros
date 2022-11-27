@@ -48,13 +48,13 @@ function interval(app, play, json) {
     var eventelm = document.createElement("div");
     console.log(home + ' and ' + events[app].type_of_event)
     eventelm.innerHTML = `hi`
-    playelm.appendChild(eventelm);
+    playelm.prepend(eventelm);
   } else {
     var playelm = document.getElementsByClassName('play');
     var eventelm = document.createElement("div");
     console.log(away + ' else ' + events[app].type_of_event)
     eventelm.innerHTML = `else`
-    playelm.appendChild(eventelm);
+    playelm.prepend(eventelm);
   }
 
 
