@@ -8,7 +8,7 @@ async function current() {
         var team2 = json.away_team;
         var home = team1.name;
         var away = team2.name;
-        console.log(away + " and " + home)
+        console.log(main)
         var status = json.status;
 
         console.log('before ' + status)
