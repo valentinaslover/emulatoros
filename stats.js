@@ -1,6 +1,6 @@
 let id = decodeURIComponent(window.location.hash.slice(1))
 async function current() {
-    let response = await fetch("https://qatar.up.railway.app/api?q=matches/" + url);
+    let response = await fetch("https://qatar.up.railway.app/api?q=matches/" + id);
     let json = await response.json();
     for (app in json) {
 
