@@ -17,7 +17,7 @@ function interval() {
     setInterval(update, 1000);
 }
 function check() {
-    if (status == "in_progress") { return 'live' } else { return date }
+    if (status == "in_progress") { return  ' Live <span class="live-icon"></span>' } else { return 'Played on<br>' + date + " CT"; }
 }
 function update() {
     $(function () {
