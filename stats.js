@@ -16,7 +16,7 @@ let id = decodeURIComponent(window.location.hash.slice(1))
 async function current() {
     let response = await fetch("https://qatar.up.railway.app/api?q=matches/" + id);
     let json = await response.json();
-    var format = moment(json[app].datetime);
+    var format = moment(json.datetime);
     var date = format.tz('America/Chicago').format('llll');
         var main = document.getElementById('main');
         var team1 = json.home_team;
