@@ -16,34 +16,36 @@ function update() {
 function interval() {
     setInterval(update, 1000);
 }
-
+function check() {
+    if (status == "in_progress") { return 'live' } else { return date }
+}
 function update() {
-$(function () {
-    $.getJSON(
-        "https://qatar.up.railway.app/api?q=matches/" + id,
-        function (json) {
-    var format = moment(json.datetime);
-    var date = format.tz('America/Chicago').format('llll');
-    var main = document.getElementById('main');
-    var team1 = json.home_team;
-    var team2 = json.away_team;
-    var home = team1.name;
-    var away = team2.name;
-    var homestats = json.home_team_statistics
-    var awaystats = json.away_team_statistics
-    console.log(main)
-    var status = json.status;
+    $(function () {
+        $.getJSON(
+            "https://qatar.up.railway.app/api?q=matches/" + id,
+            function (json) {
+                var format = moment(json.datetime);
+                var date = format.tz('America/Chicago').format('llll');
+                var main = document.getElementById('main');
+                var team1 = json.home_team;
+                var team2 = json.away_team;
+                var home = team1.name;
+                var away = team2.name;
+                var homestats = json.home_team_statistics
+                var awaystats = json.away_team_statistics
+                console.log(main)
+                var status = json.status;
 
-    console.log('before ' + status)
-    var appelm = document.createElement("div");
+                console.log('before ' + status)
+                var appelm = document.createElement("div");
 
-    appelm.className = "live";
-    
-    appelm.innerHTML =
-        `<table>
+                appelm.className = "live";
+
+                appelm.innerHTML =
+                    `<table>
   <tr>
     <th><img src="${getFlags(team1.country)}"></img><span>${home}<span></th>
-    <th>Team Stats</th>
+    <th>${check()}</th>
     <th><img src="${getFlags(team2.country)}"></img><span>${away}<span></th>
   </tr>
   <tr>
@@ -98,9 +100,9 @@ $(function () {
   </tr>
 </table>`
 
-    // check if playing
-    main.prepend(appelm);
-});
-});
+                // check if playing
+                main.prepend(appelm);
+            });
+    });
 }
 interval();
