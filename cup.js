@@ -5,14 +5,17 @@ function getFlags(code) {
   return flags
 }
 function update(app) {
- 
+ const num = app
     $.getJSON(
       "https://qatar.up.railway.app/api?q=matches/current",
-      function (json, app) {
-        console.log(json[app])
-        console.log(json)
-        console.log(app)
-        $('#score').text(json[app].home_team.goals + ' - ' + json[app].away_team.goals);
+      function (json) {
+        
+          console.log(json[num])
+          console.log(json)
+          console.log(num)
+          $('#score').text(json[num].home_team.goals + ' - ' + json[num].away_team.goals);
+        
+        
         // Patching payload into page element ID = "dog" 
       });
 }
