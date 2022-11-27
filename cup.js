@@ -12,7 +12,7 @@ function dot(finalDot) {
     </svg>`
   )
 }
-function PlayByPlay({ match }) {
+function PlayByPlay(match) {
   console.log(match)
   const events = [
     ...match.home_team_events.map(event => (Object.assign(Object.assign({}, event), { country: match.home_team_country }))),
