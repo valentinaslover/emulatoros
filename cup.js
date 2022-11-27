@@ -34,7 +34,7 @@ async function fetchapps() {
     var away = team2.name;
 
     var status = json[app].status;
-    if (status !== "completed" && status !== "on_progress" && home !== "To Be Determined") {
+    if (status !== "completed" && status !== "in_progress" && home !== "To Be Determined") {
 
       var appelm = document.createElement("a");
 
@@ -99,7 +99,7 @@ async function fetchapps() {
 async function current() {
   let response = await fetch("https://qatar.up.railway.app/api?q=matches/current");
   let json = await response.json();
-  for (app in json) {
+ 
 
     var main = document.getElementById('main');
     var team1 = json.home_team;
@@ -199,7 +199,7 @@ async function current() {
     best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
     streamsdiv.appendChild(best);
     interval(json);
-  }
+  
 }
 
 async function previous() {
