@@ -23,7 +23,7 @@ function create() {
                 appelm.className = "live";
 
                 appelm.innerHTML =
-                    `<table class="bg-dark">
+                    `<table class="div-child-box bg-dark-gray py-2 position-relative"">
                     <thead>
   <tr>
     <th><div class="d-grid justify-content-center"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div></th>
