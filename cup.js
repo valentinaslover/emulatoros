@@ -36,11 +36,12 @@ function update() {
     });
 }
 function interval(app, play, json) {
-  const e = React.createElement;
-  var elm = PlayByPlay(json[app]);
-  const domContainer = document.querySelector('#live');
-const root = ReactDOM.createRoot(domContainer);
-root.render(e(elm));
+ 
+  var events = PlayByPlay(json[app]);
+  play.innerHTML = events
+  for(event in events) {
+    console.log(event)
+  }
   setInterval(update, 10000);
 }
 
