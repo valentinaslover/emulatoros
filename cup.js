@@ -1,9 +1,8 @@
 
-$.getScript('./flags.js', function () {
-  console.log("Load was performed.");
-})
+
 function getFlags(code) {
-  return flags[code]
+  var flags = "https://qatar.up.railway.app/flags?q=" + code
+  return flags
 }
 
 async function fetchapps() {
