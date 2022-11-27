@@ -36,7 +36,11 @@ function update() {
     });
 }
 function interval(app, play, json) {
-  play.innerHTML = PlayByPlay(json[app]);
+  const e = React.createElement;
+  var elm = PlayByPlay(json[app]);
+  const domContainer = document.querySelector('#live');
+const root = ReactDOM.createRoot(domContainer);
+root.render(e(elm));
   setInterval(update, 10000);
 }
 
