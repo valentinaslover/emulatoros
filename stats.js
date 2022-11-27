@@ -4,7 +4,9 @@ function getFlags(code) {
     return flags
 }
 function percentage(partialValue, totalValue) {
-  return (100 * partialValue) / totalValue;
+  var percent = (100 * partialValue) / totalValue
+  var fixed = percent.toFixed(2);
+  return fixed;
 } 
 function create() {
     $(function () {
