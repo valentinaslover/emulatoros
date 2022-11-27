@@ -108,9 +108,9 @@ async function current() {
         appelm.innerHTML =
         `<table>
   <tr>
-    <th>Firstname</th>
+    <th><img src="${getFlags(team1.country)}"></img><span>${home}<span></th>
     <th>Lastname</th>
-    <th>Savings</th>
+    <th><img src="${getFlags(team2.country)}"></img><span>${away}<span></th>
   </tr>
   <tr>
     <td>Peter</td>
