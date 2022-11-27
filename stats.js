@@ -23,7 +23,7 @@ function create() {
                 appelm.className = "live";
 
                 appelm.innerHTML =
-                    `<table>
+                    `<table class="bg-dark-gray">
                     <thead>
   <tr>
     <th><img src="${getFlags(team1.country)}"></img><span>${home}<span></th>
@@ -86,7 +86,7 @@ function create() {
 </table>`
 
                 // check if playing
-                main.prepend(appelm);
+                main.appendChild(appelm);
 
             });
     });
