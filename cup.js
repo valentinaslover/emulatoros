@@ -148,10 +148,7 @@ async function current() {
     var datediv = document.createElement("div");
     datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
     maindiv2.appendChild(datediv);
-    $.getJSON('https://footballdb.herokuapp.com/api/event/en.2013_14/round/4?callback=?', function(json) {
-      console.log(json)
-      console.log('hi')
-  });
+
     var min = document.createElement("span");
     min.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
     min.innerHTML = json[app].time+ "'";
