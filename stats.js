@@ -3,7 +3,9 @@ function getFlags(code) {
     var flags = "https://qatar.up.railway.app/flags?q=" + code
     return flags
 }
-
+function percentage(partialValue, totalValue) {
+  return (100 * partialValue) / totalValue;
+} 
 function create() {
     $(function () {
         $.getJSON(
@@ -48,14 +50,9 @@ function create() {
   <td>${awaystats.on_target}</td>
   </tr>
   <tr>
-  <td>${homestats.ball_possession}</td>
-  <td>Possession</td>
-  <td>${awaystats.ball_possession}</td>
-  </tr>
-  <tr>
-  <td>${homestats.pass_accuracy}</td>
+  <td>${percentage(homestats.passes_completed, homestats.num_passes)}%</td>
   <td>Pass Accuracy</td>
-  <td>${awaystats.pass_accuracy}</td>
+  <td>${percentage(awaystats.passes_completed, awaystats.num_passes)}%</td>
   </tr>
   <tr>
   <td>${homestats.fouls_committed}</td>
