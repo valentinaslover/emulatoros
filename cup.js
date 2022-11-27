@@ -117,7 +117,7 @@ async function current() {
 
 
     var maindiv = document.createElement("div");
-    maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 position-relative");
+    maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 d-flex flex-column align-items-center");
     maindiv.setAttribute("style", "cursor:default;")
     appelm.appendChild(maindiv);
 
@@ -226,7 +226,7 @@ async function previous() {
 
 
       var maindiv = document.createElement("div");
-      maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 position-relative");
+      maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 d-flex flex-column align-items-center");
       maindiv.setAttribute("style", "cursor:default;")
       appelm.appendChild(maindiv);
 
@@ -257,12 +257,7 @@ async function previous() {
       datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
       maindiv2.appendChild(datediv);
 
-      var stats = document.createElement("button");
-      stats.setAttribute("class", "p-2 d-inline-block btn btn-sm btn-danger");
-      stats.innerText = 'Stats';
-      stats.setAttribute("href", "/stats#" + json[app].id);
-      datediv.appendChild(stats);
-
+      
       var datespan = document.createElement("span");
       datespan.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
       datespan.innerHTML = 'Played on<br>' + date + " CT";
@@ -283,6 +278,11 @@ async function previous() {
       team2span.setAttribute("class", "p-2 d-inline-block text-center ");
       team2span.innerText = away;
       team2div.appendChild(team2span);
+      var stats = document.createElement("button");
+      stats.setAttribute("class", "p-2 d-inline-block btn btn-sm btn-danger");
+      stats.innerText = 'Stats';
+      stats.setAttribute("href", "/stats#" + json[app].id);
+      maindiv.appendChild(stats);
 
     }
   }
