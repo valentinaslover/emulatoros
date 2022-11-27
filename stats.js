@@ -95,11 +95,16 @@ async function current() {
         score.setAttribute("id", "score");
         score.innerText = team1.goals + ' Goals ' + team2.goals;
         maindiv.appendChild(score);
+        try {
         var shots = document.createElement("span");
         shots.setAttribute("class", "h3 d-flex justify-content-center text-center");
         shots.setAttribute("id", "score");
         shots.innerText = team1.home_team_statistics.attempts_on_goal ?? 0 + ' Shots ' + team2.away_team_statistics.attempts_on_goal ?? 0;
         maindiv.appendChild(shots);
+        }
+        catch(err) {
+            console.log(err)
+        }
         appelm.innerHTML =
         `<table>
   <tr>
