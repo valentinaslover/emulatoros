@@ -226,13 +226,18 @@ async function previous() {
       team1span.innerText = home;
       team1div.appendChild(team1span);
 
+      var score = document.createElement("span");
+      score.setAttribute("class", "p-2 d-inline-block  text-center");
+      score.innerText = team1.goals + ' - ' + team2.goals;
+      maindiv2.appendChild(score);
+
       var datediv = document.createElement("div");
       datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
       maindiv2.appendChild(datediv);
 
       var datespan = document.createElement("span");
       datespan.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
-      datespan.innerHTML = '<i class="fas fa-clock"></i><br>' + date + " CT";
+      datespan.innerHTML = 'Played on<br>' + date + " CT";
       datediv.appendChild(datespan);
 
       var team2div = document.createElement("div");
