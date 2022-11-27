@@ -227,9 +227,9 @@ async function previous() {
       team1div.appendChild(team1span);
 
       var score = document.createElement("span");
-      score.setAttribute("class", "p-2 d-inline-block  text-center");
+      score.setAttribute("class", "p-2 d-flex justify-content-center text-center");
       score.innerText = team1.goals + ' - ' + team2.goals;
-      maindiv2.appendChild(score);
+      maindiv.appendChild(score);
 
       var datediv = document.createElement("div");
       datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
