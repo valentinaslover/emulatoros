@@ -24,11 +24,14 @@ function create() {
 
                 appelm.innerHTML =
                     `<table>
+                    <thead>
   <tr>
     <th><img src="${getFlags(team1.country)}"></img><span>${home}<span></th>
     <th>Played on<br>${date} CT</th>
     <th><img src="${getFlags(team2.country)}"></img><span>${away}<span></th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>${team1.goals}</td>
     <td>Goals</td>
@@ -79,6 +82,7 @@ function create() {
   <td>Corners</td>
   <td>${awaystats.corners}</td>
   </tr>
+  </thead>
 </table>`
 
                 // check if playing
