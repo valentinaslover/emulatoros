@@ -103,6 +103,8 @@ async function current() {
   let json = await response.json();
 
   for (app in json) {
+    interval(app);
+    console.log(app)
     var main = document.getElementById('live');
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
@@ -210,7 +212,7 @@ async function current() {
     best.innerText = "Best but Laggy(EN)";
     best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
     streamsdiv.appendChild(best);
-    interval(app);
+    
 
   }
 }
