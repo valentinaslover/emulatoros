@@ -40,17 +40,21 @@ function interval(app, play, json) {
   var events = PlayByPlay(json[app]);
   const home = json[app].home_team_country
   const away = json[app].away_team_country
-  const playelm = document.getElementsByClassName('play');
+  
   for(app in events) {
+    
     if (events[app].country === home ) {
+      var playelm = document.getElementsByClassName('play');
     var eventelm = document.createElement("div");
     console.log(home + ' and ' + events[app].type_of_event)
     eventelm.innerHTML = `hi`
     playelm.appendChild(eventelm);
   } else {
+    var playelm = document.getElementsByClassName('play');
     var eventelm = document.createElement("div");
     console.log(away + ' else ' + events[app].type_of_event)
     eventelm.innerHTML = `else`
+    playelm.appendChild(eventelm);
   }
 
 
