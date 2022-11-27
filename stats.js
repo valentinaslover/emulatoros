@@ -3,7 +3,7 @@ async function current() {
     let response = await fetch("https://qatar.up.railway.app/api?q=matches/" + id);
     let json = await response.json();
     for (app in json) {
-
+console.log(app)
         var main = document.getElementsByClassName('main');
         var team1 = json[app].home_team;
         var team2 = json[app].away_team;
