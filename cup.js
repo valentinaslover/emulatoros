@@ -4,7 +4,7 @@ function getFlags(code) {
   var flags = "https://qatar.up.railway.app/flags?q=" + code
   return flags
 }
-function interval(json, app){
+function interval(json, app) {
   setInterval(() => {
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
@@ -21,7 +21,7 @@ async function fetchapps() {
 
     var format = moment(json[app].datetime);
     var date = format.tz('America/Chicago').format('llll');
-    
+
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
     var home = team1.name;
@@ -73,7 +73,7 @@ async function fetchapps() {
       team2div.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-left");
       maindiv2.appendChild(team2div);
 
-      
+
 
       var team2img = document.createElement("img");
       team2img.setAttribute("class", "p-2 d-inline-block  ");
@@ -87,7 +87,7 @@ async function fetchapps() {
 
     }
   }
-  
+
 }
 
 async function current() {
@@ -95,7 +95,7 @@ async function current() {
   let json = await response.json();
   for (app in json) {
 
-var main = document.getElementsByClassName('main');
+    var main = document.getElementsByClassName('main');
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
     var home = team1.name;
@@ -117,10 +117,10 @@ var main = document.getElementsByClassName('main');
     appelm.appendChild(maindiv);
 
     var score = document.createElement("span");
-      score.setAttribute("class", "h3 d-flex justify-content-center text-center");
-      score.setAttribute("id", "score");
-      score.innerText = team1.goals + ' - ' + team2.goals;
-      maindiv.appendChild(score);
+    score.setAttribute("class", "h3 d-flex justify-content-center text-center");
+    score.setAttribute("id", "score");
+    score.innerText = team1.goals + ' - ' + team2.goals;
+    maindiv.appendChild(score);
 
     var maindiv2 = document.createElement("div");
     maindiv2.setAttribute("class", "d-flex justify-content-center row");
@@ -255,7 +255,7 @@ async function previous() {
       team2div.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-left");
       maindiv2.appendChild(team2div);
 
-      
+
 
       var team2img = document.createElement("img");
       team2img.setAttribute("class", "p-2 d-inline-block  ");
