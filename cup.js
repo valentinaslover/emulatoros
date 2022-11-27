@@ -95,7 +95,7 @@ async function current() {
   let json = await response.json();
   for (app in json) {
 
-
+var main = document.getElementsByClassName('main');
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
     var home = team1.name;
@@ -108,7 +108,7 @@ async function current() {
 
     appelm.className = "live";
 
-    body.prependChild(appelm);
+    main.prependChild(appelm);
 
 
     var maindiv = document.createElement("div");
@@ -141,7 +141,7 @@ async function current() {
 
     var datespan = document.createElement("span");
     datespan.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
-    datespan.innerHTML = '<i class="fas fa-clock"></i><br> Live ';
+    datespan.innerHTML = ' Live <span class="live-icon"></span>';
     datediv.appendChild(datespan);
 
     var team2div = document.createElement("div");
