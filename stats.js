@@ -28,6 +28,8 @@ async function current() {
         var team2 = json.away_team;
         var home = team1.name;
         var away = team2.name;
+        var homestats = json.home_team_statistics
+        var awaystats = json.away_team_statistics
         console.log(main)
         var status = json.status;
 
@@ -99,7 +101,7 @@ async function current() {
         var shots = document.createElement("span");
         shots.setAttribute("class", "h3 d-flex justify-content-center text-center");
         shots.setAttribute("id", "score");
-        shots.innerText = team1.home_team_statistics.attempts_on_goal ?? 0 + ' Shots ' + team2.away_team_statistics.attempts_on_goal ?? 0;
+        shots.innerText = homestats.attempts_on_goal + ' Shots ' + awaystats.attempts_on_goal;
         maindiv.appendChild(shots);
         }
         catch(err) {
@@ -109,18 +111,18 @@ async function current() {
         `<table>
   <tr>
     <th><img src="${getFlags(team1.country)}"></img><span>${home}<span></th>
-    <th>Lastname</th>
+    <th>Team Stats</th>
     <th><img src="${getFlags(team2.country)}"></img><span>${away}<span></th>
   </tr>
   <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
+    <td>${team1.goals}</td>
+    <td>Goals</td>
+    <td>${team2.goals}</td>
   </tr>
   <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
+    <td>${homestats.attempts_on_goal}</td>
+    <td>Shots</td>
+    <td>${awaystats.attempts_on_goal}</td>
   </tr>
   <tr>
     <td>Joe</td>
