@@ -1,15 +1,12 @@
 var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
 const dt = new Date(today);
-var hrs = dt.getHours();
-import flags from 
+
 $.getScript('./flags.js', function(){
   console.log(flags)
 })
 function getFlags(code) {
   return flags[code]
 }
-console.log(today);
-console.log(dt)
 function openapp(app) {
   var appframe = document.getElementById("surf");
   var controls = document.getElementById("controls");
