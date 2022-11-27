@@ -154,7 +154,7 @@ async function current() {
   });
     var min = document.createElement("span");
     min.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
-    min.innerHTML = time+ "'";
+    min.innerHTML = json[app].time+ "'";
     datediv.appendChild(min);
 
     var datespan = document.createElement("span");
