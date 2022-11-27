@@ -2,15 +2,14 @@ let id = decodeURIComponent(window.location.hash.slice(1))
 async function current() {
     let response = await fetch("https://qatar.up.railway.app/api?q=matches/" + id);
     let json = await response.json();
-    for (app in json) {
-console.log(app)
+    
         var main = document.getElementsByClassName('main');
-        var team1 = json[app].home_team;
-        var team2 = json[app].away_team;
+        var team1 = json.home_team;
+        var team2 = json.away_team;
         var home = team1.name;
         var away = team2.name;
         console.log(away + " and " + home)
-        var status = json[app].status;
+        var status = json.status;
 
         console.log('before ' + status)
         var appelm = document.createElement("a");
@@ -98,5 +97,5 @@ console.log(app)
         streamsdiv.appendChild(best);
         interval(json, app);
     }
-}
+
 current();
