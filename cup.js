@@ -85,10 +85,11 @@ async function fetchapps() {
 async function current() {
   let response = await fetch("https://qatar.up.railway.app/api?q=matches/current");
   let json = await response.json();
-  var main = document.getElementById("font-md-10");
-  for (app in json) {
+  if (json == null) {
 
-
+    setInterval(() => {
+      console.log(hi)
+    }, 1000);
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
     var home = team1.name;
@@ -101,13 +102,20 @@ async function current() {
 
     appelm.className = "live";
 
-    main.appendChild(appelm);
+    body.prependChild(appelm);
 
 
     var maindiv = document.createElement("div");
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 position-relative");
     maindiv.setAttribute("style", "cursor:default;")
     appelm.appendChild(maindiv);
+
+    var score = document.createElement("span");
+      score.setAttribute("class", "h3 d-flex justify-content-center text-center");
+      score.setAttribute("id", "score");
+      score.innerText = team1.goals + ' - ' + team2.goals;
+      maindiv.appendChild(score);
+
     var maindiv2 = document.createElement("div");
     maindiv2.setAttribute("class", "d-flex justify-content-center row");
     maindiv.appendChild(maindiv2);
