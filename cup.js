@@ -38,9 +38,10 @@ function update() {
 function interval(app, play, json) {
  
   var events = PlayByPlay(json[app]);
+  const home = json[app].home_team_country
   
   for(app in events) {
-    if (events[app].country === json[app].home_team_country ) {
+    if (events[app].country === home ) {
     var eventelm = document.createElement("div");
     console.log(json[app].home_team_country + ' and ' + events[app].event)
     eventelm.innerHTML = `hi`
