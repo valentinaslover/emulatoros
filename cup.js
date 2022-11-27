@@ -257,6 +257,12 @@ async function previous() {
       datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
       maindiv2.appendChild(datediv);
 
+      var stats = document.createElement("button");
+      stats.setAttribute("class", "p-2 d-inline-block btn btn-sm btn-danger");
+      stats.innerText = 'Stats';
+      stats.setAttribute("href", "/stats#" + json[app].id);
+      datediv.appendChild(stats);
+
       var datespan = document.createElement("span");
       datespan.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
       datespan.innerHTML = 'Played on<br>' + date + " CT";
