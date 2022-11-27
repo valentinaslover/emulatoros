@@ -4,7 +4,12 @@ function getFlags(code) {
   var flags = "https://qatar.up.railway.app/flags?q=" + code
   return flags
 }
-
+function interval(json, app){
+  setInterval(() => {
+    console.log(json)
+    console.log(app)
+  }, 1000);
+}
 async function fetchapps() {
   let response = await fetch("https://qatar.up.railway.app/api?q=matches");
   let json = await response.json();
@@ -13,14 +18,13 @@ async function fetchapps() {
 
     var format = moment(json[app].datetime);
     var date = format.tz('America/Chicago').format('llll');
-    console.log(date)
+    
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
     var home = team1.name;
     var away = team2.name;
 
     var status = json[app].status;
-    console.log(`${away} is ${status}`)
     if (status !== "completed" && status !== "on_progress" && home !== "To Be Determined") {
 
       var appelm = document.createElement("a");
@@ -80,16 +84,15 @@ async function fetchapps() {
 
     }
   }
+  interval(json, app);
 }
 
 async function current() {
   let response = await fetch("https://qatar.up.railway.app/api?q=matches/current");
   let json = await response.json();
-  if (json == null) {
+  for (app in json) {
 
-    setInterval(() => {
-      console.log(hi)
-    }, 1000);
+
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
     var home = team1.name;
@@ -181,7 +184,9 @@ async function current() {
     best.innerText = "Best but Laggy(EN)";
     best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
     streamsdiv.appendChild(best);
-
+setInterval(() => {
+  console.log('hi')
+}, 1000);
 
   }
 }
@@ -194,14 +199,12 @@ async function previous() {
 
     var format = moment(json[app].datetime);
     var date = format.tz('America/Chicago').format('llll');
-    console.log(date)
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
     var home = team1.name;
     var away = team2.name;
 
     var status = json[app].status;
-    console.log(`${away} is ${status}`)
     if (status == "completed") {
 
       var appelm = document.createElement("a");
