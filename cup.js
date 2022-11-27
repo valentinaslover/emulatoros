@@ -1,48 +1,9 @@
-var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
-const dt = new Date(today);
 
-$.getScript('./flags.js', function(){
-  console.log(flags)
-})
+
 function getFlags(code) {
   return flags[code]
 }
-function openapp(app) {
-  var appframe = document.getElementById("surf");
-  var controls = document.getElementById("controls");
-  var header = document.getElementById("header");
-  header.style.display = "none";
-  controls.style.display = "flex";
-  appframe.style.display = "initial";
-  appframe.setAttribute("src", "https://qatar.up.railway.app/apps/apps.html#" + app);
-}
 
-function reloadapp() {
-  document.getElementById("surf").src = document.getElementById("surf").src;
-}
-function closeapp() {
-  var appframe = document.getElementById("surf");
-  var controls = document.getElementById("controls");
-  var header = document.getElementById("header");
-  header.style.display = "block";
-  controls.style.display = "none";
-  appframe.style.display = "none";
-  appframe.setAttribute("src", "");
-}
-function fullapp() {
-  var appframe = document.getElementById("surf");
-  appframe.requestFullscreen();
-}
-function opentab() {
-  var url = document.getElementById("surf").src;
-
-  var tabOrWindow = window.open(url, "_blank");
-  closeapp();
-  console.log("open in new tab");
-
-  tabOrWindow.focus();
-}
-var plink = localStorage.getItem("plink");
 async function fetchapps() {
   let response = await fetch("https://qatar.up.railway.app/api?q=matches");
   let json = await response.json();
