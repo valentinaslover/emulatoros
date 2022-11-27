@@ -95,7 +95,7 @@ async function current() {
   let json = await response.json();
   for (app in json) {
 
-    var main = document.getElementsByClassName('main');
+    var main = document.getElementById('main');
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
     var home = team1.name;

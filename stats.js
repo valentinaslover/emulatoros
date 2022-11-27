@@ -3,7 +3,7 @@ async function current() {
     let response = await fetch("https://qatar.up.railway.app/api?q=matches/" + id);
     let json = await response.json();
     
-        var main = document.getElementsByClassName('main');
+        var main = document.getElementById('main');
         var team1 = json.home_team;
         var team2 = json.away_team;
         var home = team1.name;
@@ -12,7 +12,7 @@ async function current() {
         var status = json.status;
 
         console.log('before ' + status)
-        var appelm = document.createElement("a");
+        var appelm = document.createElement("div");
 
         appelm.className = "live";
 
