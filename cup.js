@@ -47,12 +47,12 @@ function interval(app, play, json) {
      
     var eventelm = document.createElement("div");
     console.log(home + ' and ' + events[app].type_of_event)
-    eventelm.innerHTML = `hi`
+    eventelm.innerHTML = `${home} made a ${events[app].type_of_event} on ${events[app].time}`
     play.prepend(eventelm);
   } else {
     var eventelm = document.createElement("div");
     console.log(away + ' else ' + events[app].type_of_event)
-    eventelm.innerHTML = `else`
+    eventelm.innerHTML = `${away} made a ${events[app].type_of_event} on ${events[app].time}`
     play.prepend(eventelm);
   }
 
