@@ -28,9 +28,6 @@ function update() {
       "/current.json",
       function (json) {
         for (app in json) {
-         console.log(json[app])
-        console.log(json)
-        console.log(app)
         $('#score').text(json[app].home_team.goals + ' - ' + json[app].away_team.goals);
         $('#time').text(json[app].time);
         }
