@@ -98,7 +98,7 @@ async function current() {
         var shots = document.createElement("span");
         shots.setAttribute("class", "h3 d-flex justify-content-center text-center");
         shots.setAttribute("id", "score");
-        shots.innerText = team1.home_team_statistics.attempts_on_goal + ' Shots ' + team2.away_team_statistics.attempts_on_goal;
+        shots.innerText = team1.home_team_statistics.attempts_on_goal ?? 0 + ' Shots ' + team2.away_team_statistics.attempts_on_goal ?? 0;
         maindiv.appendChild(shots);
         appelm.innerHTML =
         `<table>
