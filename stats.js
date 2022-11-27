@@ -39,12 +39,7 @@ async function current() {
         maindiv.setAttribute("style", "cursor:default;")
         appelm.appendChild(maindiv);
 
-        var score = document.createElement("span");
-        score.setAttribute("class", "h3 d-flex justify-content-center text-center");
-        score.setAttribute("id", "score");
-        score.innerText = team1.goals + ' - ' + team2.goals;
-        maindiv.appendChild(score);
-
+        
         var maindiv2 = document.createElement("div");
         maindiv2.setAttribute("class", "d-flex justify-content-center row");
         maindiv.appendChild(maindiv2);
@@ -90,6 +85,12 @@ async function current() {
         team2span.setAttribute("class", "p-2 d-inline-block  text-center");
         team2span.innerText = away;
         team2div.appendChild(team2span);
+        var score = document.createElement("span");
+        score.setAttribute("class", "h3 d-flex justify-content-center text-center");
+        score.setAttribute("id", "score");
+        score.innerText = team1.goals + ' Goals ' + team2.goals;
+        maindiv.appendChild(score);
+
 
         // check if playing
 
