@@ -4,17 +4,17 @@ function getFlags(code) {
   var flags = "https://qatar.up.railway.app/flags?q=" + code
   return flags
 }
-function update(app) {
- const num = app
+function update() {
+ 
     $.getJSON(
       "/current.json",
       function (json) {
-        
-          console.log(json[num])
-          console.log(json)
-          console.log(num)
-          $('#score').text(json[num].home_team.goals + ' - ' + json[num].away_team.goals);
-        
+        for (app in json) {
+         console.log(json[app])
+        console.log(json)
+        console.log(app)
+        $('#score').text(json[app].home_team.goals + ' - ' + json[app].away_team.goals);
+        }
         
         // Patching payload into page element ID = "dog" 
       });
@@ -105,8 +105,7 @@ async function current() {
   let json = await response.json();
 
   for (app in json) {
-    interval(app);
-    console.log(app)
+    
     var main = document.getElementById('live');
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
@@ -216,6 +215,7 @@ async function current() {
     streamsdiv.appendChild(best);
     
 
+    interval();
   }
 }
 
