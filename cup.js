@@ -16,8 +16,8 @@ function PlayByPlay(code, json) {
   console.log(code)
   console.log(json)
   const events = [
-    ...match.home_team_events.map(event => ({...event, country:match.home_team_country})), 
-    ...match.away_team_events.map(event => ({...event, country:match.away_team_country}))
+    ...json[code].home_team_events.map(event => ({...event, country:json[code].home_team_country})), 
+    ...json[code].away_team_events.map(event => ({...event, country:json[code].away_team_country}))
 ]
 events.sort((a,b) => b.id - a.id)
 
