@@ -40,7 +40,7 @@ function interval(app, play, json) {
   var events = PlayByPlay(json[app]);
   const home = json[app].home_team_country
   const away = json[app].away_team_country
-  const play = document.getElementsByClassName('play');
+  const playelm = document.getElementsByClassName('play');
   for(app in events) {
     if (events[app].country === home ) {
     var eventelm = document.createElement("div");
@@ -51,7 +51,7 @@ function interval(app, play, json) {
     console.log(away + ' else ' + events[app].type_of_event)
     eventelm.innerHTML = `else`
   }
-play.appendChild(eventelm);
+playelm.appendChild(eventelm);
 
 }
   setInterval(update, 10000);
