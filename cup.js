@@ -128,9 +128,10 @@ async function current() {
 
     // 1fr 1em 1fr
     var play = document.createElement("div");
-    play.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 d-flex flex-column align-items-center");
+    play.setAttribute("class", "container");
     play.setAttribute("style", "cursor:default;")
     appelm.appendChild(play);
+    play.innerHTML = `play`
     var maindiv = document.createElement("div");
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 d-flex flex-column align-items-center");
     maindiv.setAttribute("style", "cursor:default;")
