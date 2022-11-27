@@ -43,11 +43,11 @@ function interval(app, play, json) {
   for(app in events) {
     if (events[app].country === home ) {
     var eventelm = document.createElement("div");
-    console.log(json[app].home_team_country + ' and ' + events[app].event)
+    console.log(json[app].home_team_country + ' and ' + events[app].type_of_event)
     eventelm.innerHTML = `hi`
   } else {
     var eventelm = document.createElement("div");
-    console.log(json[app].home_team_country + ' else ' + events[app].event)
+    console.log(json[app].home_team_country + ' else ' + events[app].type_of_event)
     eventelm.innerHTML = `else`
   }
 
