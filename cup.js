@@ -108,7 +108,7 @@ var main = document.getElementsByClassName('main');
 
     appelm.className = "live";
 
-    main.prependChild(appelm);
+    main.prepend(appelm);
 
 
     var maindiv = document.createElement("div");
@@ -211,7 +211,7 @@ async function previous() {
 
       appelm.className = "app";
 
-      main.prependChild(appelm);
+      main.prepend(appelm);
 
 
       var maindiv = document.createElement("div");
