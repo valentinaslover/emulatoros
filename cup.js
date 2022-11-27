@@ -4,6 +4,9 @@ function getFlags(code) {
   var flags = "https://qatar.up.railway.app/flags?q=" + code
   return flags
 }
+function PlayByPlay(code) {
+  console.log(hi)
+}
 function update() {
  
     $.getJSON(
@@ -21,6 +24,7 @@ function update() {
       });
 }
 function interval() {
+  PlayByPlay();
   setInterval(update, 10000);
 }
 
@@ -122,7 +126,11 @@ async function current() {
 
     main.prepend(appelm);
 
-
+    // 1fr 1em 1fr
+    var play = document.createElement("div");
+    play.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 d-flex flex-column align-items-center");
+    play.setAttribute("style", "cursor:default;")
+    appelm.appendChild(play);
     var maindiv = document.createElement("div");
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 d-flex flex-column align-items-center");
     maindiv.setAttribute("style", "cursor:default;")
@@ -157,7 +165,7 @@ async function current() {
     maindiv2.appendChild(datediv);
 
     var min = document.createElement("span");
-    min.setAttribute("class", "p-2 d-inline-block text-center text-success");
+    min.setAttribute("class", "p-2 d-flex text-center text-success");
     min.setAttribute("id", "time");
     min.innerHTML = json[app].time;
     datediv.appendChild(min);
