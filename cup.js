@@ -4,20 +4,19 @@ function getFlags(code) {
   var flags = "https://qatar.up.railway.app/flags?q=" + code
   return flags
 }
-function update()
-{
-    $(function() {
-        $.getJSON(
-            "https://qatar.up.railway.app/api?q=matches/current",
-        function(json){ 
-            $('#score').text(team1.goals + ' - ' + team2.goals);
+function update() {
+  $(function () {
+    $.getJSON(
+      "https://qatar.up.railway.app/api?q=matches/current",
+      function (json) {
+        $('#score').text(team1.goals + ' - ' + team2.goals);
         // Patching payload into page element ID = "dog" 
-        });
-    });
+      });
+  });
 }
-  function interval() {
-    setInterval( update, 1000 );
-  }
+function interval() {
+  setInterval(update, 1000);
+}
 
 async function fetchapps() {
   let response = await fetch("https://qatar.up.railway.app/api?q=matches");
@@ -99,15 +98,15 @@ async function fetchapps() {
 async function current() {
   let response = await fetch("https://qatar.up.railway.app/api?q=matches/current");
   let json = await response.json();
- 
 
+  for (app in json) {
     var main = document.getElementById('main');
-    var team1 = json.home_team;
-    var team2 = json.away_team;
+    var team1 = json[app].home_team;
+    var team2 = json[app].away_team;
     var home = team1.name;
     var away = team2.name;
     console.log(away + " and " + home)
-    var status = json.status;
+    var status = json[app].status;
 
     console.log('before ' + status)
     var appelm = document.createElement("a");
@@ -199,7 +198,8 @@ async function current() {
     best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
     streamsdiv.appendChild(best);
     interval(json);
-  
+
+  }
 }
 
 async function previous() {

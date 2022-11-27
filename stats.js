@@ -16,9 +16,7 @@ function update() {
 function interval() {
     setInterval(update, 1000);
 }
-function check() {
-    if (status == "in_progress") { return  ' Live <span class="live-icon"></span>' } else { return 'Played on<br>' + date + " CT"; }
-}
+
 function update() {
     $(function () {
         $.getJSON(
@@ -33,7 +31,9 @@ function update() {
                 var away = team2.name;
                 var homestats = json.home_team_statistics
                 var awaystats = json.away_team_statistics
-                console.log(date)
+                function check() {
+                    if (status == "in_progress") { return  ' Live <span class="live-icon"></span>' } else { return 'Played on<br>' + date + " CT"; }
+                }
                 var status = json.status;
 
                 console.log('before ' + status)
