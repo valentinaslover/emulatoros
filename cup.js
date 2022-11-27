@@ -38,9 +38,10 @@ function update() {
 function interval(app, play, json) {
  
   var events = PlayByPlay(json[app]);
-  play.innerHTML = events
+  
   for(event in events) {
-    console.log(event)
+    console.log(events[event])
+    play.innerHTML = events[event]
   }
   setInterval(update, 10000);
 }
