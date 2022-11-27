@@ -14,13 +14,14 @@ function update() {
         console.log(json)
         console.log(app)
         $('#score').text(json[app].home_team.goals + ' - ' + json[app].away_team.goals);
+        $('#time').text(json[app].time);
         }
         
         // Patching payload into page element ID = "dog" 
       });
 }
 function interval() {
-  setInterval(update, 1000);
+  setInterval(update, 10000);
 }
 
 async function fetchapps() {
@@ -152,12 +153,13 @@ async function current() {
     team1div.appendChild(team1span);
 
     var datediv = document.createElement("div");
-    datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
+    datediv.setAttribute("class", "d-flex flex-column justify-content-center align-items-center col-4 text-center");
     maindiv2.appendChild(datediv);
 
     var min = document.createElement("span");
-    min.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
-    min.innerHTML = json[app].time+ "'";
+    min.setAttribute("class", "p-2 d-inline-block text-center text-success");
+    min.setAttribute("id", "time");
+    min.innerHTML = json[app].time;
     datediv.appendChild(min);
 
     var datespan = document.createElement("span");
