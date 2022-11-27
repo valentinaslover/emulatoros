@@ -1,7 +1,10 @@
 var today = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
 const dt = new Date(today);
 var hrs = dt.getHours();
-import flags from './flags.js'
+import flags from 
+$.getScript('./flags.js', function(){
+  console.log(flags)
+})
 function getFlags(code) {
   return flags[code]
 }

@@ -210,5 +210,3 @@ flags.WAL = 'https://upload.wikimedia.org/wikipedia/commons/d/dc/Flag_of_Wales.s
 flags.YEM = '//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/23px-Flag_of_Yemen.svg.png';
 flags.ZAM = '//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/23px-Flag_of_Zambia.svg.png';
 flags.ZIM = '//upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/23px-Flag_of_Zimbabwe.svg.png';
-
-export default flags;
