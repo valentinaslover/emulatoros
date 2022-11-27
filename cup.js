@@ -35,7 +35,7 @@ return (
         ))}
     </Grid>
 )
-  console.log(hi)
+  console.log('hi')
 }
 function update() {
  
