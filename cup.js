@@ -6,8 +6,8 @@ function getFlags(code) {
 }
 function interval(json, app) {
   setInterval(() => {
-    var team1 = json[app].home_team;
-    var team2 = json[app].away_team;
+    var team1 = json.home_team;
+    var team2 = json.away_team;
     var score = document.getElementById("score");
     score.innerText = team1.goals + ' - ' + team2.goals;
     console.log(team1.goals + ' - ' + team2.goals)
@@ -96,12 +96,12 @@ async function current() {
   for (app in json) {
 
     var main = document.getElementById('main');
-    var team1 = json[app].home_team;
-    var team2 = json[app].away_team;
+    var team1 = json.home_team;
+    var team2 = json.away_team;
     var home = team1.name;
     var away = team2.name;
     console.log(away + " and " + home)
-    var status = json[app].status;
+    var status = json.status;
 
     console.log('before ' + status)
     var appelm = document.createElement("a");
@@ -134,6 +134,11 @@ async function current() {
     team1span.setAttribute("class", "p-2 d-inline-block  text-center");
     team1span.innerText = home;
     team1div.appendChild(team1span);
+
+    var team1img = document.createElement("img");
+    team1img.setAttribute("class", "p-2 d-inline-block  ");
+    team1img.src = getFlags(team1.country);
+    team1div.appendChild(team1img);
 
     var datediv = document.createElement("div");
     datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
@@ -187,7 +192,7 @@ async function current() {
     best.innerText = "Best but Laggy(EN)";
     best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
     streamsdiv.appendChild(best);
-    interval(json, app);
+    interval(json);
   }
 }
 
