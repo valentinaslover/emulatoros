@@ -211,7 +211,7 @@ async function previous() {
 
       appelm.className = "app";
 
-      main.appendChild(appelm);
+      main.prependChild(appelm);
 
 
       var maindiv = document.createElement("div");
