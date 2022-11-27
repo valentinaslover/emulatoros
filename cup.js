@@ -12,30 +12,16 @@ function dot(finalDot){
     </svg>`
 )
 }
-function PlayByPlay(code) {
+function PlayByPlay(code, json) {
+  console.log(code)
+  console.log(json)
   const events = [
     ...match.home_team_events.map(event => ({...event, country:match.home_team_country})), 
     ...match.away_team_events.map(event => ({...event, country:match.away_team_country}))
 ]
 events.sort((a,b) => b.id - a.id)
 
-return (
-    <Grid maxHeight={'40vh'} gridTemplateColumns={'1fr 1em 1fr'} overflowY={'scroll'}>
-        {events.map((event, i) => (
-            <>
-                {event.country === match.home_team_country && <><Text key={`time_${event.id}`} textAlign={'right'}>{event.time}</Text><Dot key={`dot_${event.id}`} finalDot={i === 0}/></>}
-                <Box key={event.id} textAlign={event.country === match.home_team_country ? 'left' : 'right'}>
-                    <Badge colorScheme={eventToColour(event.type_of_event)}>
-                        {mapEventType(event.type_of_event)}
-                    </Badge>
-                    <Text>{event.player}</Text>
-                </Box>
-                {event.country !== match.home_team_country && <><Dot key={`dot_${event.id}`} finalDot={ i === 0 }/><Text key={`time_${event.id}`}>{event.time}</Text></>}
-            </>
-        ))}
-    </Grid>
-)
-  console.log('hi')
+return (events)
 }
 function update() {
  
@@ -53,8 +39,8 @@ function update() {
         // Patching payload into page element ID = "dog" 
       });
 }
-function interval(app, play) {
-  play.innerHTML = PlayByPlay(app);
+function interval(app, play, json) {
+  play.innerHTML = PlayByPlay(app, json);
   setInterval(update, 10000);
 }
 
@@ -256,7 +242,7 @@ async function current() {
     streamsdiv.appendChild(best);
     
 
-    interval(app, play);
+    interval(app, play, json);
   }
 }
 
