@@ -209,10 +209,10 @@ async function previous() {
       appelm.appendChild(maindiv);
 
       var score = document.createElement("span");
-      score.setAttribute("class", "p-2 d-flex justify-content-center text-center");
+      score.setAttribute("class", "h3 d-flex justify-content-center text-center");
       score.innerText = team1.goals + ' - ' + team2.goals;
       maindiv.appendChild(score);
-      
+
       var maindiv2 = document.createElement("div");
       maindiv2.setAttribute("class", "d-flex justify-content-center row");
       maindiv.appendChild(maindiv2);
