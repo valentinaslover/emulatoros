@@ -10,8 +10,8 @@ function update(app) {
       "https://qatar.up.railway.app/api?q=matches/current",
       function (json) {
         console.log(json[app])
-        console.log(json[app].home_team)
-        console.log(json[app].home_team.goals)
+        console.log(json)
+        console.log(app)
         $('#score').text(json[app].home_team.goals + ' - ' + json[app].away_team.goals);
         // Patching payload into page element ID = "dog" 
       });
