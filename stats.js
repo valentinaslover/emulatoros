@@ -16,7 +16,8 @@ let id = decodeURIComponent(window.location.hash.slice(1))
 async function current() {
     let response = await fetch("https://qatar.up.railway.app/api?q=matches/" + id);
     let json = await response.json();
-    
+    var format = moment(json[app].datetime);
+    var date = format.tz('America/Chicago').format('llll');
         var main = document.getElementById('main');
         var team1 = json.home_team;
         var team2 = json.away_team;
@@ -51,16 +52,16 @@ async function current() {
         var team1div = document.createElement("div");
         team1div.setAttribute("class", "d-flex d-flex justify-content-center align-items-center col-4 text-right");
         maindiv2.appendChild(team1div);
-
+        var team1img = document.createElement("img");
+        team1img.setAttribute("class", "p-2 d-inline-block  ");
+        team1img.src = getFlags(team1.country);
+        team1div.appendChild(team1img);
         var team1span = document.createElement("span");
         team1span.setAttribute("class", "p-2 d-inline-block  text-center");
         team1span.innerText = home;
         team1div.appendChild(team1span);
 
-        var team1img = document.createElement("img");
-        team1img.setAttribute("class", "p-2 d-inline-block  ");
-        team1img.src = getFlags(team1.country);
-        team1div.appendChild(team1img);
+        
 
         var datediv = document.createElement("div");
         datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
