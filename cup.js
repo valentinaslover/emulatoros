@@ -44,17 +44,16 @@ function interval(app, play, json) {
   for(app in events) {
     
     if (events[app].country === home ) {
-      var playelm = document.getElementsByClassName('play');
+     
     var eventelm = document.createElement("div");
     console.log(home + ' and ' + events[app].type_of_event)
     eventelm.innerHTML = `hi`
-    playelm.prepend(eventelm);
+    play.prepend(eventelm);
   } else {
-    var playelm = document.getElementsByClassName('play');
     var eventelm = document.createElement("div");
     console.log(away + ' else ' + events[app].type_of_event)
     eventelm.innerHTML = `else`
-    playelm.prepend(eventelm);
+    play.prepend(eventelm);
   }
 
 
