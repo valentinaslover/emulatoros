@@ -39,17 +39,19 @@ function interval(app, play, json) {
  
   var events = PlayByPlay(json[app]);
   const home = json[app].home_team_country
-  
+  const away = json[app].away_team_country
+  const play = document.getElementsByClassName('play');
   for(app in events) {
     if (events[app].country === home ) {
     var eventelm = document.createElement("div");
-    console.log(json[app].home_team_country + ' and ' + events[app].type_of_event)
+    console.log(home + ' and ' + events[app].type_of_event)
     eventelm.innerHTML = `hi`
   } else {
     var eventelm = document.createElement("div");
-    console.log(json[app].home_team_country + ' else ' + events[app].type_of_event)
+    console.log(away + ' else ' + events[app].type_of_event)
     eventelm.innerHTML = `else`
   }
+play.appendChild(eventelm);
 
 }
   setInterval(update, 10000);
@@ -158,7 +160,7 @@ async function current() {
     play.setAttribute("class", "d-grid play");
     play.setAttribute("style", "cursor:default;")
     appelm.appendChild(play);
-    play.innerHTML = `play`
+
     var maindiv = document.createElement("div");
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 d-flex flex-column align-items-center");
     maindiv.setAttribute("style", "cursor:default;")
