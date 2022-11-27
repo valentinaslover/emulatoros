@@ -208,6 +208,11 @@ async function previous() {
       maindiv.setAttribute("style", "cursor:default;")
       appelm.appendChild(maindiv);
 
+      var score = document.createElement("span");
+      score.setAttribute("class", "p-2 d-flex justify-content-center text-center");
+      score.innerText = team1.goals + ' - ' + team2.goals;
+      maindiv.appendChild(score);
+      
       var maindiv2 = document.createElement("div");
       maindiv2.setAttribute("class", "d-flex justify-content-center row");
       maindiv.appendChild(maindiv2);
@@ -225,11 +230,6 @@ async function previous() {
       team1span.setAttribute("class", "p-2 d-inline-block  text-center");
       team1span.innerText = home;
       team1div.appendChild(team1span);
-
-      var score = document.createElement("span");
-      score.setAttribute("class", "p-2 d-flex justify-content-center text-center");
-      score.innerText = team1.goals + ' - ' + team2.goals;
-      maindiv.appendChild(score);
 
       var datediv = document.createElement("div");
       datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
