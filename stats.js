@@ -25,7 +25,7 @@ function update() {
             "https://qatar.up.railway.app/api?q=matches/" + id,
             function (json) {
                 var format = moment(json.datetime);
-                var date = format.tz('America/Chicago').format('llll');
+                const date = format.tz('America/Chicago').format('llll');
                 var main = document.getElementById('main');
                 var team1 = json.home_team;
                 var team2 = json.away_team;
@@ -33,7 +33,7 @@ function update() {
                 var away = team2.name;
                 var homestats = json.home_team_statistics
                 var awaystats = json.away_team_statistics
-                console.log(main)
+                console.log(date)
                 var status = json.status;
 
                 console.log('before ' + status)
