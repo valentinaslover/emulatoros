@@ -4,39 +4,38 @@ function getFlags(code) {
   var flags = "https://qatar.up.railway.app/flags?q=" + code
   return flags
 }
-function dot(finalDot){
+function dot(finalDot) {
   return (
     `<svg style={{width: '100%', height: '48px'}}>
         <rect x="40%" y={${finalDot} ? '30%' : '0%'} width="20%" height="100%" fill="#2D3748" />
         <circle cx="50%" cy="30%" r="10%" fill="#2D3748" />
     </svg>`
-)
+  )
 }
-function PlayByPlay(code, json) {
-  console.log(json[code])
+function PlayByPlay({ match }) {
   const events = [
-    ...json[code].home_team_events.map(event => ({...event, country:json[code].home_team_country})), 
-    ...json[code].away_team_events.map(event => ({...event, country:json[code].away_team_country}))
-]
-events.sort((a,b) => b.id - a.id)
-console.log(events)
-return (events)
+    ...match.home_team_events.map(event => (Object.assign(Object.assign({}, event), { country: match.home_team_country }))),
+    ...match.away_team_events.map(event => (Object.assign(Object.assign({}, event), { country: match.away_team_country })))
+  ];
+  events.sort((a, b) => b.id - a.id);
+  console.log(events)
+  return (events)
 }
 function update() {
- 
-    $.getJSON(
-      "/current.json",
-      function (json) {
-        for (app in json) {
+
+  $.getJSON(
+    "/current.json",
+    function (json) {
+      for (app in json) {
         $('#score').text(json[app].home_team.goals + ' - ' + json[app].away_team.goals);
         $('#time').text(json[app].time);
-        }
-        
-        // Patching payload into page element ID = "dog" 
-      });
+      }
+
+      // Patching payload into page element ID = "dog" 
+    });
 }
 function interval(app, play, json) {
-  play.innerHTML = PlayByPlay(app, json);
+  play.innerHTML = PlayByPlay(json[app]);
   setInterval(update, 10000);
 }
 
@@ -122,7 +121,7 @@ async function current() {
   let json = await response.json();
 
   for (app in json) {
-    
+
     var main = document.getElementById('live');
     var team1 = json[app].home_team;
     var team2 = json[app].away_team;
@@ -236,7 +235,7 @@ async function current() {
     best.innerText = "Best but Laggy(EN)";
     best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
     streamsdiv.appendChild(best);
-    
+
 
     interval(app, play, json);
   }
