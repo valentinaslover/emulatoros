@@ -157,7 +157,10 @@ async function current() {
     var team2div = document.createElement("div");
     team2div.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-left");
     maindiv2.appendChild(team2div);
-
+    var team2img = document.createElement("img");
+    team2img.setAttribute("class", "p-2 d-inline-block  ");
+    team2img.src = getFlags(team2.country);
+    team2div.appendChild(team2img);
     var team2span = document.createElement("span");
     team2span.setAttribute("class", "p-2 d-inline-block  text-center");
     team2span.innerText = away;
@@ -220,7 +223,7 @@ async function previous() {
 
       var appelm = document.createElement("a");
 
-      appelm.className = "app";
+      appelm.className = "previous";
 
       main.prepend(appelm);
 
