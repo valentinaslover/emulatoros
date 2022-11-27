@@ -23,7 +23,7 @@ function create() {
                 appelm.className = "live";
 
                 appelm.innerHTML =
-                    `<table class="bg-black">
+                    `<table class="bg-dark-black">
                     <thead>
   <tr>
     <th><img src="${getFlags(team1.country)}"></img><span>${home}<span></th>
