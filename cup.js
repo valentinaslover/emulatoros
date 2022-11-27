@@ -6,8 +6,11 @@ function getFlags(code) {
 }
 function interval(json, app){
   setInterval(() => {
-    console.log(json)
-    console.log(app)
+    var team1 = json[app].home_team;
+    var team2 = json[app].away_team;
+    var score = document.getElementById("score");
+    score.innerText = team1.goals + ' - ' + team2.goals;
+    console.log(team1.goals + ' - ' + team2.goals)
   }, 1000);
 }
 async function fetchapps() {
@@ -84,7 +87,7 @@ async function fetchapps() {
 
     }
   }
-  interval(json, app);
+  
 }
 
 async function current() {
@@ -184,10 +187,7 @@ async function current() {
     best.innerText = "Best but Laggy(EN)";
     best.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
     streamsdiv.appendChild(best);
-setInterval(() => {
-  console.log('hi')
-}, 1000);
-
+    interval(json, app);
   }
 }
 
