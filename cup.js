@@ -132,18 +132,18 @@ async function current() {
     maindiv.appendChild(maindiv2);
 
     var team1div = document.createElement("div");
-    team1div.setAttribute("class", "d-flex d-flex justify-content-center align-items-center col-4 text-right");
+    team1div.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-right");
     maindiv2.appendChild(team1div);
-
-    var team1span = document.createElement("span");
-    team1span.setAttribute("class", "p-2 d-inline-block  text-center");
-    team1span.innerText = home;
-    team1div.appendChild(team1span);
 
     var team1img = document.createElement("img");
     team1img.setAttribute("class", "p-2 d-inline-block  ");
     team1img.src = getFlags(team1.country);
     team1div.appendChild(team1img);
+
+    var team1span = document.createElement("span");
+    team1span.setAttribute("class", "p-2 d-inline-block  text-center");
+    team1span.innerText = home;
+    team1div.appendChild(team1span);
 
     var datediv = document.createElement("div");
     datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
@@ -157,12 +157,14 @@ async function current() {
     var team2div = document.createElement("div");
     team2div.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-left");
     maindiv2.appendChild(team2div);
+    
     var team2img = document.createElement("img");
     team2img.setAttribute("class", "p-2 d-inline-block  ");
     team2img.src = getFlags(team2.country);
     team2div.appendChild(team2img);
+
     var team2span = document.createElement("span");
-    team2span.setAttribute("class", "p-2 d-inline-block  text-center");
+    team2span.setAttribute("class", "p-2 d-inline-block text-center ");
     team2span.innerText = away;
     team2div.appendChild(team2span);
 
@@ -260,7 +262,7 @@ async function previous() {
       datediv.setAttribute("class", "d-flex justify-content-center align-items-center col-4 text-center");
       maindiv2.appendChild(datediv);
 
-      
+
       var datespan = document.createElement("span");
       datespan.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
       datespan.innerHTML = 'Played on<br>' + date + " CT";
