@@ -13,14 +13,13 @@ function dot(finalDot){
 )
 }
 function PlayByPlay(code, json) {
-  console.log(code)
-  console.log(json)
+  console.log(json[code])
   const events = [
     ...json[code].home_team_events.map(event => ({...event, country:json[code].home_team_country})), 
     ...json[code].away_team_events.map(event => ({...event, country:json[code].away_team_country}))
 ]
 events.sort((a,b) => b.id - a.id)
-
+console.log(events)
 return (events)
 }
 function update() {
