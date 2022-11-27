@@ -4,15 +4,21 @@ function getFlags(code) {
   var flags = "https://qatar.up.railway.app/flags?q=" + code
   return flags
 }
-function interval(json, app) {
-  setInterval(() => {
-    var team1 = json.home_team;
-    var team2 = json.away_team;
-    var score = document.getElementById("score");
-    score.innerText = team1.goals + ' - ' + team2.goals;
-    console.log(team1.goals + ' - ' + team2.goals)
-  }, 1000);
+function update()
+{
+    $(function() {
+        $.getJSON(
+            "https://qatar.up.railway.app/api?q=matches/current",
+        function(json){ 
+            $('#score').text(team1.goals + ' - ' + team2.goals);
+        // Patching payload into page element ID = "dog" 
+        });
+    });
 }
+  function interval() {
+    setInterval( update, 1000 );
+  }
+
 async function fetchapps() {
   let response = await fetch("https://qatar.up.railway.app/api?q=matches");
   let json = await response.json();

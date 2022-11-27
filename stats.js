@@ -1,18 +1,23 @@
-
+let id = decodeURIComponent(window.location.hash.slice(1))
 function getFlags(code) {
     var flags = "https://qatar.up.railway.app/flags?q=" + code
     return flags
   }
-  function interval(json, app) {
-    setInterval(() => {
-      var team1 = json.home_team;
-      var team2 = json.away_team;
-      var score = document.getElementById("score");
-      score.innerText = team1.goals + ' - ' + team2.goals;
-      console.log(team1.goals + ' - ' + team2.goals)
-    }, 1000);
+  function update()
+{
+    $(function() {
+        $.getJSON(
+            "https://qatar.up.railway.app/api?q=matches/" + id,
+        function(json){ 
+            $('#score').text(team1.goals + ' Goals ' + team2.goals);
+        // Patching payload into page element ID = "dog" 
+        });
+    });
+}
+  function interval() {
+    setInterval( update, 1000 );
   }
-let id = decodeURIComponent(window.location.hash.slice(1))
+
 async function current() {
     let response = await fetch("https://qatar.up.railway.app/api?q=matches/" + id);
     let json = await response.json();
@@ -90,7 +95,39 @@ async function current() {
         score.setAttribute("id", "score");
         score.innerText = team1.goals + ' Goals ' + team2.goals;
         maindiv.appendChild(score);
-
+        var shots = document.createElement("span");
+        shots.setAttribute("class", "h3 d-flex justify-content-center text-center");
+        shots.setAttribute("id", "score");
+        shots.innerText = team1.home_team_statistics.attempts_on_goal + ' Shots ' + team2.away_team_statistics.attempts_on_goal;
+        maindiv.appendChild(shots);
+        appelm.innerHTML =
+        `<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+    <td>$150</td>
+  </tr>
+  <tr>
+    <td>Joe</td>
+    <td>Swanson</td>
+    <td>$300</td>
+  </tr>
+  <tr>
+    <td>Cleveland</td>
+    <td>Brown</td>
+    <td>$250</td>
+  </tr>
+</table>`
 
         // check if playing
 
