@@ -46,12 +46,12 @@ async function fetchapps() {
       maindiv2.appendChild(team1div);
 
       var team1img = document.createElement("img");
-      team1img.setAttribute("class", "p-3 d-inline-block  ");
+      team1img.setAttribute("class", "p-2 d-inline-block  ");
       team1img.src = getFlags(team1.country);
       team1div.appendChild(team1img);
 
       var team1span = document.createElement("span");
-      team1span.setAttribute("class", "p-3 d-inline-block  text-center");
+      team1span.setAttribute("class", "p-2 d-inline-block  text-center");
       team1span.innerText = home;
       team1div.appendChild(team1span);
 
@@ -60,7 +60,7 @@ async function fetchapps() {
       maindiv2.appendChild(datediv);
 
       var datespan = document.createElement("span");
-      datespan.setAttribute("class", "p-3 d-inline-block text-center text-dark-l");
+      datespan.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
       datespan.innerHTML = '<i class="fas fa-clock"></i><br>' + date + " CT";
       datediv.appendChild(datespan);
 
@@ -71,12 +71,12 @@ async function fetchapps() {
       
 
       var team2img = document.createElement("img");
-      team2img.setAttribute("class", "p-3 d-inline-block  ");
+      team2img.setAttribute("class", "p-2 d-inline-block  ");
       team2img.src = getFlags(team2.country);
       team2div.appendChild(team2img);
 
       var team2span = document.createElement("span");
-      team2span.setAttribute("class", "p-3 d-inline-block text-center ");
+      team2span.setAttribute("class", "p-2 d-inline-block text-center ");
       team2span.innerText = away;
       team2div.appendChild(team2span);
 
@@ -133,7 +133,7 @@ async function current() {
     console.log('before ' + status)
     var appelm = document.createElement("a");
 
-    appelm.className = "live" + app;
+    appelm.className = "live";
 
     main.appendChild(appelm);
 
@@ -151,7 +151,7 @@ async function current() {
     maindiv2.appendChild(team1div);
 
     var team1span = document.createElement("span");
-    team1span.setAttribute("class", "p-3 d-inline-block  text-center");
+    team1span.setAttribute("class", "p-2 d-inline-block  text-center");
     team1span.innerText = home;
     team1div.appendChild(team1span);
 
@@ -160,7 +160,7 @@ async function current() {
     maindiv2.appendChild(datediv);
 
     var datespan = document.createElement("span");
-    datespan.setAttribute("class", "p-3 d-inline-block text-center text-dark-l");
+    datespan.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
     datespan.innerHTML = '<i class="fas fa-clock"></i><br> Live ';
     datediv.appendChild(datespan);
 
@@ -169,7 +169,7 @@ async function current() {
     maindiv2.appendChild(team2div);
 
     var team2span = document.createElement("span");
-    team2span.setAttribute("class", "p-3 d-inline-block  text-center");
+    team2span.setAttribute("class", "p-2 d-inline-block  text-center");
     team2span.innerText = away;
     team2div.appendChild(team2span);
 
