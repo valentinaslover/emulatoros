@@ -3,6 +3,89 @@ function getFlags(code) {
     var flags = "https://qatar.up.railway.app/flags?q=" + code
     return flags
 }
+function mapEventType(type) {
+  if (type === 'booking') {
+      return 'card';
+  }
+  return type;
+}
+function eventToColour(eventType) {
+  if (eventType === 'goal') {
+      return 'green';
+  }
+  if (eventType === 'booking') {
+      return 'yellow';
+  }
+  return 'gray';
+}
+
+function PlayByPlay(match) {
+  console.log(match)
+  const events = [
+    ...match.home_team_events.map(event => (Object.assign(Object.assign({}, event), { country: match.home_team_country }))),
+    ...match.away_team_events.map(event => (Object.assign(Object.assign({}, event), { country: match.away_team_country })))
+  ];
+  events.sort((a, b) => b.id - a.id);
+  console.log(events)
+  return (events)
+}
+function interval( play, json) {
+ 
+  var events = PlayByPlay(json);
+  const home = json.home_team_country
+  const away = json.away_team_country
+  
+  for(app in events) {
+    
+    if (events[app].country === home ) {
+     
+    var eventelm = document.createElement("div");
+    eventelm.setAttribute("style", "text-align:right;")
+      play.appendChild(eventelm);
+      eventelm.innerHTML = `<span class="type ${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
+      <p>${events[app].player}</p>`
+
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("style", "width: 100%; height: 58px;")
+      svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+        play.appendChild(svg);
+        svg.innerHTML = ` 
+        <rect x="40%" y="30%" width="20%" height="100%" fill="#ffffff"></rect>
+        <circle cx="50%" cy="30%" r="10%" fill="#ffffff"></circle>`
+
+      var p = document.createElement("p");
+      p.setAttribute("style", "margin:0;")
+      p.innerHTML = `${events[app].time}`
+      play.appendChild(p);
+  } else {
+    var p = document.createElement("p");
+      p.setAttribute("style", "margin:0;text-align:right;")
+      p.innerHTML = `${events[app].time}`
+      play.appendChild(p);
+
+   
+
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("style", "width: 100%; height: 58px;")
+    svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+      play.appendChild(svg);
+      svg.innerHTML = ` 
+      <rect x="40%" y="30%" width="20%" height="100%" fill="#ffffff"></rect>
+      <circle cx="50%" cy="30%" r="10%" fill="#ffffff"></circle>`
+
+      var eventelm = document.createElement("div");
+      eventelm.setAttribute("style", "text-align:left;")
+        play.appendChild(eventelm);
+        eventelm.innerHTML = `<span class="type ${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
+        <p>${events[app].player}</p>`
+
+      
+  }
+
+
+}
+}
+
 function percentage(partialValue, totalValue) {
   var percent = (100 * partialValue) / totalValue
   var fixed = percent.toFixed(2);
@@ -27,14 +110,15 @@ function create() {
                 appelm.className = "live";
 
                 appelm.innerHTML =
-                    `<table class="div-child-box bg-dark-gray py-2 position-relative"">
-                    <thead>
-  <tr>
-    <th><div class="d-grid justify-content-center"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div></th>
-    <th>Played on<br>${date} CT</th>
-    <th><div class="d-grid justify-content-center"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div></th>
-  </tr>
-  </thead>
+                    `
+                    <div class="content">
+  <div class="header">
+    <div class="d-grid justify-content-center"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div>
+    <p>Played on<br>${date} CT</p>
+    <div class="d-grid justify-content-center"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div>
+  </div>
+  <div id="play"></div>
+  <table class="div-child-box bg-dark-gray py-2 position-relative"">
   <tbody>
   <tr>
     <td>${team1.goals}</td>
@@ -82,10 +166,14 @@ function create() {
   <td>${awaystats.corners}</td>
   </tr>
   </thead>
-</table>`
+</table>
+</div>
+`
 
                 // check if playing
+                var play = document.getElementById('play');
                 main.appendChild(appelm);
+                interval(play, json);
 
             });
     });
