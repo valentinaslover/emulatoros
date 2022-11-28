@@ -4,14 +4,22 @@ function getFlags(code) {
   var flags = "https://qatar.up.railway.app/flags?q=" + code
   return flags
 }
-function dot(finalDot) {
-  return (
-    `<svg style={{width: '100%', height: '48px'}}>
-        <rect x="40%" y={${finalDot} ? '30%' : '0%'} width="20%" height="100%" fill="#2D3748" />
-        <circle cx="50%" cy="30%" r="10%" fill="#2D3748" />
-    </svg>`
-  )
+function mapEventType(type) {
+  if (type === 'booking') {
+      return 'card';
+  }
+  return type;
 }
+function eventToColour(eventType) {
+  if (eventType === 'goal') {
+      return 'green';
+  }
+  if (eventType === 'booking') {
+      return 'yellow';
+  }
+  return 'gray';
+}
+
 function PlayByPlay(match) {
   console.log(match)
   const events = [
@@ -47,7 +55,13 @@ function interval(app, play, json) {
      
     var eventelm = document.createElement("div");
     console.log(home + ' and ' + events[app].type_of_event)
-    eventelm.innerHTML = `${home} made a ${events[app].type_of_event} on ${events[app].time}`
+    eventelm.innerHTML = `<p class="text-align-right">${events[app].time}</p><svg style={{width: '100%', height: '48px'}}>
+    <rect x="40%" y=${app ? '30%' : '0%'} width="20%" height="100%" fill="#2D3748" />
+    <circle cx="50%" cy="30%" r="10%" fill="#2D3748" />
+</svg><div style="text-align:${events[app].country === home ? 'left' : 'right'};">
+<p style="color:${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</p>
+<p>${events[app].player}</p>
+</div>`
     play.prepend(eventelm);
   } else {
     var eventelm = document.createElement("div");
