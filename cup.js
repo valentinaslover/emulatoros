@@ -203,7 +203,7 @@ async function current() {
 
     // 1fr 1em 1fr
     var play = document.createElement("div");
-    play.setAttribute("class", "d-grid play");
+    play.setAttribute("class", "d-grid play bg-dark-gray");
     play.setAttribute("style", "cursor:default;")
     appelm.appendChild(play);
 
@@ -247,7 +247,7 @@ async function current() {
     datediv.appendChild(min);
 
     var datespan = document.createElement("span");
-    datespan.setAttribute("class", "p-2 d-inline-block text-center text-dark-l");
+    datespan.setAttribute("class", "p-2 d-flex text-center text-dark-l");
     datespan.innerHTML = ' Live <span class="live-icon"></span>';
     datediv.appendChild(datespan);
 
