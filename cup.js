@@ -73,7 +73,7 @@ function interval(app, play, json) {
       play.appendChild(p);
   } else {
     var p = document.createElement("p");
-      p.setAttribute("style", "margin:0;")
+      p.setAttribute("style", "margin:0;text-align:right;")
       p.innerHTML = `${events[app].time}`
       play.appendChild(p);
 
