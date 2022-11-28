@@ -29,8 +29,8 @@ function PlayByPlay(match) {
   console.log(events)
   return (events)
 }
-function interval( play, json) {
- 
+function interval(json) {
+  const play = document.getElementById('play');
   var events = PlayByPlay(json);
   const home = json.home_team_country
   const away = json.away_team_country
@@ -171,9 +171,9 @@ function create() {
 `
 
                 // check if playing
-                var play = document.getElementById('play');
+               
                 main.appendChild(appelm);
-                interval(play, json);
+                interval(json);
 
             });
     });
