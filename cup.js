@@ -202,10 +202,7 @@ async function current() {
     main.prepend(appelm);
 
     // 1fr 1em 1fr
-    var play = document.createElement("div");
-    play.setAttribute("class", "d-grid play bg-dark-gray");
-    play.setAttribute("style", "cursor:default;")
-    appelm.appendChild(play);
+    
 
     var maindiv = document.createElement("div");
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 d-flex flex-column align-items-center");
@@ -266,7 +263,10 @@ async function current() {
     team2div.appendChild(team2span);
 
     // check if playing
-
+    var play = document.createElement("div");
+    play.setAttribute("class", "d-grid play bg-dark-gray");
+    play.setAttribute("style", "cursor:default;")
+    maindiv.appendChild(play);
 
     var streamsdiv = document.createElement("div");
     streamsdiv.setAttribute("class", "d-flex justify-content-center");
