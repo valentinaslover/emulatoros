@@ -117,7 +117,7 @@ function create() {
     <div class="col">Played on<br>${date} CT</div>
     <div class=" justify-content-center col"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div>
   </div>
-  <div id="play"></div>
+  <div class="d-grid play bg-dark-gray"id="play"></div>
   <table class="div-child-box bg-dark-gray py-2 position-relative">
   <tbody>
   <tr>
