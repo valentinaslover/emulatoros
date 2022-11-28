@@ -66,7 +66,7 @@ function interval(app, play, json) {
       <rect x="40%" y="30%" width="20%" height="100%" fill="#2D3748"></rect>
       <circle cx="50%" cy="30%" r="10%" fill="#2D3748"></circle>`
 
-      var p = document.createElement("div");
+      var p = document.createElement("p");
       p.setAttribute("style", "margin:0;")
       p.innerHTML = ` 
       <rect x="40%" y="30%" width="20%" height="100%" fill="#2D3748"></rect>
