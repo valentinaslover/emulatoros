@@ -60,12 +60,12 @@ function interval(app, play, json) {
       <p>${events[app].player}</p>`
 
       var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("style", "width: 100%; height: 48px;")
-    svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
-      play.appendChild(svg);
-      svg.innerHTML = ` 
-      <rect x="40%" y="30%" width="20%" height="100%" fill="#2D3748"></rect>
-      <circle cx="50%" cy="30%" r="10%" fill="#2D3748"></circle>`
+      svg.setAttribute("style", "width: 100%; height: 58px;")
+      svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+        play.appendChild(svg);
+        svg.innerHTML = ` 
+        <rect x="40%" y="30%" width="20%" height="100%" fill="#ffffff"></rect>
+        <circle cx="50%" cy="30%" r="10%" fill="#ffffff"></circle>`
 
       var p = document.createElement("p");
       p.setAttribute("style", "margin:0;")
