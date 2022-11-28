@@ -59,10 +59,9 @@ function interval(app, play, json) {
       eventelm.innerHTML = `<span class="type ${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
       <p>${events[app].player}</p>`
 
-      var svg = document.createElement("svg");
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("style", "width: 100%; height: 48px;")
-    svg.setAttribute("viewBox", "0 0 100 200")
-    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg")
+    svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
       play.appendChild(svg);
       svg.innerHTML = ` 
       <rect x="40%" y="30%" width="20%" height="100%" fill="#2D3748"></rect>
@@ -84,10 +83,9 @@ function interval(app, play, json) {
 
    
 
-      var svg = document.createElement("svg");
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("style", "width: 100%; height: 48px;")
-    svg.setAttribute("viewBox", "0 0 100 200")
-    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg")
+    svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
       play.appendChild(svg);
       svg.innerHTML = ` 
       <rect x="40%" y="30%" width="20%" height="100%" fill="#ffffff"></rect>
