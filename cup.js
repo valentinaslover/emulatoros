@@ -88,9 +88,9 @@ function interval(app, play, json) {
       svg.innerHTML = ` 
       <rect x="40%" y="30%" width="20%" height="100%" fill="#2D3748"></rect>
       <circle cx="50%" cy="30%" r="10%" fill="#2D3748"></circle>`
-      
+
       var eventelm = document.createElement("div");
-      eventelm.setAttribute("style", "text-align:right;")
+      eventelm.setAttribute("style", "text-align:left;")
         play.appendChild(eventelm);
         eventelm.innerHTML = `<span class="type"style="color:${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
         <p>${events[app].player}</p>`
