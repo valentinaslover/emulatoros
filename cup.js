@@ -273,13 +273,13 @@ async function current() {
     var stream = document.createElement("button");
     stream.setAttribute("class", "btn btn-sm btn-danger m-2");
     stream.innerText = "Stream 1(EN)";
-    stream.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')");
+    stream.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://1l1l.to/embed4')");
     streamsdiv.appendChild(stream);
 
     var stream2 = document.createElement("button");
     stream2.setAttribute("class", "btn btn-sm btn-danger m-2");
     stream2.innerText = "Stream 2(EN)";
-    stream2.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://1l1l.to/embed4')");
+    stream2.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')");
     streamsdiv.appendChild(stream2);
 
     var stream3 = document.createElement("button");
