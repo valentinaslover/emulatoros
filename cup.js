@@ -73,10 +73,29 @@ function interval(app, play, json) {
       <circle cx="50%" cy="30%" r="10%" fill="#2D3748"></circle>`
       play.appendChild(p);
   } else {
-    var eventelm = document.createElement("div");
-    console.log(away + ' else ' + events[app].type_of_event)
-    eventelm.innerHTML = `${away} made a ${events[app].type_of_event} on ${events[app].time}`
-    play.prepend(eventelm);
+    var p = document.createElement("p");
+      p.setAttribute("style", "margin:0;")
+      p.innerHTML = ` 
+      <rect x="40%" y="30%" width="20%" height="100%" fill="#2D3748"></rect>
+      <circle cx="50%" cy="30%" r="10%" fill="#2D3748"></circle>`
+      play.appendChild(p);
+
+   
+
+      var svg = document.createElement("svg");
+    svg.setAttribute("style", "width: 100%; height: 48px;")
+      play.appendChild(svg);
+      svg.innerHTML = ` 
+      <rect x="40%" y="30%" width="20%" height="100%" fill="#2D3748"></rect>
+      <circle cx="50%" cy="30%" r="10%" fill="#2D3748"></circle>`
+      
+      var eventelm = document.createElement("div");
+      eventelm.setAttribute("style", "text-align:right;")
+        play.appendChild(eventelm);
+        eventelm.innerHTML = `<span class="type"style="color:${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
+        <p>${events[app].player}</p>`
+
+      
   }
 
 
