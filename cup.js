@@ -80,7 +80,7 @@ function interval(app, play, json) {
    
 
       var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("style", "width: 100%; height: 48px;")
+    svg.setAttribute("style", "width: 100%; height: 58px;")
     svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
       play.appendChild(svg);
       svg.innerHTML = ` 
