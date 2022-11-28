@@ -56,7 +56,7 @@ function interval(app, play, json) {
     var eventelm = document.createElement("div");
     eventelm.setAttribute("style", "text-align:right;")
       play.appendChild(eventelm);
-      eventelm.innerHTML = `<span class="type"class="${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
+      eventelm.innerHTML = `<span class="type ${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
       <p>${events[app].player}</p>`
 
       var svg = document.createElement("svg");
@@ -96,7 +96,7 @@ function interval(app, play, json) {
       var eventelm = document.createElement("div");
       eventelm.setAttribute("style", "text-align:left;")
         play.appendChild(eventelm);
-        eventelm.innerHTML = `<span class="type"class="${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
+        eventelm.innerHTML = `<span class="type ${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
         <p>${events[app].player}</p>`
 
       
