@@ -382,7 +382,7 @@ async function previous() {
       var stats = document.createElement("button");
       stats.setAttribute("class", "p-2 d-inline-block btn btn-sm btn-danger");
       stats.innerText = 'Stats';
-      stats.setAttribute("href", "/stats#" + json[app].id);
+      stats.setAttribute("onclick", `window.location.href='/stats#${json[app].id}'`);
       maindiv.appendChild(stats);
 
     }
