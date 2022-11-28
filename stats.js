@@ -34,7 +34,7 @@ function interval( play, json) {
   var events = PlayByPlay(json);
   const home = json.home_team_country
   const away = json.away_team_country
-  
+  console.log(play)
   for(app in events) {
     
     if (events[app].country === home ) {
@@ -111,14 +111,14 @@ function create() {
 
                 appelm.innerHTML =
                     `
-                    <div class="content">
+                    <div class="content div-child-box bg-dark-gray py-2 position-relative">
   <div class="header">
     <div class="d-grid justify-content-center"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div>
     <p>Played on<br>${date} CT</p>
     <div class="d-grid justify-content-center"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div>
   </div>
   <div id="play"></div>
-  <table class="div-child-box bg-dark-gray py-2 position-relative"">
+  <table class="div-child-box bg-dark-gray py-2 position-relative">
   <tbody>
   <tr>
     <td>${team1.goals}</td>
