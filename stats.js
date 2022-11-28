@@ -114,61 +114,23 @@ function create() {
                     <div class="content div-child-box bg-dark-gray py-2 position-relative">
   <div class="header d-flex">
     <div class=" justify-content-center d-flex flex-column align-items-center col"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div>
-    <div class="col text-align-center">Played on<br>${date} CT</div>
+    <div class="col text-center">Played on<br>${date} CT</div>
     <div class=" justify-content-center d-flex flex-column align-items-center col"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div>
   </div>
   <div class="d-grid play bg-dark-gray"id="play"></div>
-  <table class="div-child-box bg-dark-gray py-2 position-relative">
-  <tbody>
-  <tr>
-    <td>${team1.goals}</td>
-    <td>Goals</td>
-    <td>${team2.goals}</td>
-  </tr>
-  <tr>
-    <td>${homestats.attempts_on_goal}</td>
-    <td>Shots</td>
-    <td>${awaystats.attempts_on_goal}</td>
-  </tr>
-  <tr>
-  <td>${homestats.on_target}</td>
-  <td>Shots On Target</td>
-  <td>${awaystats.on_target}</td>
-  </tr>
-  <tr>
-  <td>${percentage(homestats.passes_completed, homestats.num_passes)}%</td>
-  <td>Pass Accuracy</td>
-  <td>${percentage(awaystats.passes_completed, awaystats.num_passes)}%</td>
-  </tr>
-  <tr>
-  <td>${homestats.fouls_committed}</td>
-  <td>Fouls</td>
-  <td>${awaystats.fouls_committed}</td>
-  </tr>
-   <tr>
-  <td>${homestats.yellow_cards}</td>
-  <td>Yellow Cards</td>
-  <td>${awaystats.yellow_cards}</td>
-  </tr>
-  <tr>
-  <td>${homestats.red_cards}</td>
-  <td>Red Cards</td>
-  <td>${awaystats.red_cards}</td>
-  </tr>
-  <tr>
-  <td>${homestats.offsides}</td>
-  <td>Offsides</td>
-  <td>${awaystats.offsides}</td>
-  </tr>
-  <tr>
-  <td>${homestats.corners}</td>
-  <td>Corners</td>
-  <td>${awaystats.corners}</td>
-  </tr>
-  </thead>
-</table>
-</div>
-`
+  </div>`
+  if(json.home_team_statistics !== null) {
+    var table = document.createElement('table')
+    table.setAttribute('class', 'div-child-box bg-dark-gray py-2 position-relative')
+    table.innerHTML = `<tbody><tr>  <td>${team1.goals}</td>  <td>Goals</td>  <td>${team2.goals}</td></tr><tr>  <td>${homestats.attempts_on_goal}</td>  <td>Shots</td><td>${awaystats.attempts_on_goal}</td></tr><tr><td>${homestats.on_target}</td><td>Shots On Target</td><td>${awaystats.on_target}</td></tr><tr><td>${percentage(homestats.passes_completed, homestats.num_passes)}%</td><td>Pass Accuracy</td><td>${percentage(awaystats.passes_completed, awaystats.num_passes)}%</td></tr><tr><td>${homestats.fouls_committed}</td><td>Fouls</td><td>${awaystats.fouls_committed}</td></tr> <tr><td>${homestats.yellow_cards}</td><td>Yellow Cards</td><td>${awaystats.yellow_cards}</td></tr><tr><td>${homestats.red_cards}</td><td>Red Cards</td><td>${awaystats.red_cards}</td></tr><tr><td>${homestats.offsides}</td><td>Offsides</td><td>${awaystats.offsides}</td></tr><tr><td>${homestats.corners}</td><td>Corners</td><td>${awaystats.corners}</td></tr></thead>`
+  appelm.appendChild(table)
+  } else {
+    var table = document.createElement('table')
+    table.setAttribute('class', 'div-child-box bg-dark-gray py-2 position-relative')
+    table.innerHTML = `<tbody><tr>  <td>${team1.goals}</td>  <td>Goals</td>  <td>${team2.goals}</td></tr></thead>`
+  appelm.appendChild(table)
+  }
+
 
                 // check if playing
                
