@@ -113,9 +113,9 @@ function create() {
                     `
                     <div class="content div-child-box bg-dark-gray py-2 position-relative">
   <div class="header d-flex">
-    <div class=" justify-content-center d-flex flex-direction-column align-items-center col"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div>
+    <div class=" justify-content-center d-flex flex-column align-items-center col"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div>
     <div class="col">Played on<br>${date} CT</div>
-    <div class=" justify-content-center d-flex flex-direction-column align-items-center col"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div>
+    <div class=" justify-content-center d-flex flex-column align-items-center col"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div>
   </div>
   <div class="d-grid play bg-dark-gray"id="play"></div>
   <table class="div-child-box bg-dark-gray py-2 position-relative">
