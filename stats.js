@@ -112,10 +112,10 @@ function create() {
                 appelm.innerHTML =
                     `
                     <div class="content div-child-box bg-dark-gray py-2 position-relative">
-  <div class="header">
-    <div class="d-grid justify-content-center"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div>
-    <p>Played on<br>${date} CT</p>
-    <div class="d-grid justify-content-center"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div>
+  <div class="header d-grid">
+    <div class=" justify-content-center col"><img src="${getFlags(team1.country)}"></img><span>${home}<span></div>
+    <div class="col">Played on<br>${date} CT</div>
+    <div class=" justify-content-center col"><img src="${getFlags(team2.country)}"></img><span>${away}<span></div>
   </div>
   <div id="play"></div>
   <table class="div-child-box bg-dark-gray py-2 position-relative">
