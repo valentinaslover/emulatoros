@@ -33,7 +33,7 @@ function PlayByPlay(match) {
 function update() {
 
   $.getJSON(
-    "/current.json",
+    "https://qatar.up.railway.app/api?q=matches/current",
     function (json) {
       for (app in json) {
         $('#score').text(json[app].home_team.goals + ' - ' + json[app].away_team.goals);
@@ -179,7 +179,7 @@ async function fetchapps() {
 }
 
 async function current() {
-  let response = await fetch("/current.json");
+  let response = await fetch("https://qatar.up.railway.app/api?q=matches/current");
   let json = await response.json();
 
   for (app in json) {
@@ -236,7 +236,7 @@ async function current() {
     maindiv2.appendChild(datediv);
 
     var min = document.createElement("span");
-    min.setAttribute("class", "p-2 d-flex text-center text-success");
+    min.setAttribute("class", "p-2 d-flex text-center green-txt");
     min.setAttribute("id", "time");
     min.innerHTML = json[app].time;
     datediv.appendChild(min);
