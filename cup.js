@@ -61,6 +61,7 @@ function interval(app, play, json) {
 
       var svg = document.createElement("svg");
     svg.setAttribute("style", "width: 100%; height: 48px;")
+    svg.setAttribute("viewBox", "0 0 100 200")
     svg.setAttribute("xmlns", "http://www.w3.org/2000/svg")
       play.appendChild(svg);
       svg.innerHTML = ` 
@@ -85,6 +86,7 @@ function interval(app, play, json) {
 
       var svg = document.createElement("svg");
     svg.setAttribute("style", "width: 100%; height: 48px;")
+    svg.setAttribute("viewBox", "0 0 100 200")
     svg.setAttribute("xmlns", "http://www.w3.org/2000/svg")
       play.appendChild(svg);
       svg.innerHTML = ` 
