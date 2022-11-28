@@ -55,7 +55,7 @@ function interval(app, play, json) {
      
     var eventelm = document.createElement("div");
     console.log(home + ' and ' + events[app].type_of_event)
-    eventelm.innerHTML = `<p class="text-align-right">${events[app].time}</p><svg style={{width: '100%', height: '48px'}}>
+    eventelm.innerHTML = `<p class="text-align-right">${events[app].time}</p><svg style="width: 100%; height: 48px">
     <rect x="40%" y=${app ? '30%' : '0%'} width="20%" height="100%" fill="#2D3748" />
     <circle cx="50%" cy="30%" r="10%" fill="#2D3748" />
 </svg><div style="text-align:${events[app].country === home ? 'left' : 'right'};">
