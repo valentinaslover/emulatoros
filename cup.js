@@ -279,7 +279,7 @@ async function current() {
     var stream2 = document.createElement("button");
     stream2.setAttribute("class", "btn btn-sm btn-danger m-2");
     stream2.innerText = "Stream 2(EN)";
-    stream2.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://l1l1.to/ch4')");
+    stream2.setAttribute("onclick", "window.open('https://qatar.up.railway.app/apps/apps.html#https://1l1l.to/embed4')");
     streamsdiv.appendChild(stream2);
 
     var stream3 = document.createElement("button");
