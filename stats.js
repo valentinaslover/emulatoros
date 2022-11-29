@@ -1,6 +1,6 @@
 let id = decodeURIComponent(window.location.hash.slice(1))
 function getFlags(code) {
-    var flags = "https://qatar.up.railway.app/flags?q=" + code
+    var flags = "https://emulatoros.up.railway.app/flags?q=" + code
     return flags
 }
 function mapEventType(type) {
