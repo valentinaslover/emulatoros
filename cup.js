@@ -416,13 +416,12 @@ $(document).ready(function() {
   previous();
   current();
   const check = $('#stream1');
-console.log(check)
-  console.log('load4')
 if (check === null) {
   console.log('is null' + check)
 } else {
   console.log('is not null')
   var streamatt = $('#stream1');
+  console.log('stream' + streamatt)
   streamatt.attr("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')");
 console.log(streamatt.attr('onclick'))
   var streamatt2 = $('#2stream1');
