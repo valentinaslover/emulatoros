@@ -409,9 +409,9 @@ $(document).ready(function() {
   fetchapps();
   previous();
   current();
-})
-var check = document.querySelector('.stream1')
+  var check = document.querySelector('.stream1')
 console.log(check)
+  console.log('load')
 if (check === null) {
   console.log('is null' + check)
 } else {
@@ -432,3 +432,5 @@ if (check === null) {
   streamatt5.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
 
 }
+})
+
