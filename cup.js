@@ -415,7 +415,7 @@ $(document).ready(function() {
   fetchapps();
   previous();
   current();
-  const check = document.getElementsById('stream1')
+  const check = $('#stream1');
 console.log(check)
   console.log('load4')
 if (check === null) {
