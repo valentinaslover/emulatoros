@@ -394,7 +394,7 @@ setTimeout(() => {
   fetchapps();
 previous();
   if (document.getElementByClassName('stream1') !== null) {
-    var stream1 = document.getElementByClassName('stream1')
+    var stream1 = document.getElementsByClassName('stream1')
     stream1.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
     
   }
