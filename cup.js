@@ -108,15 +108,15 @@ function interval(app, play, json) {
 }
 
 function fetchapps() {
-  console.log('fetchapps')
+  
   $.getJSON(
     "https://emulatoros.up.railway.app/api?q=matches/current",
     function(json) {
-        console.log('fetchapps json')
+       
       var main = document.getElementById("font-md-10");
       var previous = document.getElementById("previous");
       for (app in json) {
-
+console.log(app)
         var format = moment(json[app].datetime);
         var date = format.tz('America/Chicago').format('llll');
 
@@ -127,7 +127,7 @@ function fetchapps() {
 
         var status = json[app].status;
         if (status !== "completed" && status !== "in_progress" && home !== "To Be Determined") {
-
+console.log('if succedeed')
           var appelm = document.createElement("a");
 
           appelm.className = "app";
