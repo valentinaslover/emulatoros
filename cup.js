@@ -108,9 +108,11 @@ function interval(app, play, json) {
 }
 
 function fetchapps() {
+  console.log('fetchapps')
   $.getJSON(
     "https://emulatoros.up.railway.app/api?q=matches/current",
     function(json) {
+        console.log('fetchapps json')
       var main = document.getElementById("font-md-10");
       var previous = document.getElementById("previous");
       for (app in json) {
