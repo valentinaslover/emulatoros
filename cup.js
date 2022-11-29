@@ -422,7 +422,7 @@ if (check === null) {
   console.log('is null' + check)
 } else {
   console.log('is not null')
-  var streamatt = $('#contents');document.getElementsById('stream1');
+  var streamatt = $('#stream1');
   streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')");
 
   var streamatt2 = $('#2stream1');
@@ -434,7 +434,7 @@ if (check === null) {
   var streamatt4 = $('#4stream1');
   streamatt4.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
 
-  var streamatt4 = $('#5stream1');
+  var streamatt5 = $('#5stream1');
   streamatt5.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
 
 }
