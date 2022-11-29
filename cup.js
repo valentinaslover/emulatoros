@@ -110,13 +110,12 @@ function interval(app, play, json) {
 function fetchapps() {
   
   $.getJSON(
-    "https://emulatoros.up.railway.app/api?q=matches/current",
+    "https://emulatoros.up.railway.app/api?q=matches",
     function(json) {
        
       var main = document.getElementById("font-md-10");
       var previous = document.getElementById("previous");
       for (app in json) {
-console.log(app)
         var format = moment(json[app].datetime);
         var date = format.tz('America/Chicago').format('llll');
 
@@ -127,7 +126,6 @@ console.log(app)
 
         var status = json[app].status;
         if (status !== "completed" && status !== "in_progress" && home !== "To Be Determined") {
-console.log('if succedeed')
           var appelm = document.createElement("a");
 
           appelm.className = "app";
@@ -182,7 +180,6 @@ console.log('if succedeed')
           team2span.setAttribute("class", "p-2 d-inline-block text-center ");
           team2span.innerText = away;
           team2div.appendChild(team2span);
-clearInterval(retryfn);
         }
       }
     }
@@ -191,7 +188,7 @@ clearInterval(retryfn);
 
 function previous() {
   $.getJSON(
-    "https://emulatoros.up.railway.app/api?q=matches/current",
+    "https://emulatoros.up.railway.app/api?q=matches",
     function(json) {
       var main = document.getElementById("previous");
       for (app in json) {
@@ -416,7 +413,7 @@ function current() {
 $(document).ready(function() {
   
   current();
-  function retry(){
+ 
     fetchapps();
   previous();
   const check = $('#stream1');
@@ -437,9 +434,7 @@ $("#5stream1").attr("onclick","new_function_name()");
   //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
 }
     
-    console.log('retry')
-  }
-  
-  const retryfn = setInterval(retry,1000);
+    
+
 })
 
