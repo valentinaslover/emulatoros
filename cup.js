@@ -382,7 +382,7 @@ previous();
     var stream4 = document.createElement("button");
     stream4.setAttribute("class", "btn btn-sm btn-danger m-2 4stream" + app);
     stream4.innerText = "Stream 4(EN)";
-    stream4.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://liveon.sx/embed1')");
+    stream4.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m2.html')");
     streamsdiv.appendChild(stream4);
     var best = document.createElement("button");
     best.setAttribute("class", "btn btn-sm btn-danger m-2 5stream" + app);
@@ -401,7 +401,7 @@ current();
   
   if (document.querySelector('.stream1') !== null) {
     var streamatt = document.querySelector('.stream1');
-    streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://liveon.sx/embed2')");
+    streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')");
     
     var streamatt2 = document.querySelector('.2stream1');
     streamatt2.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
