@@ -390,5 +390,7 @@ async function previous() {
   }
 }
 current();
-fetchapps();
+setTimeout(() => {
+  fetchapps();
 previous();
+}, "1000")
