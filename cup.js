@@ -272,7 +272,7 @@ async function current() {
     maindiv.appendChild(streamsdiv);
 
     var stream = document.createElement("button");
-    stream.setAttribute("class", "btn btn-sm btn-danger m-2");
+    stream.setAttribute("class", "btn btn-sm btn-danger m-2 stream" + app);
     stream.innerText = "Stream 1(EN)";
     stream.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed4')");
     streamsdiv.appendChild(stream);
@@ -393,4 +393,9 @@ current();
 setTimeout(() => {
   fetchapps();
 previous();
-}, "1000")
+  if (document.getElementByClassName('stream1') !== null) {
+    var stream1 = document.getElementByClassName('stream1')
+    stream1.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
+    
+  }
+}, "2000")
