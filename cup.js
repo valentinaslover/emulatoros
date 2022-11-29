@@ -394,8 +394,9 @@ setTimeout(() => {
   fetchapps();
 previous();
   if (document.getElementsByClassName('stream1') !== null) {
-    var stream1 = document.getElementsByClassName('stream1')
-    stream1.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
+    const streamatt = document.getElementsByClassName('stream1');
+    console.log(streamatt)
+    streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
     
   }
 }, "2000")
