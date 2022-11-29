@@ -121,7 +121,7 @@ async function fetchapps() {
     var team2 = json[app].away_team;
     var home = team1.name;
     var away = team2.name;
-
+console.log(json[app])
     var previous = document.getElementById('live');
     var status = json[app].status;
     if (status !== "completed" && status !== "in_progress" && home !== "To Be Determined") {
