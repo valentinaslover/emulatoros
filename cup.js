@@ -112,6 +112,7 @@ async function fetchapps() {
   let json = await response.json();
   var main = document.getElementById("font-md-10");
   var previous = document.getElementById("previous");
+  console.log('fetch')
   for (app in json) {
 
     var format = moment(json[app].datetime);
