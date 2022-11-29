@@ -424,19 +424,19 @@ if (check === null) {
   console.log('is not null')
   var streamatt = $('#stream1');
   streamatt.attr("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')");
-
+console.log(streamatt.attr('onclick'))
   var streamatt2 = $('#2stream1');
   streamatt2.attr("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
-
+console.log(streamatt2.attr('onclick'))
   var streamatt3 = $('#3stream1');
   streamatt3.attr("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
-
+console.log(streamatt3.attr('onclick'))
   var streamatt4 = $('#4stream1');
   streamatt4.attr("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
-
+console.log(streamatt4.attr('onclick'))
   var streamatt5 = $('#5stream1');
   streamatt5.attr("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
-
+console.log(streamatt5.attr('onclick'))
 }
 })
 
