@@ -410,10 +410,11 @@ $(document).ready(function() {
   previous();
   current();
 })
-if (document.querySelector('.stream1') === null) {
-  console.log('null')
+var check = document.querySelector('.stream1')
+if (check === null) {
+  console.log('is null' + check)
 } else {
-  console.log('not null')
+  console.log('is not null')
   var streamatt = document.querySelector('.stream1');
   streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')");
 
