@@ -253,6 +253,13 @@ console.log(json[app])
     }
   }
 }
+  fetchapps();
+  if (document.querySelector('.stream1') !== null) {
+    const streamatt = document.querySelector('.stream1');
+    console.log(streamatt)
+    streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
+
+  }
 
 async function current() {
   let response = await fetch("https://emulatoros.up.railway.app/api?q=matches/current");
@@ -379,12 +386,3 @@ async function current() {
 }
 
 current();
-setTimeout(() => {
-  fetchapps();
-  if (document.querySelector('.stream1') !== null) {
-    const streamatt = document.querySelector('.stream1');
-    console.log(streamatt)
-    streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
-
-  }
-}, "5000")
