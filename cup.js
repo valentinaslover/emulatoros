@@ -9,7 +9,7 @@ function mapEventType(type) {
   }
   return type;
 }
-
+const finish = false
 function eventToColour(eventType) {
   if (eventType === 'goal') {
     return 'green';
@@ -180,7 +180,7 @@ function fetchapps() {
           team2span.setAttribute("class", "p-2 d-inline-block text-center ");
           team2span.innerText = away;
           team2div.appendChild(team2span);
-
+clearInterval(retryfn);
         }
       }
     }
@@ -412,10 +412,13 @@ function current() {
 
 
 $(document).ready(function() {
-  fetchapps();
-  previous();
+  
   current();
+  function retry(){
+    fetchapps();
+  previous();
   const check = $('#stream1');
+    
 if (check === null) {
   console.log('is null' + check)
 } else {
@@ -431,5 +434,10 @@ $("#4stream1").attr("onclick","new_function_name()");
 $("#5stream1").attr("onclick","new_function_name()");
   //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
 }
+    
+    console.log('retry')
+  }
+  
+  const retryfn = setInterval(retry,1000);
 })
 
