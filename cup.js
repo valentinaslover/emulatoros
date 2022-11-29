@@ -245,6 +245,7 @@ async function fetchapps() {
   }
 clearInterval(myinterval);
 }
+}
 
 async function current() {
   let response = await fetch("https://emulatoros.up.railway.app/api?q=matches/current");
@@ -375,9 +376,6 @@ async function current() {
 
 const finish = false
 current();
-const myinterval = setInterval(function()
-  {if (finish == true) {
-    fetchapps();
-  }
-  }, 1000)
-
+const myinterval = setInterval(function(){
+  if (finish == true) {
+    fetchapps();}}, 1000);
