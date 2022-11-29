@@ -1,21 +1,21 @@
-
-
 function getFlags(code) {
   var flags = "https://emulatoros.up.railway.app/flags?q=" + code
   return flags
 }
+
 function mapEventType(type) {
   if (type === 'booking') {
-      return 'card';
+    return 'card';
   }
   return type;
 }
+
 function eventToColour(eventType) {
   if (eventType === 'goal') {
-      return 'green';
+    return 'green';
   }
   if (eventType === 'booking') {
-      return 'yellow';
+    return 'yellow';
   }
   return 'gray';
 }
@@ -23,18 +23,23 @@ function eventToColour(eventType) {
 function PlayByPlay(match) {
   console.log(match)
   const events = [
-    ...match.home_team_events.map(event => (Object.assign(Object.assign({}, event), { country: match.home_team_country }))),
-    ...match.away_team_events.map(event => (Object.assign(Object.assign({}, event), { country: match.away_team_country })))
+    ...match.home_team_events.map(event => (Object.assign(Object.assign({}, event), {
+      country: match.home_team_country
+    }))),
+    ...match.away_team_events.map(event => (Object.assign(Object.assign({}, event), {
+      country: match.away_team_country
+    })))
   ];
   events.sort((a, b) => b.id - a.id);
   console.log(events)
   return (events)
 }
+
 function update() {
 
   $.getJSON(
     "https://emulatoros.up.railway.app/api?q=matches/current",
-    function (json) {
+    function(json) {
       for (app in json) {
         $('#score').text(json[app].home_team.goals + ' - ' + json[app].away_team.goals);
         $('#time').text(json[app].time);
@@ -43,18 +48,19 @@ function update() {
       // Patching payload into page element ID = "dog" 
     });
 }
+
 function interval(app, play, json) {
- 
+
   var events = PlayByPlay(json[app]);
   const home = json[app].home_team_country
   const away = json[app].away_team_country
-  
-  for(app in events) {
-    
-    if (events[app].country === home ) {
-     
-    var eventelm = document.createElement("div");
-    eventelm.setAttribute("style", "text-align:right;")
+
+  for (app in events) {
+
+    if (events[app].country === home) {
+
+      var eventelm = document.createElement("div");
+      eventelm.setAttribute("style", "text-align:right;")
       play.appendChild(eventelm);
       eventelm.innerHTML = `<span class="type ${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
       <p>${events[app].player}</p>`
@@ -62,8 +68,8 @@ function interval(app, play, json) {
       var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       svg.setAttribute("style", "width: 100%; height: 58px;")
       svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
-        play.appendChild(svg);
-        svg.innerHTML = ` 
+      play.appendChild(svg);
+      svg.innerHTML = ` 
         <rect x="40%" y="30%" width="20%" height="100%" fill="#ffffff"></rect>
         <circle cx="50%" cy="30%" r="10%" fill="#ffffff"></circle>`
 
@@ -71,17 +77,17 @@ function interval(app, play, json) {
       p.setAttribute("style", "margin:0;")
       p.innerHTML = `${events[app].time}`
       play.appendChild(p);
-  } else {
-    var p = document.createElement("p");
+    } else {
+      var p = document.createElement("p");
       p.setAttribute("style", "margin:0;text-align:right;")
       p.innerHTML = `${events[app].time}`
       play.appendChild(p);
 
-   
+
 
       var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("style", "width: 100%; height: 58px;")
-    svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+      svg.setAttribute("style", "width: 100%; height: 58px;")
+      svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
       play.appendChild(svg);
       svg.innerHTML = ` 
       <rect x="40%" y="30%" width="20%" height="100%" fill="#ffffff"></rect>
@@ -89,15 +95,15 @@ function interval(app, play, json) {
 
       var eventelm = document.createElement("div");
       eventelm.setAttribute("style", "text-align:left;")
-        play.appendChild(eventelm);
-        eventelm.innerHTML = `<span class="type ${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
+      play.appendChild(eventelm);
+      eventelm.innerHTML = `<span class="type ${eventToColour(events[app].type_of_event)}">${mapEventType(events[app].type_of_event)}</span>
         <p>${events[app].player}</p>`
 
-      
+
+    }
+
+
   }
-
-
-}
   setInterval(update, 10000);
 }
 
@@ -243,8 +249,8 @@ async function fetchapps() {
       stats.setAttribute("onclick", `window.location.href='/stats#${json[app].id}'`);
       maindiv.appendChild(stats);
 
+    }
   }
-
 }
 
 async function current() {
@@ -268,7 +274,7 @@ async function current() {
     main.prepend(appelm);
 
     // 1fr 1em 1fr
-    
+
 
     var maindiv = document.createElement("div");
     maindiv.setAttribute("class", "div-child-box bg-dark-gray  bg-white py-2 d-flex flex-column align-items-center");
@@ -378,6 +384,6 @@ setTimeout(() => {
     const streamatt = document.querySelector('.stream1');
     console.log(streamatt)
     streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
-    
+
   }
 }, "5000")
