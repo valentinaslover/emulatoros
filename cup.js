@@ -179,7 +179,6 @@ function interval(app, play, json) {
   }
 
 }
-fetchapps();
 
 async function previous() {
   let response = await fetch("https://emulatoros.up.railway.app/api?q=matches");
@@ -267,7 +266,7 @@ async function previous() {
   }
 }
  }
-previous();
+
 
  function current() {
   $.getJSON(
@@ -396,9 +395,12 @@ previous();
 }
     }
 
-current();
 
-  
+  $(document).ready(function() {
+    fetchapps();
+    previous();
+current();
+  }
   if (document.querySelector('.stream1') !== null) {
     var streamatt = document.querySelector('.stream1');
     streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')");
