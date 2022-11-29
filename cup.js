@@ -411,6 +411,7 @@ $(document).ready(function() {
   current();
 })
 var check = document.querySelector('.stream1')
+console.log(check)
 if (check === null) {
   console.log('is null' + check)
 } else {
