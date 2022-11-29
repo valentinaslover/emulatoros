@@ -101,9 +101,10 @@ function interval(app, play, json) {
   setInterval(update, 10000);
 }
 
-async function fetchapps() {
-  let response = await fetch("https://emulatoros.up.railway.app/api?q=matches");
-  let json = await response.json();
+ function fetchapps() {
+   $.getJSON(
+    "https://emulatoros.up.railway.app/api?q=matches/current",
+    function (json) {
   var main = document.getElementById("font-md-10");
   var previous = document.getElementById("previous");
   for (app in json) {
@@ -265,12 +266,13 @@ async function previous() {
     }
   }
 }
-
+ }
 previous();
 
-async function current() {
-  let response = await fetch("https://emulatoros.up.railway.app/api?q=matches/current");
-  let json = await response.json();
+ function current() {
+  $.getJSON(
+    "https://emulatoros.up.railway.app/api?q=matches/current",
+    function (json) {
 
   for (app in json) {
 
@@ -367,23 +369,23 @@ async function current() {
     streamsdiv.appendChild(stream);
 
     var stream2 = document.createElement("button");
-    stream2.setAttribute("class", "btn btn-sm btn-danger m-2");
+    stream2.setAttribute("class", "btn btn-sm btn-danger m-2 2stream" + app);
     stream2.innerText = "Stream 2(EN)";
     stream2.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')");
     streamsdiv.appendChild(stream2);
 
     var stream3 = document.createElement("button");
-    stream3.setAttribute("class", "btn btn-sm btn-danger m-2");
+    stream3.setAttribute("class", "btn btn-sm btn-danger m-2 3stream" + app);
     stream3.innerText = "Stream 3(ES)";
-    stream3.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://l1l1.to/ch10')");
+    stream3.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
     streamsdiv.appendChild(stream3);
     var stream4 = document.createElement("button");
-    stream4.setAttribute("class", "btn btn-sm btn-danger m-2");
+    stream4.setAttribute("class", "btn btn-sm btn-danger m-2 4stream" + app);
     stream4.innerText = "Stream 4(EN)";
     stream4.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://liveon.sx/embed1')");
     streamsdiv.appendChild(stream4);
     var best = document.createElement("button");
-    best.setAttribute("class", "btn btn-sm btn-danger m-2");
+    best.setAttribute("class", "btn btn-sm btn-danger m-2 5stream" + app);
     best.innerText = "Best but Laggy(EN)";
     best.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
     streamsdiv.appendChild(best);
@@ -392,13 +394,25 @@ async function current() {
     interval(app, play, json);
   }
 }
+    }
 
 current();
 
   
   if (document.querySelector('.stream1') !== null) {
-    const streamatt = document.querySelector('.stream1');
-    console.log(streamatt)
-    streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
+    var streamatt = document.querySelector('.stream1');
+    streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://liveon.sx/embed2')");
+    
+    var streamatt2 = document.querySelector('.2stream1');
+    streamatt2.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
+     
+    var streamatt3 = document.querySelector('.3stream1');
+    streamatt3.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
+    
+    var streamatt4 = document.querySelector('.4stream1');
+    streamatt4.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
+    
+    var streamatt4 = document.querySelector('.5stream1');
+    streamatt5.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
     
   }
