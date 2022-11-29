@@ -409,9 +409,9 @@ $(document).ready(function() {
   fetchapps();
   previous();
   current();
-  var check = document.querySelector('.stream1')
+  const check = document.querySelector('.stream1')
 console.log(check)
-  console.log('load')
+  console.log('load2')
 if (check === null) {
   console.log('is null' + check)
 } else {
