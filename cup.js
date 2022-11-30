@@ -9,7 +9,7 @@ function mapEventType(type) {
   }
   return type;
 }
-
+const finish = false
 function eventToColour(eventType) {
   if (eventType === 'goal') {
     return 'green';
@@ -108,13 +108,14 @@ function interval(app, play, json) {
 }
 
 function fetchapps() {
+  
   $.getJSON(
-    "https://emulatoros.up.railway.app/api?q=matches/current",
+    "https://emulatoros.up.railway.app/api?q=matches",
     function(json) {
+       
       var main = document.getElementById("font-md-10");
       var previous = document.getElementById("previous");
       for (app in json) {
-
         var format = moment(json[app].datetime);
         var date = format.tz('America/Chicago').format('llll');
 
@@ -125,7 +126,6 @@ function fetchapps() {
 
         var status = json[app].status;
         if (status !== "completed" && status !== "in_progress" && home !== "To Be Determined") {
-
           var appelm = document.createElement("a");
 
           appelm.className = "app";
@@ -180,7 +180,6 @@ function fetchapps() {
           team2span.setAttribute("class", "p-2 d-inline-block text-center ");
           team2span.innerText = away;
           team2div.appendChild(team2span);
-
         }
       }
     }
@@ -189,7 +188,7 @@ function fetchapps() {
 
 function previous() {
   $.getJSON(
-    "https://emulatoros.up.railway.app/api?q=matches/current",
+    "https://emulatoros.up.railway.app/api?q=matches",
     function(json) {
       var main = document.getElementById("previous");
       for (app in json) {
@@ -370,29 +369,35 @@ function current() {
         maindiv.appendChild(streamsdiv);
 
         var stream = document.createElement("button");
-        stream.setAttribute("class", "btn btn-sm btn-danger m-2 stream" + app);
+        stream.setAttribute("class", "btn btn-sm btn-danger m-2 ");
+        stream.setAttribute("id", "stream" + app);
         stream.innerText = "Stream 1(EN)";
         stream.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed4')");
         streamsdiv.appendChild(stream);
 
         var stream2 = document.createElement("button");
-        stream2.setAttribute("class", "btn btn-sm btn-danger m-2 2stream" + app);
+        stream2.setAttribute("class", "btn btn-sm btn-danger m-2");
+        stream2.setAttribute("id", "2stream" + app);
         stream2.innerText = "Stream 2(EN)";
         stream2.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')");
         streamsdiv.appendChild(stream2);
 
         var stream3 = document.createElement("button");
-        stream3.setAttribute("class", "btn btn-sm btn-danger m-2 3stream" + app);
+        stream3.setAttribute("class", "btn btn-sm btn-danger m-2 " );
+        stream3.setAttribute("id", "3stream" + app);
         stream3.innerText = "Stream 3(ES)";
         stream3.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
         streamsdiv.appendChild(stream3);
+        
         var stream4 = document.createElement("button");
-        stream4.setAttribute("class", "btn btn-sm btn-danger m-2 4stream" + app);
+        stream4.setAttribute("class", "btn btn-sm btn-danger m-2 ");
+        stream4.setAttribute("id", "4stream" + app);
         stream4.innerText = "Stream 4(EN)";
         stream4.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m2.html')");
         streamsdiv.appendChild(stream4);
         var best = document.createElement("button");
-        best.setAttribute("class", "btn btn-sm btn-danger m-2 5stream" + app);
+        best.setAttribute("class", "btn btn-sm btn-danger m-2 ");
+        best.setAttribute("id", "5stream" + app);
         best.innerText = "Best but Laggy(EN)";
         best.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')");
         streamsdiv.appendChild(best);
@@ -406,27 +411,30 @@ function current() {
 
 
 $(document).ready(function() {
-  fetchapps();
-  previous();
+  
   current();
-})
-if (document.querySelector('.stream1') === null) {
-  console.log('null')
+ 
+    fetchapps();
+  previous();
+  const check = $('#stream1');
+    
+if (check === null) {
+  console.log('is null' + check)
 } else {
-  console.log('not null')
-  var streamatt = document.querySelector('.stream1');
-  streamatt.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')");
-
-  var streamatt2 = document.querySelector('.2stream1');
-  streamatt2.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
-
-  var streamatt3 = document.querySelector('.3stream1');
-  streamatt3.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
-
-  var streamatt4 = document.querySelector('.4stream1');
-  streamatt4.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
-
-  var streamatt4 = document.querySelector('.5stream1');
-  streamatt5.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
-
+  console.log('is not null')
+  $("#stream1").attr("onclick","new_function_name()");
+  //"onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')");
+$("#2stream1").attr("onclick","new_function_name()");
+  //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
+$("#3stream1").attr("onclick","new_function_name()");
+ //"window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
+$("#4stream1").attr("onclick","new_function_name()");
+  //window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
+$("#5stream1").attr("onclick","new_function_name()");
+  //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
 }
+    
+    
+
+})
+
