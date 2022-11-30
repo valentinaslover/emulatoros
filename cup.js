@@ -427,7 +427,7 @@ $(document).ready(function() {
 if (check === null) {
   console.log('is null' + check)
 } else {
-  console.log('is not null')
+  console.log('is not null' + check)
   $("#stream1").click(function() {
 window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')
   })
