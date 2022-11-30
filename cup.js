@@ -430,7 +430,7 @@ $("#3stream1").attr("onclick","new_function_name()");
  //"window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
 $("#4stream1").attr("onclick","new_function_name()");
   //window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
-  console.log($("#5stream1"))
+  console.log($("#5stream1").attr('onclick'))
 $("#5stream1").attr("onclick","new_function_name()");
   //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
 }
