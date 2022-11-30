@@ -372,9 +372,7 @@ function current() {
           "class": "btn btn-sm btn-danger m-2 ",
           "id": "stream" + app,
           text: "Stream 1(EN)",
-          click: function() {
-            window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed4')
-          }
+         
         })
           .appendTo( streamsdiv );
 
@@ -382,9 +380,7 @@ function current() {
             "class": "btn btn-sm btn-danger m-2 ",
             "id": "3stream" + app,
             text: "Stream 3",
-            click: function() {
-              window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')
-            }
+            
           })
             .appendTo( streamsdiv );
 
@@ -392,9 +388,7 @@ function current() {
               "class": "btn btn-sm btn-danger m-2 ",
               "id": "4stream" + app,
               text: "Stream 4",
-              click: function() {
-                window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')
-              }
+              
             })
               .appendTo( streamsdiv );
 
@@ -402,9 +396,7 @@ function current() {
                 "class": "btn btn-sm btn-danger m-2 ",
                 "id": "5stream" + app,
                 text: "Stream 5(EN)",
-                click: function() {
-                  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')
-                }
+                
               })
                 .appendTo( streamsdiv );
 
@@ -426,11 +418,53 @@ $(document).ready(function() {
     
 if (check === null) {
   console.log('is null' + check)
+  $("#stream0").click(function() {
+    window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed4')
+      })
+      console.log( $("#stream1"))
+    $("#2stream0").click(function() {
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')
+        })
+      //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
+    $("#3stream0").click(function() {
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')
+        })
+     //"window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
+    $("#4stream0").click(function() {
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')
+        })
+      //window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
+     
+    $("#5stream0").click(function() {
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')
+        })
+     
 } else {
+  $("#stream0").click(function() {
+    window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed4')
+      })
+      console.log( $("#stream1"))
+    $("#2stream0").click(function() {
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')
+        })
+      //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
+    $("#3stream0").click(function() {
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')
+        })
+     //"window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
+    $("#4stream0").click(function() {
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')
+        })
+      //window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
+     
+    $("#5stream0").click(function() {
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd1.php')
+        })
   console.log('is not null' + check)
   $("#stream1").click(function() {
 window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')
   })
+  console.log( $("#stream1"))
 $("#2stream1").click(function() {
   window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')
     })
