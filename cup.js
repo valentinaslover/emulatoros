@@ -367,35 +367,37 @@ function current() {
         var streamsdiv = document.createElement("div");
         streamsdiv.setAttribute("class", "d-flex justify-content-center");
         maindiv.appendChild(streamsdiv);
-
-        var stream = document.createElement("button");
-        stream.setAttribute("class", "btn btn-sm btn-danger m-2 ");
-        stream.setAttribute("id", "stream" + app);
-        stream.innerText = "Stream 1(EN)";
-        stream.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed4')");
-        streamsdiv.appendChild(stream);
-
-        var stream2 = document.createElement("button");
+        $( "<button/>", {
+          "class": "btn btn-sm btn-danger m-2 ",
+          "id": "stream" + app,
+          text: "Stream 1(EN)",
+          click: function() {
+            window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed4')
+          }
+        })
+          .appendTo( streamsdiv );
+        
+        var stream2 = $( document.createElement("button") );
         stream2.setAttribute("class", "btn btn-sm btn-danger m-2");
         stream2.setAttribute("id", "2stream" + app);
         stream2.innerText = "Stream 2(EN)";
         stream2.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')");
         streamsdiv.appendChild(stream2);
 
-        var stream3 = document.createElement("button");
+        var stream3 = $( document.createElement("button") );
         stream3.setAttribute("class", "btn btn-sm btn-danger m-2 " );
         stream3.setAttribute("id", "3stream" + app);
         stream3.innerText = "Stream 3(ES)";
         stream3.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
         streamsdiv.appendChild(stream3);
         
-        var stream4 = document.createElement("button");
+        var stream4 = $( document.createElement("button") );
         stream4.setAttribute("class", "btn btn-sm btn-danger m-2 ");
         stream4.setAttribute("id", "4stream" + app);
         stream4.innerText = "Stream 4(EN)";
         stream4.setAttribute("onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m2.html')");
         streamsdiv.appendChild(stream4);
-        var best = document.createElement("button");
+        var best = $( document.createElement("button") );
         best.setAttribute("class", "btn btn-sm btn-danger m-2 ");
         best.setAttribute("id", "5stream" + app);
         best.innerText = "Best but Laggy(EN)";
