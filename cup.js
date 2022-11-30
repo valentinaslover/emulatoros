@@ -376,6 +376,14 @@ function current() {
         })
           .appendTo( streamsdiv );
 
+$( "<button/>", {
+          "class": "btn btn-sm btn-danger m-2 ",
+          "id": "2stream" + app,
+          text: "Stream 2(EN)",
+         
+        })
+          .appendTo( streamsdiv );
+
           $( "<button/>", {
             "class": "btn btn-sm btn-danger m-2 ",
             "id": "3stream" + app,
