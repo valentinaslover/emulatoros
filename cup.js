@@ -428,16 +428,25 @@ if (check === null) {
   console.log('is null' + check)
 } else {
   console.log('is not null')
-  $("#stream1").attr("onclick","new_function_name()");
-  //"onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')");
-$("#2stream1").attr("onclick","new_function_name()");
+  $("#stream1").click(function() {
+window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/embed2')
+  })
+$("#2stream1").click(function() {
+  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')
+    })
   //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
-$("#3stream1").attr("onclick","new_function_name()");
+$("#3stream1").click(function() {
+  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts2.html')
+    })
  //"window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
-$("#4stream1").attr("onclick","new_function_name()");
+$("#4stream1").click(function() {
+  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m2.html')
+    })
   //window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
-  console.log($("#5stream1").attr('onclick'))
-$("#5stream1").attr("onclick","new_function_name()");
+ 
+$("#5stream1").click(function() {
+  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')
+    })
   //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
 }
     
