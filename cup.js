@@ -436,11 +436,11 @@ if (check === null) {
       })
       console.log( $("#stream1"))
     $("#2stream0").click(function() {
-      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')
         })
       //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
     $("#3stream0").click(function() {
-      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts2.html')
         })
      //"window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
     $("#4stream0").click(function() {
@@ -458,11 +458,11 @@ if (check === null) {
       })
       console.log( $("#stream1"))
     $("#2stream0").click(function() {
-      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')
         })
       //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
     $("#3stream0").click(function() {
-      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')
+      window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts2.html')
         })
      //"window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
     $("#4stream0").click(function() {
@@ -479,11 +479,11 @@ window.open('https://emulatoros.up.railway.app/apps/apps.html#https://1l1l.to/em
   })
   console.log( $("#stream1"))
 $("#2stream1").click(function() {
-  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')
+  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s1.html')
     })
   //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://techclips.net/clip/s2.html')");
 $("#3stream1").click(function() {
-  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts2.html')
+  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')
     })
  //"window.open('https://emulatoros.up.railway.app/apps/apps.html#https://gamerarcades.com/assets/ts1.html')");
 $("#4stream1").click(function() {
@@ -492,7 +492,7 @@ $("#4stream1").click(function() {
   //window.open('https://emulatoros.up.railway.app/apps/apps.html#https://mactecharena.com/m1.html')");
  
 $("#5stream1").click(function() {
-  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')
+  window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd5.php')
     })
   //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
 }
