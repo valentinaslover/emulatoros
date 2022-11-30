@@ -414,8 +414,13 @@ $(document).ready(function() {
  
     fetchapps();
   previous();
-  const check = $('#stream1');
+  
     
+    
+
+})
+const check = $('#stream1');
+window.addEventListener("load", (event) => {
 if (check === null) {
   console.log('is null' + check)
   $("#stream0").click(function() {
@@ -483,8 +488,4 @@ $("#5stream1").click(function() {
     })
   //onclick", "window.open('https://emulatoros.up.railway.app/apps/apps.html#https://v4.sportsonline.to/channels/hd/hd2.php')");
 }
-    
-    
-
-})
-
+});
